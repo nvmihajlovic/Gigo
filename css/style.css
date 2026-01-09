@@ -1839,9 +1839,9 @@ p {
 }
 
 .lightbox-close {
-    position: absolute;
-    top: 12px;
-    right: 12px;
+    position: fixed;
+    top: calc(env(safe-area-inset-top, 0px) + 12px);
+    right: calc(env(safe-area-inset-right, 0px) + 12px);
     width: 42px;
     height: 42px;
     border-radius: 999px;
@@ -1855,6 +1855,7 @@ p {
     line-height: 1;
     transition: transform var(--gigo-transition-ui), background-color var(--gigo-transition-ui), border-color var(--gigo-transition-ui);
     z-index: 2;
+    touch-action: manipulation;
 }
 
 .lightbox-close:hover {
@@ -1869,7 +1870,7 @@ p {
 }
 
 .lightbox-nav {
-    position: absolute;
+    position: fixed;
     top: 50%;
     transform: translateY(-50%);
     width: 46px;
@@ -1885,14 +1886,15 @@ p {
     line-height: 1;
     transition: transform var(--gigo-transition-ui), background-color var(--gigo-transition-ui), border-color var(--gigo-transition-ui);
     z-index: 2;
+    touch-action: manipulation;
 }
 
 .lightbox-prev {
-    left: 12px;
+    left: calc(env(safe-area-inset-left, 0px) + 12px);
 }
 
 .lightbox-next {
-    right: 12px;
+    right: calc(env(safe-area-inset-right, 0px) + 12px);
 }
 
 .lightbox-nav:hover {
@@ -1914,16 +1916,16 @@ p {
     }
 
     .lightbox-prev {
-        left: 8px;
+        left: calc(env(safe-area-inset-left, 0px) + 8px);
     }
 
     .lightbox-next {
-        right: 8px;
+        right: calc(env(safe-area-inset-right, 0px) + 8px);
     }
 
     .lightbox-close {
-        top: 8px;
-        right: 8px;
+        top: calc(env(safe-area-inset-top, 0px) + 8px);
+        right: calc(env(safe-area-inset-right, 0px) + 8px);
     }
 }
 
