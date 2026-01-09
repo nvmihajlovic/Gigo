@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-label="Ilustracija za deserte">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f8f8"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <radialGradient id="gold" cx="55%" cy="25%" r="75%">
+      <stop offset="0" stop-color="#c9a961" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#c9a961" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="1200" height="900" fill="url(#bg)"/>
+  <rect width="1200" height="900" fill="url(#gold)"/>
+
+  <!-- abstract "dessert" composition (lighter, playful) -->
+  <path d="M420 610 C450 520, 510 470, 600 470 C690 470, 750 520, 780 610" fill="#c9a961" fill-opacity="0.12"/>
+  <path d="M460 610 C480 545, 530 510, 600 510 C670 510, 720 545, 740 610" fill="#1a1a1a" fill-opacity="0.05"/>
+
+  <circle cx="560" cy="430" r="48" fill="#c9a961" fill-opacity="0.18"/>
+  <circle cx="650" cy="410" r="32" fill="#1a1a1a" fill-opacity="0.08"/>
+  <circle cx="700" cy="455" r="24" fill="#c9a961" fill-opacity="0.16"/>
+
+  <path d="M520 650 L680 650" stroke="#c9a961" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round"/>
+
+  <!-- subtle frame -->
+  <rect x="70" y="70" width="1060" height="760" rx="28" fill="none" stroke="#1a1a1a" stroke-opacity="0.06" stroke-width="2"/>
+</svg>

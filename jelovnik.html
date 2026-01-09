@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jelovnik Restorana Gigo - Autentična srpska kuhinja, tradicionalna jela i specijaliteti kuće.">
+    <title>Jelovnik - Restoran Gigo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo" aria-label="Restoran Gigo">
+                    <img src="images/logo-beli.png" alt="Restoran Gigo" class="logo-img" data-logo-default="images/logo-beli.png" data-logo-inverse="images/logo-beli.png">
+                    <span class="visually-hidden">Restoran Gigo</span>
+                </a>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Početna</a></li>
+                    <li><a href="o-nama.html" class="nav-link">O nama</a></li>
+                    <li><a href="jelovnik.html" class="nav-link active" aria-current="page">Jelovnik</a></li>
+                    <li><a href="vinska-karta.html" class="nav-link">Vinska karta</a></li>
+                    <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+                    <li class="nav-lang">
+                        <div class="lang-switch" aria-label="Language switch">
+                            <a href="jelovnik.html" class="active" aria-current="page">SR</a>
+                            <a href="en/jelovnik.html">EN</a>
+                        </div>
+                    </li>
+                    <li><a href="tel:+381112612253" class="btn-reserve">Rezervišite</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header menu-header">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Naš jelovnik</h1>
+                <p>Autentični ukusi srpske tradicije</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Filter -->
+    <section class="menu-filter section-padding-small">
+        <div class="container">
+            <div class="filter-buttons" role="tablist" aria-label="Kategorije jelovnika">
+                <button type="button" class="filter-btn active" data-filter="all" data-target="all" role="tab" aria-selected="true" id="menu-tab-all">Sve</button>
+                <button type="button" class="filter-btn" data-filter="predjela" data-target="predjela" role="tab" aria-controls="predjela" aria-selected="false" tabindex="-1" id="menu-tab-predjela">Predjela</button>
+                <button type="button" class="filter-btn" data-filter="čorbe" data-target="corbe" role="tab" aria-controls="corbe" aria-selected="false" tabindex="-1" id="menu-tab-corbe">Čorbe i supe</button>
+                <button type="button" class="filter-btn" data-filter="glavna" data-target="glavna-jela" role="tab" aria-controls="glavna-jela" aria-selected="false" tabindex="-1" id="menu-tab-glavna">Glavna jela</button>
+                <button type="button" class="filter-btn" data-filter="salate" data-target="salate" role="tab" aria-controls="salate" aria-selected="false" tabindex="-1" id="menu-tab-salate">Salate</button>
+                <button type="button" class="filter-btn" data-filter="deserti" data-target="deserti" role="tab" aria-controls="deserti" aria-selected="false" tabindex="-1" id="menu-tab-deserti">Deserti</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - Predjela -->
+    <section class="menu-section section-padding" id="predjela">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Predjela</h2>
+                <p>Tradicionalna predjela koja savršeno započinju obrok</p>
+            </div>
+            <div class="menu-items" data-category="predjela">
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-30.jpg" alt="Kajmak" loading="lazy">
+                        <span class="menu-badge">Specijalitet</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Domaći kajmak</h3>
+                            <span class="menu-price">650 RSD</span>
+                        </div>
+                        <p class="menu-description">Tradicionalni domaći kajmak sa svežim lepinjama</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-31.jpg" alt="Pršuta" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Srpska pršuta i sir</h3>
+                            <span class="menu-price">1,200 RSD</span>
+                        </div>
+                        <p class="menu-description">Izbor domaćih pršuta i zrelih sireva</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-32.jpg" alt="Ajvar" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Domaći ajvar</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                        <p class="menu-description">Ljuti i blagi ajvar po originalnom receptu</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-30.jpg" alt="Gibanica" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Gibanica</h3>
+                            <span class="menu-price">550 RSD</span>
+                        </div>
+                        <p class="menu-description">Tradicionalna gibanica sa sirom</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - Čorbe -->
+    <section class="menu-section section-padding bg-light" id="corbe">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Čorbe i supe</h2>
+                <p>Topli zalogaji za sve prilike</p>
+            </div>
+            <div class="menu-items" data-category="čorbe">
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-31.jpg" alt="Teleća čorba" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Teleća čorba</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                        <p class="menu-description">Klasična teleća čorba sa domaćim rezancima</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-32.jpg" alt="Pileća čorba" loading="lazy">
+                        <span class="menu-badge">Popularna</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pileća čorba</h3>
+                            <span class="menu-price">380 RSD</span>
+                        </div>
+                        <p class="menu-description">Domaća pileća čorba sa povrćem</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-30.jpg" alt="Gulaš" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Gulaš čorba</h3>
+                            <span class="menu-price">550 RSD</span>
+                        </div>
+                        <p class="menu-description">Začinjena gulaš čorba sa mesom</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - Glavna jela -->
+    <section class="menu-section section-padding" id="glavna-jela">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Glavna jela</h2>
+                <p>Bogata ponuda tradicionalnih specijaliteta</p>
+            </div>
+            <div class="menu-items" data-category="glavna">
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-29.jpg" alt="Karađorđeva šnicla" loading="lazy">
+                        <span class="menu-badge">Specijalitet</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Karađorđeva šnicla</h3>
+                            <span class="menu-price">1,450 RSD</span>
+                        </div>
+                        <p class="menu-description">Tradicionalna punjena šnicla sa kajmakom i tartar sosom</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-31.jpg" alt="Ćevapi" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Ćevapi (10 kom)</h3>
+                            <span class="menu-price">950 RSD</span>
+                        </div>
+                        <p class="menu-description">Sočni ćevapi sa lukom i lepinjama</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-32.jpg" alt="Punjene paprike" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Punjene paprike</h3>
+                            <span class="menu-price">1,100 RSD</span>
+                        </div>
+                        <p class="menu-description">Domaće punjene paprike sa mlevenim mesom</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-29.jpg" alt="Roštilj" loading="lazy">
+                        <span class="menu-badge">Specijalitet</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Mešano meso sa roštilja</h3>
+                            <span class="menu-price">1,650 RSD</span>
+                        </div>
+                        <p class="menu-description">Raznovrsno roštilj meso sa prilogom po izboru</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-30.jpg" alt="Sarma" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Sarma</h3>
+                            <span class="menu-price">980 RSD</span>
+                        </div>
+                        <p class="menu-description">Domaća sarma u kisekom kupusu</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-31.jpg" alt="Prebranac" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Prebranac</h3>
+                            <span class="menu-price">650 RSD</span>
+                        </div>
+                        <p class="menu-description">Pečen pasulj sa lukom</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - Salate -->
+    <section class="menu-section section-padding bg-light" id="salate">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Salate</h2>
+                <p>Sveže salate od domaćeg povrća</p>
+            </div>
+            <div class="menu-items" data-category="salate">
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-32.jpg" alt="Šopska salata" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Šopska salata</h3>
+                            <span class="menu-price">480 RSD</span>
+                        </div>
+                        <p class="menu-description">Klasična šopska salata sa sirom</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-30.jpg" alt="Srpska salata" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Srpska salata</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                        <p class="menu-description">Paradajz, krastavac i luk</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-29.jpg" alt="Grčka salata" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Grčka salata</h3>
+                            <span class="menu-price">520 RSD</span>
+                        </div>
+                        <p class="menu-description">Sa feta sirom i maslinama</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - Deserti -->
+    <section class="menu-section section-padding" id="deserti">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Deserti</h2>
+                <p>Slatki zalogaji koji savršeno završavaju obrok</p>
+            </div>
+            <div class="menu-items" data-category="deserti">
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-32.jpg" alt="Palačinke" loading="lazy">
+                        <span class="menu-badge">Popularna</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Palačinke</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                        <p class="menu-description">Sa eurokremom, džemom ili orasima</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-30.jpg" alt="Tulumbe" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Tulumbe</h3>
+                            <span class="menu-price">380 RSD</span>
+                        </div>
+                        <p class="menu-description">Tradicionalne tulumbe u šećernom sirupu</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-31.jpg" alt="Baklava" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Baklava</h3>
+                            <span class="menu-price">420 RSD</span>
+                        </div>
+                        <p class="menu-description">Domaća baklava sa orasima</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-image">
+                        <img src="images/image-32.jpg" alt="Krempita" loading="lazy">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Krempita</h3>
+                            <span class="menu-price">480 RSD</span>
+                        </div>
+                        <p class="menu-description">Kremasta krempita sa vanilom</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section cta-section--premium">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-panel">
+                    <h2>Spremni da probate?</h2>
+                    <p>Rezervišite Vaš sto i uživajte u autentičnim ukusima</p>
+                    <a href="kontakt.html" class="btn btn-primary-large">Rezervišite sada</a>
+                    <div class="cta-trust" aria-label="Brzi kontakt">
+                        <a href="tel:+381112612253">011 261 2253</a>
+                        <span class="cta-trust-hours">·&nbsp;Pon–Pet 10:00–23:00 · Vikend 09:00–00:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer--home">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-brand" aria-label="Restoran Gigo">
+                        <img src="images/logo-beli.png" alt="Restoran Gigo" class="footer-logo">
+                    </a>
+                    <p><span data-years-since="1998">28</span> godina tradicije i ukusa. Vaše mesto za autentičnu srpsku kuhinju i nezaboravne trenutke.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Brzi linkovi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Početna</a></li>
+                        <li><a href="o-nama.html">O nama</a></li>
+                        <li><a href="jelovnik.html">Jelovnik</a></li>
+                        <li><a href="vinska-karta.html">Vinska karta</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Radno vreme</h4>
+                    <ul class="footer-info">
+                        <li><strong>Ponedeljak - Petak</strong></li>
+                        <li>10:00 - 23:00</li>
+                        <li><strong>Vikend</strong></li>
+                        <li>09:00 - 00:00</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Gornjogradska 7c, Zemun</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+381112612253">011 261 2253</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom has-credit">
+                <p>&copy; 2026 Restoran Gigo. Sva prava zadržana.</p>
+                <div class="footer-lang" aria-label="Language">
+                    <a href="jelovnik.html" class="active" aria-current="page">SR</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="en/jelovnik.html">EN</a>
+                </div>
+                <div class="footer-credit" aria-label="Dizajn i razvoj">
+                    <span>Dizajn i razvoj:</span>
+                    <a href="https://pansoft.rs" target="_blank" rel="noopener noreferrer" aria-label="Pansoft">
+                        <img src="images/pansoft%20logo%20bela%20slova-01.png" alt="Pansoft" class="footer-credit-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

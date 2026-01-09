@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Portret člana tima">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8f8f8"/>
+      <stop offset="1" stop-color="#ffffff"/>
+    </linearGradient>
+    <radialGradient id="accent" cx="45%" cy="20%" r="75%">
+      <stop offset="0" stop-color="#c9a961" stop-opacity="0.35"/>
+      <stop offset="1" stop-color="#c9a961" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <rect width="900" height="900" fill="url(#bg)"/>
+  <rect width="900" height="900" fill="url(#accent)"/>
+
+  <circle cx="450" cy="450" r="360" fill="#1a1a1a" fill-opacity="0.04"/>
+
+  <!-- shoulders -->
+  <path d="M205 765 C260 650, 345 605, 450 605 C555 605, 640 650, 695 765" fill="#1a1a1a" fill-opacity="0.10"/>
+  <path d="M250 765 C295 680, 365 650, 450 650 C535 650, 605 680, 650 765" fill="#c9a961" fill-opacity="0.18"/>
+
+  <!-- head -->
+  <circle cx="450" cy="390" r="148" fill="#1a1a1a" fill-opacity="0.08"/>
+  <circle cx="450" cy="400" r="128" fill="#ffffff" fill-opacity="0.65"/>
+
+  <!-- hair (short) -->
+  <path d="M340 395 C340 300, 400 260, 450 260 C520 260, 560 305, 560 395 C540 360, 510 345, 450 345 C395 345, 365 360, 340 395" fill="#1a1a1a" fill-opacity="0.18"/>
+
+  <path d="M320 710 L580 710" stroke="#c9a961" stroke-opacity="0.55" stroke-width="10" stroke-linecap="round"/>
+</svg>

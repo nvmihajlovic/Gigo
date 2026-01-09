@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Restoran Gigo - 28 godina tradicije i ukusa. Autentična srpska kuhinja u srcu grada." data-years-template="Restoran Gigo - {years} godina tradicije i ukusa. Autentična srpska kuhinja u srcu grada.">
+    <title data-years-template="Restoran Gigo - {years} godina tradicije">Restoran Gigo - 28 godina tradicije</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo" aria-label="Restoran Gigo">
+                    <img src="images/logo-beli.png" alt="Restoran Gigo" class="logo-img" data-logo-default="images/logo-beli.png" data-logo-inverse="images/logo-beli.png">
+                    <span class="visually-hidden">Restoran Gigo</span>
+                </a>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active" aria-current="page">Početna</a></li>
+                    <li><a href="o-nama.html" class="nav-link">O nama</a></li>
+                    <li><a href="jelovnik.html" class="nav-link">Jelovnik</a></li>
+                    <li><a href="vinska-karta.html" class="nav-link">Vinska karta</a></li>
+                    <li><a href="kontakt.html" class="nav-link">Kontakt</a></li>
+                    <li class="nav-lang">
+                        <div class="lang-switch" aria-label="Language switch">
+                            <a href="index.html" class="active" aria-current="page">SR</a>
+                            <a href="en/index.html">EN</a>
+                        </div>
+                    </li>
+                    <li><a href="tel:+381112612253" class="btn-reserve">Rezervišite</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active">
+                <img src="images/image-29.jpg" alt="Restoran Gigo">
+            </div>
+            <div class="hero-slide">
+                <img src="images/image-30.jpg" alt="Restoran Gigo">
+            </div>
+            <div class="hero-slide">
+                <img src="images/image-31.jpg" alt="Restoran Gigo">
+            </div>
+            <div class="hero-slide">
+                <img src="images/image-32.jpg" alt="Restoran Gigo">
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <span class="hero-subtitle">Dobrodošli u</span>
+                    <h1 class="hero-title">Restoran Gigo</h1>
+                    <p class="hero-tagline"><span data-years-since="1998">28</span> godina tradicije i ukusa</p>
+                    <p class="hero-description">Autentična srpska kuhinja pripremljena sa ljubavlju i pažnjom</p>
+                    <div class="hero-buttons">
+                        <a href="kontakt.html" class="btn btn-primary">Rezervišite sto</a>
+                        <a href="jelovnik.html" class="btn btn-secondary">Pogledajte jelovnik</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-slider-nav" aria-label="Navigacija slajdera">
+            <button type="button" class="slider-dot active" data-slide="0" aria-label="Prvi slajd"></button>
+            <button type="button" class="slider-dot" data-slide="1" aria-label="Drugi slajd"></button>
+            <button type="button" class="slider-dot" data-slide="2" aria-label="Treći slajd"></button>
+            <button type="button" class="slider-dot" data-slide="3" aria-label="Četvrti slajd"></button>
+        </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="about-preview section-padding">
+        <div class="container">
+            <div class="section-grid">
+                <div class="about-content">
+                    <span class="section-subtitle">Naša priča</span>
+                    <h2 class="section-title">O nama</h2>
+                    <p class="text-large">Restoran Gigo osnovan je 1998. godine kao simbol porodične tradicije i ljubavi prema dobroj hrani.</p>
+                    <p>Generacijama negujemo autentične recepte srpske kuhinje — svako jelo pripremamo pažljivo, bez prečica. Naša misija je da svakom gostu pružimo više od obroka: iskustvo gostoprimstva, toplinu doma i ukus koji se pamti.</p>
+                    <p>Koristimo sveže, sezonske sastojke od lokalnih dobavljača.</p>
+                    <a href="o-nama.html" class="btn btn-outline">Saznajte više</a>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="images/image-30.jpg" alt="Enterijer Restorana Gigo" loading="lazy">
+                        <div class="image-badge">
+                            <span class="badge-number" data-years-since="1998">28</span>
+                            <span class="badge-text">Godina<br>Tradicije</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features section-padding bg-dark">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-subtitle light">Zašto izabrati nas</span>
+                <h2 class="section-title light">Dobar ukus i autentično iskustvo</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3>Tradicionalni recepti</h3>
+                    <p>Jela pripremljena po originalnim receptima koji se prenose generacijama</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Sveži sastojci</h3>
+                    <p>Koristimo samo najkvalitetnije, sveže sastojke od lokalnih proizvođača</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-wine-glass-alt"></i>
+                    </div>
+                    <h3>Izbor vina</h3>
+                    <p>Bogata kolekcija domaćih i stranih vina pažljivo odabranih za svako jelo</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Topla atmosfera</h3>
+                    <p>Prostorije dizajnirane da pružaju osećaj topline i domaće atmosfere</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Preview -->
+    <section class="menu-preview section-padding">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-subtitle">Naša ponuda</span>
+                <h2 class="section-title">Upoznajte naš jelovnik</h2>
+                <p class="section-description">Svaki obrok kod nas je priča puna ukusa i tradicije. Od doručka do večere, nudimo autentična srpska jela koja oduševljavaju.</p>
+            </div>
+            <div class="menu-categories">
+                <div class="menu-card">
+                    <div class="menu-card-image">
+                        <img src="images/galerija%202.jpg" alt="Predjela" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <a href="jelovnik.html#predjela" class="btn btn-light">Pogledajte</a>
+                        </div>
+                    </div>
+                    <h3>Predjela</h3>
+                    <p>Tradicionalna predjela koja savršeno započinju obrok</p>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-image">
+                        <img src="images/galerija%203.jpg" alt="Glavna jela" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <a href="jelovnik.html#glavna-jela" class="btn btn-light">Pogledajte</a>
+                        </div>
+                    </div>
+                    <h3>Glavna jela</h3>
+                    <p>Bogata ponuda tradicionalnih specijaliteta</p>
+                </div>
+                <div class="menu-card">
+                    <div class="menu-card-image">
+                        <img src="images/galerija%204.jpg" alt="Deserti" loading="lazy">
+                        <div class="menu-card-overlay">
+                            <a href="jelovnik.html#deserti" class="btn btn-light">Pogledajte</a>
+                        </div>
+                    </div>
+                    <h3>Deserti</h3>
+                    <p>Slatki zalogaji koji savršeno završavaju obrok</p>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="jelovnik.html" class="btn btn-primary">Pogledajte kompletan jelovnik</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wine Section -->
+    <section class="wine-section section-padding bg-dark">
+        <div class="container">
+            <div class="section-grid reverse">
+                <div class="wine-image">
+                    <img src="images/vinska-karta-sekcija.png" alt="Vinska karta" loading="lazy">
+                </div>
+                <div class="wine-content">
+                    <span class="section-subtitle light">Vinoteka</span>
+                    <h2 class="section-title light">Najbolja vina Srbije</h2>
+                    <p class="text-large light">Naš restoran poseduje vrhunski odabranu kolekciju domaćih vina.</p>
+                    <p class="light">Naši somelijeri su pažljivo odabrali najbolja vina iz svih regiona Srbije, kao i odabir međunarodnih etiketa koje savršeno dopunjuju našu kuhinju. Bez obzira da li volite crveno, belo ili roze, imamo pravo vino za vas i Vaše ukuse.</p>
+                    <a href="vinska-karta.html" class="btn btn-outline-light">Pogledajte vinsku kartu</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section class="gallery section-padding">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-subtitle">Galerija</span>
+                <h2 class="section-title">Doživite atmosferu</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="images/gakerija%201.jpg" alt="Galerija 1" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/galerija%202.jpg" alt="Galerija 2" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/galerija%203.jpg" alt="Galerija 3" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/galerija%204.jpg" alt="Galerija 4" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/galerija%205.jpg" alt="Galerija 5" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/galerija%206.jpg" alt="Galerija 6" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/galerija%205.jpg" alt="Galerija 7" loading="lazy">
+                </div>
+                <div class="gallery-item">
+                    <img src="images/galerija%206.jpg" alt="Galerija 8" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section cta-section--premium">
+        <div class="cta-overlay"></div>
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-panel">
+                    <h2>Rezervišite sto danas</h2>
+                    <p>Javite nam se i potvrdićemo rezervaciju u najkraćem roku.</p>
+                    <a href="kontakt.html" class="btn btn-primary-large">Rezervišite sada</a>
+                    <div class="cta-trust" aria-label="Brzi kontakt">
+                        <a href="tel:+381112612253">011 261 2253</a>
+                        <span class="cta-trust-hours">·&nbsp;Pon–Pet 10:00–23:00 · Vikend 09:00–00:00</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer--home">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-brand" aria-label="Restoran Gigo">
+                        <img src="images/logo-beli.png" alt="Restoran Gigo" class="footer-logo">
+                    </a>
+                    <p><span data-years-since="1998">28</span> godina tradicije i ukusa. Vaše mesto za autentičnu srpsku kuhinju i nezaboravne trenutke.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Brzi linkovi</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Početna</a></li>
+                        <li><a href="o-nama.html">O nama</a></li>
+                        <li><a href="jelovnik.html">Jelovnik</a></li>
+                        <li><a href="vinska-karta.html">Vinska karta</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Radno vreme</h4>
+                    <ul class="footer-info">
+                        <li><strong>Ponedeljak - Petak</strong></li>
+                        <li>10:00 - 23:00</li>
+                        <li><strong>Vikend</strong></li>
+                        <li>09:00 - 00:00</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul class="footer-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Gornjogradska 7c, Zemun</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+381112612253">011 261 2253</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom has-credit">
+                <p>&copy; 2026 Restoran Gigo. Sva prava zadržana.</p>
+                <div class="footer-lang" aria-label="Language">
+                    <a href="index.html" class="active" aria-current="page">SR</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="en/index.html">EN</a>
+                </div>
+                <div class="footer-credit" aria-label="Dizajn i razvoj">
+                    <span>Dizajn i razvoj:</span>
+                    <a href="https://pansoft.rs" target="_blank" rel="noopener noreferrer" aria-label="Pansoft">
+                        <img src="images/pansoft%20logo%20bela%20slova-01.png" alt="Pansoft" class="footer-credit-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>

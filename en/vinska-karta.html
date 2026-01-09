@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gigo Restaurant wine list — the best wines of Serbia and a curated selection of international labels.">
+    <title>Wine List - Gigo Restaurant</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo" aria-label="Gigo Restaurant">
+                    <img src="../images/logo-beli.png" alt="Gigo Restaurant" class="logo-img" data-logo-default="../images/logo-beli.png" data-logo-inverse="../images/logo-beli.png">
+                    <span class="visually-hidden">Gigo Restaurant</span>
+                </a>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="o-nama.html" class="nav-link">About</a></li>
+                    <li><a href="jelovnik.html" class="nav-link">Menu</a></li>
+                    <li><a href="vinska-karta.html" class="nav-link active" aria-current="page">Wine List</a></li>
+                    <li><a href="kontakt.html" class="nav-link">Contact</a></li>
+                    <li class="nav-lang">
+                        <div class="lang-switch" aria-label="Language switch">
+                            <a href="../vinska-karta.html">SR</a>
+                            <a href="vinska-karta.html" class="active" aria-current="page">EN</a>
+                        </div>
+                    </li>
+                    <li><a href="tel:+381112612253" class="btn-reserve">Reserve</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header wine-header">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Wine list</h1>
+                <p>A premium selection of local and international wines</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wine Intro -->
+    <section class="wine-intro section-padding">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-subtitle">Our collection</span>
+                <h2 class="section-title">A cellar of Serbian wines</h2>
+                <p class="section-description">Our wine list features carefully selected wines that pair beautifully with our cuisine. From renowned Serbian wine regions to international labels — every bottle has its own story.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wine Filter -->
+    <section class="wine-filter section-padding-small bg-light">
+        <div class="container">
+            <div class="filter-buttons" role="tablist" aria-label="Wine list sections">
+                <button type="button" class="filter-btn active" data-filter="all" data-target="all" role="tab" aria-selected="true" id="wine-tab-all">All wines</button>
+                <button type="button" class="filter-btn" data-filter="bela" data-target="bela" role="tab" aria-controls="bela" aria-selected="false" tabindex="-1" id="wine-tab-bela">White wines</button>
+                <button type="button" class="filter-btn" data-filter="crna" data-target="crna" role="tab" aria-controls="crna" aria-selected="false" tabindex="-1" id="wine-tab-crna">Red wines</button>
+                <button type="button" class="filter-btn" data-filter="roze" data-target="roze" role="tab" aria-controls="roze" aria-selected="false" tabindex="-1" id="wine-tab-roze">Rosé wines</button>
+                <button type="button" class="filter-btn" data-filter="penuava" data-target="penuava" role="tab" aria-controls="penuava" aria-selected="false" tabindex="-1" id="wine-tab-penuava">Sparkling wines</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bela vina -->
+    <section class="wine-section section-padding" id="bela">
+        <div class="container">
+            <div class="wine-category-header">
+                <h2 class="section-title">White wines</h2>
+                <p>Refreshing and aromatic whites</p>
+            </div>
+            <div class="wine-list" data-category="bela">
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Tamjanika - Aleksandrović</h3>
+                            <p class="wine-details">Župa, Serbia | 2022</p>
+                            <p class="wine-description">Aromatic wine with rose and apricot notes</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Glass</span>
+                            <span class="wine-price">550 RSD</span>
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">2,800 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Chardonnay - Vinarija Kovačević</h3>
+                            <p class="wine-details">Fruška Gora, Serbia | 2021</p>
+                            <p class="wine-description">An elegant wine with a rich palate</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Glass</span>
+                            <span class="wine-price">480 RSD</span>
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">2,400 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item featured">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Sauvignon Blanc - Despotika</h3>
+                            <p class="wine-details">Negotin, Serbia | 2022</p>
+                            <p class="wine-description">A refreshing wine with a mineral finish</p>
+                            <span class="wine-badge">Sommelier's choice</span>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Glass</span>
+                            <span class="wine-price">600 RSD</span>
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">3,200 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Riesling - Vinski Podrum Radovanović</h3>
+                            <p class="wine-details">Nišava, Serbia | 2021</p>
+                            <p class="wine-description">A balanced wine with fruit aromas</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Glass</span>
+                            <span class="wine-price">520 RSD</span>
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">2,600 RSD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crna vina -->
+    <section class="wine-section section-padding bg-light" id="crna">
+        <div class="container">
+            <div class="wine-category-header">
+                <h2 class="section-title">Red wines</h2>
+                <p>Rich, full-bodied reds</p>
+            </div>
+            <div class="wine-list" data-category="crna">
+                <div class="wine-item featured">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Prokupac - Toplički Vinogradi</h3>
+                            <p class="wine-details">Toplica, Serbia | 2020</p>
+                            <p class="wine-description">An authentic Serbian wine with a distinctive character</p>
+                            <span class="wine-badge">Signature</span>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Glass</span>
+                            <span class="wine-price">580 RSD</span>
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">3,000 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Cabernet Sauvignon - Aleksandrović</h3>
+                            <p class="wine-details">Župa, Serbia | 2019</p>
+                            <p class="wine-description">A structured wine with dark fruit notes</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Glass</span>
+                            <span class="wine-price">620 RSD</span>
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">3,400 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Merlot - Vinarija Šumadija</h3>
+                            <p class="wine-details">Šumadija, Serbia | 2020</p>
+                            <p class="wine-description">Soft and pleasant with a velvety texture</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Glass</span>
+                            <span class="wine-price">560 RSD</span>
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">2,900 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Vranac - 13. Jul Plantaže</h3>
+                            <p class="wine-details">Montenegro | 2019</p>
+                            <p class="wine-description">A powerful Balkan wine with a full body</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Glass</span>
+                            <span class="wine-price">590 RSD</span>
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">3,100 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Pinot Noir - Vinski Podrum Zvonko Bogdan</h3>
+                            <p class="wine-details">Subotica, Serbia | 2021</p>
+                            <p class="wine-description">An elegant wine with red berry notes</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Glass</span>
+                            <span class="wine-price">680 RSD</span>
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">3,800 RSD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roze vina -->
+    <section class="wine-section section-padding" id="roze">
+        <div class="container">
+            <div class="wine-category-header">
+                <h2 class="section-title">Rosé wines</h2>
+                <p>Fresh, light, and perfect for summer</p>
+            </div>
+            <div class="wine-list" data-category="roze">
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Rosé - Aleksandrović</h3>
+                            <p class="wine-details">Župa, Serbia | 2022</p>
+                            <p class="wine-description">A refreshing rosé with strawberry aromas</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Glass</span>
+                            <span class="wine-price">490 RSD</span>
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">2,500 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Pink Tamjanika - Vinski Podrum Janko</h3>
+                            <p class="wine-details">Župa, Serbia | 2022</p>
+                            <p class="wine-description">An aromatic rosé with floral notes</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Glass</span>
+                            <span class="wine-price">520 RSD</span>
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">2,700 RSD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Penuava vina -->
+    <section class="wine-section section-padding bg-light" id="penuava">
+        <div class="container">
+            <div class="wine-category-header">
+                <h2 class="section-title">Sparkling wines</h2>
+                <p>For celebrations and special moments</p>
+            </div>
+            <div class="wine-list" data-category="penuava">
+                <div class="wine-item featured">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Tri Morave Brut - Aleksa Despotović</h3>
+                            <p class="wine-details">Negotin, Serbia</p>
+                            <p class="wine-description">Elegant sparkling wine made using the traditional method</p>
+                            <span class="wine-badge">Premium</span>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Glass</span>
+                            <span class="wine-price">750 RSD</span>
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">4,200 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Rubin Brut - Rubin</h3>
+                            <p class="wine-details">Kruševac, Serbia</p>
+                            <p class="wine-description">A quality local sparkling wine</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Glass</span>
+                            <span class="wine-price">450 RSD</span>
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">2,400 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Moët &amp; Chandon Impérial</h3>
+                            <p class="wine-details">Champagne, France</p>
+                            <p class="wine-description">An iconic champagne for special moments</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Bottle</span>
+                            <span class="wine-price">12,500 RSD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wine Pairing Section -->
+    <section class="wine-pairing section-padding bg-dark">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-subtitle light">Sommelier tip</span>
+                <h2 class="section-title light">Recommended pairings</h2>
+            </div>
+            <div class="pairing-grid">
+                <div class="pairing-card" tabindex="0">
+                    <div class="pairing-icon">
+                        <i class="fas fa-drumstick-bite"></i>
+                    </div>
+                    <h3>Grill &amp; meat</h3>
+                    <p class="light">Prokupac, Cabernet Sauvignon, or Vranac pair beautifully with grilled dishes</p>
+                </div>
+                <div class="pairing-card" tabindex="0">
+                    <div class="pairing-icon">
+                        <i class="fas fa-fish"></i>
+                    </div>
+                    <h3>Fish &amp; seafood</h3>
+                    <p class="light">Sauvignon Blanc or Chardonnay complement delicate flavors</p>
+                </div>
+                <div class="pairing-card" tabindex="0">
+                    <div class="pairing-icon">
+                        <i class="fas fa-cheese"></i>
+                    </div>
+                    <h3>Cheeses &amp; starters</h3>
+                    <p class="light">Tamjanika or Pink Tamjanika are ideal with starters</p>
+                </div>
+                <div class="pairing-card" tabindex="0">
+                    <div class="pairing-icon">
+                        <i class="fas fa-birthday-cake"></i>
+                    </div>
+                    <h3>Desserts</h3>
+                    <p class="light">Riesling or sparkling wines pair well with sweet bites</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sommelier Section -->
+    <section class="sommelier-section section-padding">
+        <div class="container">
+            <div class="section-grid">
+                <div class="sommelier-image">
+                    <img src="../images/vinska-karta.jpg" alt="Our sommelier" loading="lazy">
+                </div>
+                <div class="sommelier-content">
+                    <span class="section-subtitle">Your sommelier</span>
+                    <h2 class="section-title">Expert help with your choice</h2>
+                    <p class="text-large">Not sure which wine to choose? Our sommelier is here to help.</p>
+                    <p>With years of experience and deep knowledge of wines, our team will recommend the perfect bottle to complement your meal. Whether you love reds, whites, or rosés — or want to try something new — we'll help you find the right match.</p>
+                    <div class="sommelier-cta">
+                        <a href="kontakt.html" class="btn btn-primary">Contact us</a>
+                        <div class="sommelier-trust" aria-label="Quick contact">
+                            <span>Call:</span> <a href="tel:+381112612253">011 261 2253</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer--home">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-brand" aria-label="Gigo Restaurant">
+                        <img src="../images/logo-beli.png" alt="Gigo Restaurant" class="footer-logo">
+                    </a>
+                    <p><span data-years-since="1998">28</span> years of tradition and flavor. Your place for authentic Serbian cuisine and unforgettable moments.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="o-nama.html">About</a></li>
+                        <li><a href="jelovnik.html">Menu</a></li>
+                        <li><a href="vinska-karta.html">Wine List</a></li>
+                        <li><a href="kontakt.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Working hours</h4>
+                    <ul class="footer-info">
+                        <li><strong>Monday - Friday</strong></li>
+                        <li>10:00 - 23:00</li>
+                        <li><strong>Weekend</strong></li>
+                        <li>09:00 - 00:00</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul class="footer-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Gornjogradska 7c, Zemun</li>
+                        <li><i class="fas fa-phone"></i> <a href="tel:+381112612253">011 261 2253</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom has-credit">
+                <p>&copy; 2026 Gigo Restaurant. All rights reserved.</p>
+                <div class="footer-lang" aria-label="Language">
+                    <a href="../vinska-karta.html">SR</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="vinska-karta.html" class="active" aria-current="page">EN</a>
+                </div>
+                <div class="footer-credit" aria-label="Design and development">
+                    <span>Design &amp; Development:</span>
+                    <a href="https://pansoft.rs" target="_blank" rel="noopener noreferrer" aria-label="Pansoft">
+                        <img src="../images/pansoft%20logo%20bela%20slova-01.png" alt="Pansoft" class="footer-credit-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="../js/main.js"></script>
+</body>
+</html>
