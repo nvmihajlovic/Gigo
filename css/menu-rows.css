@@ -1,0 +1,151 @@
+/* ====================================
+   MENU & WINE — ELEGANT ROW LIST
+   Replaces box card grid with clean
+   restaurant menu row layout
+   ==================================== */
+
+/* ---- JELOVNIK — row list ---- */
+.page-menu.page-home-modern .menu-items {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    grid-template-columns: unset !important;
+    border-top: 1px solid rgba(58, 39, 24, 0.13) !important;
+}
+
+.page-menu.page-home-modern .menu-item {
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(58, 39, 24, 0.1) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    min-height: unset !important;
+    padding: 0 !important;
+    transform: none !important;
+    transition: background 180ms ease !important;
+}
+
+.page-menu.page-home-modern .menu-item::before {
+    display: none !important;
+}
+
+.page-menu.page-home-modern .menu-item:hover {
+    background: rgba(255, 250, 242, 0.62) !important;
+    border-color: rgba(58, 39, 24, 0.1) !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.page-menu.page-home-modern .menu-item-content {
+    padding: clamp(18px, 2vw, 26px) clamp(16px, 2vw, 28px) !important;
+}
+
+.page-menu.page-home-modern .menu-item-header {
+    display: flex !important;
+    align-items: baseline !important;
+    justify-content: space-between !important;
+    grid-template-columns: unset !important;
+    gap: 24px !important;
+    margin-bottom: 0.3rem !important;
+}
+
+.page-menu.page-home-modern .menu-item-header h3 {
+    font-size: clamp(1.08rem, 1.25vw, 1.3rem) !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    margin: 0 !important;
+}
+
+.page-menu.page-home-modern .menu-price {
+    font-size: 0.96rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+    flex-shrink: 0 !important;
+}
+
+.page-menu.page-home-modern .menu-description {
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+    margin: 0 !important;
+    max-width: 64ch !important;
+}
+
+/* ---- VINSKA KARTA — row list ---- */
+.page-wine.page-home-modern .wine-list {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    max-width: none !important;
+    border-top: 1px solid rgba(58, 39, 24, 0.13) !important;
+}
+
+.page-wine.page-home-modern .wine-item {
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px solid rgba(58, 39, 24, 0.1) !important;
+    border-radius: 0 !important;
+    border-left: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    transform: none !important;
+    transition: background 180ms ease !important;
+}
+
+.page-wine.page-home-modern .wine-item::before {
+    display: none !important;
+}
+
+.page-wine.page-home-modern .wine-item:hover,
+.page-wine.page-home-modern .wine-item:focus-within {
+    background: rgba(255, 250, 242, 0.62) !important;
+    border-color: rgba(58, 39, 24, 0.1) !important;
+    border-left: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.page-wine.page-home-modern .wine-item-header {
+    padding: clamp(18px, 2vw, 26px) clamp(16px, 2vw, 28px) !important;
+    gap: clamp(20px, 3vw, 48px) !important;
+    align-items: flex-start !important;
+}
+
+.page-wine.page-home-modern .wine-info h3 {
+    font-size: clamp(1.05rem, 1.25vw, 1.28rem) !important;
+    font-weight: 600 !important;
+    margin-bottom: 0.25rem !important;
+}
+
+.page-wine.page-home-modern .wine-details {
+    font-size: 0.78rem !important;
+    margin-bottom: 0.45rem !important;
+}
+
+.page-wine.page-home-modern .wine-description {
+    font-size: 0.92rem !important;
+    line-height: 1.6 !important;
+}
+
+.page-wine.page-home-modern .wine-badge {
+    margin-top: 0.55rem !important;
+}
+
+.page-wine.page-home-modern .wine-prices {
+    min-width: 140px !important;
+}
+
+.page-wine.page-home-modern .wine-price {
+    font-size: 1.05rem !important;
+}
+
+@media (max-width: 640px) {
+    .page-wine.page-home-modern .wine-item-header {
+        flex-direction: column !important;
+        gap: 12px !important;
+    }
+
+    .page-wine.page-home-modern .wine-prices {
+        justify-content: flex-start !important;
+        text-align: left !important;
+    }
+}

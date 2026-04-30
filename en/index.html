@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,13 @@
     <title data-years-template="Gigo Restaurant - {years} Years of Tradition">Gigo Restaurant - 28 Years of Tradition</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/landing.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="page-home-modern">
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
@@ -46,244 +47,149 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-slider">
-            <div class="hero-slide active">
-                <img src="../images/image-29.jpg" alt="Gigo Restaurant">
+    <main>
+        <section class="hero home-hero">
+            <div class="hero-slider" aria-hidden="true">
+                <div class="hero-slide active"><img src="../images/image-29.jpg" alt=""></div>
+                <div class="hero-slide"><img src="../images/image-30.jpg" alt=""></div>
+                <div class="hero-slide"><img src="../images/image-31.jpg" alt=""></div>
+                <div class="hero-slide"><img src="../images/image-32.jpg" alt=""></div>
             </div>
-            <div class="hero-slide">
-                <img src="../images/image-30.jpg" alt="Gigo Restaurant">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="container home-hero-grid">
+                    <div class="hero-text">
+                        <p class="hero-kicker">Zemun · since 1998</p>
+                        <h1 class="hero-title">Gigo Restaurant</h1>
+                        <p class="hero-tagline">Serbian home-style cooking in a calmer, more elegant setting.</p>
+                        <p class="hero-description">Grill, soups, traditional dishes, and a wine list made for lunch, dinner, and family gatherings.</p>
+                        <div class="hero-buttons">
+                            <a href="kontakt.html" class="btn btn-primary">Reserve a table</a>
+                            <a href="jelovnik.html" class="btn btn-secondary">Menu</a>
+                        </div>
+                        <p class="hero-contact-line">Gornjogradska 7c · <a href="tel:+381112612253">011/2612-253</a> · <a href="tel:+381611318967">061/1318-967</a></p>
+                    </div>
+                </div>
             </div>
-            <div class="hero-slide">
-                <img src="../images/image-31.jpg" alt="Gigo Restaurant">
+            <div class="hero-slider-nav" aria-label="Slider navigation">
+                <button type="button" class="slider-dot active" data-slide="0" aria-label="First slide"></button>
+                <button type="button" class="slider-dot" data-slide="1" aria-label="Second slide"></button>
+                <button type="button" class="slider-dot" data-slide="2" aria-label="Third slide"></button>
+                <button type="button" class="slider-dot" data-slide="3" aria-label="Fourth slide"></button>
             </div>
-            <div class="hero-slide">
-                <img src="../images/image-32.jpg" alt="Gigo Restaurant">
+        </section>
+
+        <section class="home-intro section-padding">
+            <div class="container home-split">
+                <div class="home-copy">
+                    <p class="section-subtitle">A restaurant for a proper meal</p>
+                    <h2 class="section-title">Less staging, more good food and attentive service.</h2>
+                    <p class="text-large">Gigo is a family restaurant for guests who want reliable Serbian cooking, a quiet table, and staff who know the menu.</p>
+                    <p>The day starts with soups and kitchen prep, and ends with grill dishes, wine, and plates guests return to again.</p>
+                    <a href="o-nama.html" class="btn btn-outline">About the restaurant</a>
+                </div>
+                <div class="home-image-stack">
+                    <img class="home-image-large" src="../images/image-30.jpg" alt="Gigo Restaurant interior" loading="lazy">
+                    <img class="home-image-small" src="../images/galerija%203.jpg" alt="Dish from Gigo Restaurant" loading="lazy">
+                </div>
             </div>
-        </div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
+        </section>
+
+        <section class="home-menu-showcase section-padding">
             <div class="container">
-                <div class="hero-text">
-                    <span class="hero-subtitle">Welcome to</span>
-                    <h1 class="hero-title">Gigo Restaurant</h1>
-                    <p class="hero-tagline"><span data-years-since="1998">28</span> years of tradition and flavor</p>
-                    <p class="hero-description">Authentic Serbian cuisine prepared with care and love</p>
-                    <div class="hero-buttons">
-                        <a href="kontakt.html" class="btn btn-primary">Reserve a Table</a>
-                        <a href="jelovnik.html" class="btn btn-secondary">View Menu</a>
+                <div class="home-section-head">
+                    <div>
+                        <p class="section-subtitle">Menu</p>
+                        <h2 class="section-title">House classics, clearly grouped.</h2>
                     </div>
+                    <a href="jelovnik.html" class="btn btn-outline">Full menu</a>
+                </div>
+                <div class="signature-grid">
+                    <a href="jelovnik.html#predjela" class="signature-item"><img src="../images/galerija%202.jpg" alt="Starters" loading="lazy"><span>Starters</span></a>
+                    <a href="jelovnik.html#glavna-jela" class="signature-item signature-item--large"><img src="../images/galerija%203.jpg" alt="Main dishes" loading="lazy"><span>Main dishes and grill</span></a>
+                    <a href="vinska-karta.html" class="signature-item"><img src="../images/vinska-karta-sekcija.png" alt="Wine list" loading="lazy"><span>Wine with food</span></a>
                 </div>
             </div>
-        </div>
-        <div class="hero-slider-nav" aria-label="Slider navigation">
-            <button type="button" class="slider-dot active" data-slide="0" aria-label="First slide"></button>
-            <button type="button" class="slider-dot" data-slide="1" aria-label="Second slide"></button>
-            <button type="button" class="slider-dot" data-slide="2" aria-label="Third slide"></button>
-            <button type="button" class="slider-dot" data-slide="3" aria-label="Fourth slide"></button>
-        </div>
-    </section>
+        </section>
 
-    <!-- About Preview -->
-    <section class="about-preview section-padding">
-        <div class="container">
-            <div class="section-grid">
-                <div class="about-content">
-                    <span class="section-subtitle">Our story</span>
-                    <h2 class="section-title">About us</h2>
-                    <p class="text-large">Gigo Restaurant was founded in 1998 as a symbol of family tradition and a love for great food.</p>
-                    <p>For generations, we have cherished authentic Serbian recipes — each dish is prepared with care, without shortcuts. Our mission is to offer more than a meal: a warm welcome, the comfort of home, and flavors you remember.</p>
-                    <p>We use fresh, seasonal ingredients from local suppliers.</p>
-                    <a href="o-nama.html" class="btn btn-outline">Learn more</a>
+        <section class="home-standards section-padding">
+            <div class="container">
+                <div class="standards-head">
+                    <p class="section-subtitle">Our approach</p>
+                    <h2 class="section-title">What stays important here.</h2>
+                    <p>Good food, pleasant atmosphere, and attention to every guest.</p>
                 </div>
-                <div class="about-image">
-                    <div class="image-wrapper">
-                        <img src="../images/image-30.jpg" alt="Gigo Restaurant interior" loading="lazy">
-                        <div class="image-badge">
-                            <span class="badge-number" data-years-since="1998">28</span>
-                            <span class="badge-text">Years<br>of Tradition</span>
-                        </div>
-                    </div>
+                <div class="standards-grid">
+                    <div class="standard-line"><span>01</span><h3>Cooked to order</h3><p>Dishes leave the kitchen fresh, without unnecessary complication.</p></div>
+                    <div class="standard-line"><span>02</span><h3>Generous portions</h3><p>Lunch, dinner, or a family table follow the same rhythm: clear, warm, well served.</p></div>
+                    <div class="standard-line"><span>03</span><h3>Wine chosen with food</h3><p>Recommendations follow taste, dish, and budget, without theatre.</p></div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Features -->
-    <section class="features section-padding bg-dark">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-subtitle light">Why choose us</span>
-                <h2 class="section-title light">Great taste and an authentic experience</h2>
-            </div>
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-utensils"></i>
-                    </div>
-                    <h3>Traditional recipes</h3>
-                    <p>Dishes prepared using original recipes passed down through generations</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <h3>Fresh ingredients</h3>
-                    <p>Only the highest-quality fresh ingredients from local producers</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-wine-glass-alt"></i>
-                    </div>
-                    <h3>Wine selection</h3>
-                    <p>A rich collection of local and international wines thoughtfully paired with our cuisine</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-heart"></i>
-                    </div>
-                    <h3>Warm atmosphere</h3>
-                    <p>Spaces designed to feel welcoming, cozy, and unmistakably home-like</p>
+        <section class="home-gallery-strip section-padding">
+            <div class="container">
+                <div class="home-section-head">
+                    <div><p class="section-subtitle">Atmosphere</p><h2 class="section-title">Calm, warm, and easy to settle into.</h2></div>
+                    <a href="kontakt.html" class="btn btn-primary">Reserve</a>
                 </div>
             </div>
-        </div>
-    </section>
+            <div class="gallery-rail" aria-label="Restaurant gallery">
+                <img src="../images/gakerija%201.jpg" alt="Gigo Restaurant" loading="lazy">
+                <img src="../images/galerija%202.jpg" alt="Gigo Restaurant" loading="lazy">
+                <img src="../images/galerija%204.jpg" alt="Gigo Restaurant" loading="lazy">
+                <img src="../images/galerija%205.jpg" alt="Gigo Restaurant" loading="lazy">
+            </div>
+        </section>
 
-    <!-- Menu Preview -->
-    <section class="menu-preview section-padding">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-subtitle">Our offer</span>
-                <h2 class="section-title">Explore our menu</h2>
-                <p class="section-description">Every meal is a story of flavor and tradition. From breakfast to dinner, we serve authentic Serbian dishes that delight.</p>
-            </div>
-            <div class="menu-categories">
-                <div class="menu-card">
-                    <div class="menu-card-image">
-                        <img src="../images/galerija%202.jpg" alt="Starters" loading="lazy">
-                        <div class="menu-card-overlay">
-                            <a href="jelovnik.html#predjela" class="btn btn-light">View</a>
-                        </div>
-                    </div>
-                    <h3>Starters</h3>
-                    <p>Traditional starters to begin your meal the right way</p>
+        <section class="reviews-section home-reviews">
+            <div class="container reviews-layout">
+                <div class="reviews-head">
+                    <p class="section-subtitle">Guest impression</p>
+                    <h2 class="section-title">4.9 on TripAdvisor</h2>
+                    <p>Guests most often mention home-style food, a calm atmosphere, and service that can recommend the right dish.</p>
+                    <a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline"><i class="fab fa-tripadvisor" aria-hidden="true"></i> All reviews</a>
                 </div>
-                <div class="menu-card">
-                    <div class="menu-card-image">
-                        <img src="../images/galerija%203.jpg" alt="Main dishes" loading="lazy">
-                        <div class="menu-card-overlay">
-                            <a href="jelovnik.html#glavna-jela" class="btn btn-light">View</a>
-                        </div>
-                    </div>
-                    <h3>Main dishes</h3>
-                    <p>A rich selection of traditional specialties</p>
-                </div>
-                <div class="menu-card">
-                    <div class="menu-card-image">
-                        <img src="../images/galerija%204.jpg" alt="Desserts" loading="lazy">
-                        <div class="menu-card-overlay">
-                            <a href="jelovnik.html#deserti" class="btn btn-light">View</a>
-                        </div>
-                    </div>
-                    <h3>Desserts</h3>
-                    <p>Sweet bites to finish your meal perfectly</p>
+                <div class="reviews-grid">
+                    <figure class="review-card"><blockquote><p>Great food and ambiance. Definitely coming back.</p></blockquote><figcaption><span class="review-author">Alex S, TripAdvisor</span></figcaption></figure>
+                    <figure class="review-card"><blockquote><p>Looks humble from the street but marvellous inside. Try it and see for yourself.</p></blockquote><figcaption><span class="review-author">Julius H, TripAdvisor</span></figcaption></figure>
                 </div>
             </div>
-            <div class="text-center">
-                <a href="jelovnik.html" class="btn btn-primary">View full menu</a>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Wine Section -->
-    <section class="wine-section section-padding bg-dark">
-        <div class="container">
-            <div class="section-grid reverse">
-                <div class="wine-image">
-                    <img src="../images/vinska-karta-sekcija.png" alt="Wine list" loading="lazy">
-                </div>
-                <div class="wine-content">
-                    <span class="section-subtitle light">Wine cellar</span>
-                    <h2 class="section-title light">The best wines of Serbia</h2>
-                    <p class="text-large light">Our restaurant features a carefully curated selection of Serbian wines.</p>
-                    <p class="light">Our sommeliers have chosen standout labels from every region of Serbia, along with a selection of international bottles that pair beautifully with our cuisine. Whether you prefer red, white, or rosé, you'll find a wine to match your taste.</p>
-                    <a href="vinska-karta.html" class="btn btn-outline-light">View wine list</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery -->
-    <section class="gallery section-padding">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-subtitle">Gallery</span>
-                <h2 class="section-title">Feel the atmosphere</h2>
-            </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="../images/gakerija%201.jpg" alt="Gallery 1" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/galerija%202.jpg" alt="Gallery 2" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/galerija%203.jpg" alt="Gallery 3" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/galerija%204.jpg" alt="Gallery 4" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/galerija%205.jpg" alt="Gallery 5" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/galerija%206.jpg" alt="Gallery 6" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/galerija%205.jpg" alt="Gallery 7" loading="lazy">
-                </div>
-                <div class="gallery-item">
-                    <img src="../images/galerija%206.jpg" alt="Gallery 8" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section cta-section--premium">
-        <div class="cta-overlay"></div>
-        <div class="container">
-            <div class="cta-content">
-                <div class="cta-panel">
-                    <h2>Reserve a table today</h2>
-                    <p>Get in touch and we'll confirm your reservation as soon as possible.</p>
-                    <a href="kontakt.html" class="btn btn-primary-large">Reserve now</a>
-                    <div class="cta-trust" aria-label="Quick contact">
-                        <a href="tel:+381112612253">011 261 2253</a>
-                        <span class="cta-trust-hours">·&nbsp;Mon–Fri 10:00–23:00 · Weekend 09:00–00:00</span>
+        <section class="cta-section cta-section--premium home-final-cta">
+            <div class="cta-overlay"></div>
+            <div class="container">
+                <div class="cta-content">
+                    <div class="cta-panel">
+                        <p class="section-subtitle light">Reservations</p>
+                        <h2>A table for lunch, dinner, or a family gathering.</h2>
+                        <p>Call the restaurant and we will confirm the time without long back-and-forth.</p>
+                        <a href="kontakt.html" class="btn btn-primary-large">Reserve a table</a>
+                        <div class="cta-trust" aria-label="Quick contact"><a href="tel:+381112612253">011 261 2253</a><span class="cta-trust-hours">Mon-Fri 10:00-23:00 · Weekend 09:00-00:00</span></div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer footer--home">
-        <div class="container">
+        <div class="footer-inner">
             <div class="footer-grid">
-                <div class="footer-col">
+                <div class="footer-col footer-col--brand">
                     <a href="index.html" class="footer-brand" aria-label="Gigo Restaurant">
                         <img src="../images/logo-beli.png" alt="Gigo Restaurant" class="footer-logo">
                     </a>
-                    <p><span data-years-since="1998">28</span> years of tradition and flavor. Your place for authentic Serbian cuisine and unforgettable moments.</p>
+                    <p class="footer-tagline">Home cooking you keep coming back to.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Quick links</h4>
+                    <h4>Links</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="o-nama.html">About</a></li>
@@ -295,29 +201,34 @@
                 <div class="footer-col">
                     <h4>Working hours</h4>
                     <ul class="footer-info">
-                        <li><strong>Monday - Friday</strong></li>
-                        <li>10:00 - 23:00</li>
-                        <li><strong>Weekend</strong></li>
-                        <li>09:00 - 00:00</li>
+                        <li>
+                            <span class="fi-label">Mon – Sat</span>
+                            <span class="fi-value">10:00 – 23:00</span>
+                        </li>
+                        <li>
+                            <span class="fi-label">Sunday</span>
+                            <span class="fi-value">closed</span>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Contact</h4>
-                    <ul class="footer-info">
-                        <li><i class="fas fa-map-marker-alt"></i> Gornjogradska 7c, Zemun</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+381112612253">011 261 2253</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li>
+                    <ul class="footer-info footer-info--contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Gornjogradska 7c, Zemun</span></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381112612253">011/2612-253</a></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381611318967">061/1318-967</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom has-credit">
-                <p>&copy; 2026 Gigo Restaurant. All rights reserved.</p>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Gigo Restaurant. All rights reserved.</p>
                 <div class="footer-lang" aria-label="Language">
                     <a href="../index.html">SR</a>
                     <span aria-hidden="true">·</span>
                     <a href="index.html" class="active" aria-current="page">EN</a>
                 </div>
-                <div class="footer-credit" aria-label="Design and development">
+                <div class="footer-credit">
                     <span>Design &amp; Development:</span>
                     <a href="https://pansoft.rs" target="_blank" rel="noopener noreferrer" aria-label="Pansoft">
                         <img src="../images/pansoft%20logo%20bela%20slova-01.png" alt="Pansoft" class="footer-credit-logo">
@@ -336,3 +247,4 @@
     <script src="../js/main.js"></script>
 </body>
 </html>
+

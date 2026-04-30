@@ -1,0 +1,2046 @@
+/* ====================================
+   RESTORAN GIGO - HOMEPAGE PREMIUM POLISH
+   Refinement layer over the existing design
+   ==================================== */
+
+.page-home-modern {
+    --landing-container: 1240px;
+    --landing-gutter: clamp(20px, 3vw, 36px);
+    --landing-ink: #211710;
+    --landing-muted: #6f6258;
+    --landing-muted-strong: #4b3d33;
+    --landing-cream: #f3eadf;
+    --landing-cream-soft: #faf6ef;
+    --landing-paper: #fffaf2;
+    --landing-dark: #120d09;
+    --landing-dark-2: #1d130d;
+    --landing-gold: #bd8a52;
+    --landing-gold-soft: #d6aa74;
+    --landing-gold-deep: #936232;
+    --landing-line: rgba(58, 39, 24, 0.16);
+    --landing-line-dark: rgba(255, 255, 255, 0.12);
+    --landing-shadow: 0 22px 58px rgba(47, 28, 14, 0.14);
+    --landing-shadow-soft: 0 14px 34px rgba(47, 28, 14, 0.09);
+    --landing-shadow-deep: 0 28px 76px rgba(0, 0, 0, 0.34);
+    background: var(--landing-cream);
+    color: var(--landing-ink);
+}
+
+.page-home-modern .container {
+    width: min(var(--landing-container), calc(100% - (var(--landing-gutter) * 2)));
+    max-width: none;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.page-home-modern .section-padding,
+.page-home-modern .reviews-section {
+    padding: clamp(72px, 8vw, 112px) 0 !important;
+}
+
+.page-home-modern .section-subtitle {
+    color: var(--landing-gold-deep) !important;
+    font-size: 0.72rem !important;
+    font-weight: 700;
+    letter-spacing: 0.18em !important;
+    text-transform: uppercase;
+    margin: 0 0 1rem !important;
+}
+
+.page-home-modern .section-subtitle::before {
+    background: currentColor;
+    opacity: 0.58;
+}
+
+.page-home-modern .section-title {
+    color: var(--landing-ink);
+    font-size: clamp(2.18rem, 3.55vw, 4.05rem) !important;
+    line-height: 1.06 !important;
+    font-weight: 600;
+    letter-spacing: 0 !important;
+    max-width: 780px;
+    margin-bottom: 0;
+}
+
+.page-home-modern .section-note,
+.page-home-modern .home-copy p,
+.page-home-modern .reviews-head p {
+    color: var(--landing-muted);
+    max-width: 620px;
+    line-height: 1.76;
+}
+
+.page-home-modern .text-large {
+    font-size: clamp(1.08rem, 1.05vw, 1.24rem) !important;
+    line-height: 1.72 !important;
+    color: var(--landing-muted-strong) !important;
+}
+
+.page-home-modern .btn,
+.page-home-modern .btn-reserve,
+.page-home-modern .btn-primary-large {
+    border-radius: 0 !important;
+    min-height: 50px !important;
+    padding: 0.9rem 1.45rem !important;
+    font-size: 0.88rem !important;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    border-width: 1px !important;
+    box-shadow: none;
+    transition: background 180ms ease, border-color 180ms ease, color 180ms ease, transform 180ms ease, box-shadow 180ms ease;
+}
+
+.page-home-modern .btn:hover,
+.page-home-modern .btn-reserve:hover,
+.page-home-modern .btn-primary-large:hover {
+    transform: translateY(-1px) !important;
+}
+
+.page-home-modern .btn-primary,
+.page-home-modern .btn-primary-large,
+.page-home-modern .btn-reserve {
+    background: linear-gradient(180deg, var(--landing-gold-soft) 0%, var(--landing-gold) 100%) !important;
+    border-color: var(--landing-gold) !important;
+    color: #160f0a !important;
+    box-shadow: 0 12px 26px rgba(147, 98, 50, 0.18);
+}
+
+.page-home-modern .btn-primary:hover,
+.page-home-modern .btn-primary-large:hover,
+.page-home-modern .btn-reserve:hover {
+    background: linear-gradient(180deg, #deb27c 0%, #c9965f 100%) !important;
+    border-color: #d0a06a !important;
+    box-shadow: 0 16px 34px rgba(147, 98, 50, 0.24);
+}
+
+.page-home-modern .btn-outline,
+.page-home-modern .btn-secondary {
+    background: transparent !important;
+    border: 1px solid rgba(33, 23, 16, 0.36) !important;
+    color: var(--landing-ink) !important;
+}
+
+.page-home-modern .btn-outline:hover {
+    background: var(--landing-ink) !important;
+    border-color: var(--landing-ink) !important;
+    color: #fff !important;
+}
+
+/* 4. Secondary button in hero — elegantnije, tanji border */
+.page-home-modern .home-menu-showcase .btn-outline,
+.page-home-modern .home-hero .btn-secondary {
+    border-color: rgba(255, 255, 255, 0.28) !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: #fff !important;
+}
+
+/* 4b. Hover — subtilan */
+.page-home-modern .home-menu-showcase .btn-outline:hover,
+.page-home-modern .home-hero .btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.14) !important;
+    border-color: rgba(255, 255, 255, 0.48) !important;
+    color: #fff !important;
+}
+
+.page-home-modern .navbar {
+    padding: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    background: linear-gradient(180deg, rgba(16, 11, 7, 0.82), rgba(16, 11, 7, 0.22));
+    backdrop-filter: blur(12px);
+}
+
+.page-home-modern .navbar.scrolled {
+    background: rgba(18, 13, 9, 0.96) !important;
+    border-bottom-color: rgba(189, 138, 82, 0.24);
+}
+
+.page-home-modern .nav-wrapper {
+    min-height: 84px;
+    gap: 28px;
+}
+
+.page-home-modern .logo-img {
+    max-height: 52px !important;
+}
+
+.page-home-modern .nav-menu {
+    gap: clamp(0.9rem, 1.25vw, 1.45rem);
+}
+
+.page-home-modern .nav-link {
+    color: rgba(255, 255, 255, 0.84) !important;
+    font-size: 0.9rem !important;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    padding: 0.45rem 0;
+}
+
+.page-home-modern .nav-link:hover,
+.page-home-modern .nav-link.active {
+    color: #fff !important;
+}
+
+.page-home-modern .lang-switch {
+    border-color: rgba(255, 255, 255, 0.28);
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.page-home-modern .lang-switch a {
+    color: rgba(255, 255, 255, 0.76);
+}
+
+.page-home-modern .lang-switch a.active {
+    background: rgba(189, 138, 82, 0.95);
+    color: #140e09;
+}
+
+.page-home-modern .home-hero {
+    min-height: clamp(680px, 94vh, 880px) !important;
+    background: var(--landing-dark) !important;
+}
+
+.page-home-modern .home-hero .hero-slide img {
+    object-position: 58% 52% !important;
+    filter: saturate(1.04) contrast(1.04) brightness(0.95) !important;
+}
+
+.page-home-modern .home-hero .hero-overlay {
+    background:
+        linear-gradient(90deg, rgba(13, 8, 5, 0.92) 0%, rgba(13, 8, 5, 0.76) 34%, rgba(13, 8, 5, 0.34) 69%, rgba(13, 8, 5, 0.16) 100%),
+        linear-gradient(180deg, rgba(13, 8, 5, 0.48) 0%, rgba(13, 8, 5, 0.08) 46%, rgba(13, 8, 5, 0.86) 100%) !important;
+}
+
+/* 1. Hero content — lift slightly */
+.page-home-modern .home-hero .hero-content {
+    align-items: center !important;
+    padding: 90px 0 100px !important;
+    text-align: left;
+}
+
+.page-home-modern .home-hero .container.home-hero-grid {
+    width: min(var(--landing-container), calc(100% - (var(--landing-gutter) * 2))) !important;
+}
+
+.page-home-modern .home-hero .hero-text {
+    width: min(540px, 100%) !important;
+}
+
+.page-home-modern .home-hero .hero-kicker {
+    color: #e2bb82 !important;
+    font-size: 0.76rem !important;
+    letter-spacing: 0.2em !important;
+    margin-bottom: 1.375rem !important; /* 22px — eyebrow → title */
+}
+
+.page-home-modern .home-hero .hero-title {
+    font-size: clamp(4rem, 7.2vw, 7.25rem) !important;
+    line-height: 0.92 !important;
+    max-width: 9ch !important;
+    margin-bottom: 2rem !important; /* 32px — title → tagline */
+    font-weight: 600 !important;
+    letter-spacing: 0 !important;
+    text-shadow: 0 18px 60px rgba(0, 0, 0, 0.54) !important;
+}
+
+/* 2. Tagline — wider, smaller font so it breaks after "ambijent" */
+.page-home-modern .home-hero .hero-tagline {
+    color: rgba(255, 255, 255, 0.88) !important;
+    font-size: clamp(1.175rem, 1.35vw, 1.4375rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+    max-width: 640px !important;
+    margin-top: 0 !important;
+    margin-bottom: 2.125rem !important; /* 34px — tagline → buttons */
+}
+
+.page-home-modern .home-hero .hero-buttons {
+    gap: 1rem; /* 16px — between the two buttons */
+}
+
+.page-home-modern .home-hero .btn {
+    min-height: 54px !important;
+    padding: 0.92rem 1.55rem !important;
+}
+
+/* 5. Contact line — diskretnije, malo niže */
+.page-home-modern .hero-contact-line {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-size: 0.88rem !important;
+    margin-top: 1.625rem !important; /* 26px — buttons → contact */
+    letter-spacing: 0.02em;
+}
+
+.page-home-modern .home-intro {
+    background: var(--landing-cream);
+}
+
+.page-home-modern .home-split {
+    grid-template-columns: minmax(0, 0.88fr) minmax(420px, 1.12fr) !important;
+    gap: clamp(42px, 6.8vw, 96px) !important;
+    align-items: center;
+}
+
+.page-home-modern .home-copy {
+    max-width: 590px;
+    padding: 0 0 clamp(8px, 1.2vw, 16px);
+}
+
+.page-home-modern .home-copy p:not(.section-subtitle) {
+    margin-top: 1.15rem;
+}
+
+.page-home-modern .home-copy .btn {
+    margin-top: 1rem;
+}
+
+.page-home-modern .home-image-stack {
+    position: relative;
+    height: clamp(400px, 42vw, 590px) !important;
+    min-height: 0 !important;
+    box-shadow: var(--landing-shadow);
+    overflow: hidden;
+    background: #d9cbbb;
+}
+
+.page-home-modern .home-image-stack::after {
+    content: '';
+    position: absolute;
+    inset: 14px;
+    border: 1px solid rgba(255, 255, 255, 0.34);
+    pointer-events: none;
+}
+
+.page-home-modern .home-image-large {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    object-position: center;
+}
+
+.page-home-modern .home-menu-showcase {
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.035), transparent 18%),
+        radial-gradient(circle at 12% 12%, rgba(189, 138, 82, 0.14), transparent 30%),
+        linear-gradient(135deg, #110c08 0%, #1b120d 60%, #24170f 100%) !important;
+    color: #fff;
+}
+
+.page-home-modern .home-menu-showcase .section-title,
+.page-home-modern .home-menu-showcase .section-note {
+    color: #fff !important;
+}
+
+.page-home-modern .home-menu-showcase .section-note {
+    opacity: 0.72;
+    margin-top: 0.85rem;
+}
+
+.page-home-modern .home-section-head {
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    gap: clamp(1.5rem, 4vw, 4rem) !important;
+    align-items: end;
+    margin-bottom: clamp(34px, 4.2vw, 56px) !important;
+}
+
+.page-home-modern .signature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: clamp(16px, 2vw, 24px) !important;
+}
+
+.page-home-modern .signature-item,
+.page-home-modern .signature-item--large {
+    position: relative;
+    min-height: 0 !important;
+    height: clamp(340px, 35vw, 500px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: var(--landing-shadow-deep);
+    overflow: hidden;
+}
+
+.page-home-modern .signature-item::after {
+    background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0.04) 10%, rgba(0, 0, 0, 0.52) 62%, rgba(0, 0, 0, 0.82) 100%),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.18), transparent 68%) !important;
+}
+
+.page-home-modern .signature-item::before {
+    content: '';
+    position: absolute;
+    inset: 12px;
+    z-index: 2;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    opacity: 0;
+    transition: opacity 180ms ease;
+    pointer-events: none;
+}
+
+.page-home-modern .signature-item:hover::before {
+    opacity: 1;
+}
+
+.page-home-modern .signature-item img {
+    object-fit: cover;
+    object-position: center;
+    transition: transform 420ms ease;
+}
+
+.page-home-modern .signature-item:hover img {
+    transform: scale(1.035);
+}
+
+.page-home-modern .signature-item:nth-child(1) img {
+    object-position: 50% 58%;
+}
+
+.page-home-modern .signature-item:nth-child(2) img {
+    object-position: 46% 54%;
+}
+
+.page-home-modern .signature-item:nth-child(3) img {
+    object-position: 44% 50%;
+}
+
+.page-home-modern .signature-copy {
+    position: absolute;
+    z-index: 3;
+    left: clamp(22px, 2.4vw, 34px);
+    right: clamp(22px, 2.4vw, 34px);
+    bottom: clamp(22px, 2.4vw, 34px);
+}
+
+.page-home-modern .signature-copy h3 {
+    color: #fff;
+    font-size: clamp(1.55rem, 2.25vw, 2.35rem) !important;
+    line-height: 1.08 !important;
+    font-weight: 600;
+    margin: 0 0 0.55rem !important;
+}
+
+.page-home-modern .signature-copy p {
+    color: rgba(255, 255, 255, 0.78) !important;
+    font-size: 0.94rem !important;
+    margin: 0;
+}
+
+.page-home-modern .signature-item > span {
+    display: none !important;
+}
+
+.page-home-modern .home-standards {
+    background:
+        radial-gradient(circle at 18% 18%, rgba(183, 127, 67, 0.06), transparent 28%),
+        linear-gradient(180deg, var(--landing-cream-soft), #f5ecdf) !important;
+}
+
+.page-home-modern .home-standards .container {
+    width: min(1360px, calc(100% - 128px));
+    max-width: 1360px;
+}
+
+.page-home-modern .standards-head {
+    max-width: 820px;
+    margin: 0 0 clamp(48px, 5vw, 72px);
+    text-align: left;
+}
+
+.page-home-modern .standards-head .section-title {
+    max-width: 760px;
+}
+
+.page-home-modern .standards-head p:not(.section-subtitle) {
+    max-width: 620px;
+    margin: 1.15rem 0 0;
+    color: var(--landing-muted-strong) !important;
+}
+
+.page-home-modern .standards-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(48px, 5vw, 76px);
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+}
+
+.page-home-modern .standard-line {
+    position: relative;
+    padding: 28px 0 0 !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    overflow: visible;
+}
+
+.page-home-modern .standard-line::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 58px;
+    height: 1px;
+    background: linear-gradient(90deg, rgba(139, 87, 42, 0.78), rgba(213, 170, 115, 0.16));
+}
+
+.page-home-modern .standard-line:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 28px;
+    right: calc(clamp(48px, 5vw, 76px) / -2);
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, rgba(82, 55, 35, 0.13), transparent 78%);
+}
+
+.page-home-modern .standard-line span {
+    display: block;
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    background: transparent;
+    border: 0;
+    color: var(--landing-gold-deep) !important;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+    font-weight: 800;
+}
+
+.page-home-modern .standard-line h3 {
+    color: var(--landing-ink);
+    font-family: var(--font-heading);
+    font-size: clamp(1.55rem, 1.9vw, 2rem) !important;
+    line-height: 1.12 !important;
+    font-weight: 500;
+    letter-spacing: 0 !important;
+    margin: 1.15rem 0 0.85rem !important;
+}
+
+.page-home-modern .standard-line p {
+    color: var(--landing-muted) !important;
+    line-height: 1.78 !important;
+    max-width: 32ch;
+    margin: 0;
+}
+
+.page-home-modern .home-gallery-strip {
+    background: var(--landing-cream) !important;
+}
+
+.page-home-modern .gallery-rail {
+    width: min(var(--landing-container), calc(100% - (var(--landing-gutter) * 2))) !important;
+    margin-left: auto;
+    margin-right: auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    gap: clamp(14px, 1.5vw, 20px) !important;
+}
+
+.page-home-modern .gallery-rail img {
+    height: clamp(250px, 24vw, 380px) !important;
+    object-fit: cover;
+    box-shadow: 0 16px 38px rgba(47, 28, 14, 0.13);
+}
+
+.page-home-modern .gallery-rail img:nth-child(1) { object-position: 52% 52%; }
+.page-home-modern .gallery-rail img:nth-child(2) { object-position: 50% 58%; }
+.page-home-modern .gallery-rail img:nth-child(3) { object-position: center; }
+.page-home-modern .gallery-rail img:nth-child(4) { object-position: 48% 50%; }
+
+.page-home-modern .home-reviews {
+    background: linear-gradient(180deg, #efe4d6 0%, #f6eee4 100%) !important;
+}
+
+.page-home-modern .reviews-layout {
+    grid-template-columns: minmax(0, 0.82fr) minmax(420px, 1.18fr) !important;
+    gap: clamp(42px, 6vw, 88px) !important;
+    align-items: center;
+}
+
+.page-home-modern .reviews-head {
+    text-align: left;
+    margin: 0;
+    max-width: 520px;
+}
+
+.page-home-modern .reviews-head .btn {
+    margin-top: 0.75rem;
+}
+
+.page-home-modern .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-top: 0;
+}
+
+.page-home-modern .home-reviews .review-card {
+    border: 1px solid rgba(58, 39, 24, 0.11) !important;
+    border-left: 3px solid var(--landing-gold) !important;
+    background: rgba(255, 250, 242, 0.84) !important;
+    box-shadow: var(--landing-shadow-soft) !important;
+    padding: clamp(26px, 3.2vw, 38px) !important;
+}
+
+.page-home-modern .home-reviews .review-card blockquote p {
+    color: #35271d !important;
+    font-size: clamp(1.05rem, 1.12vw, 1.18rem) !important;
+    line-height: 1.64 !important;
+}
+
+.page-home-modern .review-author {
+    color: var(--landing-muted);
+}
+
+/* ====================================
+   FINAL CTA — SPLIT LAYOUT
+   ==================================== */
+
+.page-home-modern .home-final-cta {
+    position: relative;
+    background-image: url('../images/image-31.jpg');
+    background-size: cover;
+    background-position: center 52%;
+    color: #fff;
+}
+
+.page-home-modern .home-final-cta .cta-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(
+            105deg,
+            rgba(8, 4, 2, 0.80) 0%,
+            rgba(12, 7, 4, 0.58) 50%,
+            rgba(6, 3, 1, 0.82) 100%
+        );
+}
+
+.page-home-modern .cta-split-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 104px 48px;
+    display: grid;
+    grid-template-columns: 1.15fr 0.85fr;
+    gap: 64px;
+    align-items: center;
+}
+
+.page-home-modern .cta-split-left {
+    text-align: left;
+}
+
+.page-home-modern .cta-label {
+    display: block;
+    font-size: 0.6875rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: rgba(204, 168, 121, 0.72);
+    margin-bottom: 18px;
+}
+
+.page-home-modern .cta-split-title {
+    font-family: var(--font-serif, 'Playfair Display', serif);
+    font-size: clamp(48px, 5vw, 68px);
+    font-weight: 400;
+    line-height: 0.98;
+    letter-spacing: -0.02em;
+    color: #fff;
+    margin: 0 0 22px;
+}
+
+.page-home-modern .cta-split-text {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: rgba(245, 236, 224, 0.76);
+    max-width: 540px;
+    margin: 0;
+}
+
+.page-home-modern .cta-split-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.page-home-modern .cta-info-block {
+    background: rgba(22, 14, 10, 0.58);
+    border: 1px solid rgba(204, 168, 121, 0.18);
+    border-radius: 8px;
+    padding: 34px 38px;
+    width: 100%;
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+.page-home-modern .cta-info-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.page-home-modern .cta-info-label {
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(204, 168, 121, 0.68);
+}
+
+.page-home-modern .cta-info-value {
+    display: block;
+    font-size: 1rem;
+    color: rgba(245, 236, 224, 0.84);
+    text-decoration: none;
+    line-height: 1.6;
+}
+
+/* Phone number slightly more prominent */
+.page-home-modern a.cta-info-value {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: rgba(245, 236, 224, 0.92);
+    letter-spacing: 0.01em;
+}
+
+.page-home-modern a.cta-info-value:hover {
+    color: #fff;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.page-home-modern .cta-split-btn {
+    display: inline-block;
+    align-self: flex-start;
+    background: #7d5228;
+    color: #fff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 16px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.22s ease;
+    margin-top: 4px;
+}
+
+.page-home-modern .cta-split-btn:hover {
+    background: #8f6030;
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 1023px) {
+    .page-home-modern .cta-split-container {
+        gap: 52px;
+        padding: 88px 40px;
+    }
+}
+
+@media (max-width: 767px) {
+    .page-home-modern .cta-split-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 60px 24px;
+    }
+
+    .page-home-modern .cta-split-title {
+        font-size: clamp(36px, 10vw, 52px);
+    }
+
+    .page-home-modern .cta-split-right {
+        justify-content: flex-start;
+    }
+
+    .page-home-modern .cta-info-block {
+        max-width: 100%;
+        padding: 26px 24px;
+        gap: 18px;
+    }
+
+    .page-home-modern .cta-split-btn {
+        width: 100%;
+        text-align: center;
+        align-self: stretch;
+    }
+}
+
+/* ====================================
+   FOOTER — PREMIUM REDESIGN (FINAL)
+   ==================================== */
+
+/* ---- Wrapper ---- */
+.page-home-modern .footer--home {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    background:
+        radial-gradient(ellipse at 18% 0%,  rgba(160, 110, 55, 0.10), transparent 42%),
+        radial-gradient(ellipse at 82% 100%, rgba(100, 58, 20, 0.12), transparent 38%),
+        linear-gradient(180deg, #16100b 0%, #0f0b08 55%, #080604 100%);
+    border-top: 1px solid rgba(204, 168, 121, 0.14);
+}
+
+.page-home-modern .footer--home::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: min(1200px, calc(100% - 48px));
+    height: 1px;
+    transform: translateX(-50%);
+    background: linear-gradient(90deg, transparent, rgba(204, 168, 121, 0.38), transparent);
+    pointer-events: none;
+}
+
+/* ---- Inner container ---- */
+.page-home-modern .footer-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 80px clamp(20px, 4vw, 48px) 0;
+}
+
+/* ---- Upper grid ---- */
+.page-home-modern .footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 0.72fr 0.9fr 1.08fr;
+    gap: 48px;
+    align-items: start;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(246, 232, 211, 0.08);
+    margin-bottom: 0;
+}
+
+/* ---- Col 1: Brand ---- */
+.page-home-modern .footer-col--brand {
+    padding-top: 2px;
+}
+
+.page-home-modern .footer-logo {
+    height: clamp(54px, 4.2vw, 70px);
+    opacity: 0.90;
+    display: block;
+}
+
+.page-home-modern .footer-tagline {
+    max-width: 252px;
+    margin: 18px 0 22px;
+    font-size: 0.875rem;
+    line-height: 1.72;
+    color: rgba(230, 215, 193, 0.52);
+    letter-spacing: 0;
+}
+
+/* Social icons */
+.page-home-modern .social-links {
+    display: flex;
+    gap: 10px;
+}
+
+.page-home-modern .social-links a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 5px;
+    background: transparent;
+    border: 1px solid rgba(204, 168, 121, 0.20);
+    color: rgba(246, 232, 211, 0.72);
+    font-size: 0.82rem;
+    transition: background 0.22s, border-color 0.22s, color 0.22s, transform 0.22s;
+}
+
+.page-home-modern .social-links a:hover {
+    background: rgba(160, 110, 55, 0.14);
+    border-color: rgba(204, 168, 121, 0.44);
+    color: #f5ece0;
+    transform: translateY(-2px);
+}
+
+/* ---- Column headings ---- */
+.page-home-modern .footer--home h4 {
+    font-family: var(--font-primary);
+    font-size: 0.625rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(204, 168, 121, 0.78);
+    margin-bottom: 1.25rem;
+}
+
+/* ---- Nav links ---- */
+.page-home-modern .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.page-home-modern .footer-links a {
+    font-size: 0.9rem;
+    color: rgba(246, 232, 211, 0.62);
+    transition: color 0.2s, transform 0.2s;
+    display: inline-block;
+}
+
+.page-home-modern .footer-links a:hover {
+    color: #f0dfc2;
+    transform: translateX(3px);
+}
+
+/* ---- Hours list ---- */
+.page-home-modern .footer-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+.page-home-modern .footer-info li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+}
+
+.page-home-modern .fi-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    color: rgba(204, 168, 121, 0.58);
+    text-transform: uppercase;
+}
+
+.page-home-modern .fi-value {
+    font-size: 0.9rem;
+    color: rgba(246, 232, 211, 0.80);
+}
+
+/* ---- Contact list ---- */
+.page-home-modern .footer-info--contact li {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.6rem;
+}
+
+.page-home-modern .footer-info--contact i {
+    width: 15px;
+    min-width: 15px;
+    margin-top: 0.22rem;
+    font-size: 0.78rem;
+    color: rgba(204, 168, 121, 0.65);
+    text-align: center;
+}
+
+.page-home-modern .footer-info--contact span,
+.page-home-modern .footer-info--contact a {
+    font-size: 0.9rem;
+    color: rgba(246, 232, 211, 0.68);
+    overflow-wrap: anywhere;
+    transition: color 0.2s;
+}
+
+.page-home-modern .footer-info--contact a:hover {
+    color: #f0dfc2;
+}
+
+/* ---- Bottom bar ---- */
+.page-home-modern .footer-bottom {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+    align-items: center;
+    gap: 20px;
+    padding: 22px 0 32px;
+    font-size: 0.775rem;
+    color: rgba(246, 232, 211, 0.40);
+}
+
+.page-home-modern .footer-copy {
+    margin: 0;
+    white-space: nowrap;
+}
+
+.page-home-modern .footer-lang {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 12px;
+    border: 1px solid rgba(204, 168, 121, 0.14);
+    border-radius: 999px;
+    color: rgba(246, 232, 211, 0.36);
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+}
+
+.page-home-modern .footer-lang a {
+    padding: 2px 4px;
+    color: rgba(246, 232, 211, 0.52);
+    transition: color 0.2s;
+}
+
+.page-home-modern .footer-lang a:hover {
+    color: #f0dfc2;
+}
+
+.page-home-modern .footer-lang a.active,
+.page-home-modern .footer-lang a[aria-current="page"] {
+    color: rgba(204, 168, 121, 0.92);
+}
+
+.page-home-modern .footer-credit {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgba(246, 232, 211, 0.40);
+    white-space: nowrap;
+}
+
+.page-home-modern .footer-credit a {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 10px;
+    border: 1px solid rgba(246, 232, 211, 0.09);
+    border-radius: 4px;
+    background: rgba(255, 250, 242, 0.025);
+    transition: background 0.22s, border-color 0.22s;
+}
+
+.page-home-modern .footer-credit a:hover {
+    background: rgba(160, 110, 55, 0.10);
+    border-color: rgba(204, 168, 121, 0.22);
+}
+
+.page-home-modern .footer-credit-logo {
+    height: 24px;
+    opacity: 0.82;
+}
+
+.page-home-modern .back-to-top {
+    width: 38px;
+    height: 38px;
+    right: 18px;
+    bottom: 18px;
+    border-radius: 4px;
+    background: rgba(10, 7, 5, 0.78);
+    border: 1px solid rgba(214, 170, 116, 0.22);
+    color: rgba(246, 232, 211, 0.7);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.24), inset 0 1px 0 rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(10px);
+}
+
+.page-home-modern .back-to-top:hover {
+    background: rgba(189, 138, 82, 0.2);
+    border-color: rgba(214, 170, 116, 0.46);
+    color: #f9efe0;
+}
+
+@media (max-width: 980px) {
+    .page-home-modern .home-standards .container {
+        width: min(100% - 64px, 1360px);
+    }
+
+    .page-home-modern .home-split,
+    .page-home-modern .reviews-layout {
+        grid-template-columns: 1fr !important;
+    }
+
+    .page-home-modern .home-section-head {
+        grid-template-columns: 1fr !important;
+        align-items: start;
+    }
+
+    .page-home-modern .signature-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .page-home-modern .signature-item,
+    .page-home-modern .signature-item--large {
+        height: clamp(280px, 54vw, 400px) !important;
+    }
+
+    .page-home-modern .standards-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 44px 52px;
+    }
+
+    .page-home-modern .standard-line:not(:last-child)::after {
+        display: none;
+    }
+
+    .page-home-modern .gallery-rail {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: auto !important;
+    }
+
+    .page-home-modern .gallery-rail img {
+        grid-row: auto !important;
+        grid-column: auto !important;
+        height: clamp(200px, 28vw, 300px) !important;
+    }
+
+    .page-home-modern .footer--home .footer-grid {
+        grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+        gap: 40px 34px;
+    }
+
+    .page-home-modern .footer-bottom {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+        gap: 14px;
+    }
+
+    .page-home-modern .footer-credit {
+        justify-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-home-modern .container {
+        width: min(100% - 32px, var(--landing-container));
+    }
+
+    .page-home-modern .home-standards .container {
+        width: min(100% - 48px, 1360px);
+    }
+
+    .page-home-modern .navbar {
+        background: rgba(18, 13, 9, 0.96) !important;
+    }
+
+    .page-home-modern .nav-wrapper {
+        min-height: 70px;
+    }
+
+    .page-home-modern .logo-img {
+        max-height: 42px !important;
+    }
+
+    .page-home-modern .mobile-toggle span {
+        background: #fff;
+    }
+
+    .page-home-modern .nav-menu {
+        background: rgba(18, 13, 9, 0.98) !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.12);
+        padding:
+            calc(env(safe-area-inset-top) + 84px)
+            1rem
+            calc(env(safe-area-inset-bottom) + 1.25rem);
+    }
+
+    .page-home-modern .nav-menu.active {
+        display: flex;
+    }
+
+    .page-home-modern .nav-menu li,
+    .page-home-modern .nav-link,
+    .page-home-modern .btn-reserve {
+        width: 100%;
+    }
+
+    .page-home-modern .home-hero {
+        min-height: 660px !important;
+    }
+
+    .page-home-modern .home-hero .hero-slide img {
+        object-position: 60% center !important;
+    }
+
+    .page-home-modern .home-hero .hero-overlay {
+        background:
+            linear-gradient(180deg, rgba(15, 10, 6, 0.76) 0%, rgba(15, 10, 6, 0.58) 38%, rgba(15, 10, 6, 0.9) 100%),
+            linear-gradient(90deg, rgba(15, 10, 6, 0.64), rgba(15, 10, 6, 0.22)) !important;
+    }
+
+    .page-home-modern .home-hero .hero-content {
+        align-items: flex-end !important;
+        padding: 106px 0 42px !important;
+        text-align: left;
+    }
+
+    .page-home-modern .home-hero .hero-title {
+        font-size: clamp(3.2rem, 13vw, 4.65rem) !important;
+        max-width: 8.5ch !important;
+    }
+
+    .page-home-modern .home-hero .hero-tagline {
+        font-size: 1.04rem !important;
+    }
+
+    .page-home-modern .home-hero .hero-buttons {
+        align-items: stretch;
+    }
+
+    .page-home-modern .home-hero .btn {
+        width: 100%;
+    }
+
+    .page-home-modern .section-padding,
+    .page-home-modern .reviews-section {
+        padding: 62px 0 !important;
+    }
+
+    .page-home-modern .section-title {
+        font-size: clamp(1.9rem, 9vw, 2.7rem) !important;
+    }
+
+    .page-home-modern .home-image-stack {
+        height: 330px !important;
+    }
+
+    .page-home-modern .gallery-rail {
+        grid-template-columns: 1fr !important;
+    }
+
+    .page-home-modern .standards-head {
+        text-align: left;
+    }
+
+    .page-home-modern .standards-head .section-title,
+    .page-home-modern .standards-head p:not(.section-subtitle) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .page-home-modern .standards-grid {
+        grid-template-columns: 1fr !important;
+        gap: 0;
+    }
+
+    .page-home-modern .standard-line {
+        padding: 26px 0 !important;
+        border-top: 1px solid rgba(82, 55, 35, 0.12) !important;
+    }
+
+    .page-home-modern .standard-line::before {
+        top: 26px;
+        width: 46px;
+    }
+
+    .page-home-modern .standard-line span {
+        margin-top: 18px;
+    }
+
+    .page-home-modern .standard-line p {
+        max-width: none;
+    }
+
+    .page-home-modern .gallery-rail img {
+        height: 260px !important;
+    }
+
+    .page-home-modern .reviews-head {
+        max-width: none;
+    }
+
+    .page-home-modern .footer--home .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding-bottom: 40px;
+    }
+
+    .page-home-modern .footer-inner {
+        padding-top: 60px;
+    }
+
+    .page-home-modern .footer--home h4 {
+        margin-bottom: 0.85rem;
+    }
+
+    .page-home-modern .footer-bottom {
+        padding-bottom: 28px;
+    }
+
+    .page-home-modern .footer-credit {
+        flex-wrap: wrap;
+        justify-content: center;
+        white-space: normal;
+    }
+
+    .page-home-modern .back-to-top {
+        width: 34px;
+        height: 34px;
+        right: 14px;
+        bottom: 14px;
+    }
+}
+
+/* ====================================
+   ART-DIRECTED PREMIUM SYSTEM LAYER
+   ==================================== */
+
+body.page-home-modern {
+    --landing-container: 1180px;
+    --landing-gutter: clamp(22px, 4vw, 46px);
+    --landing-ink: #21150e;
+    --landing-muted: #706258;
+    --landing-muted-strong: #4a392e;
+    --landing-cream: #efe4d6;
+    --landing-cream-soft: #f8f1e7;
+    --landing-paper: #fff9ef;
+    --landing-dark: #100a06;
+    --landing-dark-2: #1c120b;
+    --landing-gold: #b77f43;
+    --landing-gold-soft: #d5aa73;
+    --landing-gold-deep: #8b572a;
+    --landing-line: rgba(52, 33, 20, 0.14);
+    --landing-shadow: 0 26px 70px rgba(41, 24, 12, 0.15);
+    --landing-shadow-soft: 0 16px 42px rgba(41, 24, 12, 0.09);
+    background:
+        radial-gradient(circle at 10% 8%, rgba(183, 127, 67, 0.06), transparent 28%),
+        linear-gradient(180deg, #f7efe4 0%, #efe4d6 42%, #f5ecdf 100%);
+    color: var(--landing-ink);
+    font-size: 16px;
+    text-rendering: optimizeLegibility;
+}
+
+.page-home-modern .section-padding,
+.page-home-modern .reviews-section {
+    padding-top: clamp(88px, 9vw, 132px) !important;
+    padding-bottom: clamp(88px, 9vw, 132px) !important;
+}
+
+.page-home-modern .section-header {
+    margin-bottom: clamp(34px, 4.4vw, 62px) !important;
+}
+
+.page-home-modern .section-subtitle,
+.page-home-modern .home-hero .hero-kicker {
+    color: var(--landing-gold-deep) !important;
+    font-size: 0.69rem !important;
+    font-style: normal !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.2em !important;
+    line-height: 1.25 !important;
+    margin-bottom: 1.05rem !important;
+}
+
+.page-home-modern .section-title {
+    color: var(--landing-ink);
+    font-size: clamp(2.55rem, 4.25vw, 5rem) !important;
+    line-height: 0.98 !important;
+    font-weight: 600 !important;
+    letter-spacing: 0 !important;
+    max-width: 820px;
+}
+
+.page-home-modern p,
+.page-home-modern .section-note,
+.page-home-modern .home-copy p,
+.page-home-modern .reviews-head p,
+.page-home-modern .text-large {
+    color: var(--landing-muted);
+    font-size: clamp(1rem, 0.34vw + 0.94rem, 1.14rem) !important;
+    line-height: 1.82 !important;
+}
+
+.page-home-modern .navbar {
+    background: linear-gradient(180deg, rgba(12, 8, 5, 0.9), rgba(12, 8, 5, 0.28)) !important;
+    border-bottom: 1px solid rgba(245, 228, 204, 0.13) !important;
+    box-shadow: 0 12px 34px rgba(0, 0, 0, 0.12);
+}
+
+.page-home-modern .navbar.scrolled {
+    background: rgba(15, 10, 6, 0.95) !important;
+    border-bottom-color: rgba(213, 170, 115, 0.26) !important;
+}
+
+.page-home-modern .nav-wrapper {
+    min-height: 88px;
+}
+
+.page-home-modern .logo-img {
+    max-height: 56px !important;
+}
+
+.page-home-modern .nav-menu {
+    gap: clamp(1.05rem, 1.55vw, 1.75rem) !important;
+}
+
+.page-home-modern .nav-link {
+    position: relative;
+    color: rgba(249, 239, 224, 0.82) !important;
+    font-size: 0.82rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.08em !important;
+    text-transform: uppercase;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.page-home-modern .nav-link:hover {
+    color: rgba(255, 250, 242, 0.96) !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.page-home-modern .nav-link.active,
+.page-home-modern .nav-link[aria-current="page"],
+.page-home-modern .nav-link[aria-current="true"] {
+    color: rgba(246, 223, 189, 0.98) !important;
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.page-home-modern .nav-link:active,
+.page-home-modern .nav-link:focus,
+.page-home-modern .nav-link:focus-visible {
+    background: transparent !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    transform: none !important;
+}
+
+.page-home-modern .lang-switch {
+    border-color: rgba(245, 228, 204, 0.18) !important;
+    background: rgba(255, 250, 242, 0.055) !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.page-home-modern .lang-switch a {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+}
+
+.page-home-modern .btn,
+.page-home-modern .btn-reserve,
+.page-home-modern .btn-primary-large {
+    min-height: 54px !important;
+    padding: 1rem 1.65rem !important;
+    border-radius: 3px !important;
+    font-size: 0.78rem !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.13em !important;
+    text-transform: uppercase;
+}
+
+.page-home-modern .btn-primary,
+.page-home-modern .btn-primary-large,
+.page-home-modern .btn-reserve {
+    background: linear-gradient(180deg, #d7aa72 0%, #b77f43 100%) !important;
+    border-color: rgba(213, 170, 115, 0.86) !important;
+    box-shadow: 0 16px 36px rgba(120, 72, 32, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.24) !important;
+}
+
+.page-home-modern .btn-primary:hover,
+.page-home-modern .btn-primary-large:hover,
+.page-home-modern .btn-reserve:hover {
+    background: linear-gradient(180deg, #e2b982 0%, #c38e53 100%) !important;
+    box-shadow: 0 20px 44px rgba(120, 72, 32, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.28) !important;
+}
+
+.page-home-modern .btn-outline,
+.page-home-modern .btn-secondary {
+    border-color: rgba(52, 33, 20, 0.32) !important;
+    background: rgba(255, 250, 242, 0.18) !important;
+}
+
+.page-home-modern .home-hero {
+    min-height: clamp(720px, 96vh, 940px) !important;
+}
+
+.page-home-modern .home-hero .hero-slide img,
+.page-home-modern .page-header {
+    filter: saturate(1.03) contrast(1.06) brightness(0.94);
+}
+
+/* 3. Overlay — mekši prelaz levo, manje ugušena fotografija */
+.page-home-modern .home-hero .hero-overlay {
+    background:
+        radial-gradient(circle at 28% 48%, rgba(183, 127, 67, 0.12), transparent 38%),
+        linear-gradient(90deg, rgba(11, 7, 4, 0.82) 0%, rgba(11, 7, 4, 0.66) 28%, rgba(11, 7, 4, 0.30) 58%, rgba(11, 7, 4, 0.10) 82%, transparent 100%),
+        linear-gradient(180deg, rgba(11, 7, 4, 0.46) 0%, rgba(11, 7, 4, 0.06) 46%, rgba(11, 7, 4, 0.82) 100%) !important;
+}
+
+.page-home-modern .home-hero .hero-title {
+    font-size: clamp(4.8rem, 8vw, 8.4rem) !important;
+    line-height: 0.92 !important;
+    max-width: 8ch !important;
+    margin-bottom: 2rem !important; /* 32px — override lower block */
+    text-shadow: 0 22px 70px rgba(0, 0, 0, 0.58) !important;
+}
+
+.page-home-modern .home-hero .hero-tagline {
+    max-width: 640px !important;
+    color: rgba(255, 250, 242, 0.9) !important;
+    font-size: clamp(1.175rem, 1.35vw, 1.4375rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.5 !important;
+}
+
+.page-home-modern .home-image-stack,
+.page-home-modern .signature-item,
+.page-home-modern .signature-item--large,
+.page-home-modern .gallery-rail img {
+    border-radius: 4px;
+    box-shadow: 0 24px 64px rgba(41, 24, 12, 0.16);
+}
+
+.page-home-modern .home-image-stack::after,
+.page-home-modern .signature-item::before {
+    border-radius: 2px;
+    border-color: rgba(255, 250, 242, 0.28);
+}
+
+.page-home-modern .home-menu-showcase {
+    background:
+        radial-gradient(circle at 16% 16%, rgba(213, 170, 115, 0.16), transparent 34%),
+        radial-gradient(circle at 86% 78%, rgba(90, 50, 24, 0.22), transparent 36%),
+        linear-gradient(135deg, #0f0905 0%, #1a100a 54%, #26170e 100%) !important;
+}
+
+.page-home-modern .home-reviews .review-card,
+.page-home-modern .home-reviews .review-card {
+    border-radius: 4px !important;
+    border: 1px solid rgba(52, 33, 20, 0.13) !important;
+    box-shadow: var(--landing-shadow-soft) !important;
+}
+
+.page-home-modern .home-reviews {
+    background:
+        radial-gradient(circle at 78% 18%, rgba(183, 127, 67, 0.07), transparent 28%),
+        linear-gradient(180deg, #eadcc9 0%, #f7efe4 100%) !important;
+}
+
+.page-home-modern .home-reviews .review-card {
+    background: linear-gradient(180deg, rgba(255, 250, 242, 0.94), rgba(250, 241, 228, 0.86)) !important;
+    border-left: 0 !important;
+    position: relative;
+}
+
+.page-home-modern .home-reviews .review-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 22px;
+    bottom: 22px;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, var(--landing-gold), transparent);
+}
+
+.page-home-modern .footer--home {
+    margin-top: 0;
+}
+
+
+@media (max-width: 980px) {
+    .page-home-modern .section-padding,
+    .page-home-modern .reviews-section {
+        padding-top: clamp(68px, 9vw, 92px) !important;
+        padding-bottom: clamp(68px, 9vw, 92px) !important;
+    }
+
+    .page-home-modern .home-hero .hero-title {
+        font-size: clamp(4rem, 11vw, 6.4rem) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    body.page-home-modern {
+        --landing-gutter: 20px;
+    }
+
+    .page-home-modern .nav-wrapper {
+        min-height: 76px;
+    }
+
+    .page-home-modern .logo-img {
+        max-height: 48px !important;
+    }
+
+    .page-home-modern .section-title {
+        font-size: clamp(2.1rem, 10vw, 3.35rem) !important;
+        line-height: 1.02 !important;
+    }
+
+    .page-home-modern .home-hero {
+        min-height: 650px !important;
+    }
+
+    .page-home-modern .home-hero .hero-title {
+        font-size: clamp(3.4rem, 15vw, 4.8rem) !important;
+    }
+}
+
+/* ====================================
+   TRIPADVISOR REVIEWS - PREMIUM LAYOUT
+   ==================================== */
+
+.page-home-modern .home-reviews {
+    background:
+        linear-gradient(90deg, rgba(255, 250, 242, 0.28), transparent 36%),
+        linear-gradient(180deg, #eadcc9 0%, #f7efe4 100%) !important;
+    padding: 0 !important;
+}
+
+.page-home-modern .reviews-layout {
+    display: grid;
+    grid-template-columns: minmax(380px, 460px) minmax(620px, 760px) !important;
+    justify-content: center;
+    align-items: start !important;
+    gap: 88px !important;
+    width: min(100%, 1440px) !important;
+    max-width: 1440px !important;
+    margin: 0 auto !important;
+    padding: 110px 64px !important;
+    box-sizing: border-box;
+}
+
+.page-home-modern .home-reviews .reviews-head {
+    position: sticky;
+    top: 120px;
+    max-width: 430px;
+}
+
+.page-home-modern .home-reviews .reviews-head .section-subtitle {
+    color: var(--landing-gold-deep) !important;
+}
+
+.page-home-modern .home-reviews .reviews-head .section-title {
+    max-width: 430px;
+    font-size: clamp(56px, 6vw, 84px) !important;
+    line-height: 0.92 !important;
+    letter-spacing: -0.02em !important;
+    overflow-wrap: normal;
+}
+
+.page-home-modern .home-reviews .reviews-head p:not(.section-subtitle) {
+    margin-top: 1.25rem;
+    color: var(--landing-muted-strong) !important;
+    max-width: 430px;
+}
+
+.page-home-modern .home-reviews .reviews-head .btn {
+    margin-top: 1.45rem;
+    min-height: 44px !important;
+    padding: 0.78rem 1.18rem !important;
+    font-size: 0.74rem !important;
+    letter-spacing: 0.11em !important;
+}
+
+.page-home-modern .home-reviews .reviews-grid {
+    display: grid;
+    grid-template-columns: 1fr !important;
+    gap: 22px !important;
+    margin-top: 0 !important;
+    width: 100%;
+    max-width: 760px;
+    justify-self: stretch;
+}
+
+.page-home-modern .home-reviews .review-card--tripadvisor {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "stars"
+        "quote"
+        "meta";
+    row-gap: 18px;
+    align-items: start;
+    min-height: 0;
+    padding: 30px 34px !important;
+    margin: 0;
+    border: 1px solid rgba(82, 55, 35, 0.13) !important;
+    border-radius: 12px !important;
+    background:
+        linear-gradient(180deg, rgba(255, 251, 244, 0.98), rgba(252, 244, 233, 0.92)) !important;
+    box-shadow: 0 12px 30px rgba(41, 24, 12, 0.075), inset 0 1px 0 rgba(255, 255, 255, 0.7) !important;
+    overflow: hidden;
+}
+
+.page-home-modern .home-reviews .review-card--tripadvisor::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 28px;
+    bottom: 28px;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, rgba(139, 87, 42, 0.62), transparent);
+}
+
+.page-home-modern .home-reviews .review-card--tripadvisor::after {
+    content: none !important;
+}
+
+.page-home-modern .home-reviews .review-stars {
+    grid-area: stars;
+    color: var(--landing-gold-deep);
+    font-size: 0.88rem;
+    letter-spacing: 0.14em;
+    line-height: 1.2;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.page-home-modern .home-reviews .review-card--tripadvisor blockquote {
+    grid-area: quote;
+    margin: 0;
+}
+
+.page-home-modern .home-reviews .review-card--tripadvisor blockquote p {
+    color: #33251c !important;
+    font-family: var(--font-heading);
+    font-size: clamp(1.08rem, 0.46vw + 1rem, 1.28rem) !important;
+    font-weight: 500;
+    line-height: 1.48 !important;
+    margin: 0;
+    max-width: 50ch;
+}
+
+.page-home-modern .home-reviews .review-meta {
+    grid-area: meta;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.38rem 0.65rem;
+    align-items: center;
+    margin: 0;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(82, 55, 35, 0.085);
+}
+
+.page-home-modern .home-reviews .review-meta strong {
+    color: var(--landing-ink);
+    font-family: var(--font-primary);
+    font-size: 0.92rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+}
+
+.page-home-modern .home-reviews .review-meta strong::after {
+    content: "\00b7";
+    margin-left: 0.65rem;
+    color: rgba(72, 54, 42, 0.38);
+    font-weight: 500;
+}
+
+.page-home-modern .home-reviews .review-meta span {
+    color: rgba(72, 54, 42, 0.62);
+    font-size: 0.88rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 980px) {
+    .page-home-modern .reviews-layout {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+        padding: 82px 32px !important;
+    }
+
+    .page-home-modern .home-reviews .reviews-head {
+        position: static;
+        max-width: 640px;
+    }
+
+    .page-home-modern .home-reviews .reviews-grid {
+        justify-self: start;
+        width: 100%;
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 981px) and (max-width: 1180px) {
+    .page-home-modern .reviews-layout {
+        grid-template-columns: minmax(300px, 360px) minmax(0, 680px) !important;
+        gap: 48px !important;
+        padding: 96px 48px !important;
+    }
+
+    .page-home-modern .home-reviews .reviews-head .section-title {
+        font-size: clamp(48px, 5vw, 60px) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .page-home-modern .home-reviews .reviews-grid {
+        grid-template-columns: 1fr !important;
+        gap: 16px !important;
+    }
+
+    .page-home-modern .home-reviews .reviews-head .section-title {
+        font-size: clamp(42px, 11vw, 56px) !important;
+        line-height: 0.98 !important;
+    }
+
+    .page-home-modern .home-reviews .reviews-head p:not(.section-subtitle) {
+        max-width: none;
+    }
+
+    .page-home-modern .home-reviews .review-card--tripadvisor {
+        padding: 26px 24px !important;
+        border-radius: 10px !important;
+    }
+
+    .page-home-modern .home-reviews .review-card--tripadvisor blockquote p {
+        font-size: 1.08rem !important;
+        line-height: 1.5 !important;
+    }
+
+    .page-home-modern .home-reviews .review-meta {
+        padding-top: 0.95rem;
+    }
+}
+
+/* ============================================================
+   PRECISE POLISH — targeted fixes, no redesign
+   ============================================================ */
+
+/* 1. HERO — tagline readability against photo */
+.page-home-modern .home-hero .hero-tagline {
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
+}
+
+/* 2. INTRO — more air between paragraphs */
+.page-home-modern .home-copy p:not(.section-subtitle) {
+    margin-top: 1.35rem !important;
+}
+
+/* 3. MENU SHOWCASE — full-width header (button moved below grid in HTML) */
+.page-home-modern .home-menu-showcase .home-section-head {
+    grid-template-columns: 1fr !important;
+}
+
+/* button row below signature grid */
+.page-home-modern .menu-cta-row {
+    margin-top: clamp(36px, 4vw, 52px);
+    display: flex;
+    justify-content: center;
+}
+
+/* 4. STANDARDS — restore left-align on header block */
+.page-home-modern .standards-head {
+    text-align: left !important;
+}
+
+/* 5. GALLERY — editorial asymmetric: 1 dominant left + 3 right */
+.page-home-modern .gallery-rail {
+    display: grid !important;
+    grid-template-columns: 1.75fr 1fr 1fr !important;
+    grid-template-rows: clamp(200px, 19vw, 290px) clamp(200px, 19vw, 290px) !important;
+    gap: clamp(8px, 0.9vw, 12px) !important;
+    width: min(var(--landing-container), calc(100% - (var(--landing-gutter) * 2))) !important;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-home-modern .gallery-rail img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    border-radius: 4px;
+    grid-row: auto !important;
+    grid-column: auto !important;
+}
+
+/* First image: spans both rows on the left — dominant */
+.page-home-modern .gallery-rail img:nth-child(1) {
+    grid-row: 1 / span 2 !important;
+    grid-column: 1 !important;
+}
+
+/* Images 2 and 3: top-right and middle-right cells */
+.page-home-modern .gallery-rail img:nth-child(2) {
+    grid-row: 1 !important;
+    grid-column: 2 !important;
+}
+
+.page-home-modern .gallery-rail img:nth-child(3) {
+    grid-row: 1 !important;
+    grid-column: 3 !important;
+}
+
+/* Image 4: wide, spans both right columns at bottom */
+.page-home-modern .gallery-rail img:nth-child(4) {
+    grid-row: 2 !important;
+    grid-column: 2 / span 2 !important;
+}
+
+/* 6. TRIPADVISOR — fix column overflow (fr instead of pixel minimums) */
+/* and remove sticky that causes navbar overlap */
+.page-home-modern .reviews-layout {
+    grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr) !important;
+}
+
+.page-home-modern .home-reviews .reviews-head {
+    position: static !important;
+    top: auto !important;
+    max-width: 480px;
+}
+
+/* 7. CTA info block — slightly less opaque for warmer feel */
+.page-home-modern .cta-info-block {
+    background: rgba(20, 12, 8, 0.42) !important;
+    border: 1px solid rgba(255, 250, 242, 0.09) !important;
+}
+
+/* 8. FOOTER — tighter columns, brand block stacks cleanly */
+.page-home-modern .footer--home .footer-grid {
+    gap: 36px !important;
+}
+
+.page-home-modern .footer-col--brand {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+}
+
+/* Gallery subtitle — premium editorial style */
+.page-home-modern .home-gallery-strip .section-note {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: clamp(1.2rem, 1.5vw, 1.45rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.62 !important;
+    color: rgba(47, 32, 20, 0.58) !important;
+    max-width: 38ch !important;
+    margin-top: 1.15rem !important;
+    letter-spacing: 0 !important;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 600px) {
+    .page-home-modern .menu-cta-row {
+        justify-content: flex-start;
+        margin-top: 28px;
+    }
+
+    .page-home-modern .gallery-rail {
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+    }
+
+    .page-home-modern .gallery-rail img {
+        grid-row: auto !important;
+        grid-column: auto !important;
+        height: clamp(220px, 60vw, 320px) !important;
+    }
+}
+
+/* Gallery section subtitle — premium editorial style */
+.page-home-modern .gallery-subtitle {
+    font-family: 'DM Sans', sans-serif !important;
+    font-size: clamp(1.15rem, 1.45vw, 1.35rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.58 !important;
+    color: rgba(42, 28, 22, 0.62) !important;
+    max-width: 580px;
+    margin-top: 1.1rem !important;
+    letter-spacing: 0.005em;
+}
+
+/* Gallery section head — button aligned to bottom of text block */
+.page-home-modern .home-gallery-strip .home-section-head {
+    align-items: end !important;
+    margin-bottom: clamp(24px, 2.8vw, 36px) !important;
+}
+
+/* Reduce gap between container text block and gallery rail */
+.page-home-modern .home-gallery-strip .container {
+    padding-bottom: 0 !important;
+}
+
+/* ====================================
+   O NAMA — Visit Reasons as Standard Lines
+   Match "Zbog čega se dolazi kod nas"
+   to "Naš pristup" standard-line style
+   ==================================== */
+
+.page-about.page-home-modern .visit-reasons-section {
+    background: #f6f1ea !important;
+}
+
+.page-about.page-home-modern .visit-reasons-section .section-header {
+    text-align: left !important;
+    max-width: none !important;
+    margin-bottom: clamp(30px, 4vw, 48px) !important;
+}
+
+.page-about.page-home-modern .visit-reasons-section .section-header h2 {
+    text-align: left !important;
+}
+
+.page-about.page-home-modern .visit-reasons-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0 !important;
+    border-top: 1px solid rgba(28, 22, 16, 0.18) !important;
+    border-bottom: 1px solid rgba(28, 22, 16, 0.18) !important;
+}
+
+.page-about.page-home-modern .visit-reason {
+    background: none !important;
+    border: none !important;
+    border-right: 1px solid rgba(28, 22, 16, 0.18) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: clamp(26px, 4vw, 48px) !important;
+    transform: none !important;
+    transition: none !important;
+}
+
+.page-about.page-home-modern .visit-reason:last-child {
+    border-right: 0 !important;
+}
+
+.page-about.page-home-modern .visit-reason:hover {
+    background: none !important;
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+.page-about.page-home-modern .visit-reason span {
+    color: #b98f5d !important;
+    font-weight: 700 !important;
+    font-size: 0.75rem !important;
+    font-family: var(--font-primary) !important;
+    display: block !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.page-about.page-home-modern .visit-reason h3 {
+    margin: 0.8rem 0 !important;
+    font-size: clamp(1.55rem, 2.4vw, 2.35rem) !important;
+    font-family: var(--font-heading) !important;
+    color: var(--landing-ink) !important;
+}
+
+.page-about.page-home-modern .visit-reason p {
+    color: var(--landing-muted, #6f6258) !important;
+    font-size: 0.98rem !important;
+    line-height: 1.7 !important;
+    margin: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .page-about.page-home-modern .visit-reasons-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .page-about.page-home-modern .visit-reason,
+    .page-about.page-home-modern .visit-reason:last-child {
+        border-right: 0 !important;
+        border-bottom: 1px solid rgba(28, 22, 16, 0.18) !important;
+    }
+
+    .page-about.page-home-modern .visit-reason:last-child {
+        border-bottom: 0 !important;
+    }
+}

@@ -1,18 +1,19 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="sr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kontaktirajte Restoran Gigo - Rezervišite sto ili nam pošaljite poruku.">
+    <meta name="description" content="Kontakt Restorana Gigo - rezervacije, adresa, radno vreme i ruta do restorana u Zemunu.">
     <title>Kontakt - Restoran Gigo</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pages.css">
+    <link rel="stylesheet" href="css/landing.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body class="page-contact">
+<body class="page-contact page-home-modern">
     <!-- Navigation -->
     <nav class="navbar" id="navbar">
         <div class="container">
@@ -52,11 +53,20 @@
         <div class="container">
             <div class="page-header-content">
                 <h1>Kontakt</h1>
-                <p>Rezervišite sto ili nam pošaljite poruku</p>
+                <p>Rezervacije, adresa i radno vreme restorana.</p>
                 <div class="page-header-actions page-header-actions--contact" aria-label="Brza akcija">
-                    <a href="tel:+381112612253" class="btn btn-primary">Pozovite odmah</a>
+                    <a href="tel:+381112612253" class="btn btn-primary">Pozovite restoran</a>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- Contact Intro -->
+    <section class="contact-intro section-padding">
+        <div class="container contact-intro-inner">
+            <p class="section-subtitle">Kontakt</p>
+            <h2 class="section-title">Rezervišite sto ili nam pošaljite upit</h2>
+            <p>Za rezervacije nas možete pozvati telefonom ili poslati upit kroz formu. Ako planirate veći sto, porodično okupljanje ili manju proslavu, napišite nam datum, vreme i broj gostiju.</p>
         </div>
     </section>
 
@@ -67,9 +77,9 @@
                 <!-- Contact Form -->
                 <div class="contact-form-wrapper">
                     <div class="section-header">
-                        <span class="section-subtitle">Pošaljite nam poruku</span>
-                        <h2 class="section-title">Rezervišite Vaš sto</h2>
-                        <p>Popunite formu ispod i kontaktiraćemo vas u najkraćem roku da potvrdimo rezervaciju</p>
+                        <span class="section-subtitle">Rezervacija</span>
+                        <h2 class="section-title">Upit za rezervaciju</h2>
+                        <p>Pošaljite datum, vreme i broj gostiju. Javićemo vam se sa potvrdom.</p>
                     </div>
                     <form class="contact-form" id="contactForm">
                         <div class="form-row">
@@ -121,9 +131,9 @@
                         </div>
                         <div class="form-group">
                             <label for="message">Dodatne napomene</label>
-                            <textarea id="message" name="message" rows="4" placeholder="Specijalni zahtevi, proslave, alergije..."></textarea>
+                            <textarea id="message" name="message" rows="4" placeholder="Posebni zahtevi, proslave, alergije…"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Pošaljite rezervaciju</button>
+                        <button type="submit" class="btn btn-primary">Pošaljite upit</button>
                         <div class="form-message" id="formMessage"></div>
                     </form>
                 </div>
@@ -150,7 +160,8 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Telefon</h4>
-                                <p><a href="tel:+381112612253">011 261 2253</a></p>
+                                <p><a href="tel:+381112612253">011/2612-253</a></p>
+                                <p><a href="tel:+381611318967">061/1318-967</a></p>
                             </div>
                         </div>
                         <div class="contact-info-item">
@@ -169,8 +180,8 @@
                             </div>
                             <div class="contact-details">
                                 <h4>Radno vreme</h4>
-                                <p><strong>Ponedeljak - Petak:</strong><br>10:00 - 23:00</p>
-                                <p><strong>Subota - Nedelja:</strong><br>09:00 - 00:00</p>
+                                <p><strong>Ponedeljak – Subota:</strong><br>10:00 – 23:00</p>
+                                <p><strong>Nedeljom:</strong><br>ne radimo</p>
                             </div>
                         </div>
                     </div>
@@ -186,6 +197,17 @@
                                 <i class="fab fa-instagram"></i>
                                 <span>Instagram</span>
                             </a>
+                            <a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor" class="social-link">
+                                <i class="fab fa-tripadvisor"></i>
+                                <span>TripAdvisor</span>
+                            </a>
+                        </div>
+                        <div class="ta-badge">
+                            <a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-tripadvisor" aria-hidden="true"></i>
+                                <span class="ta-badge-stars" aria-label="Ocena 5 od 5">★★★★★</span>
+                                <span class="ta-badge-meta"><strong>4.9</strong> · 27 recenzija</span>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -198,21 +220,20 @@
         <div class="container">
             <div class="map-card">
                 <div class="map-card-header">
+                    <p class="section-subtitle">Lokacija</p>
                     <h2 class="map-title">Kako do nas</h2>
-                    <p>Otvorite mapu i prikažite rutu do restorana.</p>
-                    <a class="btn btn-primary map-open" href="https://www.google.com/maps/search/?api=1&query=Gornjogradska%207c%2C%20Zemun%2C%20Serbia" target="_blank" rel="noopener noreferrer">Otvori u Google Maps</a>
+                    <p>Restoran se nalazi u Gornjogradskoj ulici u Zemunu. Ako dolazite prvi put, najlakše je da otvorite rutu na mapi.</p>
                     <a class="btn btn-primary map-directions" href="https://www.google.com/maps/dir/?api=1&destination=Gornjogradska%207c%2C%20Zemun%2C%20Serbia" target="_blank" rel="noopener noreferrer">Prikažite rutu</a>
                 </div>
-                <div class="map-container">
-                    <iframe 
-                        src="https://www.google.com/maps?q=Gornjogradska%207c%2C%20Zemun&output=embed" 
-                        width="100%" 
-                        height="450" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy" 
-                        referrerpolicy="no-referrer-when-downgrade">
-                    </iframe>
+                <div class="map-container map-placeholder" aria-label="Mapa lokacije Restorana Gigo">
+                    <div class="map-grid" aria-hidden="true"></div>
+                    <div class="map-marker" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="map-location-card">
+                        <span>Restoran Gigo</span>
+                        <strong>Gornjogradska 7c</strong>
+                        <p>Zemun, Srbija</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Gornjogradska%207c%2C%20Zemun%2C%20Serbia" target="_blank" rel="noopener noreferrer">Mapa će biti prikazana ovde.</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -222,8 +243,8 @@
     <section class="faq-section section-padding bg-light">
         <div class="container">
             <div class="section-header center">
-                <span class="section-subtitle">Često postavljana pitanja</span>
-                <h2 class="section-title">Imate pitanje?</h2>
+                <span class="section-subtitle">Česta pitanja</span>
+                <h2 class="section-title">Pre dolaska</h2>
             </div>
             <div class="faq-wrapper">
                 <div class="faq-item">
@@ -232,7 +253,7 @@
                         <i class="fas fa-chevron-down" aria-hidden="true"></i>
                     </button>
                     <div class="faq-answer" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
-                        <p>Preporučujemo rezervaciju, posebno za vikende i praznike. Ipak, uvek ćemo se potruditi da vas primimo i bez rezervacije ako ima slobodnih mesta.</p>
+                        <p>Rezervacija nije obavezna, ali je preporučujemo za vikend, veće društvo ili porodični ručak. Ako dolazite bez rezervacije, primićemo vas čim se oslobodi sto.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -241,7 +262,7 @@
                         <i class="fas fa-chevron-down" aria-hidden="true"></i>
                     </button>
                     <div class="faq-answer" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
-                        <p>Trenutno nemamo sopstveni parking. Ipak, u okolnim ulicama se obično može pronaći parking mesto, a u blizini su dostupne i javne opcije za parkiranje. Ako dolazite u špicu ili vikendom, preporučujemo da krenete par minuta ranije ili da razmotrite taksi/ride opciju — rado ćemo vam pomoći telefonom oko najpraktičnijeg prilaza.</p>
+                        <p>Parking zavisi od trenutne gužve u okolini restorana. Ako dolazite prvi put, pozovite nas i reći ćemo vam šta je najpraktičnije.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -250,16 +271,16 @@
                         <i class="fas fa-chevron-down" aria-hidden="true"></i>
                     </button>
                     <div class="faq-answer" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
-                        <p>Apsolutno! Imamo prostor za grupne proslave, poslovne ručkove i posebne događaje. Kontaktirajte nas direktno za detalje i specijalne aranžmane.</p>
+                        <p>Da, primamo rezervacije za veće stolove i manje proslave. Najbolje je da nas kontaktirate unapred kako bismo dogovorili termin i raspored sedenja.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" type="button" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">
-                        <span>Da li nudite vegetarijanska/veganska jela?</span>
+                        <span>Da li nudite vegetarijanska jela?</span>
                         <i class="fas fa-chevron-down" aria-hidden="true"></i>
                     </button>
                     <div class="faq-answer" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
-                        <p>Da, naš jelovnik uključuje vegetarijanske opcije. Za veganske opcije, molimo vas da nas obavestite unapred kako bismo pripremili specijalna jela.</p>
+                        <p>U jelovniku postoje salate, predjela i pojedina jela bez mesa. Za konkretnu preporuku najbolje je da pitate osoblje prilikom rezervacije ili dolaska.</p>
                     </div>
                 </div>
                 <div class="faq-item">
@@ -268,29 +289,46 @@
                         <i class="fas fa-chevron-down" aria-hidden="true"></i>
                     </button>
                     <div class="faq-answer" id="faq-a-5" role="region" aria-labelledby="faq-q-5">
-                        <p>Trenutno ne nudimo sopstvenu dostavu, ali sarađujemo sa popularnim platformama za dostavu hrane u Beogradu.</p>
+                        <p>Restoran je prvenstveno namenjen gostima koji dolaze kod nas. Za mogućnost poručivanja ili preuzimanja hrane najbolje je da nas pozovete.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Phone CTA Section -->
+    <section class="contact-phone-cta section-padding">
+        <div class="container contact-phone-panel">
+            <div>
+                <p class="section-subtitle">Brza rezervacija</p>
+                <h2>Najbrže je telefonom.</h2>
+                <p>Za rezervaciju za isti dan, veći sto ili pitanje oko slobodnih termina, pozovite nas direktno.</p>
+            </div>
+            <div class="contact-phone-actions">
+                <a href="tel:+381112612253" class="btn btn-primary">Pozovite restoran</a>
+                <a href="tel:+381112612253" class="contact-phone-number">011/2612-253</a>
+                <a href="tel:+381611318967" class="contact-phone-number">061/1318-967</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer footer--home">
-        <div class="container">
+        <div class="footer-inner">
             <div class="footer-grid">
-                <div class="footer-col">
+                <div class="footer-col footer-col--brand">
                     <a href="index.html" class="footer-brand" aria-label="Restoran Gigo">
                         <img src="images/logo-beli.png" alt="Restoran Gigo" class="footer-logo">
                     </a>
-                    <p><span data-years-since="1998">28</span> godina tradicije i ukusa. Vaše mesto za autentičnu srpsku kuhinju i nezaboravne trenutke.</p>
+                    <p class="footer-tagline">Domaća kuhinja kojoj se uvek vraćate.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
-                    <h4>Brzi linkovi</h4>
+                    <h4>Linkovi</h4>
                     <ul class="footer-links">
                         <li><a href="index.html">Početna</a></li>
                         <li><a href="o-nama.html">O nama</a></li>
@@ -302,29 +340,34 @@
                 <div class="footer-col">
                     <h4>Radno vreme</h4>
                     <ul class="footer-info">
-                        <li><strong>Ponedeljak - Petak</strong></li>
-                        <li>10:00 - 23:00</li>
-                        <li><strong>Vikend</strong></li>
-                        <li>09:00 - 00:00</li>
+                        <li>
+                            <span class="fi-label">Pon – Sub</span>
+                            <span class="fi-value">10:00 – 23:00</span>
+                        </li>
+                        <li>
+                            <span class="fi-label">Nedeljom</span>
+                            <span class="fi-value">ne radimo</span>
+                        </li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Kontakt</h4>
-                    <ul class="footer-info">
-                        <li><i class="fas fa-map-marker-alt"></i> Gornjogradska 7c, Zemun</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+381112612253">011 261 2253</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li>
+                    <ul class="footer-info footer-info--contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Gornjogradska 7c, Zemun</span></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381112612253">011/2612-253</a></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381611318967">061/1318-967</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="footer-bottom has-credit">
-                <p>&copy; 2026 Restoran Gigo. Sva prava zadržana.</p>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Restoran Gigo. Sva prava zadržana.</p>
                 <div class="footer-lang" aria-label="Language">
                     <a href="kontakt.html" class="active" aria-current="page">SR</a>
                     <span aria-hidden="true">·</span>
                     <a href="en/kontakt.html">EN</a>
                 </div>
-                <div class="footer-credit" aria-label="Dizajn i razvoj">
+                <div class="footer-credit">
                     <span>Dizajn i razvoj:</span>
                     <a href="https://pansoft.rs" target="_blank" rel="noopener noreferrer" aria-label="Pansoft">
                         <img src="images/pansoft%20logo%20bela%20slova-01.png" alt="Pansoft" class="footer-credit-logo">
@@ -343,3 +386,4 @@
     <script src="js/main.js"></script>
 </body>
 </html>
+

@@ -3,29 +3,32 @@
    Mobile First Design
    ==================================== */
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap');
+
 /* ====================================
    CSS VARIABLES & RESET
    ==================================== */
 :root {
     /* Colors */
-    --primary-color: #c9a961;
-    --primary-dark: #a38544;
-    --primary-light: #e5d4a3;
-    --secondary-color: #2c2c2c;
-    --secondary-light: #3d3d3d;
-    --accent-color: #8b6f47;
-    --text-dark: #1a1a1a;
-    --text-light: #666666;
+    --primary-color: #b8946a;
+    --primary-dark: #8a6e4a;
+    --primary-light: #d4b896;
+    --secondary-color: #1e1c1a;
+    --secondary-light: #2e2b28;
+    --accent-color: #b8946a;
+    --text-dark: #1a1714;
+    --text-light: #6b6560;
     --text-white: #ffffff;
-    --bg-light: #f8f8f8;
-    --bg-dark: #2c2c2c;
-    --border-color: #e0e0e0;
+    --bg-light: #f8f5f0;
+    --bg-dark: #111009;
+    --border-color: #e4ddd5;
     --success-color: #28a745;
     --error-color: #dc3545;
     
     /* Typography */
-    --font-primary: 'Manrope', sans-serif;
-    --font-heading: 'Playfair Display', serif;
+    --font-primary: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+    --font-heading: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+    --font-accent: 'Playfair Display', 'Georgia', serif;
     
     /* Type Scale - Modular Scale (1.25 - Major Third) */
     --text-xs: clamp(0.75rem, 0.7rem + 0.25vw, 0.813rem);
@@ -73,10 +76,10 @@
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.2);
     
     /* Border Radius */
-    --radius-sm: 4px;
-    --radius-md: 8px;
-    --radius-lg: 16px;
-    --radius-xl: 24px;
+    --radius-sm: 0px;
+    --radius-md: 2px;
+    --radius-lg: 2px;
+    --radius-xl: 4px;
 
     /* ====================================
        GIGO TOKENS (prefixed)
@@ -88,8 +91,8 @@
     --gigo-section-py-tablet: 64px;
     --gigo-section-py-desktop: 88px;
 
-    --gigo-radius-card: 16px;
-    --gigo-radius-btn: 12px;
+    --gigo-radius-card: 2px;
+    --gigo-radius-btn: 2px;
 
     --gigo-shadow-card: 0 10px 28px rgba(0, 0, 0, 0.12);
     --gigo-shadow-card-hover: 0 18px 44px rgba(0, 0, 0, 0.18);
@@ -207,25 +210,25 @@ textarea {
    ==================================== */
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
-    font-weight: 500;
-    line-height: 1.2;
+    font-weight: 400;
+    line-height: 1.15;
     margin-bottom: 1.25rem;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
 }
 
 h1 {
     font-size: clamp(2.5rem, 5vw + 1rem, 4.5rem);
-    line-height: 1.15;
+    line-height: 1.12;
     letter-spacing: -0.025em;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 1.5rem;
 }
 
 h2 {
     font-size: clamp(2rem, 4vw + 0.5rem, 3.25rem);
-    line-height: 1.2;
+    line-height: 1.18;
     letter-spacing: -0.02em;
-    font-weight: 500;
+    font-weight: 400;
     margin-bottom: 1.25rem;
 }
 
@@ -338,16 +341,7 @@ p {
 }
 
 .bg-dark::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        radial-gradient(circle at 20% 50%, rgba(201, 169, 97, 0.03) 0%, transparent 50%),
-        radial-gradient(circle at 80% 80%, rgba(201, 169, 97, 0.02) 0%, transparent 50%);
-    pointer-events: none;
+    display: none;
 }
 
 /* Section Headers */
@@ -380,41 +374,32 @@ p {
 
 .section-subtitle {
     display: inline-block;
-    font-family: var(--font-primary);
-    font-size: 0.8125rem;
+    font-family: var(--font-heading);
+    font-size: 1rem;
     color: var(--primary-color);
-    font-style: normal;
-    margin-bottom: 0.75rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    font-weight: 600;
-    position: relative;
-    padding-left: 40px;
+    font-style: italic;
+    margin-bottom: 0.875rem;
+    letter-spacing: 0;
+    font-weight: 400;
 }
 
 .section-subtitle::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 28px;
-    height: 1px;
-    background: linear-gradient(90deg, var(--primary-color), transparent);
+    display: none;
 }
 
 .section-subtitle.light {
     color: var(--primary-light);
+    font-style: italic;
 }
 
 .section-subtitle.light::before {
-    background: linear-gradient(90deg, var(--primary-light), transparent);
+    display: none;
 }
 
 .section-title {
     color: var(--text-dark);
     margin-bottom: 1.5rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .section-title.light {
@@ -425,8 +410,8 @@ p {
     .section-title {
         font-size: clamp(2.25rem, 4vw + 0.5rem, 3.5rem);
         margin-bottom: 2rem;
-        font-weight: 600;
-        line-height: 1.2;
+        font-weight: 400;
+        line-height: 1.15;
     }
 }
 
@@ -484,11 +469,11 @@ p {
 }
 
 .navbar.scrolled {
-    background-color: rgba(18, 18, 18, 0.78);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    background-color: rgba(10, 9, 7, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     padding: var(--spacing-xs) 0;
 }
 
@@ -606,41 +591,35 @@ p {
     padding: var(--spacing-xs) var(--spacing-sm);
     position: relative;
     transition: color var(--gigo-transition-ui), opacity var(--gigo-transition-ui);
+    -webkit-tap-highlight-color: transparent;
 }
 
 .navbar.scrolled .nav-link {
     color: rgba(255, 255, 255, 0.9);
 }
 
-.navbar.scrolled .nav-link:hover,
-.navbar.scrolled .nav-link.active {
-    color: var(--primary-color);
+.navbar.scrolled .nav-link:hover {
+    color: var(--text-white);
 }
 
-.nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%) scaleX(0);
-    width: 80%;
-    height: 2px;
-    background-color: var(--primary-color);
-    transition: transform 0.25s ease;
+.navbar.scrolled .nav-link.active,
+.navbar.scrolled .nav-link[aria-current="page"],
+.navbar.scrolled .nav-link[aria-current="true"] {
+    color: var(--primary-light);
 }
 
-.nav-link:hover,
-.nav-link.active {
-    color: var(--primary-color);
+.nav-link:hover {
+    color: var(--text-white);
 }
 
-.nav-link:hover::after,
-.nav-link.active::after {
-    transform: translateX(-50%) scaleX(1);
+.nav-link.active,
+.nav-link[aria-current="page"],
+.nav-link[aria-current="true"] {
+    color: var(--primary-light);
 }
+
 .nav-link:focus-visible {
-    outline-offset: 4px;
-    border-radius: 6px;
+    outline: none;
 }
 
 /* ====================================
@@ -670,7 +649,7 @@ p {
         margin-right: auto;
     }
 
-    /* Menu items as tap cards */
+    /* Menu items remain text-only, without tap rectangles */
     .nav-link {
         width: 100%;
         min-height: 60px; /* 56–64px spec */
@@ -678,54 +657,37 @@ p {
         align-items: center;
         justify-content: flex-start;
         padding: 0 18px;
-        border-radius: var(--gigo-radius-card);
-        background-color: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.10);
+        border-radius: 0;
+        background-color: transparent;
+        border: 0;
         opacity: 0.85;
         font-size: 1.05rem;
         font-weight: 600;
         letter-spacing: 0;
-        transition: transform var(--gigo-transition-ui), background-color var(--gigo-transition-ui), opacity var(--gigo-transition-ui), border-color var(--gigo-transition-ui), color var(--gigo-transition-ui);
+        transition: opacity var(--gigo-transition-ui), color var(--gigo-transition-ui);
     }
 
     /* No hover reliance on mobile */
     .nav-link:hover {
         transform: none;
-        background-color: rgba(255, 255, 255, 0.04);
+        background-color: transparent;
     }
 
-    /* Clear tap feedback */
+    /* No rectangular tap feedback */
     .nav-link:active {
-        transform: translateY(1px);
-        background-color: rgba(255, 255, 255, 0.10);
+        transform: none;
+        background-color: transparent;
         opacity: 1;
     }
 
-    /* Active item: bigger text + stronger accent + subtle indicator */
+    /* Active item: text-only state, no indicator line or dot */
     .nav-link.active,
     .nav-link[aria-current="page"],
     .nav-link[aria-current="true"] {
-        font-size: 1.15rem;
         opacity: 1;
-        color: var(--primary-color);
-        border-color: rgba(255, 255, 255, 0.14);
-        background-color: rgba(255, 255, 255, 0.06);
-    }
-
-    .nav-link::after {
-        width: 6px;
-        height: 6px;
-        border-radius: 999px;
-        bottom: 10px;
-        left: 50%;
-        transform: translateX(-50%) scale(0);
-        background-color: var(--primary-color);
-    }
-
-    .nav-link.active::after,
-    .nav-link[aria-current="page"]::after,
-    .nav-link[aria-current="true"]::after {
-        transform: translateX(-50%) scale(1);
+        color: var(--primary-light);
+        background-color: transparent;
+        border: 0;
     }
 
     /* Language switcher: bigger, higher contrast, not glued */
@@ -821,9 +783,7 @@ p {
     }
     
     .nav-link:focus-visible {
-        outline: 2px solid var(--primary-color);
-        outline-offset: 4px;
-        border-radius: 4px;
+        outline: none;
     }
 }
 
@@ -930,8 +890,6 @@ p {
 
 .btn-reserve:hover {
     background-color: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.4);
 }
 .btn-reserve:focus-visible {
     outline: 2px solid var(--primary-light);
@@ -955,16 +913,16 @@ p {
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 0.95rem 1.75rem;
-    font-weight: 600;
+    padding: 0.9rem 2rem;
+    font-weight: 500;
     border-radius: var(--gigo-radius-btn);
-    transition: transform var(--gigo-transition-ui), box-shadow var(--gigo-transition-ui), background-color var(--gigo-transition-ui), color var(--gigo-transition-ui), border-color var(--gigo-transition-ui);
+    transition: background-color var(--gigo-transition-ui), color var(--gigo-transition-ui), border-color var(--gigo-transition-ui);
     cursor: pointer;
     text-align: center;
-    font-size: 1rem;
-    border: 2px solid transparent;
-    letter-spacing: 0;
-    min-height: 52px;
+    font-size: 0.9375rem;
+    border: 1px solid transparent;
+    letter-spacing: 0.02em;
+    min-height: 50px;
 }
 
 .btn-primary {
@@ -974,8 +932,6 @@ p {
 
 .btn-primary:hover {
     background-color: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(201, 169, 97, 0.35);
 }
 
 .btn-secondary {
@@ -987,7 +943,6 @@ p {
 .btn-secondary:hover {
     background-color: var(--text-white);
     color: var(--text-dark);
-    transform: translateY(-2px);
 }
 
 .btn-secondary:focus-visible {
@@ -1007,12 +962,13 @@ p {
 .btn-outline {
     background-color: transparent;
     color: var(--primary-color);
-    border-color: var(--primary-color);
+    border-color: currentColor;
 }
 
 .btn-outline:hover {
     background-color: var(--primary-color);
     color: var(--text-white);
+    border-color: var(--primary-color);
 }
 
 .btn-outline-light {
@@ -1046,8 +1002,6 @@ p {
 
 .btn-primary-large:hover {
     background-color: var(--primary-dark);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(201, 169, 97, 0.4);
 }
 
 @media (min-width: 1024px) {
@@ -1152,8 +1106,7 @@ p {
 .slider-dot.active {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
-    transform: scale(1.35);
-    box-shadow: 0 10px 26px rgba(201, 169, 97, 0.35);
+    transform: scale(1.2);
 }
 
 .hero-overlay {
@@ -1164,9 +1117,9 @@ p {
     bottom: 0;
     background: linear-gradient(
         180deg,
-        rgba(0, 0, 0, 0.72) 0%,
-        rgba(0, 0, 0, 0.32) 45%,
-        rgba(0, 0, 0, 0.78) 100%
+        rgba(5, 4, 2, 0.55) 0%,
+        rgba(5, 4, 2, 0.20) 40%,
+        rgba(5, 4, 2, 0.72) 100%
     );
     z-index: 1;
 }
@@ -1180,16 +1133,15 @@ p {
 }
 
 .hero-subtitle {
-    font-family: var(--font-primary);
-    font-size: 0.8125rem;
-    font-style: normal;
+    font-family: var(--font-accent);
+    font-size: 1.05rem;
+    font-style: italic;
     color: var(--primary-light);
     margin-bottom: 1rem;
     display: block;
     animation: fadeInUp 0.8s ease;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    font-weight: 600;
+    letter-spacing: 0.02em;
+    font-weight: 400;
 }
 
 .hero-title {
