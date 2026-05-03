@@ -2043,3 +2043,93 @@ body.page-home-modern {
         border-bottom: 0 !important;
     }
 }
+
+/* Final mobile safety overrides */
+@media (max-width: 1100px) {
+    .page-home-modern .reviews-layout {
+        display: block !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: clamp(56px, 8vw, 80px) clamp(22px, 6vw, 44px) !important;
+        margin: 0 !important;
+    }
+
+    .page-home-modern .home-reviews .reviews-head {
+        position: static !important;
+        max-width: 100% !important;
+        margin: 0 0 30px !important;
+    }
+
+    .page-home-modern .home-reviews .reviews-head .section-title {
+        max-width: 100% !important;
+        font-size: clamp(2.7rem, 13vw, 3.6rem) !important;
+        line-height: 1 !important;
+        overflow-wrap: normal !important;
+    }
+
+    .page-home-modern .home-reviews .reviews-head p:not(.section-subtitle) {
+        max-width: 32ch !important;
+        font-size: 1.02rem !important;
+        line-height: 1.55 !important;
+    }
+
+    .page-home-modern .home-reviews .reviews-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        gap: 18px !important;
+        justify-self: auto !important;
+    }
+
+    .page-home-modern .home-reviews .review-card--tripadvisor {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 22px 20px !important;
+        border-radius: 8px !important;
+        box-sizing: border-box !important;
+    }
+
+    .page-home-modern .home-reviews .review-card--tripadvisor blockquote p {
+        font-size: 1.04rem !important;
+        line-height: 1.48 !important;
+        max-width: none !important;
+    }
+
+    .page-home-modern .home-reviews .review-meta strong,
+    .page-home-modern .home-reviews .review-meta span {
+        overflow-wrap: anywhere !important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .page-home-modern .nav-menu {
+        padding: calc(env(safe-area-inset-top) + 78px) 30px calc(env(safe-area-inset-bottom) + 24px) !important;
+        gap: 10px !important;
+    }
+
+    .page-home-modern .nav-link {
+        min-height: 52px !important;
+        padding: 0 !important;
+        font-size: 0.92rem !important;
+        letter-spacing: 0.11em !important;
+    }
+
+    .page-home-modern .lang-switch {
+        width: 100% !important;
+        padding: 8px !important;
+        gap: 8px !important;
+    }
+
+    .page-home-modern .lang-switch a {
+        min-width: 56px !important;
+        height: 40px !important;
+    }
+
+    .page-home-modern .nav-menu .btn-reserve {
+        width: min(100%, 280px) !important;
+        min-height: 52px !important;
+        padding: 0.92rem 1.2rem !important;
+    }
+}
