@@ -2198,7 +2198,7 @@ body.page-home-modern {
 
     .page-home-modern .home-hero .hero-content {
         align-items: center !important;
-        padding: 108px 0 42px !important;
+        padding: 108px 0 54px !important;
         text-align: left !important;
     }
 
@@ -2210,7 +2210,7 @@ body.page-home-modern {
     .page-home-modern .home-hero .hero-title {
         font-size: clamp(3.55rem, 14vw, 4.85rem) !important;
         line-height: 0.94 !important;
-        margin-bottom: 1.5rem !important;
+        margin-bottom: 2.05rem !important;
     }
 
     .page-home-modern .home-hero .hero-tagline {
@@ -2218,7 +2218,7 @@ body.page-home-modern {
     }
 
     .page-home-modern .home-hero .hero-buttons {
-        margin-top: 0 !important;
+        margin-top: 0.1rem !important;
     }
 
     .page-home-modern .home-hero .btn {
@@ -2230,7 +2230,7 @@ body.page-home-modern {
 
     .page-home-modern .hero-contact-line {
         max-width: 100% !important;
-        margin-top: 1.35rem !important;
+        margin-top: 1.65rem !important;
         font-size: 0.95rem !important;
         line-height: 1.45 !important;
     }
