@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -14,24 +14,382 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="page-contact page-home-modern">
-    <nav class="navbar" id="navbar"><div class="container"><div class="nav-wrapper"><a href="index.html" class="logo" aria-label="Ресторан Gigo"><img src="../images/logo-beli.png" alt="" class="logo-img" data-logo-default="../images/logo-beli.png" data-logo-inverse="../images/logo-beli.png"></a><button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню"><span></span><span></span><span></span></button><ul class="nav-menu" id="navMenu"><li><a href="index.html" class="nav-link">Главная</a></li><li><a href="o-nama.html" class="nav-link">О нас</a></li><li><a href="jelovnik.html" class="nav-link">Меню</a></li><li><a href="vinska-karta.html" class="nav-link">Винная карта</a></li><li><a href="kontakt.html" class="nav-link active" aria-current="page">Контакт</a></li><li class="nav-lang"><div class="lang-switch" aria-label="Выбор языка"><a href="../kontakt.html">SR</a><a href="../en/kontakt.html">EN</a><a href="kontakt.html" class="active" aria-current="page">RU</a></div></li><li><a href="tel:+381112612253" class="btn-reserve">Забронировать</a></li></ul></div></div></nav>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo" aria-label="Ресторан Gigo">
+                    <img src="../images/logo-beli.png" alt="" class="logo-img" data-logo-default="../images/logo-beli.png" data-logo-inverse="../images/logo-beli.png">
+                </a>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-    <section class="page-header contact-header"><div class="page-header-overlay"></div><div class="container"><div class="page-header-content"><h1>Контакт</h1><p>Бронирование, адрес и время работы ресторана.</p><div class="page-header-actions page-header-actions--contact" aria-label="Быстрое действие"><a href="tel:+381112612253" class="btn btn-primary">Позвонить в ресторан</a></div></div></div></section>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="o-nama.html" class="nav-link">О нас</a></li>
+                    <li><a href="jelovnik.html" class="nav-link">Меню</a></li>
+                    <li><a href="vinska-karta.html" class="nav-link">Винная карта</a></li>
+                    <li><a href="kontakt.html" class="nav-link active" aria-current="page">Контакт</a></li>
+                    <li class="nav-lang">
+                        <div class="lang-switch" aria-label="Выбор языка">
+                            <a href="kontakt.html" class="active" aria-current="page">SR</a>
+                            <a href="en/kontakt.html">EN</a>
+                            <a href="ru/kontakt.html">RU</a>
+                        </div>
+                    </li>
+                    <li><a href="tel:+381112612253" class="btn-reserve">Забронировать</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <section class="contact-intro section-padding"><div class="container contact-intro-inner"><p class="section-subtitle">Контакт</p><h2 class="section-title">Забронируйте стол или отправьте запрос</h2><p>Для бронирования вы можете позвонить нам по телефону или отправить запрос через форму. Если вы планируете большой стол, семейную встречу или небольшой праздник, укажите дату, время и количество гостей.</p></div></section>
+    <!-- Page Header -->
+    <section class="page-header contact-header">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Контакт</h1>
+                <p>Бронирование, adresa i radno vreme restorana.</p>
+                <div class="page-header-actions page-header-actions--contact" aria-label="Brza akcija">
+                    <a href="tel:+381112612253" class="btn btn-primary">Позвонить в ресторан</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="contact-section section-padding"><div class="container"><div class="contact-grid"><div class="contact-form-wrapper"><div class="section-header"><span class="section-subtitle">Бронирование</span><h2 class="section-title">Запрос на бронирование</h2><p>Отправьте дату, время и количество гостей. Мы свяжемся с вами для подтверждения.</p></div><form class="contact-form" id="contactForm"><div class="form-row"><div class="form-group"><label for="name">Имя и фамилия *</label><input type="text" id="name" name="name" required></div><div class="form-group"><label for="phone">Телефон *</label><input type="tel" id="phone" name="phone" required></div></div><div class="form-row"><div class="form-group"><label for="email">Email *</label><input type="email" id="email" name="email" required></div><div class="form-group"><label for="guests">Количество гостей *</label><div class="select-wrap"><select id="guests" name="guests" required><option value="">Выберите</option><option value="1">1 гость</option><option value="2" selected>2 гостя</option><option value="3">3 гостя</option><option value="4">4 гостя</option><option value="5">5 гостей</option><option value="6">6 гостей</option><option value="7+">7+ гостей</option></select></div></div></div><div class="form-row"><div class="form-group"><label for="date">Дата *</label><div class="input-icon" data-icon="calendar"><i class="fas fa-calendar-alt" aria-hidden="true"></i><input type="date" id="date" name="date" required></div></div><div class="form-group"><label for="time">Время *</label><div class="input-icon" data-icon="clock"><i class="fas fa-clock" aria-hidden="true"></i><input type="time" id="time" name="time" required></div></div></div><div class="form-group"><label for="message">Дополнительные примечания</label><textarea id="message" name="message" rows="4" placeholder="Особые пожелания, праздники, аллергии..."></textarea></div><button type="submit" class="btn btn-primary">Отправить запрос</button><div class="form-message" id="formMessage"></div></form></div>
+    <!-- Contact Intro -->
+    <section class="contact-intro section-padding">
+        <div class="container contact-intro-inner">
+            <div class="contact-intro-copy">
+                <p class="section-subtitle">Контакт</p>
+                <h2 class="section-title">Забронируйте стол без ожидания</h2>
+                <p>Позвоните нам для быстрого подтверждения или отправьте запрос, если планируете большой стол, семейную встречу или небольшой праздник.</p>
+            </div>
+            <div class="contact-intro-panel" aria-label="Быстрое бронирование">
+                <span>Бронирование telefonom</span>
+                <a href="tel:+381112612253">011/2612-253</a>
+                <p>Понедельник - Суббота, 10:00 - 23:00</p>
+            </div>
+        </div>
+    </section>
 
-    <div class="contact-info-wrapper"><div class="contact-info-card"><h3>Информация</h3><div class="contact-info-item"><div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div><div class="contact-details"><h4>Адрес</h4><p><a class="contact-link" href="https://www.google.com/maps/search/?api=1&query=Gornjogradska%207c%2C%20Zemun%2C%20Serbia" target="_blank" rel="noopener noreferrer">Gornjogradska 7c<br>Zemun, Serbia</a></p><a class="contact-action" href="https://www.google.com/maps/dir/?api=1&destination=Gornjogradska%207c%2C%20Zemun%2C%20Serbia" target="_blank" rel="noopener noreferrer">Показать маршрут</a></div></div><div class="contact-info-item"><div class="contact-icon"><i class="fas fa-phone"></i></div><div class="contact-details"><h4>Телефон</h4><p><a href="tel:+381112612253">011/2612-253</a></p><p><a href="tel:+381611318967">061/1318-967</a></p></div></div><div class="contact-info-item"><div class="contact-icon"><i class="fas fa-envelope"></i></div><div class="contact-details"><h4>Email</h4><p><a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></p><p><a href="mailto:rezervacije@restorangigo.rs">rezervacije@restorangigo.rs</a></p></div></div><div class="contact-info-item"><div class="contact-icon"><i class="fas fa-clock"></i></div><div class="contact-details"><h4>Время работы</h4><p><strong>Понедельник - Суббота:</strong><br>10:00 - 23:00</p><p><strong>Воскресенье:</strong><br>не работаем</p></div></div></div><div class="contact-social"><h4>Следите за нами</h4><div class="social-links-large"><a href="#" aria-label="Facebook" class="social-link"><i class="fab fa-facebook-f"></i><span>Facebook</span></a><a href="#" aria-label="Instagram" class="social-link"><i class="fab fa-instagram"></i><span>Instagram</span></a><a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor" class="social-link"><i class="fab fa-tripadvisor"></i><span>TripAdvisor</span></a></div><div class="ta-badge"><a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer"><i class="fab fa-tripadvisor" aria-hidden="true"></i><span class="ta-badge-stars" aria-label="Оценка 5 из 5">★★★★★</span><span class="ta-badge-meta"><strong>4.9</strong> · 27 отзывов</span></a></div></div></div></div></div></section>
+    <!-- Contact Section -->
+    <section class="contact-section section-padding">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <div class="section-header">
+                        <span class="section-subtitle">Бронирование</span>
+                        <h2 class="section-title">Запрос на бронирование</h2>
+                        <p>Отправьте дату, время и количество гостей. Мы свяжемся с вами для подтверждения.</p>
+                    </div>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Имя и фамилия *</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="guests">Количество гостей *</label>
+                                <div class="select-wrap">
+                                    <select id="guests" name="guests" required>
+                                    <option value="">Выберите</option>
+                                    <option value="1">1 гость</option>
+                                    <option value="2" selected>2 гостей</option>
+                                    <option value="3">3 гостей</option>
+                                    <option value="4">4 гостей</option>
+                                    <option value="5">5 гость</option>
+                                    <option value="6">6 гость</option>
+                                    <option value="7+">7+ гость</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">Дата *</label>
+                                <div class="input-icon" data-icon="calendar">
+                                    <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                                    <input type="date" id="date" name="date" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="time">Время *</label>
+                                <div class="input-icon" data-icon="clock">
+                                    <i class="fas fa-clock" aria-hidden="true"></i>
+                                    <input type="time" id="time" name="time" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Дополнительные примечания</label>
+                            <textarea id="message" name="message" rows="4" placeholder="Особые пожелания, праздники, аллергии..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Отправить запрос</button>
+                        <div class="form-message" id="formMessage"></div>
+                    </form>
+                </div>
 
-    <section class="map-section"><div class="container"><div class="map-card"><div class="map-card-header"><p class="section-subtitle">Локация</p><h2 class="map-title">Как нас найти</h2><p>Ресторан находится на улице Gornjogradska в Земуне. Если вы приезжаете впервые, удобнее всего открыть маршрут на карте.</p><a class="btn btn-primary map-directions" href="https://www.google.com/maps/dir/?api=1&destination=Gornjogradska%207c%2C%20Zemun%2C%20Serbia" target="_blank" rel="noopener noreferrer">Показать маршрут</a></div><div class="map-container map-placeholder" aria-label="Карта расположения ресторана Gigo"><div class="map-grid" aria-hidden="true"></div><div class="map-marker" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div><div class="map-location-card"><span>Ресторан Gigo</span><strong>Gornjogradska 7c</strong><p>Zemun, Serbia</p><a href="https://www.google.com/maps/search/?api=1&query=Gornjogradska%207c%2C%20Zemun%2C%20Serbia" target="_blank" rel="noopener noreferrer">Карта будет показана здесь.</a></div></div></div></div></section>
+                <!-- Contact Info -->
+                <div class="contact-info-wrapper">
+                    <div class="contact-info-card">
+                        <h3>Информация</h3>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Адрес</h4>
+                                <p>
+                                    <a class="contact-link" href="https://www.google.com/maps/search/?api=1&query=Gornjogradska%207c%2C%20Zemun%2C%20Serbia" target="_blank" rel="noopener noreferrer">Gornjogradska 7c<br>Земун, Сербия</a>
+                                </p>
+                                <a class="contact-action" href="https://www.google.com/maps/dir/?api=1&destination=Gornjogradska%207c%2C%20Zemun%2C%20Serbia" target="_blank" rel="noopener noreferrer">Показать маршрут</a>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Телефон</h4>
+                                <p><a href="tel:+381112612253">011/2612-253</a>; <a href="tel:+381611318967">061/1318-967</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a>; <a href="mailto:rezervacije@restorangigo.rs">rezervacije@restorangigo.rs</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-info-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Время работы</h4>
+                                <p><strong>Понедельник - Суббота:</strong><br>10:00 - 23:00</p>
+                                <p><strong>Воскресенье:</strong><br>не работаем</p>
+                            </div>
+                        </div>
+                    </div>
 
-    <section class="faq-section section-padding bg-light"><div class="container"><div class="section-header center"><span class="section-subtitle">Частые вопросы</span><h2 class="section-title">Перед визитом</h2></div><div class="faq-wrapper"><div class="faq-item"><button class="faq-question" type="button" id="faq-q-1" aria-expanded="true" aria-controls="faq-a-1"><span>Нужна ли бронь?</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button><div class="faq-answer" id="faq-a-1" role="region" aria-labelledby="faq-q-1"><p>Бронирование не обязательно, но мы рекомендуем его на выходные, для большой компании или семейного обеда. Если вы приходите без брони, мы примем вас, как только освободится стол.</p></div></div><div class="faq-item"><button class="faq-question" type="button" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2"><span>Есть ли парковка?</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button><div class="faq-answer" id="faq-a-2" role="region" aria-labelledby="faq-q-2"><p>Парковка зависит от текущей загруженности вокруг ресторана. Если вы приезжаете впервые, позвоните нам, и мы подскажем, что будет удобнее.</p></div></div><div class="faq-item"><button class="faq-question" type="button" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3"><span>Принимаете ли вы групповые бронирования?</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button><div class="faq-answer" id="faq-a-3" role="region" aria-labelledby="faq-q-3"><p>Да, мы принимаем бронирования для больших столов и небольших праздников. Лучше связаться с нами заранее, чтобы согласовать время и рассадку.</p></div></div><div class="faq-item"><button class="faq-question" type="button" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4"><span>Есть ли вегетарианские блюда?</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button><div class="faq-answer" id="faq-a-4" role="region" aria-labelledby="faq-q-4"><p>В меню есть салаты, закуски и отдельные блюда без мяса. За конкретной рекомендацией лучше обратиться к персоналу при бронировании или по прибытии.</p></div></div><div class="faq-item"><button class="faq-question" type="button" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5"><span>Есть ли доставка?</span><i class="fas fa-chevron-down" aria-hidden="true"></i></button><div class="faq-answer" id="faq-a-5" role="region" aria-labelledby="faq-q-5"><p>Ресторан в первую очередь предназначен для гостей, которые приходят к нам. О возможности заказа или самовывоза лучше уточнить по телефону.</p></div></div></div></div></section>
+                    <div class="contact-social">
+                        <h4>Следите за нами</h4>
+                        <div class="social-links-large">
+                            <a href="#" aria-label="Facebook" class="social-link">
+                                <i class="fab fa-facebook-f"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" aria-label="Instagram" class="social-link">
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor" class="social-link">
+                                <i class="fab fa-tripadvisor"></i>
+                                <span>TripAdvisor</span>
+                            </a>
+                        </div>
+                        <div class="ta-badge">
+                            <a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer">
+                                <i class="fab fa-tripadvisor" aria-hidden="true"></i>
+                                <span class="ta-badge-stars" aria-label="Оценка 5 из 5">★★★★★</span>
+                                <span class="ta-badge-meta"><strong>4.9</strong> · 27 отзывов</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="contact-phone-cta section-padding"><div class="container contact-phone-panel"><div><p class="section-subtitle">Быстрое бронирование</p><h2>Быстрее всего по телефону.</h2><p>Для брони на тот же день, большого стола или вопроса о свободном времени позвоните нам напрямую.</p></div><div class="contact-phone-actions"><a href="tel:+381112612253" class="btn btn-primary">Позвонить в ресторан</a><a href="tel:+381112612253" class="contact-phone-number">011/2612-253</a><a href="tel:+381611318967" class="contact-phone-number">061/1318-967</a></div></div></section>
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="map-card">
+                <div class="map-card-header">
+                    <p class="section-subtitle">Локация</p>
+                    <h2 class="map-title">Как нас найти</h2>
+                    <p>Ресторан находится на улице Горньоградска в Земуне. Если вы приезжаете впервые, проще всего открыть маршрут на карте.</p>
+                    <a class="btn btn-primary map-directions" href="https://www.google.com/maps/dir/?api=1&destination=Gornjogradska%207c%2C%20Zemun%2C%20Serbia" target="_blank" rel="noopener noreferrer">Показать маршрут</a>
+                </div>
+                <div class="map-container map-placeholder" aria-label="Карта расположения ресторана Gigo">
+                    <div class="map-grid" aria-hidden="true"></div>
+                    <div class="map-marker" aria-hidden="true"><i class="fas fa-map-marker-alt"></i></div>
+                    <div class="map-location-card">
+                        <span>Restoran Gigo</span>
+                        <strong>Gornjogradska 7c</strong>
+                        <p>Земун, Сербия</p>
+                        <a href="https://www.google.com/maps/search/?api=1&query=Gornjogradska%207c%2C%20Zemun%2C%20Serbia" target="_blank" rel="noopener noreferrer">Карта будет показана здесь.</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer class="footer footer--home"><div class="footer-inner"><div class="footer-grid"><div class="footer-col footer-col--brand"><a href="index.html" class="footer-brand" aria-label="Ресторан Gigo"><img src="../images/logo-beli.png" alt="Ресторан Gigo" class="footer-logo"></a><p class="footer-tagline">Домашняя кухня, к которой всегда возвращаются.</p><div class="social-links"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a></div></div><div class="footer-col"><h4>Ссылки</h4><ul class="footer-links"><li><a href="index.html">Главная</a></li><li><a href="o-nama.html">О нас</a></li><li><a href="jelovnik.html">Меню</a></li><li><a href="vinska-karta.html">Винная карта</a></li><li><a href="kontakt.html">Контакт</a></li></ul></div><div class="footer-col"><h4>Время работы</h4><ul class="footer-info"><li><span class="fi-label">Пн - Сб</span><span class="fi-value">10:00 - 23:00</span></li><li><span class="fi-label">Воскресенье</span><span class="fi-value">не работаем</span></li></ul></div><div class="footer-col"><h4>Контакт</h4><ul class="footer-info footer-info--contact"><li><i class="fas fa-map-marker-alt"></i><span>Gornjogradska 7c, Zemun</span></li><li><i class="fas fa-phone"></i><a href="tel:+381112612253">011/2612-253</a></li><li><i class="fas fa-phone"></i><a href="tel:+381611318967">061/1318-967</a></li><li><i class="fas fa-envelope"></i><a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li></ul></div></div><div class="footer-bottom"><p class="footer-copy">&copy; 2026 Ресторан Gigo. Все права защищены.</p><div class="footer-lang" aria-label="Language"><a href="../kontakt.html">SR</a><span aria-hidden="true">·</span><a href="../en/kontakt.html">EN</a><span aria-hidden="true">·</span><a href="kontakt.html" class="active" aria-current="page">RU</a></div><div class="footer-credit"><span>Дизайн и разработка:</span><a href="https://pansoft.rs" target="_blank" rel="noopener noreferrer" aria-label="Pansoft"><img src="../images/pansoft%20logo%20bela%20slova-01.png" alt="Pansoft" class="footer-credit-logo"></a></div></div></div></footer>
-    <button class="back-to-top" id="backToTop" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
+    <!-- FAQ Section -->
+    <section class="faq-section section-padding bg-light">
+        <div class="container">
+            <div class="section-header center">
+                <span class="section-subtitle">Частые вопросы</span>
+                <h2 class="section-title">Перед визитом</h2>
+            </div>
+            <div class="faq-wrapper">
+                <div class="faq-item">
+                    <button class="faq-question" type="button" id="faq-q-1" aria-expanded="true" aria-controls="faq-a-1">
+                        <span>Нужна ли резервация?</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-a-1" role="region" aria-labelledby="faq-q-1">
+                        <p>Резервация не обязательна, но мы рекомендуем ее на выходные, для большой компании или семейного обеда. Если вы придете без резервации, мы примем вас, как только освободится стол.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" id="faq-q-2" aria-expanded="false" aria-controls="faq-a-2">
+                        <span>Есть ли парковка?</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-a-2" role="region" aria-labelledby="faq-q-2">
+                        <p>Парковка зависит от текущей загруженности вокруг ресторана. Если вы приезжаете впервые, позвоните нам, и мы подскажем самый практичный вариант.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" id="faq-q-3" aria-expanded="false" aria-controls="faq-a-3">
+                        <span>Принимаете ли вы групповые бронирования?</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-a-3" role="region" aria-labelledby="faq-q-3">
+                        <p>Да, мы принимаем бронирования для больших столов и небольших праздников. Лучше связаться с нами заранее, чтобы согласовать время и рассадку.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" id="faq-q-4" aria-expanded="false" aria-controls="faq-a-4">
+                        <span>Есть ли вегетарианские блюда?</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-a-4" role="region" aria-labelledby="faq-q-4">
+                        <p>В меню есть салаты, закуски и отдельные блюда без мяса. За конкретной рекомендацией лучше обратиться к персоналу при бронировании или по приезде.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" type="button" id="faq-q-5" aria-expanded="false" aria-controls="faq-a-5">
+                        <span>Есть ли доставка?</span>
+                        <i class="fas fa-chevron-down" aria-hidden="true"></i>
+                    </button>
+                    <div class="faq-answer" id="faq-a-5" role="region" aria-labelledby="faq-q-5">
+                        <p>Ресторан прежде всего предназначен для гостей, которые приходят к нам. О возможности заказа или самовывоза лучше узнать по телефону.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Phone CTA Section -->
+    <section class="contact-phone-cta section-padding">
+        <div class="container contact-phone-panel">
+            <div>
+                <p class="section-subtitle">Быстрое бронирование</p>
+                <h2>Быстрее всего по телефону.</h2>
+                <p>Для бронирования на тот же день, большого стола или вопроса о свободном времени позвоните нам напрямую.</p>
+            </div>
+            <div class="contact-phone-actions">
+                <a href="tel:+381112612253" class="btn btn-primary">Позвонить в ресторан</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer--home">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col footer-col--brand">
+                    <a href="index.html" class="footer-brand" aria-label="Ресторан Gigo">
+                        <img src="../images/logo-beli.png" alt="Ресторан Gigo" class="footer-logo">
+                    </a>
+                    <p class="footer-tagline">Домашняя кухня, к которой всегда возвращаются.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Ссылки</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="o-nama.html">О нас</a></li>
+                        <li><a href="jelovnik.html">Меню</a></li>
+                        <li><a href="vinska-karta.html">Винная карта</a></li>
+                        <li><a href="kontakt.html">Контакт</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Время работы</h4>
+                    <ul class="footer-info">
+                        <li>
+                            <span class="fi-label">Пн - Сб</span>
+                            <span class="fi-value">10:00 - 23:00</span>
+                        </li>
+                        <li>
+                            <span class="fi-label">Воскресенье</span>
+                            <span class="fi-value">не работаем</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакт</h4>
+                    <ul class="footer-info footer-info--contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Gornjogradska 7c, Zemun</span></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381112612253">011/2612-253</a></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381611318967">061/1318-967</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Restoran Gigo. Все права защищены.</p>
+                <div class="footer-lang" aria-label="Language">
+                    <a href="../kontakt.html">SR</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="../en/kontakt.html">EN</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="kontakt.html" class="active" aria-current="page">RU</a>
+                </div>
+                <div class="footer-credit">
+                    <span>Дизайн и разработка:</span>
+                    <a href="https://pansoft.rs" target="_blank" rel="noopener noreferrer" aria-label="Pansoft">
+                        <img src="../images/pansoft%20logo%20bela%20slova-01.png" alt="Pansoft" class="footer-credit-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="../js/main.js"></script>
 </body>
 </html>
+
+

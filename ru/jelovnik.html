@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Меню ресторана Gigo - домашние блюда, гриль, салаты и десерты для обеда, ужина и семейной встречи.">
+    <meta name="description" content="Меню ресторана Gigo - завтрак, закуски, супы, гриль, фирменные блюда, салаты и десерты.">
     <title>Меню - Ресторан Gigo</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/pages.css">
@@ -15,57 +15,693 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="page-menu page-home-modern">
-    <nav class="navbar" id="navbar"><div class="container"><div class="nav-wrapper"><a href="index.html" class="logo" aria-label="Ресторан Gigo"><img src="../images/logo-beli.png" alt="" class="logo-img" data-logo-default="../images/logo-beli.png" data-logo-inverse="../images/logo-beli.png"></a><button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню"><span></span><span></span><span></span></button><ul class="nav-menu" id="navMenu"><li><a href="index.html" class="nav-link">Главная</a></li><li><a href="o-nama.html" class="nav-link">О нас</a></li><li><a href="jelovnik.html" class="nav-link active" aria-current="page">Меню</a></li><li><a href="vinska-karta.html" class="nav-link">Винная карта</a></li><li><a href="kontakt.html" class="nav-link">Контакт</a></li><li class="nav-lang"><div class="lang-switch" aria-label="Выбор языка"><a href="../jelovnik.html">SR</a><a href="../en/jelovnik.html">EN</a><a href="jelovnik.html" class="active" aria-current="page">RU</a></div></li><li><a href="tel:+381112612253" class="btn-reserve">Забронировать</a></li></ul></div></div></nav>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo" aria-label="Ресторан Gigo">
+                    <img src="../images/logo-beli.png" alt="" class="logo-img" data-logo-default="../images/logo-beli.png" data-logo-inverse="../images/logo-beli.png">
+                </a>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-    <section class="page-header menu-header"><div class="page-header-overlay"></div><div class="container"><div class="page-header-content"><h1>Меню</h1><p>Домашние блюда, гриль, салаты и десерты для обеда или ужина.</p></div></div></section>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="o-nama.html" class="nav-link">О нас</a></li>
+                    <li><a href="jelovnik.html" class="nav-link active" aria-current="page">Меню</a></li>
+                    <li><a href="vinska-karta.html" class="nav-link">Винная карта</a></li>
+                    <li><a href="kontakt.html" class="nav-link">Контакт</a></li>
+                    <li class="nav-lang">
+                        <div class="lang-switch" aria-label="Выбор языка">
+                            <a href="jelovnik.html" class="active" aria-current="page">SR</a>
+                            <a href="en/jelovnik.html">EN</a>
+                            <a href="ru/jelovnik.html">RU</a>
+                        </div>
+                    </li>
+                    <li><a href="tel:+381112612253" class="btn-reserve">Забронировать</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <section class="menu-filter section-padding-small"><div class="container"><div class="filter-buttons" role="tablist" aria-label="Категории меню"><button type="button" class="filter-btn active" data-filter="all" data-target="all" role="tab" aria-selected="true" id="menu-tab-all">Все</button><button type="button" class="filter-btn" data-filter="predjela" data-target="predjela" role="tab" aria-controls="predjela" aria-selected="false" tabindex="-1" id="menu-tab-predjela">Закуски</button><button type="button" class="filter-btn" data-filter="čorbe" data-target="corbe" role="tab" aria-controls="corbe" aria-selected="false" tabindex="-1" id="menu-tab-corbe">Супы</button><button type="button" class="filter-btn" data-filter="glavna" data-target="glavna-jela" role="tab" aria-controls="glavna-jela" aria-selected="false" tabindex="-1" id="menu-tab-glavna">Основные блюда</button><button type="button" class="filter-btn" data-filter="salate" data-target="salate" role="tab" aria-controls="salate" aria-selected="false" tabindex="-1" id="menu-tab-salate">Салаты</button><button type="button" class="filter-btn" data-filter="deserti" data-target="deserti" role="tab" aria-controls="deserti" aria-selected="false" tabindex="-1" id="menu-tab-deserti">Десерты</button></div></div></section>
+    <!-- Page Header -->
+    <section class="page-header menu-header">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Меню</h1>
+                <p>Полное меню: завтрак, закуски, супы, гриль, фирменные блюда, салаты и десерты.</p>
+            </div>
+        </div>
+    </section>
 
-    <section class="menu-section section-padding" id="predjela"><div class="container"><div class="menu-category-header"><h2 class="section-title">Закуски</h2></div><div class="menu-items" data-category="predjela">
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Домашний каймак</h3><span class="menu-price">650 RSD</span></div><p class="menu-description">Домашний каймак с лепешкой или как дополнение к грилю.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Сербский пршут и сыр</h3><span class="menu-price">1.200 RSD</span></div><p class="menu-description">Пршут, сыр и дополнения для начала трапезы.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Домашний айвар</h3><span class="menu-price">450 RSD</span></div><p class="menu-description">Мягкий или острый, к хлебу, мясу или закускам.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Гибаница</h3><span class="menu-price">550 RSD</span></div><p class="menu-description">Домашняя гибаница с сыром.</p></div></div>
-    </div></div></section>
+    <!-- Menu Filter -->
+    <section class="menu-filter section-padding-small">
+        <div class="container">
+            <div class="filter-buttons" role="tablist" aria-label="Категории меню">
+                <button type="button" class="filter-btn active" data-filter="all" data-target="all" role="tab" aria-selected="true" id="menu-tab-all">Все</button>
+                <button type="button" class="filter-btn" data-filter="predjela" data-target="predjela" role="tab" aria-controls="predjela" aria-selected="false" tabindex="-1" id="menu-tab-predjela">Закуски</button>
+                <button type="button" class="filter-btn" data-filter="dorucak" data-target="dorucak" role="tab" aria-controls="dorucak" aria-selected="false" tabindex="-1" id="menu-tab-dorucak">Завтрак</button>
+                <button type="button" class="filter-btn" data-filter="čorbe" data-target="corbe" role="tab" aria-controls="corbe" aria-selected="false" tabindex="-1" id="menu-tab-corbe">Супы</button>
+                <button type="button" class="filter-btn" data-filter="prilozi" data-target="prilozi" role="tab" aria-controls="prilozi" aria-selected="false" tabindex="-1" id="menu-tab-prilozi">Гарниры</button>
+                <button type="button" class="filter-btn" data-filter="dame" data-target="dame" role="tab" aria-controls="dame" aria-selected="false" tabindex="-1" id="menu-tab-dame">Легкие блюда</button>
+                <button type="button" class="filter-btn" data-filter="glavna" data-target="glavna-jela" role="tab" aria-controls="glavna-jela" aria-selected="false" tabindex="-1" id="menu-tab-glavna">Основные блюда</button>
+                <button type="button" class="filter-btn" data-filter="riba" data-target="riba" role="tab" aria-controls="riba" aria-selected="false" tabindex="-1" id="menu-tab-riba">Рыба и кальмары</button>
+                <button type="button" class="filter-btn" data-filter="salate" data-target="salate" role="tab" aria-controls="salate" aria-selected="false" tabindex="-1" id="menu-tab-salate">Салаты</button>
+                <button type="button" class="filter-btn" data-filter="deserti" data-target="deserti" role="tab" aria-controls="deserti" aria-selected="false" tabindex="-1" id="menu-tab-deserti">Десерты</button>
+            </div>
+        </div>
+    </section>
 
-    <section class="menu-editorial menu-editorial--dark" aria-label="Предложение для начала обеда"><div class="container"><p>Для стола, который начинается неспешно - закуска, суп и бокал вина часто становятся лучшим началом.</p></div></section>
+    <!-- Menu Section - Predjela -->
+    <section class="menu-section section-padding" id="predjela">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Закуски</h2>
+            </div>
+            <div class="menu-items" data-category="predjela">
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Сырная тарелка "Skopski merak"</h3>
+                            <span class="menu-price">850 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Овечий сыр, 100 г</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Коровий сыр с Ястребца, 200 г</h3>
+                            <span class="menu-price">390 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Пиротский козий сыр, 100 г</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Жареный македонский сыр</h3>
+                            <span class="menu-price">490 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Каймак, 100 г</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Перец в сметане, 100 г</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                        <p class="menu-description">В сезон.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Негушский пршут, 100 г</h3>
+                            <span class="menu-price">790 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Говяжий пршут, 100 г</h3>
+                            <span class="menu-price">650 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Кулен, 100 г</h3>
+                            <span class="menu-price">690 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Suvi jelenjski ramstek</h3>
+                            <span class="menu-price">990 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Sir koziji u maslinovom ulju, 100 gr</h3>
+                            <span class="menu-price">490 RSD</span>
+                        </div>
+                        <p class="menu-description">Наша рекомендация.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Панированный качкавал, 100 г</h3>
+                            <span class="menu-price">550 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Prebranac</h3>
+                            <span class="menu-price">550 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pihtije</h3>
+                            <span class="menu-price">550 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Masline, 100 gr</h3>
+                            <span class="menu-price">350 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Грибы на гриле, 200 г</h3>
+                            <span class="menu-price">490 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Панированные фаршированные перцы</h3>
+                            <span class="menu-price">790 RSD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="menu-section section-padding bg-light" id="corbe"><div class="container"><div class="menu-category-header"><h2 class="section-title">Супы</h2><p>Теплое начало трапезы, особенно для обеда.</p></div><div class="menu-items" data-category="čorbe">
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Телячий суп</h3><span class="menu-price">450 RSD</span></div><p class="menu-description">Классический телячий суп с домашним вкусом.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Куриный суп</h3><span class="menu-price">380 RSD</span></div><p class="menu-description">Легкий суп с курицей и овощами.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Суп-гуляш</h3><span class="menu-price">550 RSD</span></div><p class="menu-description">Более насыщенный суп с мясом и полным вкусом.</p></div></div>
-    </div></div></section>
+    <!-- Menu Section - Doručak -->
+    <section class="menu-section section-padding" id="dorucak">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Завтрак</h2>
+                <p>Завтрак подается с 10:00 до 12:30.</p>
+            </div>
+            <div class="menu-items" data-category="dorucak">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 1</h3><span class="menu-price">490 RSD</span></div><p class="menu-description">Doručak od 3 jaja po izboru.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Srpski doručak 2</h3><span class="menu-price">590 RSD</span></div><p class="menu-description">Kajgana na somunu sa duvan čvarcima, kajmakom i paradajzom.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 3</h3><span class="menu-price">590 RSD</span></div><p class="menu-description">Prženice, pavlaka, pečenica, paradajz, sir.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 4</h3><span class="menu-price">590 RSD</span></div><p class="menu-description">Topli sendvič sa jajima, pečenicom, kačkavaljem, pečurkama i urnebesom.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 5 - komplet lepinja</h3><span class="menu-price">490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Komplet lepinja sa pršutom</h3><span class="menu-price">590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Komplet lepinja sa kulenom</h3><span class="menu-price">590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Komplet lepinja sa duvan čvarcima</h3><span class="menu-price">590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 6</h3><span class="menu-price">550 RSD</span></div><p class="menu-description">Kačamak sa sirom i slaninom.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Gigo doručak 7</h3><span class="menu-price">650 RSD</span></div><p class="menu-description">Njeguška pršuta, kulen, pečenica, kravlji sir, kajmak, paradajz, 2 pečena jaja.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 8</h3><span class="menu-price">650 RSD</span></div><p class="menu-description">Uštipci sa paradajzom, njeguškom pršutom, pečenicom, kravljim sirom i kajmakom.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 9</h3><span class="menu-price">590 RSD</span></div><p class="menu-description">Bećarac sa ovčijim sirom i slaninicom.</p></div></div>
+            </div>
+        </div>
+    </section>
 
-    <section class="menu-section section-padding" id="glavna-jela"><div class="container"><div class="menu-category-header"><h2 class="section-title">Основные блюда</h2><p>Гриль, домашние горячие блюда и порции для настоящего обеда.</p></div><div class="menu-items" data-category="glavna">
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Караджорджева шницла</h3><span class="menu-price">1.450 RSD</span></div><p class="menu-description">Фаршированная шницла с каймаком, с гарниром на выбор.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Чевапи</h3><span class="menu-price">950 RSD</span></div><p class="menu-description">Чевапи с луком и лепешкой.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Фаршированные перцы</h3><span class="menu-price">1.100 RSD</span></div><p class="menu-description">Домашние фаршированные перцы с мясным фаршем.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Ассорти мяса с гриля</h3><span class="menu-price">1.650 RSD</span></div><p class="menu-description">Гриль для тех, кто хочет больше вкусов на одной тарелке.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Сарма</h3><span class="menu-price">980 RSD</span></div><p class="menu-description">Домашняя сарма в квашеной капусте.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Пребранац</h3><span class="menu-price">650 RSD</span></div><p class="menu-description">Запеченная фасоль с луком.</p></div></div>
-    </div></div></section>
+    <!-- Menu Section - Čorbe -->
+    <section class="menu-section section-padding bg-light" id="corbe">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Супы</h2>
+                <p>Теплое начало трапезы, особенно для обеда.</p>
+            </div>
+            <div class="menu-items" data-category="čorbe">
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Телячий суп</h3>
+                            <span class="menu-price">390 RSD</span>
+                        </div>
+                        <p class="menu-description">Klasična teleća čorba sa domaćim ukusom.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Рыбный суп</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Домашний куриный суп</h3>
+                            <span class="menu-price">350 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Томатный суп</h3>
+                            <span class="menu-price">390 RSD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="menu-editorial menu-editorial--image" aria-label="Обед и ужин"><div class="container menu-editorial-grid"><img src="../images/galerija%203.jpg" alt="Блюдо из ресторана Gigo" loading="lazy"><div><p class="section-subtitle">Для стола</p><h2>Обед может быть быстрым, но не обязан быть поспешным.</h2><p>Основные блюда подходят для моментов, когда за столом сидят чуть дольше: гриль, домашние горячие блюда, салат и вино, если обед переходит в ужин.</p></div></div></section>
+    <!-- Menu Section - Prilozi -->
+    <section class="menu-section section-padding" id="prilozi">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Гарниры и хлеб</h2>
+            </div>
+            <div class="menu-items" data-category="prilozi">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Картофель фри</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Dalmatinsko varivo</h3><span class="menu-price">450 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Овощи на гриле</h3><span class="menu-price">450 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Рис</h3><span class="menu-price">290 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Хлеб</h3><span class="menu-price">100 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Приправленный хлеб</h3><span class="menu-price">150 RSD</span></div></div></div>
+            </div>
+        </div>
+    </section>
 
-    <section class="menu-section section-padding bg-light" id="salate"><div class="container"><div class="menu-category-header"><h2 class="section-title">Салаты</h2><p>Свежие салаты к грилю, домашним блюдам или более легкой трапезе.</p></div><div class="menu-items" data-category="salate">
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Шопский салат</h3><span class="menu-price">480 RSD</span></div><p class="menu-description">Помидор, огурец, перец, лук и сыр.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Сербский салат</h3><span class="menu-price">450 RSD</span></div><p class="menu-description">Помидор, огурец, перец и лук.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Греческий салат</h3><span class="menu-price">520 RSD</span></div><p class="menu-description">Овощи, сыр фета и оливки.</p></div></div>
-    </div></div></section>
+    <!-- Menu Section - Dame vole -->
+    <section class="menu-section section-padding bg-light" id="dame">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Легкие блюда</h2>
+            </div>
+            <div class="menu-items" data-category="dame">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Ризотто с овощами</h3><span class="menu-price">890 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Ризотто с кальмарами</h3><span class="menu-price">1150 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Cezar salata</h3><span class="menu-price">990 RSD</span></div></div></div>
+            </div>
+        </div>
+    </section>
 
-    <section class="menu-section section-padding" id="deserti"><div class="container"><div class="menu-category-header"><h2 class="section-title">Десерты</h2><p>Домашняя классика в завершение трапезы.</p></div><div class="menu-items" data-category="deserti">
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Блинчики</h3><span class="menu-price">450 RSD</span></div><p class="menu-description">С кремом, джемом или орехами.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Тулумба</h3><span class="menu-price">380 RSD</span></div><p class="menu-description">Традиционная тулумба в сиропе.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Пахлава</h3><span class="menu-price">420 RSD</span></div><p class="menu-description">Пахлава с грецкими орехами.</p></div></div>
-        <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Кремпита</h3><span class="menu-price">480 RSD</span></div><p class="menu-description">Кремовый десерт с ванилью.</p></div></div>
-    </div></div></section>
+    <!-- Menu Section - Glavna jela -->
+    <section class="menu-section section-padding" id="glavna-jela">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Основные блюда</h2>
+                <p>Блюда на заказ, гриль, стейки, блюда из-под сача и фирменные позиции.</p>
+            </div>
+            <div class="menu-items" data-category="glavna">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Куриное филе</h3><span class="menu-price">880 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Филе индейки</h3><span class="menu-price">950 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Свиная вырезка</h3><span class="menu-price">990 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Gorgonzola sos</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Vrganj - pršuta sos</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Pikant sos</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Šampinjoni sos</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Kikiriki sos</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Фаршированная курица</h3><span class="menu-price">1190 RSD</span></div><p class="menu-description">Kačkavalj, kajmak.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Филе индейки u mlincima</h3><span class="menu-price">1250 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Свиная вырезка "Gigo" na naš način</h3><span class="menu-price">1350 RSD</span></div></div></div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Телячьи ребра из-под сача, 300 г</h3>
+                            <span class="menu-price">1990 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Ягненок из-под сача, 400 г</h3>
+                            <span class="menu-price">1680 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Гуляш из дичи с ньокки</h3>
+                            <span class="menu-price">1590 RSD</span>
+                        </div>
+                        <p class="menu-description">Srnetina, divlja svinja, jelensko meso.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Biftek sa vrganjima i pršutom</h3>
+                            <span class="menu-price">2950 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Чевапи (порция)</h3>
+                            <span class="menu-price">920 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Чевапи (полпорции)</h3>
+                            <span class="menu-price">720 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Чевапи с каймаком (порция)</h3>
+                            <span class="menu-price">980 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Чевапи с каймаком (полпорции)</h3>
+                            <span class="menu-price">780 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Ćevapi Gigo</h3><span class="menu-price">1100 RSD</span></div></div></div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Уштипцы (порция)</h3>
+                            <span class="menu-price">1050 RSD</span>
+                        </div>
+                        <p class="menu-description">Kačkavalj, slaninica, tucana paprika.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Плескавица (порция)</h3>
+                            <span class="menu-price">920 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pljeskavica gurmanska, 430 gr (porcija)</h3>
+                            <span class="menu-price">1150 RSD</span>
+                        </div>
+                        <p class="menu-description">Kačkavalj, slaninica, tucana paprika.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pljeskavica punjena, 450 gr (porcija)</h3>
+                            <span class="menu-price">1190 RSD</span>
+                        </div>
+                        <p class="menu-description">Kajmak, kačkavalj.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Домашняя копченая колбаса (порция)</h3>
+                            <span class="menu-price">950 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Kobasica lovačka (porcija)</h3>
+                            <span class="menu-price">1190 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Караджорджева шницла, 400 г (порция)</h3>
+                            <span class="menu-price">1290 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Венский шницель</h3>
+                            <span class="menu-price">1190 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Punjeni svinjski file u slanini</h3>
+                            <span class="menu-price">1290 RSD</span>
+                        </div>
+                        <p class="menu-description">Наша рекомендация. Kačkavalj, kajmak.</p>
+                    </div>
+                </div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Бифштекс на гриле, 300 г</h3><span class="menu-price">2500 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Biftek sa gorgonzolom, 300 gr</h3><span class="menu-price">2950 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Biftek "Gigo", 300 gr</h3><span class="menu-price">3150 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Biftek 1 kg sa začinjenim krompirom i sosom po želji</h3><span class="menu-price">7990 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Копченые свиные ребра, 350 г</h3><span class="menu-price">1390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Teletina sa mlincima u sosu od kajmaka</h3><span class="menu-price">1590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Teleći medaljoni sa dimljenim kačkavaljem</h3><span class="menu-price">1590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Juneći ribić na kajmaku sa pirinčem</h3><span class="menu-price">1250 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tava "Gigo"</h3><span class="menu-price">1390 RSD</span></div><p class="menu-description">Dinstana junetina, paradajz, paprika, luk, šampinjoni, kačkavalj.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Teleća glava u škembetu</h3><span class="menu-price">1390 RSD</span></div><p class="menu-description">Teletina, škembići, povrće.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Dimljene butkice u kupusu, 300 gr</h3><span class="menu-price">1150 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Leskovačka mućkalica</h3><span class="menu-price">950 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Рекомендация šefa kuhinje za 2 osobe</h3><span class="menu-price">2400 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Блюдо дня</h3><span class="menu-price">790 / 1590 RSD</span></div><p class="menu-description">Обратитесь к официанту.</p></div></div>
+            </div>
+        </div>
+    </section>
 
-    <section class="menu-help section-padding"><div class="container menu-help-panel"><div><p class="section-subtitle">Рекомендация</p><h2>Не уверены, что выбрать?</h2><p>Если вы приходите впервые, спросите персонал о рекомендации. Лучший выбор часто зависит от того, пришли ли вы на быстрый обед, ужин с вином или трапезу для нескольких гостей.</p></div><a href="kontakt.html" class="btn btn-primary">Забронировать стол</a></div></section>
+    <!-- Menu Section - Riba i lignje -->
+    <section class="menu-section section-padding bg-light" id="riba">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Речная рыба и кальмары</h2>
+            </div>
+            <div class="menu-items" data-category="riba">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Судак, 1 кг</h3><span class="menu-price">3900 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Филе судака, 1 кг</h3><span class="menu-price">6500 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Fileti smuđa u belom sosu, 350 gr</h3><span class="menu-price">1490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Кальмары на гриле, 300 г</h3><span class="menu-price">1650 RSD</span></div></div></div>
+            </div>
+        </div>
+    </section>
 
-    <section class="home-final-cta cta-section--split"><div class="cta-overlay"></div><div class="cta-split-container"><div class="cta-split-left"><span class="cta-label">Бронирование</span><h2 class="cta-split-title">Забронируйте стол</h2><p class="cta-split-text">Позвоните нам, скажите, на какое время нужен стол и сколько гостей придет. Для большой компании или небольшого праздника лучше связаться с нами заранее.</p></div><div class="cta-split-right"><div class="cta-info-block"><div class="cta-info-item"><span class="cta-info-label">Телефон</span><a href="tel:+381112612253" class="cta-info-value">011/2612-253</a><a href="tel:+381611318967" class="cta-info-value">061/1318-967</a></div><div class="cta-info-item"><span class="cta-info-label">Время работы</span><span class="cta-info-value">Пн-Сб 10:00-23:00</span><span class="cta-info-value">По воскресеньям не работаем</span></div><a href="kontakt.html" class="cta-split-btn">Забронировать стол</a></div></div></div></section>
+    <!-- Menu Section - Salate -->
+    <section class="menu-section section-padding bg-light" id="salate">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Салаты</h2>
+                <p>Свежие салаты к грилю, горячим блюдам или более легкой трапезе.</p>
+            </div>
+            <div class="menu-items" data-category="salate">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Капуста</h3><span class="menu-price">320 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Огурец</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Помидор</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Помидор sa sirom</h3><span class="menu-price">420 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Зеленый салат</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Сербский салат</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Шопский салат</h3><span class="menu-price">450 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Vitaminska salata</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Печеный сладкий перец (2 шт.)</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Печеный острый перец (1 шт.)</h3><span class="menu-price">120 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Смешанный салат</h3><span class="menu-price">420 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tarator</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Ajvar domaći</h3><span class="menu-price">420 RSD</span></div><p class="menu-description">В сезон.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Kiseli kupus</h3><span class="menu-price">390 RSD</span></div><p class="menu-description">В сезон.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Греческий салат</h3><span class="menu-price">450 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Miks zelenih salata</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Miks zelenih salata sa čerijem i pinjolima</h3><span class="menu-price">490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Urnebes</h3><span class="menu-price">330 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Rotkvice</h3><span class="menu-price">190 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Rukola, čeri, parmezan domaći</h3><span class="menu-price">490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Bašta za dve osobe</h3><span class="menu-price">800 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Moravska salata</h3><span class="menu-price">450 RSD</span></div></div></div>
+            </div>
+        </div>
+    </section>
 
-    <footer class="footer footer--home"><div class="footer-inner"><div class="footer-grid"><div class="footer-col footer-col--brand"><a href="index.html" class="footer-brand" aria-label="Ресторан Gigo"><img src="../images/logo-beli.png" alt="Ресторан Gigo" class="footer-logo"></a><p class="footer-tagline">Домашняя кухня, к которой всегда возвращаются.</p><div class="social-links"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a></div></div><div class="footer-col"><h4>Ссылки</h4><ul class="footer-links"><li><a href="index.html">Главная</a></li><li><a href="o-nama.html">О нас</a></li><li><a href="jelovnik.html">Меню</a></li><li><a href="vinska-karta.html">Винная карта</a></li><li><a href="kontakt.html">Контакт</a></li></ul></div><div class="footer-col"><h4>Время работы</h4><ul class="footer-info"><li><span class="fi-label">Пн - Сб</span><span class="fi-value">10:00 - 23:00</span></li><li><span class="fi-label">Воскресенье</span><span class="fi-value">не работаем</span></li></ul></div><div class="footer-col"><h4>Контакт</h4><ul class="footer-info footer-info--contact"><li><i class="fas fa-map-marker-alt"></i><span>Gornjogradska 7c, Zemun</span></li><li><i class="fas fa-phone"></i><a href="tel:+381112612253">011/2612-253</a></li><li><i class="fas fa-phone"></i><a href="tel:+381611318967">061/1318-967</a></li><li><i class="fas fa-envelope"></i><a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li></ul></div></div><div class="footer-bottom"><p class="footer-copy">&copy; 2026 Ресторан Gigo. Все права защищены.</p><div class="footer-lang" aria-label="Language"><a href="../jelovnik.html">SR</a><span aria-hidden="true">·</span><a href="../en/jelovnik.html">EN</a><span aria-hidden="true">·</span><a href="jelovnik.html" class="active" aria-current="page">RU</a></div><div class="footer-credit"><span>Дизайн и разработка:</span><a href="https://pansoft.rs" target="_blank" rel="noopener noreferrer" aria-label="Pansoft"><img src="../images/pansoft%20logo%20bela%20slova-01.png" alt="Pansoft" class="footer-credit-logo"></a></div></div></div></footer>
-    <button class="back-to-top" id="backToTop" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
+    <!-- Menu Section - Deserti -->
+    <section class="menu-section section-padding" id="deserti">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Десерты</h2>
+                <p>Домашняя классика в завершение трапезы.</p>
+            </div>
+            <div class="menu-items" data-category="deserti">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Пахлава с мороженым</h3><span class="menu-price">420 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tufahija</h3><span class="menu-price">360 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Orasnice (1 kom)</h3><span class="menu-price">250 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tri leće</h3><span class="menu-price">380 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Čokoladni tart sa sladoledom i prelivom od višanja</h3><span class="menu-price">550 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Блинчики на выбор</h3><span class="menu-price">420 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>"Reforma" torta</h3><span class="menu-price">490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Čoko malina</h3><span class="menu-price">550 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Palačinke sa Nutelom</h3><span class="menu-price">490 RSD</span></div><p class="menu-description">Plazma, orasi.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Кремпита</h3><span class="menu-price">420 RSD</span></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Help Block -->
+    <section class="menu-help section-padding">
+        <div class="container menu-help-panel">
+            <div>
+                <p class="section-subtitle">Рекомендация</p>
+                <h2>Не уверены, что выбрать?</h2>
+                <p>Если вы приходите впервые, спросите персонал о рекомендации. Лучший выбор часто зависит от того, пришли ли вы на быстрый обед, ужин с вином или трапезу для нескольких гостей.</p>
+            </div>
+            <div class="menu-download-actions">
+                <a href="kontakt.html" class="btn btn-primary">Забронировать стол</a>
+                <a href="../jelovnik/jelovnik_jul_2025_compressed.pdf" class="btn btn-outline" download>Скачать полное меню</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="home-final-cta cta-section--split">
+        <div class="cta-overlay"></div>
+        <div class="cta-split-container">
+            <div class="cta-split-left">
+                <span class="cta-label">Бронирование</span>
+                <h2 class="cta-split-title">Забронировать стол</h2>
+                <p class="cta-split-text">Позвоните нам, скажите, на какое время нужен стол и сколько гостей придет. Для большой компании или небольшого праздника лучше связаться с нами заранее.</p>
+            </div>
+            <div class="cta-split-right">
+                <div class="cta-info-block">
+                    <div class="cta-info-item">
+                        <span class="cta-info-label">Telefon</span>
+                        <a href="tel:+381112612253" class="cta-info-value">011/2612-253</a>
+                        <a href="tel:+381611318967" class="cta-info-value">061/1318-967</a>
+                    </div>
+                    <div class="cta-info-item">
+                        <span class="cta-info-label">Radno vreme</span>
+                        <span class="cta-info-value">Пн-Сб 10:00-23:00</span>
+                        <span class="cta-info-value">По воскресеньям не работаем</span>
+                    </div>
+                    <a href="kontakt.html" class="cta-split-btn">Забронировать стол</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer--home">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col footer-col--brand">
+                    <a href="index.html" class="footer-brand" aria-label="Ресторан Gigo">
+                        <img src="../images/logo-beli.png" alt="Ресторан Gigo" class="footer-logo">
+                    </a>
+                    <p class="footer-tagline">Домашняя кухня, к которой всегда возвращаются.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Ссылки</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="o-nama.html">О нас</a></li>
+                        <li><a href="jelovnik.html">Меню</a></li>
+                        <li><a href="vinska-karta.html">Винная карта</a></li>
+                        <li><a href="kontakt.html">Контакт</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Время работы</h4>
+                    <ul class="footer-info">
+                        <li>
+                            <span class="fi-label">Пн - Сб</span>
+                            <span class="fi-value">10:00 - 23:00</span>
+                        </li>
+                        <li>
+                            <span class="fi-label">Воскресенье</span>
+                            <span class="fi-value">не работаем</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакт</h4>
+                    <ul class="footer-info footer-info--contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Gornjogradska 7c, Zemun</span></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381112612253">011/2612-253</a></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381611318967">061/1318-967</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Restoran Gigo. Все права защищены.</p>
+                <div class="footer-lang" aria-label="Language">
+                    <a href="../jelovnik.html">SR</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="../en/jelovnik.html">EN</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="jelovnik.html" class="active" aria-current="page">RU</a>
+                </div>
+                <div class="footer-credit">
+                    <span>Дизайн и разработка:</span>
+                    <a href="https://pansoft.rs" target="_blank" rel="noopener noreferrer" aria-label="Pansoft">
+                        <img src="../images/pansoft%20logo%20bela%20slova-01.png" alt="Pansoft" class="footer-credit-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="../js/main.js"></script>
 </body>
 </html>
+
+
+

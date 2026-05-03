@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Винная карта ресторана Gigo - вина к обеду, ужину, грилю, закускам и праздникам.">
-    <title>Винная карта - Ресторан Gigo</title>
+    <meta name="description" content="Винная карта и карта напитков ресторана Gigo - вина, ракия, пиво, безалкогольные напитки, вода и кофе.">
+    <title>Винная карта и напитки - Ресторан Gigo</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/pages.css">
     <link rel="stylesheet" href="../css/landing.css">
@@ -15,46 +15,598 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="page-wine page-home-modern">
-    <nav class="navbar" id="navbar"><div class="container"><div class="nav-wrapper"><a href="index.html" class="logo" aria-label="Ресторан Gigo"><img src="../images/logo-beli.png" alt="" class="logo-img" data-logo-default="../images/logo-beli.png" data-logo-inverse="../images/logo-beli.png"></a><button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню"><span></span><span></span><span></span></button><ul class="nav-menu" id="navMenu"><li><a href="index.html" class="nav-link">Главная</a></li><li><a href="o-nama.html" class="nav-link">О нас</a></li><li><a href="jelovnik.html" class="nav-link">Меню</a></li><li><a href="vinska-karta.html" class="nav-link active" aria-current="page">Винная карта</a></li><li><a href="kontakt.html" class="nav-link">Контакт</a></li><li class="nav-lang"><div class="lang-switch" aria-label="Выбор языка"><a href="../vinska-karta.html">SR</a><a href="../en/vinska-karta.html">EN</a><a href="vinska-karta.html" class="active" aria-current="page">RU</a></div></li><li><a href="tel:+381112612253" class="btn-reserve">Забронировать</a></li></ul></div></div></nav>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo" aria-label="Ресторан Gigo">
+                    <img src="../images/logo-beli.png" alt="" class="logo-img" data-logo-default="../images/logo-beli.png" data-logo-inverse="../images/logo-beli.png">
+                </a>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
 
-    <section class="page-header wine-header"><div class="page-header-overlay"></div><div class="container"><div class="page-header-content"><h1>Винная карта</h1><p>Вина к обеду, ужину и блюдам, которые делят за столом.</p></div></div></section>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link">Главная</a></li>
+                    <li><a href="o-nama.html" class="nav-link">О нас</a></li>
+                    <li><a href="jelovnik.html" class="nav-link">Меню</a></li>
+                    <li><a href="vinska-karta.html" class="nav-link active" aria-current="page">Винная карта</a></li>
+                    <li><a href="kontakt.html" class="nav-link">Контакт</a></li>
+                    <li class="nav-lang">
+                        <div class="lang-switch" aria-label="Выбор языка">
+                            <a href="vinska-karta.html" class="active" aria-current="page">SR</a>
+                            <a href="en/vinska-karta.html">EN</a>
+                            <a href="ru/vinska-karta.html">RU</a>
+                        </div>
+                    </li>
+                    <li><a href="tel:+381112612253" class="btn-reserve">Забронировать</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <section class="wine-filter section-padding-small bg-light"><div class="container"><div class="filter-buttons" role="tablist" aria-label="Разделы винной карты"><button type="button" class="filter-btn active" data-filter="all" data-target="all" role="tab" aria-selected="true" id="wine-tab-all">Все вина</button><button type="button" class="filter-btn" data-filter="bela" data-target="bela" role="tab" aria-controls="bela" aria-selected="false" tabindex="-1" id="wine-tab-bela">Белые вина</button><button type="button" class="filter-btn" data-filter="crna" data-target="crna" role="tab" aria-controls="crna" aria-selected="false" tabindex="-1" id="wine-tab-crna">Красные вина</button><button type="button" class="filter-btn" data-filter="roze" data-target="roze" role="tab" aria-controls="roze" aria-selected="false" tabindex="-1" id="wine-tab-roze">Розе</button><button type="button" class="filter-btn" data-filter="penusava" data-target="penusava" role="tab" aria-controls="penusava" aria-selected="false" tabindex="-1" id="wine-tab-penusava">Игристые вина</button></div></div></section>
+    <!-- Page Header -->
+    <section class="page-header wine-header">
+        <div class="page-header-overlay"></div>
+        <div class="container">
+            <div class="page-header-content">
+                <h1>Винная карта и напитки</h1>
+                <p>Вина к обеду и ужину, ракия, пиво, безалкогольные напитки, вода и кофе.</p>
+            </div>
+        </div>
+    </section>
 
-    <section class="wine-section section-padding" id="bela"><div class="container"><div class="wine-category-header"><h2 class="section-title">Белые вина</h2><p>Более свежие вина к закускам, рыбе, сыру и легким блюдам.</p></div><div class="wine-list" data-category="bela">
-        <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Tamjanika <span>Aleksandrović</span></h3><p class="wine-details">Жупа, Сербия · 2022</p><p class="wine-description">Ароматное белое вино к закускам, сыру и легкому началу трапезы.</p><span class="wine-badge">хорошо к закускам</span></div><div class="wine-prices"><span class="wine-price-label">Бокал</span><span class="wine-price">550 RSD</span><span class="wine-price-label">Бутылка</span><span class="wine-price">2.800 RSD</span></div></div></div>
-        <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Chardonnay <span>Vinarija Kovačević</span></h3><p class="wine-details">Фрушка-гора, Сербия · 2021</p><p class="wine-description">Более полное белое вино, которое хорошо подходит к курице, сырам и кремовым блюдам.</p></div><div class="wine-prices"><span class="wine-price-label">Бокал</span><span class="wine-price">480 RSD</span><span class="wine-price-label">Бутылка</span><span class="wine-price">2.400 RSD</span></div></div></div>
-        <div class="wine-item featured"><div class="wine-item-header"><div class="wine-info"><h3>Sauvignon Blanc <span>Despotika</span></h3><p class="wine-details">Неготин, Сербия · 2022</p><p class="wine-description">Более свежее вино для салатов, закусок и легкой трапезы.</p><span class="wine-badge">к салатам</span></div><div class="wine-prices"><span class="wine-price-label">Бокал</span><span class="wine-price">600 RSD</span><span class="wine-price-label">Бутылка</span><span class="wine-price">3.200 RSD</span></div></div></div>
-        <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Riesling <span>Vinski podrum Radovanović</span></h3><p class="wine-details">Нишава, Сербия · 2021</p><p class="wine-description">Белое вино с выраженной свежестью, хорошо к рыбе и легким блюдам.</p></div><div class="wine-prices"><span class="wine-price-label">Бокал</span><span class="wine-price">520 RSD</span><span class="wine-price-label">Бутылка</span><span class="wine-price">2.600 RSD</span></div></div></div>
-    </div></div></section>
+    <!-- Wine Filter -->
+    <section class="wine-filter section-padding-small bg-light">
+        <div class="container">
+            <div class="filter-buttons" role="tablist" aria-label="Разделы винной карты">
+                <button type="button" class="filter-btn active" data-filter="all" data-target="all" role="tab" aria-selected="true" id="wine-tab-all">Все</button>
+                <button type="button" class="filter-btn" data-filter="bela" data-target="bela" role="tab" aria-controls="bela" aria-selected="false" tabindex="-1" id="wine-tab-bela">Белые вина</button>
+                <button type="button" class="filter-btn" data-filter="crna" data-target="crna" role="tab" aria-controls="crna" aria-selected="false" tabindex="-1" id="wine-tab-crna">Красные вина</button>
+                <button type="button" class="filter-btn" data-filter="roze" data-target="roze" role="tab" aria-controls="roze" aria-selected="false" tabindex="-1" id="wine-tab-roze">Розе</button>
+                <button type="button" class="filter-btn" data-filter="penusava" data-target="penusava" role="tab" aria-controls="penusava" aria-selected="false" tabindex="-1" id="wine-tab-penusava">Игристые вина</button>
+                <button type="button" class="filter-btn" data-filter="alkoholna" data-target="alkoholna" role="tab" aria-controls="alkoholna" aria-selected="false" tabindex="-1" id="wine-tab-alkoholna">Крепкие напитки</button>
+                <button type="button" class="filter-btn" data-filter="piva" data-target="piva" role="tab" aria-controls="piva" aria-selected="false" tabindex="-1" id="wine-tab-piva">Пиво</button>
+                <button type="button" class="filter-btn" data-filter="bezalkoholna" data-target="bezalkoholna" role="tab" aria-controls="bezalkoholna" aria-selected="false" tabindex="-1" id="wine-tab-bezalkoholna">Безалкогольные</button>
+                <button type="button" class="filter-btn" data-filter="voda" data-target="voda" role="tab" aria-controls="voda" aria-selected="false" tabindex="-1" id="wine-tab-voda">Вода</button>
+                <button type="button" class="filter-btn" data-filter="kafa" data-target="kafa" role="tab" aria-controls="kafa" aria-selected="false" tabindex="-1" id="wine-tab-kafa">Кофе</button>
+            </div>
+        </div>
+    </section>
 
-    <section class="wine-section section-padding bg-light" id="crna"><div class="container"><div class="wine-category-header"><h2 class="section-title">Красные вина</h2><p>Более насыщенные вина к грилю, мясу и трапезам, которые длятся дольше.</p></div><div class="wine-list" data-category="crna">
-        <div class="wine-item featured"><div class="wine-item-header"><div class="wine-info"><h3>Prokupac <span>Toplički vinogradi</span></h3><p class="wine-details">Топлица, Сербия · 2020</p><p class="wine-description">Местный сорт, который хорошо сочетается с грилем, вяленым мясом и более насыщенными блюдами.</p><span class="wine-badge">рекомендация к грилю</span></div><div class="wine-prices"><span class="wine-price-label">Бокал</span><span class="wine-price">580 RSD</span><span class="wine-price-label">Бутылка</span><span class="wine-price">3.000 RSD</span></div></div></div>
-        <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Cabernet Sauvignon <span>Aleksandrović</span></h3><p class="wine-details">Жупа, Сербия · 2019</p><p class="wine-description">Красное вино к мясу, грилю и более плотному обеду.</p></div><div class="wine-prices"><span class="wine-price-label">Бокал</span><span class="wine-price">620 RSD</span><span class="wine-price-label">Бутылка</span><span class="wine-price">3.400 RSD</span></div></div></div>
-        <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Merlot <span>Vinarija Šumadija</span></h3><p class="wine-details">Шумадия, Сербия · 2020</p><p class="wine-description">Более мягкое красное вино к домашним блюдам, мясу и неспешному ужину.</p></div><div class="wine-prices"><span class="wine-price-label">Бокал</span><span class="wine-price">560 RSD</span><span class="wine-price-label">Бутылка</span><span class="wine-price">2.900 RSD</span></div></div></div>
-        <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Vranac <span>13. Jul Plantaže</span></h3><p class="wine-details">Черногория · 2019</p><p class="wine-description">Более сильное красное вино к грилю и насыщенным вкусам.</p></div><div class="wine-prices"><span class="wine-price-label">Бокал</span><span class="wine-price">590 RSD</span><span class="wine-price-label">Бутылка</span><span class="wine-price">3.100 RSD</span></div></div></div>
-        <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Pinot Noir <span>Vinski podrum Zvonko Bogdan</span></h3><p class="wine-details">Суботица, Сербия · 2021</p><p class="wine-description">Более элегантное красное вино к курице, легкому мясу и долгому ужину.</p></div><div class="wine-prices"><span class="wine-price-label">Бокал</span><span class="wine-price">680 RSD</span><span class="wine-price-label">Бутылка</span><span class="wine-price">3.800 RSD</span></div></div></div>
-    </div></div></section>
+    <!-- Bela vina -->
+    <section class="wine-section section-padding" id="bela">
+        <div class="container">
+            <div class="wine-category-header">
+                <h2 class="section-title">Белые вина</h2>
+                <p>Более свежие вина к закускам, рыбе, сыру и легким блюдам.</p>
+            </div>
+            <div class="wine-list" data-category="bela">
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Tamjanika <span>Aleksandrović</span></h3>
+                            <p class="wine-details">Župa, Srbija · 2022</p>
+                            <p class="wine-description">Aromatično belo vino za predjela, sir i laganiji početak obroka.</p>
+                            <span class="wine-badge">dobro uz predjela</span>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бокал</span>
+                            <span class="wine-price">550 RSD</span>
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">2.800 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Chardonnay <span>Vinarija Kovačević</span></h3>
+                            <p class="wine-details">Fruška gora, Srbija · 2021</p>
+                            <p class="wine-description">Punije belo vino koje dobro ide uz piletinu, sireve i kremastija jela.</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бокал</span>
+                            <span class="wine-price">480 RSD</span>
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">2.400 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item featured">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Sauvignon Blanc <span>Despotika</span></h3>
+                            <p class="wine-details">Negotin, Srbija · 2022</p>
+                            <p class="wine-description">Svežije vino za salate, predjela i lakši obrok.</p>
+                            <span class="wine-badge">uz salate</span>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бокал</span>
+                            <span class="wine-price">600 RSD</span>
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">3.200 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Riesling <span>Vinski podrum Radovanović</span></h3>
+                            <p class="wine-details">Nišava, Srbija · 2021</p>
+                            <p class="wine-description">Belo vino sa izraženijom svežinom, dobro uz ribu i laganija jela.</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бокал</span>
+                            <span class="wine-price">520 RSD</span>
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">2.600 RSD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="wine-section section-padding" id="roze"><div class="container"><div class="wine-category-header"><h2 class="section-title">Розе</h2><p>Легкие вина для салатов, закусок и теплых дней.</p></div><div class="wine-list" data-category="roze">
-        <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Rosé <span>Aleksandrović</span></h3><p class="wine-details">Жупа, Сербия · 2022</p><p class="wine-description">Легкое розовое вино к салатам, закускам и спокойной трапезе.</p></div><div class="wine-prices"><span class="wine-price-label">Бокал</span><span class="wine-price">490 RSD</span><span class="wine-price-label">Бутылка</span><span class="wine-price">2.500 RSD</span></div></div></div>
-        <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Pink Tamjanika <span>Vinski podrum Janko</span></h3><p class="wine-details">Жупа, Сербия · 2022</p><p class="wine-description">Более ароматное розовое вино к легким блюдам и ужину без тяжести.</p></div><div class="wine-prices"><span class="wine-price-label">Бокал</span><span class="wine-price">520 RSD</span><span class="wine-price-label">Бутылка</span><span class="wine-price">2.700 RSD</span></div></div></div>
-    </div></div></section>
+    <!-- Crna vina -->
+    <section class="wine-section section-padding bg-light" id="crna">
+        <div class="container">
+            <div class="wine-category-header">
+                <h2 class="section-title">Красные вина</h2>
+                <p>Более насыщенные вина к грилю, мясу и долгим трапезам.</p>
+            </div>
+            <div class="wine-list" data-category="crna">
+                <div class="wine-item featured">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Prokupac <span>Toplički vinogradi</span></h3>
+                            <p class="wine-details">Toplica, Srbija · 2020</p>
+                            <p class="wine-description">Domaća sorta koja dobro ide uz roštilj, suvo meso i jača jela.</p>
+                            <span class="wine-badge">preporuka uz roštilj</span>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бокал</span>
+                            <span class="wine-price">580 RSD</span>
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">3.000 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Cabernet Sauvignon <span>Aleksandrović</span></h3>
+                            <p class="wine-details">Župa, Srbija · 2019</p>
+                            <p class="wine-description">Crno vino za meso, roštilj i puniji obrok.</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бокал</span>
+                            <span class="wine-price">620 RSD</span>
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">3.400 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Merlot <span>Vinarija Šumadija</span></h3>
+                            <p class="wine-details">Šumadija, Srbija · 2020</p>
+                            <p class="wine-description">Mekše crno vino za kuvana jela, meso i večeru bez žurbe.</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бокал</span>
+                            <span class="wine-price">560 RSD</span>
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">2.900 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Vranac <span>13. Jul Plantaže</span></h3>
+                            <p class="wine-details">Crna Gora · 2019</p>
+                            <p class="wine-description">Snažnije crno vino za roštilj i jače ukuse.</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бокал</span>
+                            <span class="wine-price">590 RSD</span>
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">3.100 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Pinot Noir <span>Vinski podrum Zvonko Bogdan</span></h3>
+                            <p class="wine-details">Subotica, Srbija · 2021</p>
+                            <p class="wine-description">Elegantnije crno vino za piletinu, lakša mesa i dužu večeru.</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бокал</span>
+                            <span class="wine-price">680 RSD</span>
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">3.800 RSD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="wine-section section-padding bg-light" id="penusava"><div class="container"><div class="wine-category-header"><h2 class="section-title">Игристые вина</h2><p>Для праздников, тостов и особых случаев.</p></div><div class="wine-list" data-category="penusava">
-        <div class="wine-item featured"><div class="wine-item-header"><div class="wine-info"><h3>Tri Morave Brut <span>Aleksić</span></h3><p class="wine-details">Неготин, Сербия</p><p class="wine-description">Игристое вино для тоста, праздника или начала ужина.</p><span class="wine-badge">для праздников</span></div><div class="wine-prices"><span class="wine-price-label">Бокал</span><span class="wine-price">780 RSD</span><span class="wine-price-label">Бутылка</span><span class="wine-price">4.200 RSD</span></div></div></div>
-        <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Rubin Brut <span>Rubin</span></h3><p class="wine-details">Крушевац, Сербия</p><p class="wine-description">Домашнее игристое вино для праздников и легкого начала трапезы.</p></div><div class="wine-prices"><span class="wine-price-label">Бокал</span><span class="wine-price">450 RSD</span><span class="wine-price-label">Бутылка</span><span class="wine-price">2.400 RSD</span></div></div></div>
-        <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Moët & Chandon Impérial</h3><p class="wine-details">Шампань, Франция</p><p class="wine-description">Шампанское для особых случаев и более торжественного стола.</p></div><div class="wine-prices"><span class="wine-price-label">Бутылка</span><span class="wine-price">12.500 RSD</span></div></div></div>
-    </div></div></section>
+    <!-- Roze vina -->
+    <section class="wine-section section-padding" id="roze">
+        <div class="container">
+            <div class="wine-category-header">
+                <h2 class="section-title">Розе</h2>
+                <p>Легкие вина для салатов, закусок и теплых дней.</p>
+            </div>
+            <div class="wine-list" data-category="roze">
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Rosé <span>Aleksandrović</span></h3>
+                            <p class="wine-details">Župa, Srbija · 2022</p>
+                            <p class="wine-description">Lagano roze vino za salate, predjela i opušteniji obrok.</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бокал</span>
+                            <span class="wine-price">490 RSD</span>
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">2.500 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Pink Tamjanika <span>Vinski podrum Janko</span></h3>
+                            <p class="wine-details">Župa, Srbija · 2022</p>
+                            <p class="wine-description">Aromatičnije roze vino za lakša jela i večeru bez težine.</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бокал</span>
+                            <span class="wine-price">520 RSD</span>
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">2.700 RSD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="wine-pairing section-padding bg-dark"><div class="container"><div class="section-header center"><p class="section-subtitle light">Рекомендации</p><h2 class="section-title light">Что подходит к какому блюду</h2><p class="section-description light">Короткие рекомендации, если вы хотите, чтобы вино лучше всего сопровождало еду.</p></div><div class="pairing-grid"><div class="pairing-card" tabindex="0"><h3>Гриль и мясо</h3><p class="light">К чевапи, мясному ассорти и более насыщенным блюдам лучше подходят prokupac, vranac или cabernet sauvignon.</p></div><div class="pairing-card" tabindex="0"><h3>Закуски и сыр</h3><p class="light">К каймаку, пршуту, сыру и гибанице хорошо подходят tamjanika, chardonnay или легкое розе.</p></div><div class="pairing-card" tabindex="0"><h3>Салаты и легкие блюда</h3><p class="light">К салатам и легкой трапезе выбирайте более свежие белые вина или розе.</p></div><div class="pairing-card" tabindex="0"><h3>Десерт</h3><p class="light">К десерту лучше выбирать более легкое, сладкое или игристое вино, в зависимости от сладости.</p></div></div></div></section>
+    <!-- Penušava vina -->
+    <section class="wine-section section-padding bg-light" id="penusava">
+        <div class="container">
+            <div class="wine-category-header">
+                <h2 class="section-title">Игристые вина</h2>
+                <p>Для праздников, тостов и особых случаев.</p>
+            </div>
+            <div class="wine-list" data-category="penusava">
+                <div class="wine-item featured">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Tri Morave Brut <span>Aleksić</span></h3>
+                            <p class="wine-details">Negotin, Srbija</p>
+                            <p class="wine-description">Penušavo vino za zdravicu, proslavu ili početak večere.</p>
+                            <span class="wine-badge">za proslave</span>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бокал</span>
+                            <span class="wine-price">780 RSD</span>
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">4.200 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Rubin Brut <span>Rubin</span></h3>
+                            <p class="wine-details">Kruševac, Srbija</p>
+                            <p class="wine-description">Domaće penušavo vino za proslave i laganiji početak obroka.</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бокал</span>
+                            <span class="wine-price">450 RSD</span>
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">2.400 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="wine-item">
+                    <div class="wine-item-header">
+                        <div class="wine-info">
+                            <h3>Moët & Chandon Impérial</h3>
+                            <p class="wine-details">Champagne, Francuska</p>
+                            <p class="wine-description">Šampanjac za posebne prilike i svečaniji sto.</p>
+                        </div>
+                        <div class="wine-prices">
+                            <span class="wine-price-label">Бутылка</span>
+                            <span class="wine-price">12.500 RSD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="wine-help section-padding"><div class="container wine-help-panel"><div class="wine-help-image"><img src="../images/vinska-karta.jpg" alt="Вино в ресторане Gigo" loading="lazy"></div><div class="wine-help-content"><p class="section-subtitle">Рекомендация</p><h2 class="section-title">Не уверены, какое вино выбрать?</h2><p>Скажите нам, что вы заказываете и для какого стола выбираете вино. Мы порекомендуем то, что подойдет к еде, случаю и количеству гостей.</p><div class="wine-help-actions"><a href="kontakt.html" class="btn btn-primary">Связаться с нами</a><div class="wine-help-contact" aria-label="Быстрый контакт"><span>Позвоните:</span> <a href="tel:+381112612253">011/2612-253</a></div></div></div></div></section>
+    <!-- Alkoholna pića -->
+    <section class="wine-section section-padding" id="alkoholna">
+        <div class="container">
+            <div class="wine-category-header">
+                <h2 class="section-title">Крепкие напитки</h2>
+                <p>Ракия, ликеры, виски и другие крепкие напитки. Порция 0,05 л.</p>
+            </div>
+            <div class="wine-list" data-category="alkoholna">
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Lozovača</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">280 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Šljivovica</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">295 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Dunjevača</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">295 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Viljamovka</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">295 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Kajsijevača</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">295 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Gorki List</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">300 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Jägermeister</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">390 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Vodka Finlandia</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">390 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Vinjak "Palić"</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">280 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Konjak "Courvoisier"</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">490 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Johnny Walker</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">380 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Jameson</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">380 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Ballantine's</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">380 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Jack Daniel's</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">450 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Chivas Regal</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">450 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Campari</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">350 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Vermouth</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">250 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Baileys</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">380 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Gin Bickens</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">380 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Gin Bombay Saphire</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">420 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Martini</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">360 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Kuvano vino</h3><p class="wine-details">0,2 l</p></div><div class="wine-prices"><span class="wine-price">320 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>"Akov" šljiva</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">450 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>"Akov" loza</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">450 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>"Akov" kajsija</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">450 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>"Akov" dunja</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">450 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Zarić "Medena"</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">390 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>"Bojkovčanka" šljiva</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">430 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>"Bojkovčanka" kruška</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">450 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>"Bojkovčanka" dunja</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">450 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>"Bojkovčanka" kajsija</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">450 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>"Djedova" šljiva</h3><p class="wine-details">0,05 l</p></div><div class="wine-prices"><span class="wine-price">450 RSD</span></div></div></div>
+            </div>
+        </div>
+    </section>
 
-    <section class="home-final-cta cta-section--split"><div class="cta-overlay"></div><div class="cta-split-container"><div class="cta-split-left"><span class="cta-label">Бронирование</span><h2 class="cta-split-title">Забронируйте стол</h2><p class="cta-split-text">Позвоните нам, скажите, на какое время нужен стол и сколько гостей придет. Для большой компании или небольшого праздника лучше связаться с нами заранее.</p></div><div class="cta-split-right"><div class="cta-info-block"><div class="cta-info-item"><span class="cta-info-label">Телефон</span><a href="tel:+381112612253" class="cta-info-value">011/2612-253</a><a href="tel:+381611318967" class="cta-info-value">061/1318-967</a></div><div class="cta-info-item"><span class="cta-info-label">Время работы</span><span class="cta-info-value">Пн-Сб 10:00-23:00</span><span class="cta-info-value">По воскресеньям не работаем</span></div><a href="kontakt.html" class="cta-split-btn">Забронировать стол</a></div></div></div></section>
+    <!-- Piva -->
+    <section class="wine-section section-padding bg-light" id="piva">
+        <div class="container">
+            <div class="wine-category-header"><h2 class="section-title">Пиво</h2></div>
+            <div class="wine-list" data-category="piva">
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Točeni Lav Premium</h3><p class="wine-details">0,3 l</p></div><div class="wine-prices"><span class="wine-price">290 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Točeni Lav Premium</h3><p class="wine-details">0,5 l</p></div><div class="wine-prices"><span class="wine-price">360 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Tuborg</h3><p class="wine-details">0,33 l</p></div><div class="wine-prices"><span class="wine-price">350 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Tuborg Ice</h3><p class="wine-details">0,33 l</p></div><div class="wine-prices"><span class="wine-price">330 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Budweiser</h3><p class="wine-details">0,33 l</p></div><div class="wine-prices"><span class="wine-price">320 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Budweiser tamno</h3><p class="wine-details">0,33 l</p></div><div class="wine-prices"><span class="wine-price">320 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Erdinger mutno</h3><p class="wine-details">0,33 l</p></div><div class="wine-prices"><span class="wine-price">450 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Kronenbourg Blanc</h3><p class="wine-details">0,33 l</p></div><div class="wine-prices"><span class="wine-price">330 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Carlsberg</h3><p class="wine-details">0,25 l</p></div><div class="wine-prices"><span class="wine-price">350 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Somersby</h3><p class="wine-details">Jabuka, kruška, passion fruit · 0,33 l</p></div><div class="wine-prices"><span class="wine-price">290 RSD</span></div></div></div>
+            </div>
+        </div>
+    </section>
 
-    <footer class="footer footer--home"><div class="footer-inner"><div class="footer-grid"><div class="footer-col footer-col--brand"><a href="index.html" class="footer-brand" aria-label="Ресторан Gigo"><img src="../images/logo-beli.png" alt="Ресторан Gigo" class="footer-logo"></a><p class="footer-tagline">Домашняя кухня, к которой всегда возвращаются.</p><div class="social-links"><a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a><a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a></div></div><div class="footer-col"><h4>Ссылки</h4><ul class="footer-links"><li><a href="index.html">Главная</a></li><li><a href="o-nama.html">О нас</a></li><li><a href="jelovnik.html">Меню</a></li><li><a href="vinska-karta.html">Винная карта</a></li><li><a href="kontakt.html">Контакт</a></li></ul></div><div class="footer-col"><h4>Время работы</h4><ul class="footer-info"><li><span class="fi-label">Пн - Сб</span><span class="fi-value">10:00 - 23:00</span></li><li><span class="fi-label">Воскресенье</span><span class="fi-value">не работаем</span></li></ul></div><div class="footer-col"><h4>Контакт</h4><ul class="footer-info footer-info--contact"><li><i class="fas fa-map-marker-alt"></i><span>Gornjogradska 7c, Zemun</span></li><li><i class="fas fa-phone"></i><a href="tel:+381112612253">011/2612-253</a></li><li><i class="fas fa-phone"></i><a href="tel:+381611318967">061/1318-967</a></li><li><i class="fas fa-envelope"></i><a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li></ul></div></div><div class="footer-bottom"><p class="footer-copy">&copy; 2026 Ресторан Gigo. Все права защищены.</p><div class="footer-lang" aria-label="Language"><a href="../vinska-karta.html">SR</a><span aria-hidden="true">·</span><a href="../en/vinska-karta.html">EN</a><span aria-hidden="true">·</span><a href="vinska-karta.html" class="active" aria-current="page">RU</a></div><div class="footer-credit"><span>Дизайн и разработка:</span><a href="https://pansoft.rs" target="_blank" rel="noopener noreferrer" aria-label="Pansoft"><img src="../images/pansoft%20logo%20bela%20slova-01.png" alt="Pansoft" class="footer-credit-logo"></a></div></div></div></footer>
-    <button class="back-to-top" id="backToTop" aria-label="Наверх"><i class="fas fa-arrow-up"></i></button>
+    <!-- Bezalkoholna pića -->
+    <section class="wine-section section-padding" id="bezalkoholna">
+        <div class="container">
+            <div class="wine-category-header"><h2 class="section-title">Безалкогольные напитки</h2></div>
+            <div class="wine-list" data-category="bezalkoholna">
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Coca Cola</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Coca Cola Zero</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Fanta</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Sprite</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Bitter Lemon</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Tonic</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Pink Tonic</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Tangerina</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Narandža</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Jagoda</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Šumsko voće</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Jabuka</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Breskva</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Limunada</h3></div><div class="wine-prices"><span class="wine-price">310 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Ceđena pomorandža</h3></div><div class="wine-prices"><span class="wine-price">450 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Ceđeni grejp</h3></div><div class="wine-prices"><span class="wine-price">450 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Ceđeni miks</h3></div><div class="wine-prices"><span class="wine-price">490 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Fuze Tea</h3></div><div class="wine-prices"><span class="wine-price">350 RSD</span></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Voda -->
+    <section class="wine-section section-padding bg-light" id="voda">
+        <div class="container">
+            <div class="wine-category-header"><h2 class="section-title">Вода</h2></div>
+            <div class="wine-list" data-category="voda">
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Rosa gazirana</h3><p class="wine-details">0,75 l</p></div><div class="wine-prices"><span class="wine-price">360 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Rosa gazirana</h3><p class="wine-details">0,33 l</p></div><div class="wine-prices"><span class="wine-price">190 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Rosa negazirana</h3><p class="wine-details">0,75 l</p></div><div class="wine-prices"><span class="wine-price">360 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Rosa negazirana</h3><p class="wine-details">0,33 l</p></div><div class="wine-prices"><span class="wine-price">190 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Romerquelle</h3><p class="wine-details">0,33 l</p></div><div class="wine-prices"><span class="wine-price">260 RSD</span></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kafa -->
+    <section class="wine-section section-padding" id="kafa">
+        <div class="container">
+            <div class="wine-category-header"><h2 class="section-title">Кофе и чай</h2></div>
+            <div class="wine-list" data-category="kafa">
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Domaća kafa</h3></div><div class="wine-prices"><span class="wine-price">210 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Espresso</h3></div><div class="wine-prices"><span class="wine-price">240 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Dupli espresso</h3></div><div class="wine-prices"><span class="wine-price">290 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Espresso sa mlekom</h3></div><div class="wine-prices"><span class="wine-price">270 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Cappuccino</h3></div><div class="wine-prices"><span class="wine-price">290 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Ness kafa</h3></div><div class="wine-prices"><span class="wine-price">250 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Espresso sa šlagom</h3></div><div class="wine-prices"><span class="wine-price">290 RSD</span></div></div></div>
+                <div class="wine-item"><div class="wine-item-header"><div class="wine-info"><h3>Čaj</h3><p class="wine-details">Nana, kamilica, crni, zeleni, voćni</p></div><div class="wine-prices"><span class="wine-price">290 RSD</span></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wine Pairing Section -->
+    <section class="wine-pairing section-padding bg-dark">
+        <div class="container">
+            <div class="section-header center">
+                <p class="section-subtitle light">Рекомендации</p>
+                <h2 class="section-title light">Что подходит к какому блюду</h2>
+                <p class="section-description light">Короткие рекомендации, если вы хотите, чтобы вино лучше всего сопровождало еду.</p>
+            </div>
+            <div class="pairing-grid">
+                <div class="pairing-card" tabindex="0">
+                    <h3>Гриль и мясо</h3>
+                    <p class="light">Uz ćevape, mešano meso i jača jela bolje idu prokupac, vranac ili cabernet sauvignon.</p>
+                </div>
+                <div class="pairing-card" tabindex="0">
+                    <h3>Закуски и сыр</h3>
+                    <p class="light">Uz kajmak, pršutu, sir i gibanice dobro idu tamjanika, chardonnay ili laganiji roze.</p>
+                </div>
+                <div class="pairing-card" tabindex="0">
+                    <h3>Салаты и легкие блюда</h3>
+                    <p class="light">Uz salate i lakši obrok birajte svežija bela vina ili roze.</p>
+                </div>
+                <div class="pairing-card" tabindex="0">
+                    <h3>Десерт</h3>
+                    <p class="light">Uz desert je bolje birati lakše, slađe ili penušavo vino, u zavisnosti od poslastice.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wine Help Section -->
+    <section class="wine-help section-padding">
+        <div class="container wine-help-panel">
+            <div class="wine-help-image">
+                <img src="../images/vinska-karta.jpg" alt="Вино в ресторане Gigo" loading="lazy">
+            </div>
+            <div class="wine-help-content">
+                <p class="section-subtitle">Preporuka</p>
+                <h2 class="section-title">Не уверены, какое вино выбрать?</h2>
+                <p>Скажите нам, что вы заказываете и для какого стола выбираете вино. Мы порекомендуем то, что подойдет к еде, случаю и количеству гостей.</p>
+                <div class="wine-help-actions">
+                    <a href="tel:+381112612253" class="btn btn-primary">Позвоните нам</a>
+                    <a href="../jelovnik/jelovnik_jul_2025_compressed.pdf" class="btn btn-outline" download>Скачать меню и карту напитков</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="home-final-cta cta-section--split">
+        <div class="cta-overlay"></div>
+        <div class="cta-split-container">
+            <div class="cta-split-left">
+                <span class="cta-label">Бронирование</span>
+                <h2 class="cta-split-title">Забронировать стол</h2>
+                <p class="cta-split-text">Позвоните нам, скажите, на какое время нужен стол и сколько гостей придет. Для большой компании или небольшого праздника лучше связаться с нами заранее.</p>
+            </div>
+            <div class="cta-split-right">
+                <div class="cta-info-block">
+                    <div class="cta-info-item">
+                        <span class="cta-info-label">Telefon</span>
+                        <a href="tel:+381112612253" class="cta-info-value">011/2612-253</a>
+                        <a href="tel:+381611318967" class="cta-info-value">061/1318-967</a>
+                    </div>
+                    <div class="cta-info-item">
+                        <span class="cta-info-label">Radno vreme</span>
+                        <span class="cta-info-value">Пн-Сб 10:00-23:00</span>
+                        <span class="cta-info-value">По воскресеньям не работаем</span>
+                    </div>
+                    <a href="kontakt.html" class="cta-split-btn">Забронировать стол</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer footer--home">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col footer-col--brand">
+                    <a href="index.html" class="footer-brand" aria-label="Ресторан Gigo">
+                        <img src="../images/logo-beli.png" alt="Ресторан Gigo" class="footer-logo">
+                    </a>
+                    <p class="footer-tagline">Домашняя кухня, к которой всегда возвращаются.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Ссылки</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="o-nama.html">О нас</a></li>
+                        <li><a href="jelovnik.html">Меню</a></li>
+                        <li><a href="vinska-karta.html">Винная карта</a></li>
+                        <li><a href="kontakt.html">Контакт</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Время работы</h4>
+                    <ul class="footer-info">
+                        <li>
+                            <span class="fi-label">Пн - Сб</span>
+                            <span class="fi-value">10:00 - 23:00</span>
+                        </li>
+                        <li>
+                            <span class="fi-label">Воскресенье</span>
+                            <span class="fi-value">не работаем</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакт</h4>
+                    <ul class="footer-info footer-info--contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Gornjogradska 7c, Zemun</span></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381112612253">011/2612-253</a></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381611318967">061/1318-967</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Restoran Gigo. Все права защищены.</p>
+                <div class="footer-lang" aria-label="Language">
+                    <a href="../vinska-karta.html">SR</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="../en/vinska-karta.html">EN</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="vinska-karta.html" class="active" aria-current="page">RU</a>
+                </div>
+                <div class="footer-credit">
+                    <span>Дизайн и разработка:</span>
+                    <a href="https://pansoft.rs" target="_blank" rel="noopener noreferrer" aria-label="Pansoft">
+                        <img src="../images/pansoft%20logo%20bela%20slova-01.png" alt="Pansoft" class="footer-credit-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
     <script src="../js/main.js"></script>
 </body>
 </html>
+
+

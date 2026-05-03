@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Gigo Restaurant menu - authentic Serbian cuisine, traditional dishes, and house specialties.">
+    <meta name="description" content="Gigo Restaurant menu - breakfast, starters, soups, grill, house specialties, salads and desserts.">
     <title>Menu - Gigo Restaurant</title>
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/pages.css">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="../css/menu-rows.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="page-menu page-home-modern">
@@ -53,8 +53,8 @@
         <div class="page-header-overlay"></div>
         <div class="container">
             <div class="page-header-content">
-                <h1>Our menu</h1>
-                <p>Clear dish groups and prices, easy to navigate</p>
+                <h1>Menu</h1>
+                <p>Complete menu: breakfast, starters, soups, grill, house specialties, salads and desserts.</p>
             </div>
         </div>
     </section>
@@ -62,11 +62,15 @@
     <!-- Menu Filter -->
     <section class="menu-filter section-padding-small">
         <div class="container">
-            <div class="filter-buttons" role="tablist" aria-label="Menu sections">
+            <div class="filter-buttons" role="tablist" aria-label="Menu categories">
                 <button type="button" class="filter-btn active" data-filter="all" data-target="all" role="tab" aria-selected="true" id="menu-tab-all">All</button>
                 <button type="button" class="filter-btn" data-filter="predjela" data-target="predjela" role="tab" aria-controls="predjela" aria-selected="false" tabindex="-1" id="menu-tab-predjela">Starters</button>
+                <button type="button" class="filter-btn" data-filter="dorucak" data-target="dorucak" role="tab" aria-controls="dorucak" aria-selected="false" tabindex="-1" id="menu-tab-dorucak">Breakfast</button>
                 <button type="button" class="filter-btn" data-filter="čorbe" data-target="corbe" role="tab" aria-controls="corbe" aria-selected="false" tabindex="-1" id="menu-tab-corbe">Soups</button>
+                <button type="button" class="filter-btn" data-filter="prilozi" data-target="prilozi" role="tab" aria-controls="prilozi" aria-selected="false" tabindex="-1" id="menu-tab-prilozi">Sides</button>
+                <button type="button" class="filter-btn" data-filter="dame" data-target="dame" role="tab" aria-controls="dame" aria-selected="false" tabindex="-1" id="menu-tab-dame">Light dishes</button>
                 <button type="button" class="filter-btn" data-filter="glavna" data-target="glavna-jela" role="tab" aria-controls="glavna-jela" aria-selected="false" tabindex="-1" id="menu-tab-glavna">Main dishes</button>
+                <button type="button" class="filter-btn" data-filter="riba" data-target="riba" role="tab" aria-controls="riba" aria-selected="false" tabindex="-1" id="menu-tab-riba">Fish and squid</button>
                 <button type="button" class="filter-btn" data-filter="salate" data-target="salate" role="tab" aria-controls="salate" aria-selected="false" tabindex="-1" id="menu-tab-salate">Salads</button>
                 <button type="button" class="filter-btn" data-filter="deserti" data-target="deserti" role="tab" aria-controls="deserti" aria-selected="false" tabindex="-1" id="menu-tab-deserti">Desserts</button>
             </div>
@@ -78,45 +82,178 @@
         <div class="container">
             <div class="menu-category-header">
                 <h2 class="section-title">Starters</h2>
-                <p>Light dishes for sharing or starting your meal</p>
             </div>
             <div class="menu-items" data-category="predjela">
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Homemade kajmak</h3>
-                            <span class="menu-price">650 RSD</span>
+                            <h3>Cheese selection "Skopski merak"</h3>
+                            <span class="menu-price">850 RSD</span>
                         </div>
-                        <p class="menu-description">Traditional homemade kajmak served with fresh flatbread</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Serbian prosciutto &amp; cheese</h3>
-                            <span class="menu-price">1,200 RSD</span>
-                        </div>
-                        <p class="menu-description">A selection of local cured meats and aged cheeses</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Homemade ajvar</h3>
+                            <h3>Sheep cheese, 100 g</h3>
                             <span class="menu-price">450 RSD</span>
                         </div>
-                        <p class="menu-description">Mild or spicy ajvar made to our original recipe</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Gibanica</h3>
-                            <span class="menu-price">550 RSD</span>
+                            <h3>Cow cheese from Jastrebac, 200 g</h3>
+                            <span class="menu-price">390 RSD</span>
                         </div>
-                        <p class="menu-description">Traditional cheese pie</p>
                     </div>
                 </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pirot goat cheese, 100 g</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Grilled Macedonian cheese</h3>
+                            <span class="menu-price">490 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Kajmak, 100 g</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pepper in sour cream, 100 g</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                        <p class="menu-description">Seasonal.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Njegusi prosciutto, 100 g</h3>
+                            <span class="menu-price">790 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Beef prosciutto, 100 g</h3>
+                            <span class="menu-price">650 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Kulen, 100 g</h3>
+                            <span class="menu-price">690 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Dry-aged venison rump steak</h3>
+                            <span class="menu-price">990 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Goat cheese in olive oil, 100 g</h3>
+                            <span class="menu-price">490 RSD</span>
+                        </div>
+                        <p class="menu-description">Our recommendation.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Breaded kashkaval cheese, 100 g</h3>
+                            <span class="menu-price">550 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Prebranac</h3>
+                            <span class="menu-price">550 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Aspic</h3>
+                            <span class="menu-price">550 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Olives, 100 g</h3>
+                            <span class="menu-price">350 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Grilled mushrooms, 200 g</h3>
+                            <span class="menu-price">490 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Breaded stuffed peppers</h3>
+                            <span class="menu-price">790 RSD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - Doručak -->
+    <section class="menu-section section-padding" id="dorucak">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Breakfast</h2>
+                <p>Breakfast is served from 10:00 to 12:30.</p>
+            </div>
+            <div class="menu-items" data-category="dorucak">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Breakfast 1</h3><span class="menu-price">490 RSD</span></div><p class="menu-description">Three-egg breakfast of your choice.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Serbian breakfast 2</h3><span class="menu-price">590 RSD</span></div><p class="menu-description">Scrambled eggs on flatbread with shredded pork cracklings, kajmak and tomato.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Breakfast 3</h3><span class="menu-price">590 RSD</span></div><p class="menu-description">French toast, sour cream, smoked pork loin, tomato and cheese.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Breakfast 4</h3><span class="menu-price">590 RSD</span></div><p class="menu-description">Hot sandwich with eggs, smoked pork loin, kashkaval, mushrooms and urnebes spread.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Breakfast 5 - komplet lepinja</h3><span class="menu-price">490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Komplet lepinja with prosciutto</h3><span class="menu-price">590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Komplet lepinja sa kulenom</h3><span class="menu-price">590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Komplet lepinja with shredded cracklings</h3><span class="menu-price">590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Breakfast 6</h3><span class="menu-price">550 RSD</span></div><p class="menu-description">Kacamak with cheese and bacon.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Gigo breakfast 7</h3><span class="menu-price">650 RSD</span></div><p class="menu-description">Njegusi prosciutto, kulen, smoked pork loin, cow cheese, kajmak, tomato and 2 fried eggs.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Breakfast 8</h3><span class="menu-price">650 RSD</span></div><p class="menu-description">Fritters with tomato, Njegusi prosciutto, smoked pork loin, cow cheese and kajmak.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Breakfast 9</h3><span class="menu-price">590 RSD</span></div><p class="menu-description">Becarac with sheep cheese and bacon.</p></div></div>
             </div>
         </div>
     </section>
@@ -126,36 +263,73 @@
         <div class="container">
             <div class="menu-category-header">
                 <h2 class="section-title">Soups</h2>
-                <p>Daily soups prepared in a home-style way</p>
+                <p>A warm start to the meal, especially for lunch.</p>
             </div>
             <div class="menu-items" data-category="čorbe">
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3>Veal soup</h3>
+                            <span class="menu-price">390 RSD</span>
+                        </div>
+                        <p class="menu-description">Classic veal soup with homemade flavor.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Fish soup</h3>
                             <span class="menu-price">450 RSD</span>
                         </div>
-                        <p class="menu-description">Classic veal soup with homemade noodles</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Chicken soup</h3>
-                            <span class="menu-price">380 RSD</span>
+                            <h3>Homemade chicken soup</h3>
+                            <span class="menu-price">350 RSD</span>
                         </div>
-                        <p class="menu-description">Homestyle chicken soup with vegetables</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Goulash soup</h3>
-                            <span class="menu-price">550 RSD</span>
+                            <h3>Tomato soup</h3>
+                            <span class="menu-price">390 RSD</span>
                         </div>
-                        <p class="menu-description">Hearty, spiced goulash-style soup with meat</p>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - Prilozi -->
+    <section class="menu-section section-padding" id="prilozi">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Sides and bread</h2>
+            </div>
+            <div class="menu-items" data-category="prilozi">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>French fries</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Dalmatian-style chard and potatoes</h3><span class="menu-price">450 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Grilled vegetables</h3><span class="menu-price">450 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Rice</h3><span class="menu-price">290 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Bread</h3><span class="menu-price">100 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Seasoned bread</h3><span class="menu-price">150 RSD</span></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - Dame vole -->
+    <section class="menu-section section-padding bg-light" id="dame">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Light dishes</h2>
+            </div>
+            <div class="menu-items" data-category="dame">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Vegetable risotto</h3><span class="menu-price">890 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Squid risotto</h3><span class="menu-price">1150 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Caesar salad</h3><span class="menu-price">990 RSD</span></div></div></div>
             </div>
         </div>
     </section>
@@ -165,63 +339,191 @@
         <div class="container">
             <div class="menu-category-header">
                 <h2 class="section-title">Main dishes</h2>
-                <p>Most ordered house specialties and grill classics</p>
+                <p>Made-to-order dishes, grill, steak, slow-cooked specialties and house favorites.</p>
             </div>
             <div class="menu-items" data-category="glavna">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Chicken fillet</h3><span class="menu-price">880 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Turkey fillet</h3><span class="menu-price">950 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Pork tenderloin</h3><span class="menu-price">990 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Gorgonzola sauce</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Porcini and prosciutto sauce</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Spicy sauce</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Mushroom sauce</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Peanut sauce</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Stuffed chicken</h3><span class="menu-price">1190 RSD</span></div><p class="menu-description">Kačkavalj, kajmak.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Turkey fillet with mlinci</h3><span class="menu-price">1250 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Gigo-style pork tenderloin</h3><span class="menu-price">1350 RSD</span></div></div></div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Karađorđe's schnitzel</h3>
-                            <span class="menu-price">1,450 RSD</span>
+                            <h3>Veal ribs under the sach, 300 g</h3>
+                            <span class="menu-price">1990 RSD</span>
                         </div>
-                        <p class="menu-description">Traditional stuffed schnitzel with kajmak and tartar sauce</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Ćevapi (10 pcs)</h3>
-                            <span class="menu-price">950 RSD</span>
+                            <h3>Lamb under the sach, 400 g</h3>
+                            <span class="menu-price">1680 RSD</span>
                         </div>
-                        <p class="menu-description">Juicy grilled minced-meat sausages with onion and flatbread</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Stuffed peppers</h3>
-                            <span class="menu-price">1,100 RSD</span>
+                            <h3>Game goulash with gnocchi</h3>
+                            <span class="menu-price">1590 RSD</span>
                         </div>
-                        <p class="menu-description">Homemade peppers stuffed with minced meat</p>
+                        <p class="menu-description">Roe deer, wild boar and venison.</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Mixed grill platter</h3>
-                            <span class="menu-price">1,650 RSD</span>
+                            <h3>Beefsteak with porcini and prosciutto</h3>
+                            <span class="menu-price">2950 RSD</span>
                         </div>
-                        <p class="menu-description">A variety of grilled meats with a side of your choice</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Sarma</h3>
+                            <h3>Cevapi (portion)</h3>
+                            <span class="menu-price">920 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Cevapi (half portion)</h3>
+                            <span class="menu-price">720 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Cevapi with kajmak (portion)</h3>
                             <span class="menu-price">980 RSD</span>
                         </div>
-                        <p class="menu-description">Cabbage rolls in sauerkraut, homestyle</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Prebranac</h3>
-                            <span class="menu-price">650 RSD</span>
+                            <h3>Cevapi with kajmak (half portion)</h3>
+                            <span class="menu-price">780 RSD</span>
                         </div>
-                        <p class="menu-description">Oven-baked beans with onions</p>
                     </div>
                 </div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Gigo cevapi</h3><span class="menu-price">1100 RSD</span></div></div></div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Savory fritters (portion)</h3>
+                            <span class="menu-price">1050 RSD</span>
+                        </div>
+                        <p class="menu-description">Kashkaval, bacon and crushed pepper.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pljeskavica burger (portion)</h3>
+                            <span class="menu-price">920 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Gourmet pljeskavica, 430 g (portion)</h3>
+                            <span class="menu-price">1150 RSD</span>
+                        </div>
+                        <p class="menu-description">Kashkaval, bacon and crushed pepper.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Stuffed pljeskavica, 450 g (portion)</h3>
+                            <span class="menu-price">1190 RSD</span>
+                        </div>
+                        <p class="menu-description">Kajmak and kashkaval.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Homemade smoked sausage (portion)</h3>
+                            <span class="menu-price">950 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Hunter sausage (portion)</h3>
+                            <span class="menu-price">1190 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Karadjordje schnitzel, 400 g (portion)</h3>
+                            <span class="menu-price">1290 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Viennese schnitzel</h3>
+                            <span class="menu-price">1190 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Stuffed pork tenderloin wrapped in bacon</h3>
+                            <span class="menu-price">1290 RSD</span>
+                        </div>
+                        <p class="menu-description">Our recommendation. Kačkavalj, kajmak.</p>
+                    </div>
+                </div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Grilled beefsteak, 300 g</h3><span class="menu-price">2500 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Beefsteak with gorgonzola, 300 g</h3><span class="menu-price">2950 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Gigo beefsteak, 300 g</h3><span class="menu-price">3150 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>1 kg beefsteak with seasoned potatoes and sauce of your choice</h3><span class="menu-price">7990 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Smoked pork ribs, 350 g</h3><span class="menu-price">1390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Veal with mlinci in kajmak sauce</h3><span class="menu-price">1590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Veal medallions with smoked kashkaval</h3><span class="menu-price">1590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Beef shank on kajmak with rice</h3><span class="menu-price">1250 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tava "Gigo"</h3><span class="menu-price">1390 RSD</span></div><p class="menu-description">Stewed beef, tomato, pepper, onion, mushrooms and kashkaval.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Veal head in tripe</h3><span class="menu-price">1390 RSD</span></div><p class="menu-description">Veal, tripe and vegetables.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Smoked pork hocks with cabbage, 300 g</h3><span class="menu-price">1150 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Leskovac muckalica stew</h3><span class="menu-price">950 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Chef recommendation for 2 people</h3><span class="menu-price">2400 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Daily cooked dish</h3><span class="menu-price">790 / 1590 RSD</span></div><p class="menu-description">Please ask the waiter.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - Riba i lignje -->
+    <section class="menu-section section-padding bg-light" id="riba">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">River fish and squid</h2>
+            </div>
+            <div class="menu-items" data-category="riba">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Pike-perch, 1 kg</h3><span class="menu-price">3900 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Pike-perch fillets, 1 kg</h3><span class="menu-price">6500 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Pike-perch fillets in white sauce, 350 g</h3><span class="menu-price">1490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Grilled squid, 300 g</h3><span class="menu-price">1650 RSD</span></div></div></div>
             </div>
         </div>
     </section>
@@ -231,36 +533,31 @@
         <div class="container">
             <div class="menu-category-header">
                 <h2 class="section-title">Salads</h2>
-                <p>Fresh options as side dishes or lighter meals</p>
+                <p>Fresh salads with grill dishes, cooked meals or a lighter lunch.</p>
             </div>
             <div class="menu-items" data-category="salate">
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Shopska salad</h3>
-                            <span class="menu-price">480 RSD</span>
-                        </div>
-                        <p class="menu-description">Classic Shopska salad topped with cheese</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Serbian salad</h3>
-                            <span class="menu-price">450 RSD</span>
-                        </div>
-                        <p class="menu-description">Tomato, cucumber, and onion</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Greek salad</h3>
-                            <span class="menu-price">520 RSD</span>
-                        </div>
-                        <p class="menu-description">With feta cheese and olives</p>
-                    </div>
-                </div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Cabbage</h3><span class="menu-price">320 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Cucumber</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tomato</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tomato with cheese</h3><span class="menu-price">420 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Green salad</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Serbian salad</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Shopska salad</h3><span class="menu-price">450 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Vitamin salad</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Roasted sweet peppers (2 pcs)</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Roasted hot pepper (1 pc)</h3><span class="menu-price">120 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Mixed salad</h3><span class="menu-price">420 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tarator</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Homemade ajvar</h3><span class="menu-price">420 RSD</span></div><p class="menu-description">Seasonal.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Sauerkraut</h3><span class="menu-price">390 RSD</span></div><p class="menu-description">Seasonal.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Greek salad</h3><span class="menu-price">450 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Mixed green salad</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Mixed green salad with cherry tomatoes and pine nuts</h3><span class="menu-price">490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Urnebes</h3><span class="menu-price">330 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Rotkvice</h3><span class="menu-price">190 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Arugula, cherry tomatoes and local parmesan</h3><span class="menu-price">490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Garden salad for two</h3><span class="menu-price">800 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Morava salad</h3><span class="menu-price">450 RSD</span></div></div></div>
             </div>
         </div>
     </section>
@@ -270,45 +567,34 @@
         <div class="container">
             <div class="menu-category-header">
                 <h2 class="section-title">Desserts</h2>
-                <p>Short list of classic desserts</p>
+                <p>Homemade classics to finish the meal.</p>
             </div>
             <div class="menu-items" data-category="deserti">
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Pancakes</h3>
-                            <span class="menu-price">450 RSD</span>
-                        </div>
-                        <p class="menu-description">With chocolate spread, jam, or walnuts</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Tulumbe</h3>
-                            <span class="menu-price">380 RSD</span>
-                        </div>
-                        <p class="menu-description">Traditional tulumbe pastries in sugar syrup</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Baklava</h3>
-                            <span class="menu-price">420 RSD</span>
-                        </div>
-                        <p class="menu-description">Homemade baklava with walnuts</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Custard slice (krempita)</h3>
-                            <span class="menu-price">480 RSD</span>
-                        </div>
-                        <p class="menu-description">Creamy vanilla custard slice</p>
-                    </div>
-                </div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Baklava with ice cream</h3><span class="menu-price">420 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tufahija</h3><span class="menu-price">360 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Walnut cookie (1 pc)</h3><span class="menu-price">250 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tres leches</h3><span class="menu-price">380 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Chocolate tart with ice cream and sour cherry topping</h3><span class="menu-price">550 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Pancakes of your choice</h3><span class="menu-price">420 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>"Reforma" torta</h3><span class="menu-price">490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Chocolate raspberry cake</h3><span class="menu-price">550 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Pancakes with Nutella</h3><span class="menu-price">490 RSD</span></div><p class="menu-description">Plazma biscuits and walnuts.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Cream pie</h3><span class="menu-price">420 RSD</span></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Help Block -->
+    <section class="menu-help section-padding">
+        <div class="container menu-help-panel">
+            <div>
+                <p class="section-subtitle">Recommendation</p>
+                <h2>Not sure what to choose?</h2>
+                <p>If this is your first visit, ask the staff for a recommendation. The best choice often depends on whether you came for a quick lunch, dinner with wine or a meal for several guests.</p>
+            </div>
+            <div class="menu-download-actions">
+                <a href="kontakt.html" class="btn btn-primary">Reserve a table</a>
+                <a href="../jelovnik/jelovnik_jul_2025_compressed.pdf" class="btn btn-outline" download>Download the complete menu</a>
             </div>
         </div>
     </section>
@@ -319,20 +605,20 @@
         <div class="cta-split-container">
             <div class="cta-split-left">
                 <span class="cta-label">Reservations</span>
-                <h2 class="cta-split-title">Reserve a table.</h2>
-                <p class="cta-split-text">Call us, tell us when and how many. For larger groups or celebrations, contact us in advance.</p>
+                <h2 class="cta-split-title">Reserve a table</h2>
+                <p class="cta-split-text">Call us, tell us when you need a table and how many guests are coming. For larger groups or a small celebration, it is best to contact us in advance.</p>
             </div>
             <div class="cta-split-right">
                 <div class="cta-info-block">
                     <div class="cta-info-item">
-                        <span class="cta-info-label">Phone</span>
+                        <span class="cta-info-label">Telefon</span>
                         <a href="tel:+381112612253" class="cta-info-value">011/2612-253</a>
                         <a href="tel:+381611318967" class="cta-info-value">061/1318-967</a>
                     </div>
                     <div class="cta-info-item">
-                        <span class="cta-info-label">Working hours</span>
+                        <span class="cta-info-label">Radno vreme</span>
                         <span class="cta-info-value">Mon-Sat 10:00-23:00</span>
-                        <span class="cta-info-value">Sunday closed</span>
+                        <span class="cta-info-value">Closed on Sundays</span>
                     </div>
                     <a href="kontakt.html" class="cta-split-btn">Reserve a table</a>
                 </div>
@@ -348,7 +634,7 @@
                     <a href="index.html" class="footer-brand" aria-label="Gigo Restaurant">
                         <img src="../images/logo-beli.png" alt="Gigo Restaurant" class="footer-logo">
                     </a>
-                    <p class="footer-tagline">Home cooking you keep coming back to.</p>
+                    <p class="footer-tagline">Homemade cooking you always come back to.</p>
                     <div class="social-links">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -366,7 +652,7 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Working hours</h4>
+                    <h4>Opening hours</h4>
                     <ul class="footer-info">
                         <li>
                             <span class="fi-label">Mon - Sat</span>
@@ -389,7 +675,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p class="footer-copy">&copy; 2026 Gigo Restaurant. All rights reserved.</p>
+                <p class="footer-copy">&copy; 2026 Restoran Gigo. All rights reserved.</p>
                 <div class="footer-lang" aria-label="Language">
                     <a href="../jelovnik.html">SR</a>
                     <span aria-hidden="true">·</span>
@@ -398,7 +684,7 @@
                     <a href="../ru/jelovnik.html">RU</a>
                 </div>
                 <div class="footer-credit">
-                    <span>Design &amp; Development:</span>
+                    <span>Design and development:</span>
                     <a href="https://pansoft.rs" target="_blank" rel="noopener noreferrer" aria-label="Pansoft">
                         <img src="../images/pansoft%20logo%20bela%20slova-01.png" alt="Pansoft" class="footer-credit-logo">
                     </a>
@@ -416,4 +702,6 @@
     <script src="../js/main.js"></script>
 </body>
 </html>
+
+
 
