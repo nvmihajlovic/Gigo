@@ -139,9 +139,10 @@ function initDynamicYears() {
 }
 
 // ====================================
-// I18N (SR / EN)
+// I18N (SR / EN / RU)
 // ====================================
-const LOCALE = (document.documentElement.getAttribute('lang') || 'sr').toLowerCase().startsWith('en') ? 'en' : 'sr';
+const DOCUMENT_LANG = (document.documentElement.getAttribute('lang') || 'sr').toLowerCase();
+const LOCALE = DOCUMENT_LANG.startsWith('ru') ? 'ru' : (DOCUMENT_LANG.startsWith('en') ? 'en' : 'sr');
 
 const I18N = {
     sr: {
@@ -165,6 +166,17 @@ const I18N = {
         readMore: 'Read more',
         readLess: 'Show less',
         footerLinksToggle: 'Quick links'
+    },
+    ru: {
+        contactErrName: 'Пожалуйста, введите имя и фамилию.',
+        contactErrPhone: 'Пожалуйста, введите корректный номер телефона.',
+        contactErrEmail: 'Пожалуйста, введите корректный email.',
+        contactErrGuests: 'Пожалуйста, выберите количество гостей.',
+        contactErrDate: 'Пожалуйста, выберите дату.',
+        contactErrTime: 'Пожалуйста, выберите время.',
+        readMore: 'Читать больше',
+        readLess: 'Показать меньше',
+        footerLinksToggle: 'Быстрые ссылки'
     }
 };
 

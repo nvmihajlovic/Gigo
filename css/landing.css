@@ -126,7 +126,7 @@
     color: #fff !important;
 }
 
-/* 4. Secondary button in hero — elegantnije, tanji border */
+/* 4. Secondary button in hero - elegantnije, tanji border */
 .page-home-modern .home-menu-showcase .btn-outline,
 .page-home-modern .home-hero .btn-secondary {
     border-color: rgba(255, 255, 255, 0.28) !important;
@@ -134,7 +134,7 @@
     color: #fff !important;
 }
 
-/* 4b. Hover — subtilan */
+/* 4b. Hover - subtilan */
 .page-home-modern .home-menu-showcase .btn-outline:hover,
 .page-home-modern .home-hero .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.14) !important;
@@ -210,7 +210,7 @@
         linear-gradient(180deg, rgba(13, 8, 5, 0.48) 0%, rgba(13, 8, 5, 0.08) 46%, rgba(13, 8, 5, 0.86) 100%) !important;
 }
 
-/* 1. Hero content — lift slightly */
+/* 1. Hero content - lift slightly */
 .page-home-modern .home-hero .hero-content {
     align-items: center !important;
     padding: 90px 0 100px !important;
@@ -229,20 +229,20 @@
     color: #e2bb82 !important;
     font-size: 0.76rem !important;
     letter-spacing: 0.2em !important;
-    margin-bottom: 1.375rem !important; /* 22px — eyebrow → title */
+    margin-bottom: 1.375rem !important; /* 22px - eyebrow → title */
 }
 
 .page-home-modern .home-hero .hero-title {
     font-size: clamp(4rem, 7.2vw, 7.25rem) !important;
     line-height: 0.92 !important;
     max-width: 9ch !important;
-    margin-bottom: 2rem !important; /* 32px — title → tagline */
+    margin-bottom: 2rem !important; /* 32px - title → tagline */
     font-weight: 600 !important;
     letter-spacing: 0 !important;
     text-shadow: 0 18px 60px rgba(0, 0, 0, 0.54) !important;
 }
 
-/* 2. Tagline — wider, smaller font so it breaks after "ambijent" */
+/* 2. Tagline - wider, smaller font so it breaks after "ambijent" */
 .page-home-modern .home-hero .hero-tagline {
     color: rgba(255, 255, 255, 0.88) !important;
     font-size: clamp(1.175rem, 1.35vw, 1.4375rem) !important;
@@ -250,11 +250,11 @@
     line-height: 1.5 !important;
     max-width: 640px !important;
     margin-top: 0 !important;
-    margin-bottom: 2.125rem !important; /* 34px — tagline → buttons */
+    margin-bottom: 2.125rem !important; /* 34px - tagline → buttons */
 }
 
 .page-home-modern .home-hero .hero-buttons {
-    gap: 1rem; /* 16px — between the two buttons */
+    gap: 1rem; /* 16px - between the two buttons */
 }
 
 .page-home-modern .home-hero .btn {
@@ -262,11 +262,11 @@
     padding: 0.92rem 1.55rem !important;
 }
 
-/* 5. Contact line — diskretnije, malo niže */
+/* 5. Contact line - diskretnije, malo niže */
 .page-home-modern .hero-contact-line {
     color: rgba(255, 255, 255, 0.75) !important;
     font-size: 0.88rem !important;
-    margin-top: 1.625rem !important; /* 26px — buttons → contact */
+    margin-top: 1.625rem !important; /* 26px - buttons → contact */
     letter-spacing: 0.02em;
 }
 
@@ -591,7 +591,7 @@
 }
 
 /* ====================================
-   FINAL CTA — SPLIT LAYOUT
+   FINAL CTA - SPLIT LAYOUT
    ==================================== */
 
 .page-home-modern .home-final-cta {
@@ -770,7 +770,7 @@
 }
 
 /* ====================================
-   FOOTER — PREMIUM REDESIGN (FINAL)
+   FOOTER - PREMIUM REDESIGN (FINAL)
    ==================================== */
 
 /* ---- Wrapper ---- */
@@ -823,7 +823,7 @@
 }
 
 .page-home-modern .footer-logo {
-    height: clamp(54px, 4.2vw, 70px);
+    height: clamp(96px, 6.6vw, 118px);
     opacity: 0.90;
     display: block;
 }
@@ -1009,21 +1009,20 @@
 .page-home-modern .footer-credit a {
     display: inline-flex;
     align-items: center;
-    padding: 5px 10px;
-    border: 1px solid rgba(246, 232, 211, 0.09);
-    border-radius: 4px;
-    background: rgba(255, 250, 242, 0.025);
-    transition: background 0.22s, border-color 0.22s;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    transition: opacity 0.22s;
 }
 
 .page-home-modern .footer-credit a:hover {
-    background: rgba(160, 110, 55, 0.10);
-    border-color: rgba(204, 168, 121, 0.22);
+    opacity: 0.82;
 }
 
 .page-home-modern .footer-credit-logo {
-    height: 24px;
-    opacity: 0.82;
+    height: 32px;
+    opacity: 0.9;
 }
 
 .page-home-modern .back-to-top {
@@ -1463,7 +1462,7 @@ body.page-home-modern {
     filter: saturate(1.03) contrast(1.06) brightness(0.94);
 }
 
-/* 3. Overlay — mekši prelaz levo, manje ugušena fotografija */
+/* 3. Overlay - mekši prelaz levo, manje ugušena fotografija */
 .page-home-modern .home-hero .hero-overlay {
     background:
         radial-gradient(circle at 28% 48%, rgba(183, 127, 67, 0.12), transparent 38%),
@@ -1475,7 +1474,7 @@ body.page-home-modern {
     font-size: clamp(4.8rem, 8vw, 8.4rem) !important;
     line-height: 0.92 !important;
     max-width: 8ch !important;
-    margin-bottom: 2rem !important; /* 32px — override lower block */
+    margin-bottom: 2rem !important; /* 32px - override lower block */
     text-shadow: 0 22px 70px rgba(0, 0, 0, 0.58) !important;
 }
 
@@ -1801,20 +1800,20 @@ body.page-home-modern {
 }
 
 /* ============================================================
-   PRECISE POLISH — targeted fixes, no redesign
+   PRECISE POLISH - targeted fixes, no redesign
    ============================================================ */
 
-/* 1. HERO — tagline readability against photo */
+/* 1. HERO - tagline readability against photo */
 .page-home-modern .home-hero .hero-tagline {
     text-shadow: 0 1px 10px rgba(0, 0, 0, 0.45);
 }
 
-/* 2. INTRO — more air between paragraphs */
+/* 2. INTRO - more air between paragraphs */
 .page-home-modern .home-copy p:not(.section-subtitle) {
     margin-top: 1.35rem !important;
 }
 
-/* 3. MENU SHOWCASE — full-width header (button moved below grid in HTML) */
+/* 3. MENU SHOWCASE - full-width header (button moved below grid in HTML) */
 .page-home-modern .home-menu-showcase .home-section-head {
     grid-template-columns: 1fr !important;
 }
@@ -1826,12 +1825,12 @@ body.page-home-modern {
     justify-content: center;
 }
 
-/* 4. STANDARDS — restore left-align on header block */
+/* 4. STANDARDS - restore left-align on header block */
 .page-home-modern .standards-head {
     text-align: left !important;
 }
 
-/* 5. GALLERY — editorial asymmetric: 1 dominant left + 3 right */
+/* 5. GALLERY - editorial asymmetric: 1 dominant left + 3 right */
 .page-home-modern .gallery-rail {
     display: grid !important;
     grid-template-columns: 1.75fr 1fr 1fr !important;
@@ -1851,7 +1850,7 @@ body.page-home-modern {
     grid-column: auto !important;
 }
 
-/* First image: spans both rows on the left — dominant */
+/* First image: spans both rows on the left - dominant */
 .page-home-modern .gallery-rail img:nth-child(1) {
     grid-row: 1 / span 2 !important;
     grid-column: 1 !important;
@@ -1874,7 +1873,7 @@ body.page-home-modern {
     grid-column: 2 / span 2 !important;
 }
 
-/* 6. TRIPADVISOR — fix column overflow (fr instead of pixel minimums) */
+/* 6. TRIPADVISOR - fix column overflow (fr instead of pixel minimums) */
 /* and remove sticky that causes navbar overlap */
 .page-home-modern .reviews-layout {
     grid-template-columns: minmax(0, 0.82fr) minmax(0, 1.18fr) !important;
@@ -1886,13 +1885,13 @@ body.page-home-modern {
     max-width: 480px;
 }
 
-/* 7. CTA info block — slightly less opaque for warmer feel */
+/* 7. CTA info block - slightly less opaque for warmer feel */
 .page-home-modern .cta-info-block {
     background: rgba(20, 12, 8, 0.42) !important;
     border: 1px solid rgba(255, 250, 242, 0.09) !important;
 }
 
-/* 8. FOOTER — tighter columns, brand block stacks cleanly */
+/* 8. FOOTER - tighter columns, brand block stacks cleanly */
 .page-home-modern .footer--home .footer-grid {
     gap: 36px !important;
 }
@@ -1903,7 +1902,7 @@ body.page-home-modern {
     align-items: flex-start !important;
 }
 
-/* Gallery subtitle — premium editorial style */
+/* Gallery subtitle - premium editorial style */
 .page-home-modern .home-gallery-strip .section-note {
     font-family: 'DM Sans', sans-serif !important;
     font-size: clamp(1.2rem, 1.5vw, 1.45rem) !important;
@@ -1934,7 +1933,7 @@ body.page-home-modern {
     }
 }
 
-/* Gallery section subtitle — premium editorial style */
+/* Gallery section subtitle - premium editorial style */
 .page-home-modern .gallery-subtitle {
     font-family: 'DM Sans', sans-serif !important;
     font-size: clamp(1.15rem, 1.45vw, 1.35rem) !important;
@@ -1946,7 +1945,7 @@ body.page-home-modern {
     letter-spacing: 0.005em;
 }
 
-/* Gallery section head — button aligned to bottom of text block */
+/* Gallery section head - button aligned to bottom of text block */
 .page-home-modern .home-gallery-strip .home-section-head {
     align-items: end !important;
     margin-bottom: clamp(24px, 2.8vw, 36px) !important;
@@ -1958,7 +1957,7 @@ body.page-home-modern {
 }
 
 /* ====================================
-   O NAMA — Visit Reasons as Standard Lines
+   O NAMA - Visit Reasons as Standard Lines
    Match "Zbog čega se dolazi kod nas"
    to "Naš pristup" standard-line style
    ==================================== */

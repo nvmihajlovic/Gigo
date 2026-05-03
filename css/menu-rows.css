@@ -1,10 +1,10 @@
 /* ====================================
-   MENU & WINE — ELEGANT ROW LIST
+   MENU & WINE - ELEGANT ROW LIST
    Replaces box card grid with clean
    restaurant menu row layout
    ==================================== */
 
-/* ---- JELOVNIK — row list ---- */
+/* ---- JELOVNIK - row list ---- */
 .page-menu.page-home-modern .menu-items {
     display: flex !important;
     flex-direction: column !important;
@@ -70,7 +70,7 @@
     max-width: 64ch !important;
 }
 
-/* ---- VINSKA KARTA — row list ---- */
+/* ---- VINSKA KARTA - row list ---- */
 .page-wine.page-home-modern .wine-list {
     display: flex !important;
     flex-direction: column !important;

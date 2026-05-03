@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ресторан Gigo в Земуне - домашняя кухня, гриль и вина для обеда, ужина и семейных встреч.">
+    <title>Ресторан Gigo - домашняя кухня в Земуне</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/pages.css">
+    <link rel="stylesheet" href="../css/landing.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lato:wght@300;400;700&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="page-home-modern">
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="index.html" class="logo" aria-label="Ресторан Gigo">
+                    <img src="../images/logo-beli.png" alt="Ресторан Gigo" class="logo-img" data-logo-default="../images/logo-beli.png" data-logo-inverse="../images/logo-beli.png">
+                    <span class="visually-hidden">Ресторан Gigo</span>
+                </a>
+                
+                <button class="mobile-toggle" id="mobileToggle" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html" class="nav-link active" aria-current="page">Главная</a></li>
+                    <li><a href="o-nama.html" class="nav-link">О нас</a></li>
+                    <li><a href="jelovnik.html" class="nav-link">Меню</a></li>
+                    <li><a href="vinska-karta.html" class="nav-link">Винная карта</a></li>
+                    <li><a href="kontakt.html" class="nav-link">Контакт</a></li>
+                    <li class="nav-lang">
+                        <div class="lang-switch" aria-label="Выбор языка">
+                            <a href="../index.html">SR</a>
+                            <a href="../en/index.html">EN</a>
+                            <a href="index.html" class="active" aria-current="page">RU</a>
+                        </div>
+                    </li>
+                    <li><a href="tel:+381112612253" class="btn-reserve">Забронировать</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero home-hero">
+            <div class="hero-slider" aria-hidden="true">
+                <div class="hero-slide active"><img src="../images/galerija%203.jpg" alt=""></div>
+            </div>
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <div class="container home-hero-grid">
+                    <div class="hero-text">
+                        <p class="hero-kicker">Земун · с 1998 года</p>
+                        <h1 class="hero-title">Ресторан Gigo</h1>
+                        <p class="hero-tagline">Вкус домашней кухни и приятная атмосфера<br>в самом сердце Земуна.</p>
+                        <div class="hero-buttons">
+                            <a href="kontakt.html" class="btn btn-primary">Забронировать стол</a>
+                            <a href="jelovnik.html" class="btn btn-secondary">Посмотреть меню</a>
+                        </div>
+                        <p class="hero-contact-line">Gornjogradska 76 · <a href="tel:+381112612253">011/2612-253</a> · <a href="tel:+381611318967">061/1318-967</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-intro section-padding">
+            <div class="container home-split">
+                <div class="home-copy">
+                    <p class="section-subtitle">О ресторане</p>
+                    <h2 class="section-title">Сюда приходят за настоящим обедом</h2>
+                    <p class="text-large">Домашняя еда, хороший гриль, вино и приятная атмосфера. Gigo - место для обеда, которым действительно наслаждаются.</p>
+                    <a href="o-nama.html" class="btn btn-outline">О ресторане</a>
+                </div>
+                <div class="home-image-stack">
+                    <img class="home-image-large" src="../images/galerija%206.jpg" alt="Интерьер ресторана Gigo" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section class="home-menu-showcase section-padding">
+            <div class="container">
+                <div class="home-section-head">
+                    <div>
+                        <p class="section-subtitle">Меню</p>
+                        <h2 class="section-title">Блюда, ради которых возвращаются</h2>
+                        <p class="section-note">От закусок и гриля до домашних горячих блюд и тщательно подобранных вин.</p>
+                    </div>
+                </div>
+                <div class="signature-grid">
+                    <a href="jelovnik.html#predjela" class="signature-item">
+                        <img src="../images/galerija%202.jpg" alt="Закуски" loading="lazy">
+                        <div class="signature-copy">
+                            <h3>Закуски</h3>
+                            <p>Для спокойного начала застолья и разговора.</p>
+                        </div>
+                    </a>
+                    <a href="jelovnik.html#glavna-jela" class="signature-item signature-item--large">
+                        <img src="../images/galerija%203.jpg" alt="Основные блюда" loading="lazy">
+                        <div class="signature-copy">
+                            <h3>Основные блюда и гриль</h3>
+                            <p>Для обеда, который не остается на тарелке.</p>
+                        </div>
+                    </a>
+                    <a href="vinska-karta.html" class="signature-item">
+                        <img src="../images/vinska-karta-sekcija.png" alt="Винная карта" loading="lazy">
+                        <div class="signature-copy">
+                            <h3>Вина к еде</h3>
+                            <p>Рекомендации по блюду и вашему вкусу.</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="menu-cta-row">
+                    <a href="jelovnik.html" class="btn btn-outline">Полное меню</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-standards section-padding">
+            <div class="container">
+                <div class="standards-head">
+                    <p class="section-subtitle">НАШ ПОДХОД</p>
+                    <h2 class="section-title">То, что у нас остается важным</h2>
+                    <p>Хорошая еда, приятная атмосфера и внимание к каждому гостю.</p>
+                </div>
+                <div class="standards-grid">
+                    <div class="standard-line">
+                        <span>01</span>
+                        <h3>Блюда по заказу</h3>
+                        <p>Мы готовим после вашего заказа, поэтому блюдо приходит на стол свежим и таким, каким должно быть.</p>
+                    </div>
+                    <div class="standard-line">
+                        <span>02</span>
+                        <h3>Без маленьких порций</h3>
+                        <p>У нас едят основательно - на обед, ужин или за столом, который делят несколько гостей.</p>
+                    </div>
+                    <div class="standard-line">
+                        <span>03</span>
+                        <h3>Вино к еде</h3>
+                        <p>Если вы не уверены, что выбрать, мы порекомендуем вино, которое подойдет к вашему блюду.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-gallery-strip section-padding">
+            <div class="container">
+                <div class="home-section-head">
+                    <div>
+                        <p class="section-subtitle">Атмосфера</p>
+                        <h2 class="section-title">Пространство для обеда, ужина и небольших праздников</h2>
+                        <p class="section-note gallery-subtitle">Место для хорошей еды, общения и спокойной атмосферы.</p>
+                    </div>
+                    <a href="kontakt.html" class="btn btn-primary">Забронировать</a>
+                </div>
+            </div>
+            <div class="gallery-rail" aria-label="Галерея ресторана">
+                <img src="../images/gakerija%201.jpg" alt="Ресторан Gigo" loading="lazy">
+                <img src="../images/galerija%202.jpg" alt="Ресторан Gigo" loading="lazy">
+                <img src="../images/galerija%206.jpg" alt="Ресторан Gigo" loading="lazy">
+                <img src="../images/galerija%205.jpg" alt="Ресторан Gigo" loading="lazy">
+            </div>
+        </section>
+
+        <section class="reviews-section home-reviews">
+            <div class="container reviews-layout">
+                <div class="reviews-head">
+                    <p class="section-subtitle">ОТЗЫВЫ ГОСТЕЙ</p>
+                    <h2 class="section-title">4.9 на TripAdvisor</h2>
+                    <p>Гости чаще всего отмечают домашнюю еду, спокойную атмосферу, корректное обслуживание и порции, ради которых возвращаются.</p>
+                    <a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" class="btn btn-outline">Все отзывы</a>
+                </div>
+                <div class="reviews-grid" aria-label="Отзывы TripAdvisor">
+                    <figure class="review-card review-card--tripadvisor">
+                        <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                        <blockquote>
+                            <p>We asked the waiter for advice to try typical Serbian food and he brought us different types of stews with different types of meat. It was all very delicious.</p>
+                        </blockquote>
+                        <figcaption class="review-meta">
+                            <strong>Cristinarobles R</strong>
+                            <span>Jul 2024 · TripAdvisor</span>
+                        </figcaption>
+                    </figure>
+                    <figure class="review-card review-card--tripadvisor">
+                        <div class="review-stars" aria-label="Оценка 5 из 5">★★★★★</div>
+                        <blockquote>
+                            <p>Fabulous restaurant. Great food and ambiance. Definitely coming back. Service was impeccable and we were greeted with a smile.</p>
+                        </blockquote>
+                        <figcaption class="review-meta">
+                            <strong>Alex S</strong>
+                            <span>Sep 2021 · TripAdvisor</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section class="home-final-cta cta-section--split">
+            <div class="cta-overlay"></div>
+            <div class="cta-split-container">
+                <div class="cta-split-left">
+                    <span class="cta-label">Бронирование</span>
+                    <h2 class="cta-split-title">Забронируйте стол</h2>
+                    <p class="cta-split-text">Позвоните нам, скажите, на какое время нужен стол и сколько гостей придет. Для большой компании или небольшого праздника лучше связаться с нами заранее.</p>
+                </div>
+                <div class="cta-split-right">
+                    <div class="cta-info-block">
+                        <div class="cta-info-item">
+                            <span class="cta-info-label">Телефон</span>
+                            <a href="tel:+381112612253" class="cta-info-value">011/2612-253</a>
+                            <a href="tel:+381611318967" class="cta-info-value">061/1318-967</a>
+                        </div>
+                        <div class="cta-info-item">
+                            <span class="cta-info-label">Время работы</span>
+                            <span class="cta-info-value">Пн-Сб 10:00-23:00</span>
+                            <span class="cta-info-value">По воскресеньям не работаем</span>
+                        </div>
+                        <a href="kontakt.html" class="cta-split-btn">Забронировать стол</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer footer--home">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-col footer-col--brand">
+                    <a href="index.html" class="footer-brand" aria-label="Ресторан Gigo">
+                        <img src="../images/logo-beli.png" alt="Ресторан Gigo" class="footer-logo">
+                    </a>
+                    <p class="footer-tagline">Домашняя кухня, к которой всегда возвращаются.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tripadvisor.com/Restaurant_Review-g1898555-d7704633-Reviews-Restoran_Gigo-Zemun_Belgrade.html" target="_blank" rel="noopener noreferrer" aria-label="TripAdvisor"><i class="fab fa-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Ссылки</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="o-nama.html">О нас</a></li>
+                        <li><a href="jelovnik.html">Меню</a></li>
+                        <li><a href="vinska-karta.html">Винная карта</a></li>
+                        <li><a href="kontakt.html">Контакт</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Время работы</h4>
+                    <ul class="footer-info">
+                        <li>
+                            <span class="fi-label">Пн - Сб</span>
+                            <span class="fi-value">10:00 - 23:00</span>
+                        </li>
+                        <li>
+                            <span class="fi-label">Воскресенье</span>
+                            <span class="fi-value">не работаем</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Контакт</h4>
+                    <ul class="footer-info footer-info--contact">
+                        <li><i class="fas fa-map-marker-alt"></i><span>Gornjogradska 76, Zemun</span></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381112612253">011/2612-253</a></li>
+                        <li><i class="fas fa-phone"></i><a href="tel:+381611318967">061/1318-967</a></li>
+                        <li><i class="fas fa-envelope"></i><a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="footer-copy">&copy; 2026 Ресторан Gigo. Все права защищены.</p>
+                <div class="footer-lang" aria-label="Language">
+                    <a href="../index.html">SR</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="../en/index.html">EN</a>
+                    <span aria-hidden="true">·</span>
+                    <a href="index.html" class="active" aria-current="page">RU</a>
+                </div>
+                <div class="footer-credit">
+                    <span>Дизайн и разработка:</span>
+                    <a href="https://pansoft.rs" target="_blank" rel="noopener noreferrer" aria-label="Pansoft">
+                        <img src="../images/pansoft%20logo%20bela%20slova-01.png" alt="Pansoft" class="footer-credit-logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

@@ -652,7 +652,7 @@ p {
     /* Menu items remain text-only, without tap rectangles */
     .nav-link {
         width: 100%;
-        min-height: 60px; /* 56–64px spec */
+        min-height: 60px; /* 56-64px spec */
         display: flex;
         align-items: center;
         justify-content: flex-start;
@@ -2374,7 +2374,7 @@ p {
     }
 }
 
-/* Premium footer (homepage) — desktop only */
+/* Premium footer (homepage) - desktop only */
 @media (min-width: 1024px) {
     .footer.footer--home {
         padding: calc(var(--spacing-xl) + 1rem) 0 calc(var(--spacing-md) + 0.5rem);
