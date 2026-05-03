@@ -226,10 +226,11 @@
 }
 
 .page-home-modern .home-hero .hero-kicker {
-    color: #e2bb82 !important;
+    color: #f3d7aa !important;
     font-size: 0.76rem !important;
     letter-spacing: 0.2em !important;
     margin-bottom: 1.375rem !important; /* 22px - eyebrow → title */
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.52) !important;
 }
 
 .page-home-modern .home-hero .hero-title {
@@ -2132,4 +2133,17 @@ body.page-home-modern {
         min-height: 52px !important;
         padding: 0.92rem 1.2rem !important;
     }
+}
+
+/* Final navbar and hero readability fixes */
+.page-home-modern .navbar,
+.page-home-modern .navbar.scrolled {
+    background: #120d09 !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+.page-home-modern .home-hero .hero-kicker {
+    color: #f3d7aa !important;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.52) !important;
 }
