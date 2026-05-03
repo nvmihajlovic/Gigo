@@ -2387,7 +2387,7 @@ p {
     }
 
     .footer.footer--home .footer-logo {
-        height: 44px;
+        height: clamp(88px, 6vw, 112px);
     }
 
     .footer.footer--home .footer-col p {

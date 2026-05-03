@@ -54,7 +54,7 @@
         <div class="container">
             <div class="page-header-content">
                 <h1>Jelovnik</h1>
-                <p>Domaća jela, roštilj, salate i deserti za ručak ili večeru.</p>
+                <p>Kompletan jelovnik: doručak, predjela, čorbe, roštilj, specijaliteti, salate i deserti.</p>
             </div>
         </div>
     </section>
@@ -65,8 +65,12 @@
             <div class="filter-buttons" role="tablist" aria-label="Kategorije jelovnika">
                 <button type="button" class="filter-btn active" data-filter="all" data-target="all" role="tab" aria-selected="true" id="menu-tab-all">Sve</button>
                 <button type="button" class="filter-btn" data-filter="predjela" data-target="predjela" role="tab" aria-controls="predjela" aria-selected="false" tabindex="-1" id="menu-tab-predjela">Predjela</button>
+                <button type="button" class="filter-btn" data-filter="dorucak" data-target="dorucak" role="tab" aria-controls="dorucak" aria-selected="false" tabindex="-1" id="menu-tab-dorucak">Doručak</button>
                 <button type="button" class="filter-btn" data-filter="čorbe" data-target="corbe" role="tab" aria-controls="corbe" aria-selected="false" tabindex="-1" id="menu-tab-corbe">Čorbe i supe</button>
+                <button type="button" class="filter-btn" data-filter="prilozi" data-target="prilozi" role="tab" aria-controls="prilozi" aria-selected="false" tabindex="-1" id="menu-tab-prilozi">Prilozi</button>
+                <button type="button" class="filter-btn" data-filter="dame" data-target="dame" role="tab" aria-controls="dame" aria-selected="false" tabindex="-1" id="menu-tab-dame">Dame vole</button>
                 <button type="button" class="filter-btn" data-filter="glavna" data-target="glavna-jela" role="tab" aria-controls="glavna-jela" aria-selected="false" tabindex="-1" id="menu-tab-glavna">Glavna jela</button>
+                <button type="button" class="filter-btn" data-filter="riba" data-target="riba" role="tab" aria-controls="riba" aria-selected="false" tabindex="-1" id="menu-tab-riba">Riba i lignje</button>
                 <button type="button" class="filter-btn" data-filter="salate" data-target="salate" role="tab" aria-controls="salate" aria-selected="false" tabindex="-1" id="menu-tab-salate">Salate</button>
                 <button type="button" class="filter-btn" data-filter="deserti" data-target="deserti" role="tab" aria-controls="deserti" aria-selected="false" tabindex="-1" id="menu-tab-deserti">Deserti</button>
             </div>
@@ -83,46 +87,174 @@
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Domaći kajmak</h3>
-                            <span class="menu-price">650 RSD</span>
+                            <h3>Sirevi "Škopski merak"</h3>
+                            <span class="menu-price">850 RSD</span>
                         </div>
-                        <p class="menu-description">Domaći kajmak uz lepinju ili kao dodatak uz roštilj.</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Srpska pršuta i sir</h3>
-                            <span class="menu-price">1.200 RSD</span>
-                        </div>
-                        <p class="menu-description">Pršuta, sir i dodaci za početak obroka.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Domaći ajvar</h3>
+                            <h3>Sir ovčiji, 100 gr</h3>
                             <span class="menu-price">450 RSD</span>
                         </div>
-                        <p class="menu-description">Blag ili ljut, uz hleb, meso ili predjelo.</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Gibanica</h3>
+                            <h3>Sir kravlji sa Jastrebca, 200 gr</h3>
+                            <span class="menu-price">390 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Sir koziji pirotski, 100 gr</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Grilovano makedonsko sirenje</h3>
+                            <span class="menu-price">490 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Kajmak, 100 gr</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Paprika u pavlaci, 100 gr</h3>
+                            <span class="menu-price">450 RSD</span>
+                        </div>
+                        <p class="menu-description">U sezoni.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Njeguška pršuta, 100 gr</h3>
+                            <span class="menu-price">790 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Goveđa pršuta, 100 gr</h3>
+                            <span class="menu-price">650 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Kulen, 100 gr</h3>
+                            <span class="menu-price">690 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Suvi jelenjski ramstek</h3>
+                            <span class="menu-price">990 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Sir koziji u maslinovom ulju, 100 gr</h3>
+                            <span class="menu-price">490 RSD</span>
+                        </div>
+                        <p class="menu-description">Naša preporuka.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pohovani kačkavalj, 100 gr</h3>
                             <span class="menu-price">550 RSD</span>
                         </div>
-                        <p class="menu-description">Domaća gibanica sa sirom.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Prebranac</h3>
+                            <span class="menu-price">550 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pihtije</h3>
+                            <span class="menu-price">550 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Masline, 100 gr</h3>
+                            <span class="menu-price">350 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pečurke na žaru, 200 gr</h3>
+                            <span class="menu-price">490 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pohovane punjene paprike</h3>
+                            <span class="menu-price">790 RSD</span>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="menu-editorial menu-editorial--dark" aria-label="Predlog za početak obroka">
+    <!-- Menu Section - Doručak -->
+    <section class="menu-section section-padding" id="dorucak">
         <div class="container">
-            <p>Za sto koji počinje polako - predjelo, čorba i čaša vina često su najbolji početak.</p>
+            <div class="menu-category-header">
+                <h2 class="section-title">Doručak</h2>
+                <p>Doručak se služi od 10:00 do 12:30.</p>
+            </div>
+            <div class="menu-items" data-category="dorucak">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 1</h3><span class="menu-price">490 RSD</span></div><p class="menu-description">Doručak od 3 jaja po izboru.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Srpski doručak 2</h3><span class="menu-price">590 RSD</span></div><p class="menu-description">Kajgana na somunu sa duvan čvarcima, kajmakom i paradajzom.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 3</h3><span class="menu-price">590 RSD</span></div><p class="menu-description">Prženice, pavlaka, pečenica, paradajz, sir.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 4</h3><span class="menu-price">590 RSD</span></div><p class="menu-description">Topli sendvič sa jajima, pečenicom, kačkavaljem, pečurkama i urnebesom.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 5 - komplet lepinja</h3><span class="menu-price">490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Komplet lepinja sa pršutom</h3><span class="menu-price">590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Komplet lepinja sa kulenom</h3><span class="menu-price">590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Komplet lepinja sa duvan čvarcima</h3><span class="menu-price">590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 6</h3><span class="menu-price">550 RSD</span></div><p class="menu-description">Kačamak sa sirom i slaninom.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Gigo doručak 7</h3><span class="menu-price">650 RSD</span></div><p class="menu-description">Njeguška pršuta, kulen, pečenica, kravlji sir, kajmak, paradajz, 2 pečena jaja.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 8</h3><span class="menu-price">650 RSD</span></div><p class="menu-description">Uštipci sa paradajzom, njeguškom pršutom, pečenicom, kravljim sirom i kajmakom.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Doručak 9</h3><span class="menu-price">590 RSD</span></div><p class="menu-description">Bećarac sa ovčijim sirom i slaninicom.</p></div></div>
+            </div>
         </div>
     </section>
 
@@ -138,7 +270,7 @@
                     <div class="menu-item-content">
                         <div class="menu-item-header">
                             <h3>Teleća čorba</h3>
-                            <span class="menu-price">450 RSD</span>
+                            <span class="menu-price">390 RSD</span>
                         </div>
                         <p class="menu-description">Klasična teleća čorba sa domaćim ukusom.</p>
                     </div>
@@ -146,21 +278,58 @@
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Pileća čorba</h3>
-                            <span class="menu-price">380 RSD</span>
+                            <h3>Riblja čorba</h3>
+                            <span class="menu-price">450 RSD</span>
                         </div>
-                        <p class="menu-description">Lagana čorba sa piletinom i povrćem.</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Gulaš čorba</h3>
-                            <span class="menu-price">550 RSD</span>
+                            <h3>Pileća supa - domaća</h3>
+                            <span class="menu-price">350 RSD</span>
                         </div>
-                        <p class="menu-description">Jača čorba sa mesom i punijim ukusom.</p>
                     </div>
                 </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Paradajz čorba</h3>
+                            <span class="menu-price">390 RSD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - Prilozi -->
+    <section class="menu-section section-padding" id="prilozi">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Prilozi i hleb</h2>
+            </div>
+            <div class="menu-items" data-category="prilozi">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Pomfrit</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Dalmatinsko varivo</h3><span class="menu-price">450 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Grilovano povrće</h3><span class="menu-price">450 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Pirinač</h3><span class="menu-price">290 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Hleb</h3><span class="menu-price">100 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Začinjeni hleb</h3><span class="menu-price">150 RSD</span></div></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - Dame vole -->
+    <section class="menu-section section-padding bg-light" id="dame">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Dame vole</h2>
+            </div>
+            <div class="menu-items" data-category="dame">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Rižoto sa povrćem</h3><span class="menu-price">890 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Rižoto sa lignjama</h3><span class="menu-price">1150 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Cezar salata</h3><span class="menu-price">990 RSD</span></div></div></div>
             </div>
         </div>
     </section>
@@ -170,63 +339,191 @@
         <div class="container">
             <div class="menu-category-header">
                 <h2 class="section-title">Glavna jela</h2>
-                <p>Roštilj, kuvana jela i porcije za pravi obrok.</p>
+                <p>Jela po porudžbini, roštilj, biftek, sač i specijaliteti kuće.</p>
             </div>
             <div class="menu-items" data-category="glavna">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Pileći file</h3><span class="menu-price">880 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Ćureći file</h3><span class="menu-price">950 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Svinjski file</h3><span class="menu-price">990 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Gorgonzola sos</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Vrganj - pršuta sos</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Pikant sos</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Šampinjoni sos</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Kikiriki sos</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Piletina punjena</h3><span class="menu-price">1190 RSD</span></div><p class="menu-description">Kačkavalj, kajmak.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Ćureći file u mlincima</h3><span class="menu-price">1250 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Svinjski file "Gigo" na naš način</h3><span class="menu-price">1350 RSD</span></div></div></div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Karađorđeva šnicla</h3>
-                            <span class="menu-price">1.450 RSD</span>
+                            <h3>Teleća rebra ispod sača, 300 gr</h3>
+                            <span class="menu-price">1990 RSD</span>
                         </div>
-                        <p class="menu-description">Punjena šnicla sa kajmakom, uz prilog po izboru.</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Ćevapi</h3>
-                            <span class="menu-price">950 RSD</span>
+                            <h3>Jagnjetina ispod sača, 400 gr</h3>
+                            <span class="menu-price">1680 RSD</span>
                         </div>
-                        <p class="menu-description">Ćevapi sa lukom i lepinjom.</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Punjene paprike</h3>
-                            <span class="menu-price">1.100 RSD</span>
+                            <h3>Gulaš od divljači sa njokama</h3>
+                            <span class="menu-price">1590 RSD</span>
                         </div>
-                        <p class="menu-description">Domaće punjene paprike sa mlevenim mesom.</p>
+                        <p class="menu-description">Srnetina, divlja svinja, jelensko meso.</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Mešano meso sa roštilja</h3>
-                            <span class="menu-price">1.650 RSD</span>
+                            <h3>Biftek sa vrganjima i pršutom</h3>
+                            <span class="menu-price">2950 RSD</span>
                         </div>
-                        <p class="menu-description">Roštilj za one koji žele više ukusa na jednom tanjiru.</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Sarma</h3>
+                            <h3>Ćevapi (porcija)</h3>
+                            <span class="menu-price">920 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Ćevapi (pola porcije)</h3>
+                            <span class="menu-price">720 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Ćevapi sa kajmakom (porcija)</h3>
                             <span class="menu-price">980 RSD</span>
                         </div>
-                        <p class="menu-description">Domaća sarma u kiselom kupusu.</p>
                     </div>
                 </div>
                 <div class="menu-item">
                     <div class="menu-item-content">
                         <div class="menu-item-header">
-                            <h3>Prebranac</h3>
-                            <span class="menu-price">650 RSD</span>
+                            <h3>Ćevapi sa kajmakom (pola porcije)</h3>
+                            <span class="menu-price">780 RSD</span>
                         </div>
-                        <p class="menu-description">Zapečen pasulj sa lukom.</p>
                     </div>
                 </div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Ćevapi Gigo</h3><span class="menu-price">1100 RSD</span></div></div></div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Uštipci (porcija)</h3>
+                            <span class="menu-price">1050 RSD</span>
+                        </div>
+                        <p class="menu-description">Kačkavalj, slaninica, tucana paprika.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pljeskavica (porcija)</h3>
+                            <span class="menu-price">920 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pljeskavica gurmanska, 430 gr (porcija)</h3>
+                            <span class="menu-price">1150 RSD</span>
+                        </div>
+                        <p class="menu-description">Kačkavalj, slaninica, tucana paprika.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pljeskavica punjena, 450 gr (porcija)</h3>
+                            <span class="menu-price">1190 RSD</span>
+                        </div>
+                        <p class="menu-description">Kajmak, kačkavalj.</p>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Kobasica domaća dimljena (porcija)</h3>
+                            <span class="menu-price">950 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Kobasica lovačka (porcija)</h3>
+                            <span class="menu-price">1190 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Karađorđeva šnicla, 400 gr (porcija)</h3>
+                            <span class="menu-price">1290 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Bečka šnicla</h3>
+                            <span class="menu-price">1190 RSD</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Punjeni svinjski file u slanini</h3>
+                            <span class="menu-price">1290 RSD</span>
+                        </div>
+                        <p class="menu-description">Naša preporuka. Kačkavalj, kajmak.</p>
+                    </div>
+                </div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Biftek na žaru, 300 gr</h3><span class="menu-price">2500 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Biftek sa gorgonzolom, 300 gr</h3><span class="menu-price">2950 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Biftek "Gigo", 300 gr</h3><span class="menu-price">3150 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Biftek 1 kg sa začinjenim krompirom i sosom po želji</h3><span class="menu-price">7990 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Svinjska rebra dimljena, 350 gr</h3><span class="menu-price">1390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Teletina sa mlincima u sosu od kajmaka</h3><span class="menu-price">1590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Teleći medaljoni sa dimljenim kačkavaljem</h3><span class="menu-price">1590 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Juneći ribić na kajmaku sa pirinčem</h3><span class="menu-price">1250 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tava "Gigo"</h3><span class="menu-price">1390 RSD</span></div><p class="menu-description">Dinstana junetina, paradajz, paprika, luk, šampinjoni, kačkavalj.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Teleća glava u škembetu</h3><span class="menu-price">1390 RSD</span></div><p class="menu-description">Teletina, škembići, povrće.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Dimljene butkice u kupusu, 300 gr</h3><span class="menu-price">1150 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Leskovačka mućkalica</h3><span class="menu-price">950 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Preporuka šefa kuhinje za 2 osobe</h3><span class="menu-price">2400 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Dnevno kuvano jelo</h3><span class="menu-price">790 / 1590 RSD</span></div><p class="menu-description">Obratite se konobaru.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section - Riba i lignje -->
+    <section class="menu-section section-padding bg-light" id="riba">
+        <div class="container">
+            <div class="menu-category-header">
+                <h2 class="section-title">Rečna riba i lignje</h2>
+            </div>
+            <div class="menu-items" data-category="riba">
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Smuđ, 1 kg</h3><span class="menu-price">3900 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Smuđ fileti, 1 kg</h3><span class="menu-price">6500 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Fileti smuđa u belom sosu, 350 gr</h3><span class="menu-price">1490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Lignje na žaru, 300 gr</h3><span class="menu-price">1650 RSD</span></div></div></div>
             </div>
         </div>
     </section>
@@ -238,6 +535,10 @@
                 <p class="section-subtitle">Za sto</p>
                 <h2>Ručak može biti brz, ali ne mora biti zbrzan.</h2>
                 <p>Glavna jela su za one trenutke kada se sedi malo duže: roštilj, kuvana jela, salata i vino ako obrok ide u večeru.</p>
+                <div class="menu-editorial-actions" aria-label="Brze akcije za jelovnik">
+                    <a href="tel:+381112612253" class="btn btn-primary">Pozovite nas</a>
+                    <a href="jelovnik/jelovnik_jul_2025_compressed.pdf" class="btn btn-outline" download>Preuzmite jelovnik i kartu pića</a>
+                </div>
             </div>
         </div>
     </section>
@@ -250,33 +551,28 @@
                 <p>Sveže salate uz roštilj, kuvana jela ili laganiji obrok.</p>
             </div>
             <div class="menu-items" data-category="salate">
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Šopska salata</h3>
-                            <span class="menu-price">480 RSD</span>
-                        </div>
-                        <p class="menu-description">Paradajz, krastavac, paprika, luk i sir.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Srpska salata</h3>
-                            <span class="menu-price">450 RSD</span>
-                        </div>
-                        <p class="menu-description">Paradajz, krastavac, paprika i luk.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Grčka salata</h3>
-                            <span class="menu-price">520 RSD</span>
-                        </div>
-                        <p class="menu-description">Povrće, feta sir i masline.</p>
-                    </div>
-                </div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Kupus</h3><span class="menu-price">320 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Krastavac</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Paradajz</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Paradajz sa sirom</h3><span class="menu-price">420 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Zelena salata</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Srpska salata</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Šopska salata</h3><span class="menu-price">450 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Vitaminska salata</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Pečene slatke paprike (2 kom)</h3><span class="menu-price">350 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Pečene ljute paprike (1 kom)</h3><span class="menu-price">120 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Mešana salata</h3><span class="menu-price">420 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tarator</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Ajvar domaći</h3><span class="menu-price">420 RSD</span></div><p class="menu-description">U sezoni.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Kiseli kupus</h3><span class="menu-price">390 RSD</span></div><p class="menu-description">U sezoni.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Grčka salata</h3><span class="menu-price">450 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Miks zelenih salata</h3><span class="menu-price">390 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Miks zelenih salata sa čerijem i pinjolima</h3><span class="menu-price">490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Urnebes</h3><span class="menu-price">330 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Rotkvice</h3><span class="menu-price">190 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Rukola, čeri, parmezan domaći</h3><span class="menu-price">490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Bašta za dve osobe</h3><span class="menu-price">800 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Moravska salata</h3><span class="menu-price">450 RSD</span></div></div></div>
             </div>
         </div>
     </section>
@@ -289,42 +585,16 @@
                 <p>Domaći klasici za kraj obroka.</p>
             </div>
             <div class="menu-items" data-category="deserti">
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Palačinke</h3>
-                            <span class="menu-price">450 RSD</span>
-                        </div>
-                        <p class="menu-description">Sa kremom, džemom ili orasima.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Tulumba</h3>
-                            <span class="menu-price">380 RSD</span>
-                        </div>
-                        <p class="menu-description">Tradicionalna tulumba u sirupu.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Baklava</h3>
-                            <span class="menu-price">420 RSD</span>
-                        </div>
-                        <p class="menu-description">Baklava sa orasima.</p>
-                    </div>
-                </div>
-                <div class="menu-item">
-                    <div class="menu-item-content">
-                        <div class="menu-item-header">
-                            <h3>Krempita</h3>
-                            <span class="menu-price">480 RSD</span>
-                        </div>
-                        <p class="menu-description">Kremasta poslastica sa vanilom.</p>
-                    </div>
-                </div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Baklava sa sladoledom</h3><span class="menu-price">420 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tufahija</h3><span class="menu-price">360 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Orasnice (1 kom)</h3><span class="menu-price">250 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Tri leće</h3><span class="menu-price">380 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Čokoladni tart sa sladoledom i prelivom od višanja</h3><span class="menu-price">550 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Palačinke po izboru</h3><span class="menu-price">420 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>"Reforma" torta</h3><span class="menu-price">490 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Čoko malina</h3><span class="menu-price">550 RSD</span></div></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Palačinke sa Nutelom</h3><span class="menu-price">490 RSD</span></div><p class="menu-description">Plazma, orasi.</p></div></div>
+                <div class="menu-item"><div class="menu-item-content"><div class="menu-item-header"><h3>Krempita</h3><span class="menu-price">420 RSD</span></div></div></div>
             </div>
         </div>
     </section>
@@ -337,7 +607,10 @@
                 <h2>Niste sigurni šta da izaberete?</h2>
                 <p>Ako dolazite prvi put, pitajte osoblje za preporuku. Najbolji izbor često zavisi od toga da li ste došli na brz ručak, večeru uz vino ili obrok za više ljudi.</p>
             </div>
-            <a href="kontakt.html" class="btn btn-primary">Rezervišite sto</a>
+            <div class="menu-download-actions">
+                <a href="kontakt.html" class="btn btn-primary">Rezervišite sto</a>
+                <a href="jelovnik/jelovnik_jul_2025_compressed.pdf" class="btn btn-outline" download>Preuzmite kompletan jelovnik</a>
+            </div>
         </div>
     </section>
 

@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initHeroSlider();
     initMenuFilter();
     initMenuPrices();
+    initMenuMeasures();
     initWineFilter();
     initWinePrices();
     initContactForm();
@@ -63,6 +64,42 @@ function initMenuPrices() {
 
         el.setAttribute('aria-label', raw);
         el.innerHTML = `<span class="price-amount">${amount}</span> <span class="price-currency">${currency}</span>`;
+    });
+}
+
+// ====================================
+// MENU MEASURES (style gramages inside dish names)
+// ====================================
+function initMenuMeasures() {
+    const headings = document.querySelectorAll('.page-menu .menu-item-header h3');
+    if (headings.length === 0) return;
+
+    const measurePattern = /(\b\d+(?:[.,]\d+)?\s*(?:gr|g|kg|ml|l)\b|\(\s*\d+\s*kom\s*\))/gi;
+    const measureCheck = /^(\b\d+(?:[.,]\d+)?\s*(?:gr|g|kg|ml|l)\b|\(\s*\d+\s*kom\s*\))$/i;
+
+    headings.forEach(heading => {
+        if (heading.querySelector('.menu-measure')) return;
+
+        const text = heading.textContent || '';
+        if (!measurePattern.test(text)) return;
+        measurePattern.lastIndex = 0;
+
+        const fragment = document.createDocumentFragment();
+        text.split(measurePattern).forEach(part => {
+            if (!part) return;
+
+            if (measureCheck.test(part.trim())) {
+                const measure = document.createElement('span');
+                measure.className = 'menu-measure';
+                measure.textContent = part;
+                fragment.appendChild(measure);
+                return;
+            }
+
+            fragment.appendChild(document.createTextNode(part));
+        });
+
+        heading.replaceChildren(fragment);
     });
 }
 

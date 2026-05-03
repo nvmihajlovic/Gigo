@@ -1903,6 +1903,99 @@ body.page-home-modern {
     align-items: flex-start !important;
 }
 
+.page-home-modern .footer-col--brand .footer-logo {
+    height: clamp(82px, 5.2vw, 104px) !important;
+    margin-bottom: 0 !important;
+}
+
+.page-home-modern .footer-col--brand .footer-tagline {
+    max-width: 30ch !important;
+    margin-top: -18px !important;
+    margin-bottom: 20px !important;
+    font-size: 0.82rem !important;
+    line-height: 1.42 !important;
+    color: rgba(230, 215, 193, 0.56) !important;
+    opacity: 1 !important;
+}
+
+.page-home-modern .footer-col--brand .social-links {
+    margin-top: 0 !important;
+    gap: 12px !important;
+}
+
+/* Footer typography: keep the whole footer on one quiet scale. */
+.page-home-modern .footer--home,
+.page-home-modern .footer--home p,
+.page-home-modern .footer--home a,
+.page-home-modern .footer--home span,
+.page-home-modern .footer--home li {
+    font-family: var(--font-secondary) !important;
+    font-size: 0.88rem !important;
+    line-height: 1.55 !important;
+    letter-spacing: 0 !important;
+}
+
+.page-home-modern .footer--home h4,
+.page-home-modern .footer--home .fi-label,
+.page-home-modern .footer--home .footer-lang,
+.page-home-modern .footer--home .footer-lang a {
+    font-family: var(--font-secondary) !important;
+    font-size: 0.68rem !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.16em !important;
+    text-transform: uppercase !important;
+}
+
+.page-home-modern .footer--home .footer-tagline {
+    font-size: 0.82rem !important;
+    line-height: 1.42 !important;
+}
+
+.page-home-modern .footer--home .footer-links,
+.page-home-modern .footer--home .footer-info {
+    gap: 0.72rem !important;
+}
+
+.page-home-modern .footer--home .footer-links a,
+.page-home-modern .footer--home .fi-value,
+.page-home-modern .footer--home .footer-info--contact span,
+.page-home-modern .footer--home .footer-info--contact a {
+    color: rgba(246, 232, 211, 0.66) !important;
+}
+
+.page-home-modern .footer--home .footer-bottom,
+.page-home-modern .footer--home .footer-copy,
+.page-home-modern .footer--home .footer-credit {
+    font-size: 0.82rem !important;
+    line-height: 1.45 !important;
+    letter-spacing: 0 !important;
+}
+
+@media (max-width: 768px) {
+    .page-home-modern .footer-col--brand {
+        align-items: flex-start !important;
+        text-align: left !important;
+    }
+
+    .page-home-modern .footer-col--brand .footer-logo {
+        height: clamp(64px, 18vw, 78px) !important;
+        margin-bottom: 0 !important;
+    }
+
+    .page-home-modern .footer-col--brand .footer-tagline {
+        max-width: 27ch !important;
+        margin: -16px 0 18px !important;
+        font-size: 0.8rem !important;
+        line-height: 1.4 !important;
+    }
+
+    .page-home-modern .footer-col--brand .social-links {
+        margin-top: 0 !important;
+        justify-content: flex-start !important;
+    }
+}
+
 /* Gallery subtitle - premium editorial style */
 .page-home-modern .home-gallery-strip .section-note {
     font-family: 'DM Sans', sans-serif !important;
