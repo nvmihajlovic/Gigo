@@ -3,80 +3,80 @@ import type { Locale, SitePage } from './site';
 export const pageMeta = {
   sr: {
     home: {
-      title: 'Restoran Gigo | Domaća kuhinja u Zemunu',
-      description: 'Domaća kuhinja, roštilj i odabrana vina u prijatnom ambijentu u Zemunu.',
+      title: 'Restoran Gigo u Zemunu | Domaća kuhinja',
+      description: 'Posetite restoran Gigo u Zemunu i uživajte u domaćoj kuhinji, roštilju i jelima iz sača. Pogledajte jelovnik i rezervišite sto u Gornjogradskoj 76.',
     },
     about: {
-      title: 'O nama | Restoran Gigo',
-      description: 'Upoznajte priču porodičnog restorana Gigo u Zemunu i našu domaću kuhinju.',
+      title: 'Porodični restoran u Zemunu | Restoran Gigo',
+      description: 'Upoznajte priču restorana Gigo, porodičnu tradiciju od 1998. godine i domaću kuhinju, roštilj i specijalitete iz sača u Zemunu.',
     },
     menu: {
-      title: 'Jelovnik | Restoran Gigo',
-      description: 'Pogledajte jelovnik restorana Gigo: domaća jela, roštilj, salate i deserti.',
+      title: 'Jelovnik restorana Gigo u Zemunu',
+      description: 'Pogledajte jelovnik restorana Gigo u Zemunu: domaća jela, doručak, roštilj, specijaliteti iz sača, salate i domaći deserti.',
     },
     wine: {
-      title: 'Vinska karta i pića | Restoran Gigo',
-      description: 'Odabrana vina i pića restorana Gigo u Zemunu.',
+      title: 'Vinska karta i pića | Restoran Gigo, Zemun',
+      description: 'Istražite vinsku kartu restorana Gigo u Zemunu: domaća i regionalna vina, penušavci i pića odabrana da prate domaću kuhinju.',
     },
     gallery: {
-      title: 'Galerija | Restoran Gigo',
-      description: 'Pogledajte fotografije restorana Gigo, njegove trpeze i domaće kuhinje u Zemunu.',
+      title: 'Galerija restorana Gigo u Zemunu',
+      description: 'Pogledajte fotografije restorana Gigo u Zemunu: enterijer, atmosfera za stolom, domaća jela, roštilj i specijaliteti iz sača.',
     },
     contact: {
-      title: 'Rezervišite sto | Restoran Gigo',
-      description: 'Kontakt informacije, radno vreme i rezervacije restorana Gigo u Zemunu.',
+      title: 'Kontakt i rezervacije | Restoran Gigo, Zemun',
+      description: 'Rezervišite sto u restoranu Gigo u Zemunu. Pronađite adresu u Gornjogradskoj 76, radno vreme, telefone, e-poštu i mapu do restorana.',
     },
   },
   en: {
     home: {
-      title: 'Restaurant Gigo | Homestyle Dining in Zemun',
-      description: 'Homestyle cooking, grilled favourites, and selected wines at Restaurant Gigo in Zemun.',
+      title: 'Restaurant Gigo in Zemun | Homestyle Dining',
+      description: 'Visit Restaurant Gigo in Zemun for Serbian homestyle cooking, grilled favourites, and sač dishes. Explore the menu and book a table at Gornjogradska 76.',
     },
     about: {
-      title: 'About | Restaurant Gigo',
-      description: 'Discover the story of Restaurant Gigo, a family-run restaurant in Zemun.',
+      title: 'Our Story | Restaurant Gigo in Zemun',
+      description: 'Discover Restaurant Gigo, a family-run restaurant in Zemun since 1998, serving homestyle Serbian dishes, grilled favourites, and sač specialties.',
     },
     menu: {
-      title: 'Menu | Restaurant Gigo',
-      description: 'Explore the menu at Restaurant Gigo, from Serbian favourites to grilled dishes and desserts.',
+      title: 'Menu | Restaurant Gigo in Zemun',
+      description: 'Explore the Restaurant Gigo menu in Zemun: Serbian homestyle dishes, breakfast, grilled favourites, sač specialties, salads, and homemade desserts.',
     },
     wine: {
-      title: 'Wine and Drinks | Restaurant Gigo',
-      description: 'Explore the wine and drinks list at Restaurant Gigo in Zemun.',
+      title: 'Wine List and Drinks | Restaurant Gigo, Zemun',
+      description: 'Browse the wine and drinks list at Restaurant Gigo in Zemun, with Serbian and regional wines selected to pair with our homestyle menu.',
     },
     gallery: {
-      title: 'Gallery | Restaurant Gigo',
-      description: 'Explore photos of Restaurant Gigo, its dining room, and homestyle cuisine in Zemun.',
+      title: 'Restaurant Gallery | Gigo in Zemun',
+      description: 'Take a look inside Restaurant Gigo in Zemun: the dining room, welcoming atmosphere, homestyle dishes, grilled favourites, and sač specialties.',
     },
     contact: {
-      title: 'Book a Table | Restaurant Gigo',
-      description: 'Contact details, opening hours, and reservation information for Restaurant Gigo in Zemun.',
+      title: 'Contact & Reservations | Restaurant Gigo',
+      description: 'Book a table at Restaurant Gigo in Zemun. Find our Gornjogradska 76 address, opening hours, phone numbers, email, and directions.',
     },
   },
   ru: {
     home: {
-      title: 'Ресторан Gigo | Домашняя кухня в Земуне',
-      description: 'Домашняя кухня, блюда на гриле и выбранные вина в ресторане Gigo в Земуне.',
+      title: 'Ресторан Gigo в Земуне | Домашняя кухня',
+      description: 'Посетите ресторан Gigo в Земуне: домашняя сербская кухня, блюда на гриле и из-под сача. Посмотрите меню и забронируйте стол на Gornjogradska 76.',
     },
     about: {
-      title: 'О нас | Ресторан Gigo',
-      description: 'История семейного ресторана Gigo в Земуне и нашей домашней кухни.',
+      title: 'О ресторане Gigo в Земуне | Наша история',
+      description: 'Узнайте историю семейного ресторана Gigo в Земуне, который с 1998 года готовит домашние блюда, блюда на гриле и из-под сача.',
     },
     menu: {
-      title: 'Меню | Ресторан Gigo',
-      description: 'Меню ресторана Gigo: домашние блюда, гриль, салаты и десерты.',
+      title: 'Меню ресторана Gigo в Земуне',
+      description: 'Ознакомьтесь с меню ресторана Gigo в Земуне: домашние блюда, завтраки, гриль, блюда из-под сача, салаты и домашние десерты.',
     },
     wine: {
       title: 'Винная карта и напитки | Ресторан Gigo',
-      description: 'Винная карта и напитки ресторана Gigo в Земуне.',
+      description: 'Винная карта ресторана Gigo в Земуне: сербские и региональные вина, игристые вина и напитки к домашней кухне и блюдам на гриле.',
     },
     gallery: {
-      title: 'Галерея | Ресторан Gigo',
-      description: 'Фотографии ресторана Gigo, его зала и домашней кухни в Земуне.',
+      title: 'Галерея ресторана Gigo в Земуне',
+      description: 'Посмотрите фотографии ресторана Gigo в Земуне: зал, атмосфера за столом, домашние блюда, гриль и специалитеты из-под сача.',
     },
     contact: {
-      title: 'Забронировать стол | Ресторан Gigo',
-      description: 'Контакты, часы работы и информация о бронировании ресторана Gigo в Земуне.',
+      title: 'Контакты и бронирование | Ресторан Gigo',
+      description: 'Забронируйте стол в ресторане Gigo в Земуне. Адрес: Gornjogradska 76; часы работы, телефоны, электронная почта и карта проезда.',
     },
   },
 } satisfies Record<Locale, Record<SitePage, { title: string; description: string }>>;

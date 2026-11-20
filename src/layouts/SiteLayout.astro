@@ -1,14 +1,115 @@
 ---
 import '../styles/global.css';
 import MobileActionBar from '../components/MobileActionBar.astro';
+import { absoluteSiteUrl, languageTags, openGraphLocales, siteLocales } from '../data/seo';
+import { siteRoutes, type Locale, type SitePage } from '../data/site';
 
 interface Props {
   title: string;
   description: string;
-  lang?: 'sr' | 'en' | 'ru';
+  lang?: Locale;
+  page: SitePage;
 }
 
-const { title, description, lang = 'sr' } = Astro.props;
+const { title, description, lang = 'sr', page } = Astro.props;
+const site = Astro.site;
+
+if (!site) {
+  throw new Error('Set the site URL in astro.config.mjs to render SEO metadata.');
+}
+
+const canonicalUrl = absoluteSiteUrl(siteRoutes[lang][page], site);
+const siteUrl = absoluteSiteUrl('/', site);
+const siteName = {
+  sr: 'Restoran Gigo',
+  en: 'Restaurant Gigo',
+  ru: 'Ресторан Gigo',
+}[lang];
+const socialImageUrl = new URL('/images/galerija%203.jpg', site).href;
+const socialImageAlt = {
+  sr: 'Domaća jela na trpezi restorana Gigo',
+  en: 'Homestyle dishes at a table at Restaurant Gigo',
+  ru: 'Домашние блюда на столе в ресторане Gigo',
+}[lang];
+const restaurantId = `${siteUrl}#restaurant`;
+const websiteId = `${siteUrl}#website`;
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': 'Restaurant',
+      '@id': restaurantId,
+      name: 'Restoran Gigo',
+      url: siteUrl,
+      image: [
+        new URL('/images/galerija%203.jpg', site).href,
+        new URL('/images/galerija%204.jpg', site).href,
+        new URL('/images/galerija%206.jpg', site).href,
+      ],
+      telephone: '+381112612253',
+      contactPoint: [
+        {
+          '@type': 'ContactPoint',
+          telephone: '+381112612253',
+          contactType: 'reservations',
+          availableLanguage: ['Serbian', 'English', 'Russian'],
+        },
+        {
+          '@type': 'ContactPoint',
+          telephone: '+381611318967',
+          contactType: 'reservations',
+          availableLanguage: ['Serbian', 'English', 'Russian'],
+        },
+      ],
+      email: 'info@restorangigo.rs',
+      foundingDate: '1998',
+      servesCuisine: ['Serbian', 'Balkan'],
+      acceptsReservations: true,
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: 'Gornjogradska 76',
+        addressLocality: 'Zemun',
+        addressRegion: 'Belgrade',
+        addressCountry: 'RS',
+      },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: [
+            'https://schema.org/Monday',
+            'https://schema.org/Tuesday',
+            'https://schema.org/Wednesday',
+            'https://schema.org/Thursday',
+            'https://schema.org/Friday',
+            'https://schema.org/Saturday',
+          ],
+          opens: '10:00',
+          closes: '23:00',
+        },
+      ],
+      menu: absoluteSiteUrl(siteRoutes[lang].menu, site),
+    },
+    {
+      '@type': 'WebSite',
+      '@id': websiteId,
+      url: siteUrl,
+      name: siteName,
+      inLanguage: siteLocales.map((locale) => languageTags[locale]),
+      publisher: { '@id': restaurantId },
+    },
+    {
+      '@type': 'WebPage',
+      '@id': `${canonicalUrl}#webpage`,
+      url: canonicalUrl,
+      name: title,
+      description,
+      inLanguage: languageTags[lang],
+      isPartOf: { '@id': websiteId },
+      about: { '@id': restaurantId },
+      primaryImageOfPage: socialImageUrl,
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -17,8 +118,32 @@ const { title, description, lang = 'sr' } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content={description} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
     <meta name="theme-color" content="#f5f1e8" />
     <title>{title}</title>
+    <link rel="canonical" href={canonicalUrl} />
+    {siteLocales.map((locale) => (
+      <link rel="alternate" hreflang={languageTags[locale]} href={absoluteSiteUrl(siteRoutes[locale][page], site)} />
+    ))}
+    <link rel="alternate" hreflang="x-default" href={absoluteSiteUrl(siteRoutes.sr[page], site)} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:locale" content={openGraphLocales[lang]} />
+    {siteLocales.filter((locale) => locale !== lang).map((locale) => (
+      <meta property="og:locale:alternate" content={openGraphLocales[locale]} />
+    ))}
+    <meta property="og:image" content={socialImageUrl} />
+    <meta property="og:image:width" content="1500" />
+    <meta property="og:image:height" content="1000" />
+    <meta property="og:image:alt" content={socialImageAlt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={socialImageUrl} />
+    <meta name="twitter:image:alt" content={socialImageAlt} />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
@@ -28,6 +153,7 @@ const { title, description, lang = 'sr' } = Astro.props;
       href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=optional"
       rel="stylesheet"
     />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
   </head>
   <body>
     <slot />

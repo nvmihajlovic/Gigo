@@ -25,7 +25,7 @@ const desktopNavigation = navigation.filter((item) => item.page !== 'contact');
 const languages: Locale[] = ['sr', 'en', 'ru'];
 ---
 
-<SiteLayout title={title} description={description} lang={locale}>
+<SiteLayout title={title} description={description} lang={locale} page={page}>
   <a class="skip-link" href="#main-content">
     {locale === 'sr' ? 'Pređi na glavni sadržaj' : locale === 'en' ? 'Skip to main content' : 'Перейти к основному содержимому'}
   </a>

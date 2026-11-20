@@ -5,6 +5,9 @@ import HeroSlider from '../components/HeroSlider.astro';
 import OpeningStatus from '../components/OpeningStatus.astro';
 import GoogleReviewsWidget from '../components/GoogleReviewsWidget.astro';
 import { siteRoutes } from '../data/site';
+import { pageMeta } from '../data/page-meta';
+
+const meta = pageMeta.sr.home;
 
 const heroSlides = [
   { src: '/images/galerija%203.jpg', alt: 'Trpeza sa domaćim specijalitetima u restoranu Gigo' },
@@ -48,8 +51,10 @@ const experiences = [
 ---
 
 <SiteLayout
-  title="Restoran Gigo | Domaća kuhinja u Zemunu"
-  description="Domaća kuhinja, roštilj i odabrana vina u prijatnom ambijentu u Zemunu. Rezervišite sto u Restoranu Gigo."
+  title={meta.title}
+  description={meta.description}
+  lang="sr"
+  page="home"
 >
   <a class="skip-link" href="#main-content">Pređi na glavni sadržaj</a>
   <div class="announcement">

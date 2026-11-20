@@ -31,3 +31,11 @@ Astro's generated `public/` directory.
 
 The root `netlify.toml` configures Netlify to run `npm run build` and publish
 `dist/`. Connect this GitHub repository to Netlify to enable deploys on push.
+
+## SEO
+
+Localized page titles and descriptions are maintained in `src/data/page-meta.ts`.
+The shared layout generates canonical URLs, language alternates, social metadata,
+and Restaurant structured data. The build also generates `/sitemap.xml` and
+`/robots.txt`. Update the `site` URL in `astro.config.mjs` if the production
+domain changes.
