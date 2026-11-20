@@ -1,0 +1,104 @@
+---
+import type { Locale } from '../data/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const copy = {
+  sr: {
+    score: '4,8',
+    source: 'Google ocena',
+    reviews: 'Pogledajte recenzije',
+    label: 'Google ocena 4,8 od 5. Pogledajte recenzije',
+  },
+  en: {
+    score: '4.8',
+    source: 'Google rating',
+    reviews: 'Read reviews',
+    label: 'Google rating 4.8 out of 5. Read reviews',
+  },
+  ru: {
+    score: '4,8',
+    source: 'Оценка Google',
+    reviews: 'Читать отзывы',
+    label: 'Оценка Google 4,8 из 5. Читать отзывы',
+  },
+}[locale];
+const reviewsUrl =
+  'https://www.google.com/maps/place/Gigo/@44.8429189,20.3936367,17z/data=!4m6!3m5!1s0x475a65b84be84525:0xa4cb8bb045eee469!8m2!3d44.8429189!4d20.3936367!16s%2Fg%2F11_rjqmc8?entry=ttu';
+---
+
+<a
+  class="google-review-widget"
+  href={reviewsUrl}
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label={copy.label}
+>
+  <span class="google-review-score">{copy.score}</span>
+  <svg class="google-review-star" viewBox="0 0 24 24" aria-hidden="true">
+    <path d="m12 2.7 2.85 5.78 6.38.93-4.62 4.5 1.09 6.35L12 17.26l-5.7 3 1.09-6.35-4.62-4.5 6.38-.93L12 2.7Z" />
+  </svg>
+  <span class="google-review-copy">
+    <strong>{copy.source}</strong>
+    <span>{copy.reviews}</span>
+  </span>
+</a>
+
+<style>
+  .google-review-widget {
+    display: inline-flex;
+    width: fit-content;
+    max-width: 100%;
+    align-items: center;
+    gap: 0.55rem;
+    margin-top: 0.9rem;
+    margin-left: 0.75rem;
+    padding: 0.65rem 0.8rem;
+    border: 1px solid rgb(var(--wine-rgb) / 18%);
+    background: var(--surface-card);
+    color: var(--ink);
+    text-decoration: none;
+    transition: border-color 180ms ease, background-color 180ms ease;
+  }
+
+  .google-review-widget:hover {
+    border-color: rgb(var(--wine-rgb) / 40%);
+    background: #fff;
+  }
+
+  .google-review-score {
+    color: var(--wine);
+    font-size: 1.35rem;
+    font-variant-numeric: tabular-nums;
+    font-weight: 600;
+    line-height: 1;
+  }
+
+  .google-review-star {
+    width: 1rem;
+    height: 1rem;
+    flex: 0 0 auto;
+    fill: var(--gold);
+  }
+
+  .google-review-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 0.12rem;
+    line-height: 1.2;
+  }
+
+  .google-review-copy strong {
+    font-size: 0.74rem;
+    font-weight: 600;
+  }
+
+  .google-review-copy span {
+    color: var(--muted);
+    font-size: 0.7rem;
+  }
+
+</style>

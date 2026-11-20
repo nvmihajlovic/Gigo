@@ -1,11 +1,13 @@
 # Dependencies
 node_modules/
-package-lock.json
 yarn.lock
 
 # Build files
 dist/
+.astro/
 build/
+public/
+.netlify/
 *.min.css
 *.min.js
 

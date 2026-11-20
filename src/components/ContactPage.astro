@@ -1,0 +1,269 @@
+---
+import PageHero from './PageHero.astro';
+import type { Locale } from '../data/site';
+import GoogleReviewsWidget from './GoogleReviewsWidget.astro';
+import OpeningStatus from './OpeningStatus.astro';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const copy = {
+  sr: {
+    eyebrow: 'Vaš sto vas čeka',
+    title: 'Rezervišite sto',
+    description: 'Pošaljite upit za rezervaciju ili nas pozovite. Nalazimo se u Gornjogradskoj 76 u Zemunu, a otvoreni smo od ponedeljka do subote od 10:00 do 23:00.',
+    heroAlt: 'Sto spreman za goste u restoranu Gigo',
+    formTitle: 'Upit za rezervaciju',
+    formIntro: 'Unesite osnovne podatke, a naš tim će vam se javiti povodom zahteva.',
+    reservationNotice: 'Slanje upita ne znači da je rezervacija automatski prihvaćena. Rezervacija je potvrđena tek kada vam restoran pošalje potvrdu na e-poštu.',
+    name: 'Ime i prezime',
+    phone: 'Telefon',
+    email: 'E-pošta',
+    guests: 'Broj gostiju',
+    date: 'Datum',
+    time: 'Vreme',
+    message: 'Poruka',
+    messagePlaceholder: 'Posebni zahtevi, proslave, alergije…',
+    choose: 'Izaberite',
+    guestOptions: ['1 osoba', '2 osobe', '3 osobe', '4 osobe', '5 osoba', '6 osoba', '7+ osoba'],
+    submit: 'Nastavite putem e-pošte',
+    mailHint: 'Otvoriće se vaša e-pošta sa pripremljenim upitom. Rezervacija važi tek pošto restoran potvrdi termin e-poštom.',
+    infoTitle: 'Informacije',
+    address: 'Adresa',
+    addressValue: 'Gornjogradska 76, Zemun, Beograd',
+    hours: 'Radno vreme',
+    hoursValue: 'Ponedeljak - subota, 10:00 - 23:00',
+    closed: 'Nedeljom ne radimo',
+    phoneLabel: 'Telefon',
+    emailLabel: 'E-pošta',
+    mapTitle: 'Kako do nas',
+    mapLink: 'Otvori mapu',
+  },
+  en: {
+    eyebrow: 'Your table is waiting',
+    title: 'Book a table',
+    description: 'Send a reservation enquiry or call us. Find us at Gornjogradska 76 in Zemun, open Monday to Saturday from 10:00 to 23:00.',
+    heroAlt: 'A table ready for guests at Restaurant Gigo',
+    formTitle: 'Reservation enquiry',
+    formIntro: 'Share a few details and our team will get back to you about your request.',
+    reservationNotice: 'Submitting an enquiry does not mean your reservation is automatically accepted. It is confirmed only when the restaurant emails you a confirmation.',
+    name: 'Full name',
+    phone: 'Phone',
+    email: 'Email',
+    guests: 'Number of guests',
+    date: 'Date',
+    time: 'Time',
+    message: 'Message',
+    messagePlaceholder: 'Special requests, celebrations, allergies…',
+    choose: 'Choose',
+    guestOptions: ['1 guest', '2 guests', '3 guests', '4 guests', '5 guests', '6 guests', '7+ guests'],
+    submit: 'Continue by email',
+    mailHint: 'Your email app will open with the enquiry prepared. Your reservation is confirmed only after the restaurant confirms the time by email.',
+    infoTitle: 'Information',
+    address: 'Address',
+    addressValue: 'Gornjogradska 76, Zemun, Belgrade',
+    hours: 'Opening hours',
+    hoursValue: 'Monday - Saturday, 10:00 - 23:00',
+    closed: 'Closed on Sundays',
+    phoneLabel: 'Telephone',
+    emailLabel: 'Email',
+    mapTitle: 'Find us',
+    mapLink: 'Open map',
+  },
+  ru: {
+    eyebrow: 'Ваш стол ждёт вас',
+    title: 'Забронировать стол',
+    description: 'Отправьте запрос на бронирование или позвоните нам. Мы находимся по адресу Gornjogradska 76 в Земуне и открыты с понедельника по субботу с 10:00 до 23:00.',
+    heroAlt: 'Подготовленный стол в ресторане Gigo',
+    formTitle: 'Запрос на бронирование',
+    formIntro: 'Укажите основные данные, и наша команда свяжется с вами по поводу запроса.',
+    reservationNotice: 'Отправка запроса не означает автоматическое подтверждение бронирования. Бронирование считается подтверждённым только после письма с подтверждением от ресторана.',
+    name: 'Имя и фамилия',
+    phone: 'Телефон',
+    email: 'Электронная почта',
+    guests: 'Количество гостей',
+    date: 'Дата',
+    time: 'Время',
+    message: 'Сообщение',
+    messagePlaceholder: 'Пожелания, праздник, аллергии…',
+    choose: 'Выберите',
+    guestOptions: ['1 гость', '2 гостя', '3 гостя', '4 гостя', '5 гостей', '6 гостей', '7+ гостей'],
+    submit: 'Продолжить по электронной почте',
+    mailHint: 'Откроется ваша почта с подготовленным запросом. Бронирование подтверждается только после подтверждения времени рестораном по электронной почте.',
+    infoTitle: 'Информация',
+    address: 'Адрес',
+    addressValue: 'Gornjogradska 76, Земун, Белград',
+    hours: 'Часы работы',
+    hoursValue: 'Понедельник - суббота, 10:00 - 23:00',
+    closed: 'В воскресенье не работаем',
+    phoneLabel: 'Телефон',
+    emailLabel: 'Электронная почта',
+    mapTitle: 'Как нас найти',
+    mapLink: 'Открыть карту',
+  },
+} satisfies Record<Locale, {
+  eyebrow: string;
+  title: string;
+  description: string;
+  heroAlt: string;
+  formTitle: string;
+  formIntro: string;
+  reservationNotice: string;
+  name: string;
+  phone: string;
+  email: string;
+  guests: string;
+  date: string;
+  time: string;
+  message: string;
+  messagePlaceholder: string;
+  choose: string;
+  guestOptions: string[];
+  submit: string;
+  mailHint: string;
+  infoTitle: string;
+  address: string;
+  addressValue: string;
+  hours: string;
+  hoursValue: string;
+  closed: string;
+  phoneLabel: string;
+  emailLabel: string;
+  mapTitle: string;
+  mapLink: string;
+}>;
+
+const text = copy[locale];
+const heroFeature = {
+  sr: { label: 'Rezervacije telefonom', text: '011 / 2612-253', action: 'Pozovite nas' },
+  en: { label: 'Reservations by phone', text: '011 / 2612-253', action: 'Call the restaurant' },
+  ru: { label: 'Бронирование по телефону', text: '011 / 2612-253', action: 'Позвонить нам' },
+}[locale];
+---
+
+<PageHero
+  eyebrow={text.eyebrow}
+  title={text.title}
+  description={text.description}
+  image="/images/galerija%203.jpg"
+  alt={text.heroAlt}
+  featureLabel={heroFeature.label}
+  featureText={heroFeature.text}
+  actionLabel={heroFeature.action}
+  actionHref="tel:+381112612253"
+/>
+
+<section class="contact-layout section-wrap">
+  <div class="contact-form-panel">
+    <h2>{text.formTitle}</h2>
+    <p class="contact-form-intro">{text.formIntro}</p>
+    <form
+      class="contact-form"
+      data-reservation-form
+      data-mailto="info@restorangigo.rs"
+      data-subject={text.formTitle}
+      data-feedback={text.mailHint}
+    >
+      <label>
+        <span>{text.name}</span>
+        <input name="name" type="text" autocomplete="name" required minlength="2" />
+      </label>
+      <label>
+        <span>{text.phone}</span>
+        <input name="phone" type="tel" autocomplete="tel" required />
+      </label>
+      <label>
+        <span>{text.email}</span>
+        <input name="email" type="email" autocomplete="email" required />
+      </label>
+      <label>
+        <span>{text.guests}</span>
+        <select name="guests" required>
+          <option value="">{text.choose}</option>
+          {text.guestOptions.map((option, index) => (
+            <option value={index === 6 ? '7+' : String(index + 1)} selected={index === 1}>{option}</option>
+          ))}
+        </select>
+      </label>
+      <label>
+        <span>{text.date}</span>
+        <input name="date" type="date" required />
+      </label>
+      <label>
+        <span>{text.time}</span>
+        <input name="time" type="time" required />
+      </label>
+      <label class="contact-message-field">
+        <span>{text.message}</span>
+        <textarea name="message" rows="4" placeholder={text.messagePlaceholder}></textarea>
+      </label>
+      <p class="reservation-note">{text.reservationNotice}</p>
+      <p class="form-feedback" data-form-feedback role="status" aria-live="polite" hidden></p>
+      <button class="button button-dark" type="submit">{text.submit}</button>
+    </form>
+  </div>
+
+  <aside class="contact-details-panel">
+    <h2>{text.infoTitle}</h2>
+    <div class="contact-detail">
+      <span class="detail-label">{text.address}</span>
+      <address>{text.addressValue}</address>
+    </div>
+    <div class="contact-detail">
+      <span class="detail-label">{text.hours}</span>
+      <p>{text.hoursValue}</p>
+      <p class="muted">{text.closed}</p>
+      <p class="contact-opening-status"><OpeningStatus locale={locale} /></p>
+    </div>
+    <div class="contact-detail">
+      <span class="detail-label">{text.phoneLabel}</span>
+      <a href="tel:+381112612253">011 / 2612-253</a>
+      <a href="tel:+381611318967">061 / 1318-967</a>
+    </div>
+    <div class="contact-detail">
+      <span class="detail-label">{text.emailLabel}</span>
+      <a href="mailto:info@restorangigo.rs">info@restorangigo.rs</a>
+    </div>
+    <GoogleReviewsWidget locale={locale} />
+    <div class="contact-map">
+      <div class="contact-map-heading">
+        <h3>{text.mapTitle}</h3>
+        <a class="text-link" href="https://www.openstreetmap.org/?mlat=44.8467531&amp;mlon=20.3965861#map=16/44.8467531/20.3965861" target="_blank" rel="noopener noreferrer">{text.mapLink}</a>
+      </div>
+      <iframe
+        title={text.mapTitle}
+        src="https://www.openstreetmap.org/export/embed.html?bbox=20.3890%2C44.8415%2C20.4042%2C44.8520&amp;layer=mapnik&amp;marker=44.8467531%2C20.3965861"
+        loading="lazy"
+        referrerpolicy="no-referrer"
+      ></iframe>
+    </div>
+  </aside>
+</section>
+
+<script>
+  const reservationForm = document.querySelector<HTMLFormElement>('[data-reservation-form]');
+
+  reservationForm?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!reservationForm.reportValidity()) return;
+
+    const formData = new FormData(reservationForm);
+    const body = Array.from(formData.entries())
+      .map(([key, value]) => `${key}: ${String(value)}`)
+      .join('\n');
+    const mailto = reservationForm.dataset.mailto;
+    const subject = reservationForm.dataset.subject;
+    if (!mailto || !subject) return;
+
+    const feedback = reservationForm.querySelector<HTMLElement>('[data-form-feedback]');
+    if (feedback) {
+      feedback.textContent = reservationForm.dataset.feedback ?? '';
+      feedback.hidden = false;
+    }
+
+    window.location.href = `mailto:${mailto}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  });
+</script>

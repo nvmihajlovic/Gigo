@@ -1,0 +1,56 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  description: string;
+  image: string;
+  alt: string;
+  featureLabel?: string;
+  featureText?: string;
+  actionLabel?: string;
+  actionHref?: string;
+  showSupport?: boolean;
+  compact?: boolean;
+  showImageCaption?: boolean;
+}
+
+const {
+  eyebrow,
+  title,
+  description,
+  image,
+  alt,
+  featureLabel,
+  featureText,
+  actionLabel,
+  actionHref,
+  showSupport = true,
+  compact = false,
+  showImageCaption = true,
+} = Astro.props;
+
+if (showSupport && (!featureLabel || !featureText || !actionLabel || !actionHref)) {
+  throw new Error('Page hero support content is required when the support block is visible.');
+}
+---
+
+<section class:list={['page-hero', 'section-wrap', compact && 'page-hero--compact']}>
+  <div class="page-hero-copy">
+    <p class="eyebrow"><span></span>{eyebrow}</p>
+    <h1>{title}</h1>
+    <p class="page-hero-description">{description}</p>
+    {showSupport && (
+      <div class="page-hero-support">
+        <div class="page-hero-feature">
+          <span>{featureLabel}</span>
+          <strong>{featureText}</strong>
+        </div>
+        <a class="page-hero-action" href={actionHref}>{actionLabel}</a>
+      </div>
+    )}
+  </div>
+  <div class="page-hero-image">
+    <img src={image} alt={alt} fetchpriority="high" />
+    {showImageCaption && <span class="page-hero-image-caption">Gigo · Zemun</span>}
+  </div>
+</section>

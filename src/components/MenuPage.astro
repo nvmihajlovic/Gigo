@@ -1,0 +1,128 @@
+---
+import PageHero from './PageHero.astro';
+import { menuCatalog, menuCategoryIds } from '../data/menu';
+import { siteRoutes, type Locale } from '../data/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const copy = {
+  sr: {
+    eyebrow: 'Kuhinja restorana Gigo',
+    title: 'Jelovnik',
+    description: 'Poznati ukusi, domaća jela i pažljivo odabrani specijaliteti za svaki deo dana. Od doručka i predjela do jela sa roštilja, iz sača i domaćih deserata.',
+    heroAlt: 'Domaći obrok poslužen u restoranu Gigo',
+    note: 'Doručak se služi od ponedeljka do subote, od 10:00 do 12:30. Sve cene su izražene u dinarima.',
+    categories: {
+      predjela: 'Predjela',
+      dorucak: 'Doručak',
+      corbe: 'Čorbe i supe',
+      prilozi: 'Prilozi i hleb',
+      dame: 'Dame vole',
+      'glavna-jela': 'Glavna jela',
+      riba: 'Rečna riba i lignje',
+      salate: 'Salate',
+      deserti: 'Deserti',
+    },
+  },
+  en: {
+    eyebrow: 'From the Gigo kitchen',
+    title: 'Menu',
+    description: 'Familiar Serbian flavours, homestyle dishes, and carefully chosen favourites for every part of the day. Explore breakfast, starters, grilled dishes, sač specialties, and homemade desserts.',
+    heroAlt: 'A traditional meal served at Restaurant Gigo',
+    note: 'Breakfast is served Monday to Saturday, from 10:00 to 12:30. All prices are in Serbian dinars (RSD).',
+    categories: {
+      predjela: 'Starters',
+      dorucak: 'Breakfast',
+      corbe: 'Soups',
+      prilozi: 'Sides and bread',
+      dame: 'Light dishes',
+      'glavna-jela': 'Main dishes',
+      riba: 'River fish and squid',
+      salate: 'Salads',
+      deserti: 'Desserts',
+    },
+  },
+  ru: {
+    eyebrow: 'Кухня ресторана Gigo',
+    title: 'Меню',
+    description: 'Знакомые сербские вкусы, домашние блюда и тщательно подобранные угощения на любой случай. В меню есть завтраки, закуски, блюда на гриле и из-под сача, а также домашние десерты.',
+    heroAlt: 'Домашнее блюдо в ресторане Gigo',
+    note: 'Завтрак подаётся с понедельника по субботу, с 10:00 до 12:30. Все цены указаны в сербских динарах (RSD).',
+    categories: {
+      predjela: 'Закуски',
+      dorucak: 'Завтрак',
+      corbe: 'Супы',
+      prilozi: 'Гарниры и хлеб',
+      dame: 'Лёгкие блюда',
+      'glavna-jela': 'Основные блюда',
+      riba: 'Речная рыба и кальмары',
+      salate: 'Салаты',
+      deserti: 'Десерты',
+    },
+  },
+} satisfies Record<Locale, {
+  eyebrow: string;
+  title: string;
+  description: string;
+  heroAlt: string;
+  note: string;
+  categories: Record<(typeof menuCategoryIds)[number], string>;
+}>;
+
+const text = copy[locale];
+const heroFeature = {
+  sr: { label: 'Doručak', text: 'Ponedeljak–subota, 10:00–12:30', action: 'Pogledajte doručak' },
+  en: { label: 'Breakfast', text: 'Monday–Saturday, 10:00–12:30', action: 'Browse breakfast' },
+  ru: { label: 'Завтрак', text: 'Понедельник–суббота, 10:00–12:30', action: 'К завтракам' },
+}[locale];
+---
+
+<PageHero
+  eyebrow={text.eyebrow}
+  title={text.title}
+  description={text.description}
+  image="/images/image-31.jpg"
+  alt={text.heroAlt}
+  featureLabel={heroFeature.label}
+  featureText={heroFeature.text}
+  actionLabel={heroFeature.action}
+  actionHref={`${siteRoutes[locale].menu}#dorucak`}
+/>
+
+<section class="menu-page-content menu-page-content--menu section-wrap" data-category-menu>
+  <nav class="category-nav" aria-label={locale === 'sr' ? 'Kategorije jelovnika' : locale === 'en' ? 'Menu categories' : 'Разделы меню'}>
+    {menuCategoryIds.map((id, index) => (
+      <a href={`#${id}`} aria-current={index === 0 ? 'location' : undefined}>{text.categories[id]}</a>
+    ))}
+  </nav>
+
+  <div class="menu-content">
+    <p class="menu-note">{text.note}</p>
+
+    {menuCategoryIds.map((id) => (
+      <section class="menu-category" id={id} aria-labelledby={`${id}-title`}>
+        <div class="menu-category-heading">
+          <h2 id={`${id}-title`}>{text.categories[id]}</h2>
+        </div>
+        <div class="menu-item-list">
+          {menuCatalog[locale][id].map((item) => (
+            <div class="menu-price-row">
+              <div class="menu-item-label">
+                <span>{item.name}</span>
+                {item.measure && <span class="menu-item-measure">{item.measure}</span>}
+              </div>
+              <span class="menu-price">
+                <span class="menu-price-amount">{item.price}</span>
+                <span class="menu-price-currency">RSD</span>
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</section>

@@ -1,0 +1,92 @@
+---
+import SiteLayout from './SiteLayout.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import OpeningStatus from '../components/OpeningStatus.astro';
+import { siteCopy, siteRoutes, type Locale, type SitePage } from '../data/site';
+
+interface Props {
+  title: string;
+  description: string;
+  locale: Locale;
+  page: SitePage;
+}
+
+const { title, description, locale, page } = Astro.props;
+const copy = siteCopy[locale];
+const navigation: { page: SitePage; label: string }[] = [
+  { page: 'home', label: copy.home },
+  { page: 'about', label: copy.about },
+  { page: 'menu', label: copy.menu },
+  { page: 'wine', label: copy.wine },
+  { page: 'gallery', label: copy.gallery },
+  { page: 'contact', label: copy.contact },
+];
+const desktopNavigation = navigation.filter((item) => item.page !== 'contact');
+const languages: Locale[] = ['sr', 'en', 'ru'];
+---
+
+<SiteLayout title={title} description={description} lang={locale}>
+  <a class="skip-link" href="#main-content">
+    {locale === 'sr' ? 'Pređi na glavni sadržaj' : locale === 'en' ? 'Skip to main content' : 'Перейти к основному содержимому'}
+  </a>
+  <div class="announcement">
+    <div class="announcement-place">
+      <span class="announcement-dot" aria-hidden="true"></span>
+      <span>{copy.address}</span>
+    </div>
+    <div class="announcement-contact">
+      <span class="announcement-hours">{copy.hours}</span>
+      <OpeningStatus locale={locale} />
+      <a href="tel:+381112612253"><span class="announcement-call-label">{copy.call}</span> <span>011 / 2612-253</span></a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href={siteRoutes[locale].home} aria-label={`Gigo - ${copy.home}`}>
+      <img src="/images/logo.png" alt="Gigo - restoran sa tradicijom" />
+    </a>
+    <nav class="desktop-nav" aria-label={locale === 'sr' ? 'Glavna navigacija' : locale === 'en' ? 'Main navigation' : 'Главная навигация'}>
+      {desktopNavigation.map((item) => (
+        <a href={siteRoutes[locale][item.page]} aria-current={page === item.page ? 'page' : undefined}>
+          {item.label}
+        </a>
+      ))}
+    </nav>
+    <div class="header-actions">
+      <nav class="language-switch" aria-label={locale === 'sr' ? 'Izaberite jezik' : locale === 'en' ? 'Choose language' : 'Выберите язык'}>
+        {languages.map((language, index) => (
+          <>
+            {index > 0 && <span aria-hidden="true">/</span>}
+            <a href={siteRoutes[language][page]} aria-current={locale === language ? 'page' : undefined}>
+              {language.toUpperCase()}
+            </a>
+          </>
+        ))}
+      </nav>
+      <a class="button button-dark header-reserve" href={siteRoutes[locale].contact}>{copy.reserve}</a>
+      <details class="mobile-menu">
+        <summary aria-label={locale === 'sr' ? 'Otvori navigaciju' : locale === 'en' ? 'Open navigation' : 'Открыть меню'}>
+          <span></span><span></span>
+        </summary>
+        <nav aria-label={locale === 'sr' ? 'Mobilna navigacija' : locale === 'en' ? 'Mobile navigation' : 'Мобильная навигация'}>
+          {navigation.map((item) => (
+            <a href={siteRoutes[locale][item.page]} aria-current={page === item.page ? 'page' : undefined}>
+              {item.label}
+            </a>
+          ))}
+          <div class="mobile-languages">
+            {languages.map((language) => (
+              <a href={siteRoutes[language][page]} aria-current={locale === language ? 'page' : undefined}>
+                {copy.languages[language]}
+              </a>
+            ))}
+          </div>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1"><slot /></main>
+
+  <SiteFooter locale={locale} page={page} />
+</SiteLayout>

@@ -1,0 +1,28 @@
+---
+import PageFrame from '../layouts/PageFrame.astro';
+import InteriorPage from '../components/InteriorPage.astro';
+import { pageMeta } from '../data/page-meta';
+import type { SitePage } from '../data/site';
+
+export function getStaticPaths() {
+  const routes = [
+    { slug: 'o-nama', page: 'about' },
+    { slug: 'jelovnik', page: 'menu' },
+    { slug: 'vinska-karta', page: 'wine' },
+    { slug: 'galerija', page: 'gallery' },
+    { slug: 'kontakt', page: 'contact' },
+  ] as const;
+
+  return routes.map(({ slug, page }) => ({
+    params: { page: slug },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props as { page: Exclude<SitePage, 'home'> };
+const meta = pageMeta.sr[page];
+---
+
+<PageFrame locale="sr" page={page} title={meta.title} description={meta.description}>
+  <InteriorPage locale="sr" page={page} />
+</PageFrame>

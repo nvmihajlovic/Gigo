@@ -1,0 +1,21 @@
+---
+import AboutPage from './AboutPage.astro';
+import ContactPage from './ContactPage.astro';
+import GalleryPage from './GalleryPage.astro';
+import MenuPage from './MenuPage.astro';
+import WinePage from './WinePage.astro';
+import type { Locale, SitePage } from '../data/site';
+
+interface Props {
+  locale: Locale;
+  page: Exclude<SitePage, 'home'>;
+}
+
+const { locale, page } = Astro.props;
+---
+
+{page === 'about' && <AboutPage locale={locale} />}
+{page === 'menu' && <MenuPage locale={locale} />}
+{page === 'wine' && <WinePage locale={locale} />}
+{page === 'gallery' && <GalleryPage locale={locale} />}
+{page === 'contact' && <ContactPage locale={locale} />}

@@ -1,0 +1,291 @@
+---
+import type { Locale, SitePage } from '../data/site';
+import { siteCopy, siteRoutes } from '../data/site';
+import OpeningStatus from './OpeningStatus.astro';
+import HeroSlider from './HeroSlider.astro';
+import GoogleReviewsWidget from './GoogleReviewsWidget.astro';
+
+interface Props {
+  locale: Exclude<Locale, 'sr'>;
+}
+
+const { locale } = Astro.props;
+
+const copy = {
+  en: {
+    heroEyebrow: 'A family restaurant in Zemun · since 1998',
+    heroTitle: 'Homestyle cooking',
+    heroAccent: 'in Zemun',
+    heroText: 'Family recipes, sač dishes and grilled favourites, served in a relaxed setting.',
+    heroSlides: [
+      { src: '/images/galerija%203.jpg', alt: 'A table set with homestyle dishes at Restaurant Gigo' },
+      { src: '/images/galerija%204.jpg', alt: 'A traditional platter served at Restaurant Gigo' },
+      { src: '/images/galerija%206.jpg', alt: 'The dining room at Restaurant Gigo' },
+    ],
+    heroSliderLabel: 'Restaurant photos',
+    heroSliderControls: 'Photo controls',
+    heroSliderShow: 'Show photo',
+    heroSliderPause: 'Pause slideshow',
+    heroSliderPlay: 'Play slideshow',
+    reserve: 'Book a table',
+    menuLink: 'Explore the menu',
+    introEyebrow: 'Welcome to Gigo',
+    introTitle: 'Good food and',
+    introAccent: 'good company',
+    introText: 'We believe in what brings people together: a full table, familiar flavours, and hospitality that makes you feel at home.',
+    introSecond: 'The menu features veal and lamb cooked under the sač, alongside dishes rooted in family recipes.',
+    storyLink: 'Meet our story',
+    menuEyebrow: 'At your table',
+    menuTitle: 'From the menu',
+    menuAccent: 'and wine list',
+    menuLinkAll: 'See the full menu',
+    cards: [
+      ['Homestyle cooking', 'Familiar flavours, prepared with care.', '/images/image-30.jpg', 'A shared table of homemade dishes', 'menu'],
+      ['Sač dishes', 'Warm, generous dishes made for gathering.', '/images/image-31.jpg', 'A traditional dish cooked under a sač', 'menu'],
+      ['Wine with lunch', 'A thoughtful selection to accompany your meal.', '/images/vinska-karta-sekcija.png', 'Wine list at Restaurant Gigo', 'wine'],
+    ],
+    valuesEyebrow: 'The Gigo way',
+    valuesTitle: 'Made for everyday moments and special occasions',
+    values: [
+      ['Freshly prepared', 'We take care with every dish, from the first ingredient to the table.'],
+      ['A considered wine list', 'Ask our team for a bottle that pairs well with your meal.'],
+      ['Room to gather', 'A welcoming place for family lunches, celebrations, and good conversation.'],
+    ],
+    gatheringEyebrow: 'Better together',
+    gatheringTitle: 'Make an ordinary day',
+    gatheringAccent: 'a little special',
+    gatheringText: 'Celebrate a small occasion, share a family lunch, or stay for one more conversation. Find us in the heart of Zemun.',
+    visit: 'Get directions',
+    visitEyebrow: 'Your table is waiting',
+    visitTitle: 'See you',
+    visitAccent: 'at Gigo',
+    visitText: 'For a reservation or more information, give us a call. We will be happy to help.',
+    addressLabel: 'Address',
+    hoursLabel: 'Opening hours',
+    days: 'Monday - Saturday',
+    hours: '10:00 - 23:00',
+    closed: 'Closed on Sundays',
+    phoneLabel: 'Telephone',
+    mapLink: 'Find us',
+    location: 'Gornjogradska 76 · Zemun',
+  },
+  ru: {
+    heroEyebrow: 'Семейный ресторан в Земуне · с 1998 года',
+    heroTitle: 'Домашняя кухня',
+    heroAccent: 'в Земуне',
+    heroText: 'Семейные рецепты, блюда из-под сача и гриль в спокойной, уютной атмосфере.',
+    heroSlides: [
+      { src: '/images/galerija%203.jpg', alt: 'Стол с домашними блюдами в ресторане Gigo' },
+      { src: '/images/galerija%204.jpg', alt: 'Традиционная закуска в ресторане Gigo' },
+      { src: '/images/galerija%206.jpg', alt: 'Зал ресторана Gigo с сервированными столами' },
+    ],
+    heroSliderLabel: 'Фотографии ресторана',
+    heroSliderControls: 'Управление фотографиями',
+    heroSliderShow: 'Показать фото',
+    heroSliderPause: 'Приостановить слайд-шоу',
+    heroSliderPlay: 'Запустить слайд-шоу',
+    reserve: 'Забронировать стол',
+    menuLink: 'Открыть меню',
+    introEyebrow: 'Добро пожаловать в Gigo',
+    introTitle: 'Вкусная еда и',
+    introAccent: 'хорошая компания',
+    introText: 'Мы верим в то, что объединяет людей: полный стол, знакомые вкусы и гостеприимство, благодаря которому чувствуешь себя как дома.',
+    introSecond: 'В меню есть телятина и ягнятина, приготовленные под сачем, а также блюда по старым семейным рецептам.',
+    storyLink: 'Наша история',
+    menuEyebrow: 'За вашим столом',
+    menuTitle: 'Из меню',
+    menuAccent: 'и винной карты',
+    menuLinkAll: 'Всё меню',
+    cards: [
+      ['Домашняя кухня', 'Знакомые вкусы, приготовленные с заботой.', '/images/image-30.jpg', 'Домашние блюда на общем столе', 'menu'],
+      ['Блюда из-под сача', 'Сытные горячие блюда для встреч за столом.', '/images/image-31.jpg', 'Традиционное блюдо, приготовленное под сачем', 'menu'],
+      ['Вино к обеду', 'Подборка вин к вашему блюду.', '/images/vinska-karta-sekcija.png', 'Винная карта ресторана Gigo', 'wine'],
+    ],
+    valuesEyebrow: 'Философия Gigo',
+    valuesTitle: 'Для обычных дней и особых встреч',
+    values: [
+      ['Свежие блюда', 'Мы внимательно относимся к каждому блюду и каждому ингредиенту.'],
+      ['Вино к блюду', 'Спросите нашу команду, какое вино подойдёт к вашему выбору.'],
+      ['Место для встреч', 'Уютный ресторан для семейных обедов, праздников и бесед.'],
+    ],
+    gatheringEyebrow: 'Вместе лучше',
+    gatheringTitle: 'Пусть обычный день',
+    gatheringAccent: 'станет особенным',
+    gatheringText: 'Отметьте небольшой повод, соберитесь всей семьёй или задержитесь за беседой. Мы находимся в центре Земуна.',
+    visit: 'Как добраться',
+    visitEyebrow: 'Ваш стол ждёт',
+    visitTitle: 'До встречи',
+    visitAccent: 'в Gigo',
+    visitText: 'Чтобы забронировать стол или узнать подробности, позвоните нам. Будем рады помочь.',
+    addressLabel: 'Адрес',
+    hoursLabel: 'Часы работы',
+    days: 'Понедельник - суббота',
+    hours: '10:00 - 23:00',
+    closed: 'В воскресенье не работаем',
+    phoneLabel: 'Телефон',
+    mapLink: 'Найдите нас',
+    location: 'Gornjogradska 76 · Земун',
+  },
+} satisfies Record<Exclude<Locale, 'sr'>, {
+  heroEyebrow: string;
+  heroTitle: string;
+  heroAccent: string;
+  heroText: string;
+  heroSlides: { src: string; alt: string }[];
+  heroSliderLabel: string;
+  heroSliderControls: string;
+  heroSliderShow: string;
+  heroSliderPause: string;
+  heroSliderPlay: string;
+  reserve: string;
+  menuLink: string;
+  introEyebrow: string;
+  introTitle: string;
+  introAccent: string;
+  introText: string;
+  introSecond: string;
+  storyLink: string;
+  menuEyebrow: string;
+  menuTitle: string;
+  menuAccent: string;
+  menuLinkAll: string;
+  cards: [string, string, string, string, SitePage][];
+  valuesEyebrow: string;
+  valuesTitle: string;
+  values: [string, string][];
+  gatheringEyebrow: string;
+  gatheringTitle: string;
+  gatheringAccent: string;
+  gatheringText: string;
+  visit: string;
+  visitEyebrow: string;
+  visitTitle: string;
+  visitAccent: string;
+  visitText: string;
+  addressLabel: string;
+  hoursLabel: string;
+  days: string;
+  hours: string;
+  closed: string;
+  phoneLabel: string;
+  mapLink: string;
+  location: string;
+}>;
+
+const text = copy[locale];
+---
+
+<section class="hero" aria-labelledby="localized-hero-title">
+  <HeroSlider
+    slides={text.heroSlides}
+    label={text.heroSliderLabel}
+    controlsLabel={text.heroSliderControls}
+    showSlideLabel={text.heroSliderShow}
+    pauseLabel={text.heroSliderPause}
+    playLabel={text.heroSliderPlay}
+  />
+  <div class="hero-content">
+    <p class="eyebrow eyebrow-light"><span></span>{text.heroEyebrow}</p>
+    <h1 id="localized-hero-title">{text.heroTitle} <span class="accent">{text.heroAccent}</span></h1>
+    <p class="hero-description">{text.heroText}</p>
+    <div class="hero-actions">
+      <a class="button button-dark" href={siteRoutes[locale].contact}>{text.reserve}</a>
+      <a class="hero-menu-link" href={siteRoutes[locale].menu}>{text.menuLink}</a>
+    </div>
+  </div>
+</section>
+
+<section class="intro section-wrap">
+  <div class="intro-image-wrap">
+    <img src="/images/galerija%203.jpg" alt="The welcoming interior of Restaurant Gigo" loading="lazy" />
+    <span class="image-note">{text.location}</span>
+  </div>
+  <div class="intro-copy">
+    <p class="eyebrow"><span></span>{text.introEyebrow}</p>
+    <h2>{text.introTitle} <span class="accent">{text.introAccent}</span></h2>
+    <p>{text.introText}</p>
+    <p>{text.introSecond}</p>
+    <a class="text-link" href={siteRoutes[locale].about}>{text.storyLink}</a>
+  </div>
+</section>
+
+<section class="experience-section section-wrap">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow"><span></span>{text.menuEyebrow}</p>
+      <h2>{text.menuTitle} <span class="accent">{text.menuAccent}</span></h2>
+    </div>
+    <a class="text-link section-heading-link" href={siteRoutes[locale].menu}>{text.menuLinkAll}</a>
+  </div>
+  <div class="experience-grid">
+    {text.cards.map(([title, description, image, alt, page]) => (
+      <a class="experience-card" href={siteRoutes[locale][page]}>
+        <div class="experience-image">
+          <img src={image} alt={alt} loading="lazy" />
+        </div>
+        <div class="experience-copy">
+          <h3>{title}</h3>
+          <p>{description}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+
+<section class="about-reasons section-wrap">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow"><span></span>{text.valuesEyebrow}</p>
+      <h2>{text.valuesTitle}</h2>
+    </div>
+  </div>
+  <div class="about-reason-grid">
+    {text.values.map(([title, description], index) => (
+      <article class="about-reason">
+        <span class="about-reason-number">{String(index + 1).padStart(2, '0')}</span>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </article>
+    ))}
+  </div>
+</section>
+
+<section class="gathering">
+  <div class="gathering-image">
+    <img src="/images/image-32.jpg" alt="A shared meal at Restaurant Gigo" loading="lazy" />
+  </div>
+  <div class="gathering-content">
+    <p class="eyebrow eyebrow-light"><span></span>{text.gatheringEyebrow}</p>
+    <h2>{text.gatheringTitle} <span class="accent">{text.gatheringAccent}</span></h2>
+    <p>{text.gatheringText}</p>
+    <a class="button button-outline-light" href={siteRoutes[locale].contact}>{text.visit}</a>
+  </div>
+</section>
+
+<section class="visit-section section-wrap">
+  <div class="visit-copy">
+    <p class="eyebrow"><span></span>{text.visitEyebrow}</p>
+    <h2>{text.visitTitle} <span class="accent">{text.visitAccent}</span></h2>
+    <p>{text.visitText}</p>
+    <a class="button button-dark" href={siteRoutes[locale].contact}>{text.reserve}</a>
+    <GoogleReviewsWidget locale={locale} />
+  </div>
+  <div class="visit-details">
+    <div class="visit-detail">
+      <span class="detail-label">{text.addressLabel}</span>
+      <address>{siteCopy[locale].address}</address>
+      <a class="text-link" href="https://maps.google.com/?q=Gornjogradska+76,+Zemun" target="_blank" rel="noreferrer">{text.mapLink}</a>
+    </div>
+    <div class="visit-detail">
+      <span class="detail-label">{text.hoursLabel}</span>
+      <p>{text.days}<br />{text.hours}</p>
+      <p class="muted">{text.closed}</p>
+      <OpeningStatus locale={locale} />
+    </div>
+    <div class="visit-detail">
+      <span class="detail-label">{text.phoneLabel}</span>
+      <a href="tel:+381112612253">011 / 2612-253</a>
+      <a href="tel:+381611318967">061 / 1318-967</a>
+    </div>
+  </div>
+</section>

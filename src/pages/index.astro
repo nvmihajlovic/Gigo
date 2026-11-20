@@ -1,0 +1,220 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import HeroSlider from '../components/HeroSlider.astro';
+import OpeningStatus from '../components/OpeningStatus.astro';
+import GoogleReviewsWidget from '../components/GoogleReviewsWidget.astro';
+import { siteRoutes } from '../data/site';
+
+const heroSlides = [
+  { src: '/images/galerija%203.jpg', alt: 'Trpeza sa domaćim specijalitetima u restoranu Gigo' },
+  { src: '/images/galerija%204.jpg', alt: 'Tradicionalno posluženje u restoranu Gigo' },
+  { src: '/images/galerija%206.jpg', alt: 'Enterijer restorana Gigo sa postavljenim stolovima' },
+];
+
+const navigation = [
+  { href: siteRoutes.sr.home, label: 'Početna' },
+  { href: siteRoutes.sr.about, label: 'O nama' },
+  { href: siteRoutes.sr.menu, label: 'Jelovnik' },
+  { href: siteRoutes.sr.wine, label: 'Vinska karta' },
+  { href: siteRoutes.sr.gallery, label: 'Galerija' },
+  { href: siteRoutes.sr.contact, label: 'Rezervišite sto' },
+];
+const desktopNavigation = navigation.filter((item) => item.href !== siteRoutes.sr.contact);
+
+const experiences = [
+  {
+    title: 'Domaća kuhinja',
+    description: 'Poznati ukusi, pripremljeni pažljivo i bez žurbe.',
+    image: '/images/image-30.jpg',
+    alt: 'Domaće predjelo na drvenoj dasci',
+    href: `${siteRoutes.sr.menu}#predjela`,
+  },
+  {
+    title: 'Jela iz sača',
+    description: 'Topla, konkretna jela zbog kojih se rado vraća za sto.',
+    image: '/images/image-31.jpg',
+    alt: 'Tradicionalno jelo pripremljeno ispod sača',
+    href: `${siteRoutes.sr.menu}#glavna-jela`,
+  },
+  {
+    title: 'Vino uz ručak',
+    description: 'Odabrana vina i preporuka koja prati vaš izbor.',
+    image: '/images/vinska-karta-sekcija.png',
+    alt: 'Vinska karta restorana Gigo',
+    href: siteRoutes.sr.wine,
+  },
+];
+---
+
+<SiteLayout
+  title="Restoran Gigo | Domaća kuhinja u Zemunu"
+  description="Domaća kuhinja, roštilj i odabrana vina u prijatnom ambijentu u Zemunu. Rezervišite sto u Restoranu Gigo."
+>
+  <a class="skip-link" href="#main-content">Pređi na glavni sadržaj</a>
+  <div class="announcement">
+    <div class="announcement-place">
+      <span class="announcement-dot" aria-hidden="true"></span>
+      <span>Gornjogradska 76, Zemun</span>
+    </div>
+    <div class="announcement-contact">
+      <span class="announcement-hours">Pon-Sub, 10:00-23:00</span>
+      <OpeningStatus locale="sr" />
+      <a href="tel:+381112612253"><span class="announcement-call-label">Pozovite</span> <span>011 / 2612-253</span></a>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="brand" href={siteRoutes.sr.home} aria-label="Restoran Gigo - početna">
+      <img src="/images/logo.png" alt="Gigo - restoran sa tradicijom" />
+    </a>
+
+    <nav class="desktop-nav" aria-label="Glavna navigacija">
+      {desktopNavigation.map((item) => <a href={item.href} aria-current={item.href === siteRoutes.sr.home ? 'page' : undefined}>{item.label}</a>)}
+    </nav>
+
+    <div class="header-actions">
+      <nav class="language-switch" aria-label="Izaberite jezik">
+        <a href={siteRoutes.sr.home} aria-current="page">SR</a>
+        <span aria-hidden="true">/</span>
+        <a href={siteRoutes.en.home}>EN</a>
+        <span aria-hidden="true">/</span>
+        <a href={siteRoutes.ru.home}>RU</a>
+      </nav>
+      <a class="button button-dark header-reserve" href={siteRoutes.sr.contact}>
+        Rezervišite sto
+      </a>
+      <details class="mobile-menu">
+        <summary aria-label="Otvori navigaciju"><span></span><span></span></summary>
+        <nav aria-label="Mobilna navigacija">
+          {navigation.map((item) => (
+            <a href={item.href} aria-current={item.href === siteRoutes.sr.home ? 'page' : undefined}>
+              {item.label}
+            </a>
+          ))}
+          <div class="mobile-languages">
+            <a href={siteRoutes.sr.home} aria-current="page">Srpski</a>
+            <a href={siteRoutes.en.home}>English</a>
+            <a href={siteRoutes.ru.home}>Русский</a>
+          </div>
+        </nav>
+      </details>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <HeroSlider
+        slides={heroSlides}
+        label="Fotografije restorana"
+        controlsLabel="Kontrole fotografija"
+        showSlideLabel="Prikaži fotografiju"
+        pauseLabel="Pauziraj smenjivanje fotografija"
+        playLabel="Pokreni smenjivanje fotografija"
+      />
+      <div class="hero-content">
+        <p class="eyebrow eyebrow-light"><span></span> Porodični restoran u Zemunu · od 1998.</p>
+        <h1 id="hero-title">Domaća kuhinja <span class="accent">u Zemunu</span></h1>
+        <p class="hero-description">
+          Jela po porodičnim receptima, specijaliteti ispod sača i roštilj, u prijatnom ambijentu.
+        </p>
+        <div class="hero-actions">
+          <a class="button button-dark" href={siteRoutes.sr.contact}>Rezervišite sto</a>
+          <a class="hero-menu-link" href={siteRoutes.sr.menu}>Pogledajte jelovnik</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="intro section-wrap" id="dobrodosli">
+      <div class="intro-image-wrap">
+        <img
+          src="/images/galerija%203.jpg"
+          alt="Prijatna atmosfera u restoranu Gigo"
+          loading="lazy"
+        />
+        <span class="image-note">Gornjogradska 76 · Zemun</span>
+      </div>
+      <div class="intro-copy">
+        <p class="eyebrow"><span></span> Dobro došli u Gigo</p>
+        <h2>Mesto za dobar ručak i <span class="accent">dug razgovor</span></h2>
+        <p>
+          Verujemo u ono što okuplja ljude: pun sto, poznate ukuse i gostoprimstvo zbog kog se osećate kao kod kuće.
+        </p>
+        <p>
+          Na meniju su teletina i jagnjetina ispod sača, uz jela po starim porodičnim receptima.
+        </p>
+        <a class="text-link" href={siteRoutes.sr.about}>Upoznajte našu priču</a>
+        <div class="signature">Gigo, sa tradicijom od 1998.</div>
+      </div>
+    </section>
+
+    <section class="experience-section section-wrap">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow"><span></span> Za vašim stolom</p>
+          <h2>Iz jelovnika <span class="accent">i vinske karte</span></h2>
+        </div>
+        <a class="text-link section-heading-link" href={siteRoutes.sr.menu}>Pogledajte ceo jelovnik</a>
+      </div>
+
+      <div class="experience-grid">
+        {experiences.map((item) => (
+          <a class="experience-card" href={item.href}>
+            <div class="experience-image">
+              <img src={item.image} alt={item.alt} loading="lazy" />
+            </div>
+            <div class="experience-copy">
+              <h3>{item.title}</h3>
+              <p>{item.description}</p>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+
+    <section class="gathering">
+      <div class="gathering-image">
+        <img src="/images/image-32.jpg" alt="Jelo za deljenje za stolom" loading="lazy" />
+      </div>
+      <div class="gathering-content">
+        <p class="eyebrow eyebrow-light"><span></span> Lepo je kad se okupimo</p>
+        <h2>Za običan dan koji postane <span class="accent">poseban</span></h2>
+        <p>
+          Slavimo male povode, porodične ručkove i razgovore koji potraju. Pronađite nas u srcu Zemuna.
+        </p>
+        <a class="button button-outline-light" href={siteRoutes.sr.contact}>Kako do nas</a>
+      </div>
+    </section>
+
+    <section class="visit-section section-wrap">
+      <div class="visit-copy">
+        <p class="eyebrow"><span></span> Vaš sto vas čeka</p>
+        <h2>Vidimo se <span class="accent">u Gigu</span></h2>
+        <p>Za rezervaciju i sve informacije, pozovite nas - rado ćemo vam pomoći.</p>
+        <a class="button button-dark" href="tel:+381112612253">011 / 2612-253</a>
+        <GoogleReviewsWidget locale="sr" />
+      </div>
+      <div class="visit-details">
+        <div class="visit-detail">
+          <span class="detail-label">Adresa</span>
+          <address>Gornjogradska 76<br />Zemun, Beograd</address>
+          <a class="text-link" href="https://maps.google.com/?q=Gornjogradska+76,+Zemun" target="_blank" rel="noreferrer">Pronađite nas</a>
+        </div>
+        <div class="visit-detail">
+          <span class="detail-label">Radno vreme</span>
+          <p>Ponedeljak - subota<br />10:00 - 23:00</p>
+          <p class="muted">Nedeljom ne radimo</p>
+          <OpeningStatus locale="sr" />
+        </div>
+        <div class="visit-detail">
+          <span class="detail-label">Telefon</span>
+          <a href="tel:+381112612253">011 / 2612-253</a>
+          <a href="tel:+381611318967">061 / 1318-967</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <SiteFooter locale="sr" page="home" />
+
+</SiteLayout>

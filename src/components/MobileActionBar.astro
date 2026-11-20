@@ -1,0 +1,50 @@
+---
+import { siteRoutes, type Locale } from '../data/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const copy = {
+  sr: { label: 'Brze radnje', call: 'Pozovi', reserve: 'Rezerviši sto' },
+  en: { label: 'Quick actions', call: 'Call', reserve: 'Book a table' },
+  ru: { label: 'Быстрые действия', call: 'Позвонить', reserve: 'Забронировать стол' },
+}[locale];
+---
+
+<nav
+  class="mobile-action-bar"
+  data-mobile-action-bar
+  aria-label={copy.label}
+  aria-hidden="true"
+  inert
+>
+  <a class="mobile-action-link mobile-action-link--call" href="tel:+381112612253">{copy.call}</a>
+  <a class="mobile-action-link mobile-action-link--reserve" href={siteRoutes[locale].contact}>
+    {copy.reserve}
+  </a>
+</nav>
+
+<script>
+  const actionBar = document.querySelector<HTMLElement>('[data-mobile-action-bar]');
+  const hero = document.querySelector<HTMLElement>('.hero, .page-hero');
+  const footer = document.querySelector<HTMLElement>('.site-footer');
+
+  if (actionBar && hero && footer) {
+    const updateVisibility = () => {
+      const isMobile = window.matchMedia('(max-width: 950px)').matches;
+      const hasPassedHero = hero.getBoundingClientRect().bottom <= 0;
+      const nearFooter = footer.getBoundingClientRect().top <= window.innerHeight;
+      const isVisible = isMobile && hasPassedHero && !nearFooter;
+
+      actionBar.toggleAttribute('data-visible', isVisible);
+      actionBar.inert = !isVisible;
+      actionBar.setAttribute('aria-hidden', String(!isVisible));
+    };
+
+    window.addEventListener('scroll', updateVisibility, { passive: true });
+    window.addEventListener('resize', updateVisibility);
+    updateVisibility();
+  }
+</script>

@@ -1,0 +1,132 @@
+---
+import PageHero from './PageHero.astro';
+import { siteRoutes, type Locale } from '../data/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const copy = {
+  sr: {
+    eyebrow: 'O restoranu Gigo',
+    title: 'Naša priča',
+    lead: 'Gigo je porodični restoran u Gornjogradskoj ulici u Zemunu. Na jelovniku su domaća jela, roštilj i specijaliteti ispod sača.',
+    heroAlt: 'Pažljivo postavljena trpeza restorana Gigo',
+    storyAlt: 'Uređen enterijer restorana Gigo u Zemunu',
+    storyTitle: 'Kako je Gigo počeo',
+    story: 'Gigo je 1998. godine otvoren kao mala picerija. Kako je dolazilo sve više gostiju, proširili smo restoran da bismo mogli da ih ugostimo više.',
+    storySecond: 'S vremenom smo proširili i jelovnik. U ponudu smo uvrstili teletinu i jagnjetinu ispod sača, a mnoga jela godinama pripremamo po starim porodičnim receptima.',
+    storyQuote: 'Ko proba, neće se kajati. Ko ne proba, kajaće se.',
+    reasonsEyebrow: 'Zašto Gigo',
+    reasonsTitle: 'Mali povodi, dobar razlog za dolazak',
+    reasons: [
+      ['Domaća kuhinja', 'Jela se pripremaju pažljivo, od ukusa koje poznajemo i sastojaka koji okupljaju za stolom.', 'Pogledajte jelovnik', 'menu'],
+      ['Vino uz obrok', 'Odabrana vina i preporuka osoblja pomažu da pronađete dobar spoj uz svoj izbor.', 'Pogledajte vinsku kartu', 'wine'],
+      ['Zajedno za stolom', 'Prijatan prostor za ručak, porodična okupljanja i manje proslave u Zemunu.', 'Rezervišite sto', 'contact'],
+    ],
+  },
+  en: {
+    eyebrow: 'About Gigo',
+    title: 'Our story',
+    lead: 'Gigo is a family-run restaurant on Gornjogradska Street in Zemun. Our menu features homestyle dishes, grilled specialties, and dishes prepared under the sač.',
+    heroAlt: 'A carefully prepared table at Gigo restaurant',
+    storyAlt: 'The welcoming dining room at Restaurant Gigo',
+    storyTitle: 'How Gigo began',
+    story: 'Gigo opened in 1998 as a small pizzeria. As more guests started coming, we expanded the restaurant so we could welcome more of them.',
+    storySecond: 'Over time, we expanded the menu too. We added veal and lamb prepared under the sač, and many dishes are still made using old family recipes.',
+    storyQuote: 'Those who try it won’t regret it. Those who don’t, will.',
+    reasonsEyebrow: 'Why Gigo',
+    reasonsTitle: 'A good reason to get together',
+    reasons: [
+      ['Homestyle cooking', 'Carefully prepared dishes built around familiar flavours and ingredients made for sharing.', 'View the menu', 'menu'],
+      ['Wine with your meal', 'A considered wine selection and a helpful recommendation to accompany your choice.', 'View the wine list', 'wine'],
+      ['Gather around the table', 'A welcoming setting for lunch, family gatherings, and smaller celebrations in Zemun.', 'Book a table', 'contact'],
+    ],
+  },
+  ru: {
+    eyebrow: 'Ресторан Gigo',
+    title: 'Наша история',
+    lead: 'Gigo — семейный ресторан на улице Gornjogradska в Земуне. В меню — домашние блюда, гриль и специалитеты из-под сача.',
+    heroAlt: 'Накрытый стол в ресторане Gigo',
+    storyAlt: 'Интерьер ресторана Gigo в Земуне',
+    storyTitle: 'Как начинался Gigo',
+    story: 'В 1998 году Gigo открылся как небольшая пиццерия. Гостей становилось всё больше, и мы расширили ресторан, чтобы принять больше посетителей.',
+    storySecond: 'Со временем мы расширили и меню. Добавили телятину и ягнёнка из-под сача, а многие блюда годами готовим по старым семейным рецептам.',
+    storyQuote: 'Кто попробует — не пожалеет. Кто не попробует — будет жалеть.',
+    reasonsEyebrow: 'Почему Gigo',
+    reasonsTitle: 'Хороший повод собраться вместе',
+    reasons: [
+      ['Домашняя кухня', 'Блюда готовятся внимательно, из знакомых вкусов и продуктов, которые собирают за столом.', 'Посмотреть меню', 'menu'],
+      ['Вино к обеду', 'Подборка вин и рекомендация персонала помогут найти удачное сочетание.', 'Посмотреть винную карту', 'wine'],
+      ['Встречи за столом', 'Уютное место для обеда, семейных встреч и небольших праздников в Земуне.', 'Забронировать стол', 'contact'],
+    ],
+  },
+} satisfies Record<Locale, {
+  eyebrow: string;
+  title: string;
+  lead: string;
+  heroAlt: string;
+  storyAlt: string;
+  storyTitle: string;
+  story: string;
+  storySecond: string;
+  storyQuote: string;
+  reasonsEyebrow: string;
+  reasonsTitle: string;
+  reasons: [string, string, string, 'menu' | 'wine' | 'contact'][];
+}>;
+
+const text = copy[locale];
+const heroFeature = {
+  sr: { label: 'Od 1998.', text: 'Porodična tradicija u Zemunu', action: 'Rezervišite sto' },
+  en: { label: 'Since 1998', text: 'A family tradition in Zemun', action: 'Book a table' },
+  ru: { label: 'С 1998 года', text: 'Семейная традиция в Земуне', action: 'Забронировать стол' },
+}[locale];
+---
+
+<div class="about-page">
+  <PageHero
+    eyebrow={text.eyebrow}
+    title={text.title}
+    description={text.lead}
+    image="/images/image-29.jpg"
+    alt={text.heroAlt}
+    featureLabel={heroFeature.label}
+    featureText={heroFeature.text}
+    actionLabel={heroFeature.action}
+    actionHref={siteRoutes[locale].contact}
+    showImageCaption={false}
+  />
+
+  <section class="intro section-wrap about-story">
+    <div class="intro-image-wrap">
+      <img src="/images/image-32.jpg" alt={text.storyAlt} loading="lazy" />
+    </div>
+    <div class="intro-copy">
+      <h2>{text.storyTitle}</h2>
+      <p>{text.story}</p>
+      <p>{text.storySecond}</p>
+      <blockquote class="about-story-quote">{text.storyQuote}</blockquote>
+    </div>
+  </section>
+
+  <section class="about-reasons section-wrap">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow"><span></span>{text.reasonsEyebrow}</p>
+        <h2>{text.reasonsTitle}</h2>
+      </div>
+    </div>
+    <div class="about-reason-grid">
+      {text.reasons.map(([title, description, actionLabel, destination]) => (
+        <article class="about-reason">
+          <h3>{title}</h3>
+          <p>{description}</p>
+          <a class="text-link about-reason-link" href={siteRoutes[locale][destination]}>{actionLabel}</a>
+        </article>
+      ))}
+    </div>
+  </section>
+</div>

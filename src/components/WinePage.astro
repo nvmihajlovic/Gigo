@@ -1,0 +1,173 @@
+---
+import PageHero from './PageHero.astro';
+import { wineCatalog, wineCategoryIds } from '../data/wine';
+import { siteRoutes, type Locale } from '../data/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+
+const copy = {
+  sr: {
+    eyebrow: 'Vinska karta i pića',
+    title: 'Vino uz dobar obrok',
+    description: 'Izbor domaćih i regionalnih etiketa, uz piće za svaki deo obroka. Bela, crvena, roze i penušava vina prate različite ukuse i jela.',
+    heroAlt: 'Odabrana vina restorana Gigo',
+    note: 'Cene vina su prikazane čaša / flaša kada su obe opcije dostupne. Ostale cene su po meri navedenoj uz piće.',
+    categories: {
+      bela: 'Bela vina',
+      crna: 'Crna vina',
+      roze: 'Roze vina',
+      penusava: 'Penušava vina',
+      alkoholna: 'Alkoholna pića',
+      piva: 'Piva',
+      bezalkoholna: 'Bezalkoholna pića',
+      voda: 'Voda',
+      kafa: 'Kafa i čaj',
+    },
+    pairEyebrow: 'Preporuka uz jelo',
+    pairTitle: 'Pronađite dobar spoj',
+    pairings: [
+      ['Roštilj i meso', 'Punija crvena vina za jela sa roštilja i sporije pripremljeno meso.'],
+      ['Predjela i sir', 'Sveža bela vina uz sireve i lagana predjela.'],
+      ['Salate i lakša jela', 'Lagana bela ili roze vina koja prate, a ne nadjačavaju jelo.'],
+      ['Desert', 'Penušavo ili aromatično vino za slatki završetak obroka.'],
+    ],
+  },
+  en: {
+    eyebrow: 'Wine and drinks',
+    title: 'A good wine for your meal',
+    description: 'A selection of Serbian and regional wines, alongside drinks for every part of your meal. Choose from white, red, rosé, and sparkling wines to complement your food.',
+    heroAlt: 'Selected wines at Restaurant Gigo',
+    note: 'Wine prices are shown as glass / bottle when both are available. Other prices are for the measure shown.',
+    categories: {
+      bela: 'White wines',
+      crna: 'Red wines',
+      roze: 'Rosé wines',
+      penusava: 'Sparkling wines',
+      alkoholna: 'Spirits',
+      piva: 'Beers',
+      bezalkoholna: 'Soft drinks',
+      voda: 'Water',
+      kafa: 'Coffee and tea',
+    },
+    pairEyebrow: 'A pairing for your meal',
+    pairTitle: 'Find a lovely match',
+    pairings: [
+      ['Grilled meat', 'Fuller-bodied red wines alongside grilled dishes and slow-cooked meat.'],
+      ['Starters and cheese', 'Fresh white wines with cheeses and lighter starters.'],
+      ['Salads and lighter dishes', 'Light white or rosé wines that complement, rather than overpower, a dish.'],
+      ['Dessert', 'A sparkling or aromatic wine for a sweet finish.'],
+    ],
+  },
+  ru: {
+    eyebrow: 'Винная карта и напитки',
+    title: 'Вино к обеду',
+    description: 'Сербские и региональные вина, а также напитки для каждого этапа трапезы. Белые, красные, розовые и игристые вина дополнят ваш выбор блюд.',
+    heroAlt: 'Подборка вин ресторана Gigo',
+    note: 'Цены на вино указаны за бокал / бутылку, если доступны оба варианта. Остальные цены указаны за порцию, отмеченную в названии.',
+    categories: {
+      bela: 'Белые вина',
+      crna: 'Красные вина',
+      roze: 'Розе',
+      penusava: 'Игристые вина',
+      alkoholna: 'Крепкие напитки',
+      piva: 'Пиво',
+      bezalkoholna: 'Безалкогольные напитки',
+      voda: 'Вода',
+      kafa: 'Кофе и чай',
+    },
+    pairEyebrow: 'Рекомендации к блюдам',
+    pairTitle: 'Найдите удачное сочетание',
+    pairings: [
+      ['Мясо на гриле', 'Насыщенные красные вина к блюдам на гриле и мясу долгого приготовления.'],
+      ['Закуски и сыр', 'Свежие белые вина к сырам и лёгким закускам.'],
+      ['Салаты и лёгкие блюда', 'Лёгкое белое вино или розе, дополняющее вкус блюда.'],
+      ['Десерт', 'Игристое или ароматное вино для сладкого завершения обеда.'],
+    ],
+  },
+} satisfies Record<Locale, {
+  eyebrow: string;
+  title: string;
+  description: string;
+  heroAlt: string;
+  note: string;
+  categories: Record<(typeof wineCategoryIds)[number], string>;
+  pairEyebrow: string;
+  pairTitle: string;
+  pairings: [string, string][];
+}>;
+
+const text = copy[locale];
+const heroFeature = {
+  sr: { label: 'Za dobar spoj', text: 'Domaća i regionalna vina', action: 'Pogledajte vina' },
+  en: { label: 'A lovely pairing', text: 'Wines from Serbia and the region', action: 'Browse wines' },
+  ru: { label: 'К блюду', text: 'Вина Сербии и региона', action: 'Выбрать вино' },
+}[locale];
+---
+
+<PageHero
+  eyebrow={text.eyebrow}
+  title={text.title}
+  description={text.description}
+  image="/images/vinska-karta.jpg"
+  alt={text.heroAlt}
+  featureLabel={heroFeature.label}
+  featureText={heroFeature.text}
+  actionLabel={heroFeature.action}
+  actionHref={`${siteRoutes[locale].wine}#bela`}
+/>
+
+<section class="menu-page-content menu-page-content--wine section-wrap" data-category-menu>
+  <nav class="category-nav" aria-label={locale === 'sr' ? 'Kategorije pića' : locale === 'en' ? 'Drink categories' : 'Категории напитков'}>
+    {wineCategoryIds.map((id, index) => (
+      <a href={`#${id}`} aria-current={index === 0 ? 'location' : undefined}>{text.categories[id]}</a>
+    ))}
+  </nav>
+
+  <div class="menu-content">
+    <p class="menu-note">{text.note}</p>
+
+    {wineCategoryIds.map((id) => (
+      <section class="menu-category" id={id} aria-labelledby={`${id}-title`}>
+        <div class="menu-category-heading">
+          <h2 id={`${id}-title`}>{text.categories[id]}</h2>
+        </div>
+        <div class="menu-item-list">
+          {wineCatalog[locale][id].map((item) => (
+            <div class="menu-price-row">
+              <div class="menu-item-label menu-item-label--wine">
+                <span>{item.name}{item.measure && <span class="menu-item-measure"> {item.measure}</span>}</span>
+                {item.producer && <span class="wine-producer">{item.producer}</span>}
+              </div>
+              <span class="menu-price">
+                <span class="menu-price-amount">{item.price}</span>
+                <span class="menu-price-currency">RSD</span>
+              </span>
+            </div>
+          ))}
+        </div>
+      </section>
+    ))}
+  </div>
+</section>
+
+<section class="wine-pairings section-wrap">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow"><span></span>{text.pairEyebrow}</p>
+      <h2>{text.pairTitle}</h2>
+    </div>
+  </div>
+  <div class="about-reason-grid">
+    {text.pairings.map(([title, description], index) => (
+      <article class="about-reason">
+        <span class="about-reason-number">{String(index + 1).padStart(2, '0')}</span>
+        <h3>{title}</h3>
+        <p>{description}</p>
+      </article>
+    ))}
+  </div>
+</section>

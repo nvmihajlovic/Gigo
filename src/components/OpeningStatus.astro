@@ -1,0 +1,119 @@
+---
+import type { Locale } from '../data/site';
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const copy = {
+  sr: { open: 'Otvoreno', closed: 'Zatvoreno', checking: 'Provera radnog vremena' },
+  en: { open: 'Open', closed: 'Closed', checking: 'Checking opening hours' },
+  ru: { open: 'Открыто', closed: 'Закрыто', checking: 'Проверяем часы работы' },
+}[locale];
+---
+
+<span
+  class="opening-status"
+  data-opening-status
+  data-open-label={copy.open}
+  data-closed-label={copy.closed}
+  title={locale === 'sr' ? 'Prema redovnom radnom vremenu' : locale === 'en' ? 'Based on regular opening hours' : 'По обычному графику работы'}
+  role="status"
+  aria-live="polite"
+  hidden
+>
+  <span class="opening-status-dot" aria-hidden="true"></span>
+  <span data-opening-status-label>{copy.checking}</span>
+</span>
+
+<script>
+  const statusElements = document.querySelectorAll<HTMLElement>('[data-opening-status]');
+  const timeFormatter = new Intl.DateTimeFormat('en-US', {
+    timeZone: 'Europe/Belgrade',
+    weekday: 'short',
+    hour: '2-digit',
+    minute: '2-digit',
+    hourCycle: 'h23',
+  });
+
+  const updateOpeningStatus = () => {
+    const parts = timeFormatter.formatToParts(new Date());
+    const weekday = parts.find((part) => part.type === 'weekday')?.value;
+    const hour = Number(parts.find((part) => part.type === 'hour')?.value);
+    const minute = Number(parts.find((part) => part.type === 'minute')?.value);
+    const isOpen = weekday !== 'Sun' && hour * 60 + minute >= 600 && hour * 60 + minute < 1380;
+
+    statusElements.forEach((status) => {
+      const label = status.querySelector<HTMLElement>('[data-opening-status-label]');
+      const openLabel = status.dataset.openLabel;
+      const closedLabel = status.dataset.closedLabel;
+
+      if (!label || !openLabel || !closedLabel) {
+        throw new Error('Opening status markup is incomplete.');
+      }
+
+      status.dataset.isOpen = String(isOpen);
+      label.textContent = isOpen ? openLabel : closedLabel;
+      status.hidden = false;
+    });
+  };
+
+  updateOpeningStatus();
+  window.setInterval(updateOpeningStatus, 60_000);
+</script>
+
+<style>
+  .opening-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--muted);
+    font-size: 0.75rem;
+    font-weight: 600;
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+
+  .opening-status[hidden] {
+    display: none;
+  }
+
+  .opening-status-dot {
+    --status-dot-rgb: 158 81 73;
+    width: 0.45rem;
+    height: 0.45rem;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    background: #9e5149;
+    animation: opening-status-pulse 2.2s ease-in-out infinite;
+  }
+
+  .opening-status[data-is-open='true'] {
+    color: #285532;
+  }
+
+  .opening-status[data-is-open='true'] .opening-status-dot {
+    --status-dot-rgb: 67 141 84;
+    background: #438d54;
+  }
+
+  @keyframes opening-status-pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgb(var(--status-dot-rgb) / 0%);
+      transform: scale(1);
+    }
+
+    50% {
+      box-shadow: 0 0 0 3px rgb(var(--status-dot-rgb) / 20%);
+      transform: scale(1.12);
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .opening-status-dot {
+      animation: none;
+    }
+  }
+</style>

@@ -1,0 +1,137 @@
+---
+import '../styles/global.css';
+import MobileActionBar from '../components/MobileActionBar.astro';
+
+interface Props {
+  title: string;
+  description: string;
+  lang?: 'sr' | 'en' | 'ru';
+}
+
+const { title, description, lang = 'sr' } = Astro.props;
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f5f1e8" />
+    <title>{title}</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=optional"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <slot />
+    <MobileActionBar locale={lang} />
+    <button class="back-to-top" type="button" aria-label={lang === 'sr' ? 'Na vrh stranice' : lang === 'en' ? 'Back to top' : 'Наверх страницы'} hidden>
+      <svg viewBox="0 0 16 16" aria-hidden="true">
+        <path d="M8 12V3m-4 4 4-4 4 4" />
+      </svg>
+      <span>{lang === 'sr' ? 'Na vrh' : lang === 'en' ? 'Back to top' : 'Наверх'}</span>
+    </button>
+    <script>
+      const backToTop = document.querySelector<HTMLButtonElement>('.back-to-top');
+      const footer = document.querySelector<HTMLElement>('.site-footer');
+      const gathering = document.querySelector<HTMLElement>('.gathering');
+
+      if (backToTop) {
+        const updateVisibility = () => {
+          const footerVisible = footer
+            ? footer.getBoundingClientRect().top < window.innerHeight
+            : false;
+          backToTop.hidden = window.scrollY < 420 || footerVisible;
+
+          const buttonRect = backToTop.getBoundingClientRect();
+          const gatheringRect = gathering?.getBoundingClientRect();
+          const overlapsGathering = gatheringRect
+            ? gatheringRect.left < buttonRect.right &&
+              gatheringRect.right > buttonRect.left &&
+              gatheringRect.top < buttonRect.bottom &&
+              gatheringRect.bottom > buttonRect.top
+            : false;
+          backToTop.classList.toggle(
+            'back-to-top--on-wine',
+            !backToTop.hidden && overlapsGathering,
+          );
+        };
+
+        window.addEventListener('scroll', updateVisibility, { passive: true });
+        window.addEventListener('resize', updateVisibility);
+        updateVisibility();
+        backToTop.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'auto' });
+        });
+      }
+    </script>
+    <script>
+      const categoryMenus = document.querySelectorAll<HTMLElement>('[data-category-menu]');
+
+      categoryMenus.forEach((menu) => {
+        const categoryNav = menu.querySelector<HTMLElement>('.category-nav');
+        const categories = Array.from(menu.querySelectorAll<HTMLElement>('.menu-category'));
+        const links = Array.from(menu.querySelectorAll<HTMLAnchorElement>('.category-nav a'));
+        let updateFrame = 0;
+        let activeCategoryIndex = -1;
+
+        if (!categoryNav || categories.length !== links.length) {
+          throw new Error('Category navigation does not match its category sections.');
+        }
+
+        const updateActiveCategory = () => {
+          updateFrame = 0;
+          const activeLine = categoryNav.getBoundingClientRect().bottom + 32;
+          let activeIndex = 0;
+
+          categories.forEach((category, index) => {
+            if (category.getBoundingClientRect().top <= activeLine) activeIndex = index;
+          });
+          if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2) {
+            activeIndex = categories.length - 1;
+          }
+
+          if (activeCategoryIndex !== activeIndex) {
+            links.forEach((link, index) => {
+              if (index === activeIndex) link.setAttribute('aria-current', 'location');
+              else link.removeAttribute('aria-current');
+            });
+
+            if (categoryNav.scrollWidth > categoryNav.clientWidth) {
+              const activeLink = links[activeIndex];
+              const navRect = categoryNav.getBoundingClientRect();
+              const linkRect = activeLink.getBoundingClientRect();
+
+              if (linkRect.left < navRect.left || linkRect.right > navRect.right) {
+                const targetLeft =
+                  categoryNav.scrollLeft +
+                  linkRect.left -
+                  navRect.left -
+                  (navRect.width - linkRect.width) / 2;
+                categoryNav.scrollTo({ left: targetLeft, behavior: 'smooth' });
+              }
+            }
+
+            activeCategoryIndex = activeIndex;
+          }
+        };
+
+        const scheduleActiveCategoryUpdate = () => {
+          if (updateFrame) return;
+          updateFrame = window.requestAnimationFrame(updateActiveCategory);
+        };
+
+        window.addEventListener('scroll', scheduleActiveCategoryUpdate, { passive: true });
+        window.addEventListener('resize', scheduleActiveCategoryUpdate);
+        updateActiveCategory();
+      });
+    </script>
+  </body>
+</html>

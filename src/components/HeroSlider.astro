@@ -1,0 +1,160 @@
+---
+interface Slide {
+  src: string;
+  alt: string;
+}
+
+interface Props {
+  slides: Slide[];
+  label: string;
+  controlsLabel: string;
+  showSlideLabel: string;
+  pauseLabel: string;
+  playLabel: string;
+}
+
+const { slides, label, controlsLabel, showSlideLabel, pauseLabel, playLabel } = Astro.props;
+---
+
+<div
+  class="hero-visual"
+  data-hero-slider
+  role="region"
+  aria-roledescription="carousel"
+  aria-label={label}
+>
+  {slides.map((slide, index) => (
+    <img
+      class:list={['hero-slider-slide', { 'is-active': index === 0 }]}
+      src={slide.src}
+      alt={slide.alt}
+      data-hero-slide
+      aria-hidden={index !== 0}
+      fetchpriority={index === 0 ? 'high' : undefined}
+      loading={index === 0 ? 'eager' : 'lazy'}
+    />
+  ))}
+  <div class="hero-slider-controls" role="group" aria-label={controlsLabel}>
+    {slides.map((_, index) => (
+      <button
+        class="hero-slider-dot"
+        type="button"
+        data-hero-dot
+        aria-label={`${showSlideLabel} ${index + 1}`}
+        aria-current={index === 0 ? 'true' : undefined}
+      >
+        <span aria-hidden="true"></span>
+      </button>
+    ))}
+    <button
+      class="hero-slider-toggle"
+      type="button"
+      data-hero-toggle
+      data-pause-label={pauseLabel}
+      data-play-label={playLabel}
+      data-paused="false"
+      aria-label={pauseLabel}
+      aria-pressed="false"
+    >
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <path class="hero-slider-pause-icon" d="M8 5v14M16 5v14" />
+        <path class="hero-slider-play-icon" d="M8 5.5v13l10-6.5z" />
+      </svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-hero-slider]').forEach((slider) => {
+    const slides = Array.from(slider.querySelectorAll<HTMLImageElement>('[data-hero-slide]'));
+    const dots = Array.from(slider.querySelectorAll<HTMLButtonElement>('[data-hero-dot]'));
+    const toggle = slider.querySelector<HTMLButtonElement>('[data-hero-toggle]');
+    const pauseLabel = toggle?.dataset.pauseLabel;
+    const playLabel = toggle?.dataset.playLabel;
+
+    if (slides.length < 2 || dots.length !== slides.length || !toggle || !pauseLabel || !playLabel) return;
+
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let activeIndex = 0;
+    let paused = reducedMotion.matches;
+    let pointerInside = false;
+    let focusInside = false;
+    let intervalId: number | undefined;
+
+    const showSlide = (index: number) => {
+      activeIndex = (index + slides.length) % slides.length;
+      slides.forEach((slide, slideIndex) => {
+        const active = slideIndex === activeIndex;
+        slide.classList.toggle('is-active', active);
+        slide.setAttribute('aria-hidden', String(!active));
+        if (active) {
+          slide.removeAttribute('loading');
+        }
+      });
+      dots.forEach((dot, dotIndex) => {
+        if (dotIndex === activeIndex) {
+          dot.setAttribute('aria-current', 'true');
+        } else {
+          dot.removeAttribute('aria-current');
+        }
+      });
+    };
+
+    const updateToggle = () => {
+      toggle.dataset.paused = String(paused);
+      toggle.setAttribute('aria-pressed', String(paused));
+      toggle.setAttribute('aria-label', paused ? playLabel : pauseLabel);
+    };
+
+    const syncAutoplay = () => {
+      if (intervalId !== undefined) window.clearInterval(intervalId);
+      intervalId = undefined;
+      if (paused || pointerInside || focusInside || document.hidden) return;
+      intervalId = window.setInterval(() => showSlide(activeIndex + 1), 6500);
+    };
+
+    dots.forEach((dot, index) => {
+      dot.addEventListener('click', () => {
+        showSlide(index);
+        syncAutoplay();
+      });
+    });
+
+    toggle.addEventListener('click', () => {
+      paused = !paused;
+      updateToggle();
+      syncAutoplay();
+    });
+
+    slider.addEventListener('pointerenter', () => {
+      pointerInside = true;
+      syncAutoplay();
+    });
+    slider.addEventListener('pointerleave', () => {
+      pointerInside = false;
+      syncAutoplay();
+    });
+    slider.addEventListener('focusin', () => {
+      focusInside = true;
+      syncAutoplay();
+    });
+    slider.addEventListener('focusout', (event) => {
+      if (!(event.relatedTarget instanceof Node) || !slider.contains(event.relatedTarget)) {
+        focusInside = false;
+        syncAutoplay();
+      }
+    });
+
+    reducedMotion.addEventListener('change', (event) => {
+      if (event.matches) {
+        paused = true;
+        updateToggle();
+        syncAutoplay();
+      }
+    });
+    document.addEventListener('visibilitychange', syncAutoplay);
+
+    updateToggle();
+    syncAutoplay();
+  });
+</script>

@@ -1,0 +1,38 @@
+---
+import LocalizedHome from '../../components/LocalizedHome.astro';
+import InteriorPage from '../../components/InteriorPage.astro';
+import PageFrame from '../../layouts/PageFrame.astro';
+import { pageMeta } from '../../data/page-meta';
+import type { Locale, SitePage } from '../../data/site';
+
+export function getStaticPaths() {
+  const localizedSlugs = [
+    { slug: 'index', page: 'home' },
+    { slug: 'o-nama', page: 'about' },
+    { slug: 'jelovnik', page: 'menu' },
+    { slug: 'vinska-karta', page: 'wine' },
+    { slug: 'galerija', page: 'gallery' },
+    { slug: 'kontakt', page: 'contact' },
+  ] as const;
+  const locales = ['en', 'ru'] as const;
+
+  return locales.flatMap((locale) =>
+    localizedSlugs.map(({ slug, page }) => ({
+      params: { lang: locale, page: slug },
+      props: { locale, page },
+    })),
+  );
+}
+
+const { locale, page } = Astro.props as {
+  locale: Exclude<Locale, 'sr'>;
+  page: SitePage;
+};
+const meta = pageMeta[locale][page];
+---
+
+<PageFrame locale={locale} page={page} title={meta.title} description={meta.description}>
+  {page === 'home'
+    ? <LocalizedHome locale={locale} />
+    : <InteriorPage locale={locale} page={page} />}
+</PageFrame>

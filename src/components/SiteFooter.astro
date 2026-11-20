@@ -1,0 +1,28 @@
+---
+import { siteCopy, siteRoutes, type Locale, type SitePage } from '../data/site';
+
+interface Props {
+  locale: Locale;
+  page: SitePage;
+}
+
+const { locale, page } = Astro.props;
+const copy = siteCopy[locale];
+const languages: Locale[] = ['sr', 'en', 'ru'];
+---
+
+<footer class="site-footer">
+  <div class="footer-bottom">
+    <span>© {new Date().getFullYear()} Restoran Gigo</span>
+    <nav class="footer-languages" aria-label={copy.languageLabel}>
+      {languages.map((language) => (
+        <a
+          href={siteRoutes[language][page]}
+          aria-current={locale === language ? 'page' : undefined}
+        >
+          {language.toUpperCase()}
+        </a>
+      ))}
+    </nav>
+  </div>
+</footer>
