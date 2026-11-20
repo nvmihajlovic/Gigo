@@ -684,11 +684,6 @@ summary:focus-visible {
   letter-spacing: 0.16em;
 }
 
-.about-page .page-hero-description {
-  font-size: 20px;
-  line-height: 1.55;
-}
-
 .page-hero-support {
   display: flex;
   align-items: flex-end;
@@ -2181,10 +2176,6 @@ summary:focus-visible {
     margin-top: 1rem;
     font-size: 0.9375rem;
     line-height: 1.65;
-  }
-
-  .about-page .page-hero-description {
-    font-size: 0.9375rem;
   }
 
   .page-hero-image {
