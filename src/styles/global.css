@@ -41,6 +41,9 @@ body {
   font-family: var(--sans);
   font-size: 16px;
   line-height: 1.65;
+  hyphens: none;
+  overflow-wrap: normal;
+  word-break: normal;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -661,8 +664,6 @@ summary:focus-visible {
   font-weight: 400;
   letter-spacing: -0.045em;
   line-height: 1.03;
-  hyphens: auto;
-  overflow-wrap: break-word;
 }
 
 .page-hero-description {
@@ -960,8 +961,6 @@ summary:focus-visible {
   font-size: clamp(1.8rem, 2.5vw, 2.25rem);
   font-weight: 400;
   line-height: 1.1;
-  hyphens: auto;
-  overflow-wrap: anywhere;
 }
 
 .menu-item-list {
@@ -995,7 +994,6 @@ summary:focus-visible {
   gap: 0.15rem 0.4rem;
   min-width: 0;
   font-weight: 500;
-  overflow-wrap: anywhere;
 }
 
 .menu-item-label--wine {
@@ -1082,8 +1080,6 @@ summary:focus-visible {
   font-size: clamp(2rem, 3.2vw, 3rem);
   font-weight: 400;
   line-height: 1.1;
-  hyphens: auto;
-  overflow-wrap: anywhere;
 }
 
 .contact-form-intro {
@@ -1321,13 +1317,6 @@ summary:focus-visible {
 .section-heading h2 {
   max-width: 100%;
   min-width: 0;
-  hyphens: auto;
-  overflow-wrap: anywhere;
-}
-
-.intro h2 {
-  hyphens: auto;
-  overflow-wrap: anywhere;
 }
 
 .intro h2 em,
@@ -1466,11 +1455,6 @@ summary:focus-visible {
   align-items: flex-start;
   justify-content: center;
   padding: 5rem clamp(2rem, 8vw, 8rem);
-}
-
-.gathering h2 {
-  hyphens: auto;
-  overflow-wrap: anywhere;
 }
 
 .gathering-content > p:not(.eyebrow) {
