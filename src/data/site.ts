@@ -33,6 +33,8 @@ export const siteRoutes: Record<Locale, Record<SitePage, string>> = {
 
 export const siteCopy = {
   sr: {
+    openMenu: 'Otvori meni',
+    closeMenu: 'Zatvori meni',
     home: 'Početna',
     about: 'O nama',
     menu: 'Jelovnik',
@@ -51,6 +53,8 @@ export const siteCopy = {
     languages: { sr: 'Srpski', en: 'English', ru: 'Ruski' },
   },
   en: {
+    openMenu: 'Open menu',
+    closeMenu: 'Close menu',
     home: 'Home',
     about: 'About',
     menu: 'Menu',
@@ -69,6 +73,8 @@ export const siteCopy = {
     languages: { sr: 'Serbian', en: 'English', ru: 'Russian' },
   },
   ru: {
+    openMenu: 'Открыть меню',
+    closeMenu: 'Закрыть меню',
     home: 'Главная',
     about: 'О нас',
     menu: 'Меню',

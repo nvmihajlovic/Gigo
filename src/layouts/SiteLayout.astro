@@ -73,6 +73,64 @@ const { title, description, lang = 'sr' } = Astro.props;
       }
     </script>
     <script>
+      const mobileMenu = document.querySelector<HTMLDetailsElement>('.mobile-menu');
+      const mobileMenuPanel = mobileMenu?.querySelector<HTMLElement>('.mobile-menu-panel');
+      const mobileMenuSummary = mobileMenu?.querySelector<HTMLElement>('summary');
+      const mobileMenuHeader = mobileMenu?.closest<HTMLElement>('.site-header');
+
+      if (mobileMenu && mobileMenuPanel && mobileMenuSummary && mobileMenuHeader) {
+        const closeMobileMenu = (restoreFocus = true) => {
+          mobileMenu.open = false;
+          if (restoreFocus) mobileMenuSummary.focus();
+        };
+
+        mobileMenu.addEventListener('toggle', () => {
+          document.documentElement.classList.toggle('mobile-menu-open', mobileMenu.open);
+          mobileMenuHeader.classList.toggle('mobile-menu-open', mobileMenu.open);
+          if (mobileMenu.open) {
+            window.setTimeout(() => {
+              if (mobileMenu.open) {
+                mobileMenu.querySelector<HTMLButtonElement>('.mobile-menu-close')?.focus();
+              }
+            }, 0);
+          }
+        });
+
+        mobileMenu.querySelectorAll<HTMLButtonElement>('[data-mobile-menu-close]').forEach((button) => {
+          button.addEventListener('click', () => closeMobileMenu());
+        });
+
+        mobileMenu.querySelectorAll<HTMLAnchorElement>('.mobile-menu-panel a').forEach((link) => {
+          link.addEventListener('click', () => closeMobileMenu(false));
+        });
+
+        document.addEventListener('keydown', (event) => {
+          if (!mobileMenu.open) return;
+
+          if (event.key === 'Escape') {
+            event.preventDefault();
+            closeMobileMenu();
+            return;
+          }
+
+          if (event.key !== 'Tab') return;
+          const focusable = Array.from(
+            mobileMenuPanel.querySelectorAll<HTMLElement>('a[href], button:not([disabled])'),
+          );
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+
+          if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last?.focus();
+          } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first?.focus();
+          }
+        });
+      }
+    </script>
+    <script>
       const categoryMenus = document.querySelectorAll<HTMLElement>('[data-category-menu]');
 
       categoryMenus.forEach((menu) => {

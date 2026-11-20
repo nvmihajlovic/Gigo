@@ -85,19 +85,37 @@ const experiences = [
         Rezervišite sto
       </a>
       <details class="mobile-menu">
-        <summary aria-label="Otvori navigaciju"><span></span><span></span></summary>
-        <nav aria-label="Mobilna navigacija">
-          {navigation.map((item) => (
-            <a href={item.href} aria-current={item.href === siteRoutes.sr.home ? 'page' : undefined}>
-              {item.label}
+        <summary aria-label="Otvori meni" aria-controls="mobile-menu-panel"><span></span><span></span></summary>
+        <button class="mobile-menu-backdrop" type="button" aria-label="Zatvori meni" tabindex="-1" data-mobile-menu-close></button>
+        <div class="mobile-menu-panel" id="mobile-menu-panel" role="dialog" aria-modal="true" aria-label="Navigacija">
+          <div class="mobile-menu-top">
+            <a class="mobile-menu-brand" href={siteRoutes.sr.home} aria-label="Gigo - Početna">
+              <img src="/images/logo.png" alt="" />
             </a>
-          ))}
-          <div class="mobile-languages">
+            <button class="mobile-menu-close" type="button" aria-label="Zatvori meni" data-mobile-menu-close>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 6 12 12M18 6 6 18" />
+              </svg>
+            </button>
+          </div>
+          <p class="mobile-menu-heading">Navigacija</p>
+          <nav class="mobile-menu-links" aria-label="Mobilna navigacija">
+            {navigation.map((item) => (
+              <a
+                href={item.href}
+                aria-current={item.href === siteRoutes.sr.home ? 'page' : undefined}
+                class={item.href === siteRoutes.sr.contact ? 'mobile-menu-link--reserve' : undefined}
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+          <nav class="mobile-languages" aria-label="Izaberite jezik">
             <a href={siteRoutes.sr.home} aria-current="page">Srpski</a>
             <a href={siteRoutes.en.home}>English</a>
             <a href={siteRoutes.ru.home}>Русский</a>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </details>
     </div>
   </header>

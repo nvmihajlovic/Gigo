@@ -65,23 +65,41 @@ const languages: Locale[] = ['sr', 'en', 'ru'];
       </nav>
       <a class="button button-dark header-reserve" href={siteRoutes[locale].contact}>{copy.reserve}</a>
       <details class="mobile-menu">
-        <summary aria-label={locale === 'sr' ? 'Otvori navigaciju' : locale === 'en' ? 'Open navigation' : 'Открыть меню'}>
+        <summary aria-label={copy.openMenu} aria-controls="mobile-menu-panel">
           <span></span><span></span>
         </summary>
-        <nav aria-label={locale === 'sr' ? 'Mobilna navigacija' : locale === 'en' ? 'Mobile navigation' : 'Мобильная навигация'}>
-          {navigation.map((item) => (
-            <a href={siteRoutes[locale][item.page]} aria-current={page === item.page ? 'page' : undefined}>
-              {item.label}
+        <button class="mobile-menu-backdrop" type="button" aria-label={copy.closeMenu} tabindex="-1" data-mobile-menu-close></button>
+        <div class="mobile-menu-panel" id="mobile-menu-panel" role="dialog" aria-modal="true" aria-label={copy.footerNavigation}>
+          <div class="mobile-menu-top">
+            <a class="mobile-menu-brand" href={siteRoutes[locale].home} aria-label={`Gigo - ${copy.home}`}>
+              <img src="/images/logo.png" alt="" />
             </a>
-          ))}
-          <div class="mobile-languages">
+            <button class="mobile-menu-close" type="button" aria-label={copy.closeMenu} data-mobile-menu-close>
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 6 12 12M18 6 6 18" />
+              </svg>
+            </button>
+          </div>
+          <p class="mobile-menu-heading">{copy.footerNavigation}</p>
+          <nav class="mobile-menu-links" aria-label={copy.footerNavigation}>
+            {navigation.map((item) => (
+              <a
+                href={siteRoutes[locale][item.page]}
+                aria-current={page === item.page ? 'page' : undefined}
+                class={item.page === 'contact' ? 'mobile-menu-link--reserve' : undefined}
+              >
+                {item.label}
+              </a>
+            ))}
+          </nav>
+          <nav class="mobile-languages" aria-label={copy.languageLabel}>
             {languages.map((language) => (
               <a href={siteRoutes[language][page]} aria-current={locale === language ? 'page' : undefined}>
                 {copy.languages[language]}
               </a>
             ))}
-          </div>
-        </nav>
+          </nav>
+        </div>
       </details>
     </div>
   </header>
