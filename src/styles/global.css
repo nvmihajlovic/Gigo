@@ -2140,9 +2140,35 @@ summary:focus-visible {
 
   .page-hero {
     grid-template-columns: minmax(0, 1fr);
-    gap: 1.5rem;
+    gap: 1.75rem;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
+  }
+
+  .page-hero-copy > .eyebrow {
+    margin-bottom: 1.1rem;
+    font-size: 0.6875rem;
+    letter-spacing: 0.11em;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(1.875rem, 8vw, 2.25rem);
+    letter-spacing: -0.035em;
+    line-height: 1.08;
+  }
+
+  .page-hero-support {
+    margin-top: 0.75rem;
+    padding-top: 1.25rem;
+  }
+
+  .page-hero-feature > span {
+    font-size: 0.6875rem;
+    letter-spacing: 0.1em;
+  }
+
+  .page-hero-action {
+    font-size: 0.8125rem;
   }
 
   .page-hero--compact {
@@ -2153,11 +2179,12 @@ summary:focus-visible {
 
   .page-hero-description {
     margin-top: 1rem;
-    font-size: 1rem;
+    font-size: 0.9375rem;
+    line-height: 1.65;
   }
 
   .about-page .page-hero-description {
-    font-size: 18px;
+    font-size: 0.9375rem;
   }
 
   .page-hero-image {
