@@ -41,7 +41,7 @@ export const galleryCopy = {
   sr: {
     eyebrow: 'Restoran Gigo',
     title: 'Galerija',
-    description: 'Pogledajte kako izgleda sala i šta se služi u Gigu.',
+    description: 'Zavirite u restoran Gigo, osetite atmosferu naše sale i pogledajte domaća jela, roštilj i specijalitete iz sača.',
     galleryLabel: 'Fotografije restorana Gigo',
     photoAlt: 'Fotografija restorana Gigo broj',
     lightboxLabel: 'Pregled fotografija restorana Gigo',
@@ -52,7 +52,7 @@ export const galleryCopy = {
   en: {
     eyebrow: 'Restaurant Gigo',
     title: 'Gallery',
-    description: 'Take a look inside the dining room and see what is served at Gigo.',
+    description: 'Step inside Restaurant Gigo, get a feel for our dining room, and discover homestyle dishes, grilled favourites, and sač specialties.',
     galleryLabel: 'Photos of Restaurant Gigo',
     photoAlt: 'Photo of Restaurant Gigo, number',
     lightboxLabel: 'Restaurant Gigo photo viewer',
@@ -63,7 +63,7 @@ export const galleryCopy = {
   ru: {
     eyebrow: 'Ресторан Gigo',
     title: 'Галерея',
-    description: 'Посмотрите, как выглядит зал ресторана и какие блюда подают в Gigo.',
+    description: 'Загляните в ресторан Gigo, почувствуйте атмосферу нашего зала и познакомьтесь с домашними блюдами, грилем и угощениями из-под сача.',
     galleryLabel: 'Фотографии ресторана Gigo',
     photoAlt: 'Фотография ресторана Gigo, номер',
     lightboxLabel: 'Просмотр фотографий ресторана Gigo',
