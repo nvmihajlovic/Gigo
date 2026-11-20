@@ -538,8 +538,9 @@ summary:focus-visible {
   font-size: var(--font-size-display);
   letter-spacing: -0.045em;
   line-height: 1.03;
-  hyphens: auto;
-  overflow-wrap: anywhere;
+  hyphens: none;
+  overflow-wrap: normal;
+  text-wrap: balance;
 }
 
 .hero h1 .accent,
