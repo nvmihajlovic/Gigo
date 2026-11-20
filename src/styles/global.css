@@ -1898,6 +1898,12 @@ summary:focus-visible {
       min-height: 3rem;
     }
   }
+
+  @media (max-height: 650px) and (orientation: landscape) {
+    .mobile-menu-links > a {
+      min-height: 3.5rem;
+    }
+  }
 }
 
 @media (max-width: 820px) {
