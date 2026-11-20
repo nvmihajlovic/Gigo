@@ -287,7 +287,7 @@ summary:focus-visible {
   padding: 0.7rem 1.45rem;
   border: 0;
   border-radius: 2px;
-  font-size: 0.88rem;
+  font-size: 0.875rem;
   font-weight: 600;
   letter-spacing: 0.045em;
   transition: background 180ms ease, color 180ms ease, border-color 180ms ease, transform 180ms ease;
@@ -665,7 +665,7 @@ summary:focus-visible {
 .page-hero h1 {
   margin: 0;
   font-family: var(--serif);
-  font-size: clamp(2.25rem, calc(4vw + 1rem), 4.5rem);
+  font-size: var(--font-size-display);
   font-weight: 400;
   letter-spacing: -0.045em;
   line-height: 1.03;
@@ -678,10 +678,6 @@ summary:focus-visible {
   font-size: 1.0625rem;
   line-height: 1.7;
   text-wrap: pretty;
-}
-
-.about-page .page-hero-copy > .eyebrow {
-  letter-spacing: 0.16em;
 }
 
 .page-hero-support {
@@ -1999,7 +1995,8 @@ summary:focus-visible {
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
-  .hero h1 {
+  .hero h1,
+  .page-hero h1 {
     font-size: clamp(2.75rem, calc(3.2vw + 1.4rem), 3rem);
   }
 }
@@ -2088,7 +2085,8 @@ summary:focus-visible {
     top: 0;
   }
 
-  .hero h1 {
+  .hero h1,
+  .page-hero h1 {
     font-size: clamp(2.25rem, calc(6vw + 1rem), 2.75rem);
   }
 
@@ -2142,14 +2140,8 @@ summary:focus-visible {
 
   .page-hero-copy > .eyebrow {
     margin-bottom: 1.1rem;
-    font-size: 0.6875rem;
-    letter-spacing: 0.11em;
-  }
-
-  .page-hero h1 {
-    font-size: clamp(1.875rem, 8vw, 2.25rem);
-    letter-spacing: -0.035em;
-    line-height: 1.08;
+    font-size: 0.75rem;
+    letter-spacing: 0.14em;
   }
 
   .page-hero-support {
@@ -2163,7 +2155,7 @@ summary:focus-visible {
   }
 
   .page-hero-action {
-    font-size: 0.8125rem;
+    font-size: 0.875rem;
   }
 
   .page-hero--compact {
@@ -2175,7 +2167,7 @@ summary:focus-visible {
   .page-hero-description {
     margin-top: 1rem;
     font-size: 1rem;
-    line-height: 1.65;
+    line-height: 1.7;
   }
 
   .page-hero-image {
