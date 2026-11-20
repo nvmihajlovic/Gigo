@@ -2404,6 +2404,24 @@ summary:focus-visible {
   .announcement-contact a {
     white-space: nowrap;
   }
+
+  .announcement-contact {
+    gap: 0.5rem;
+  }
+
+  .announcement-contact > .announcement-hours {
+    padding-right: 0.5rem;
+    font-size: 0.62rem;
+  }
+
+  .announcement-contact .opening-status {
+    gap: 0;
+    font-size: 0;
+  }
+
+  .announcement-contact .opening-status [data-opening-status-label] {
+    font-size: 0;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
